@@ -72,6 +72,103 @@
 
     <!--end menu subtitles-->
 
+    <!--region Pocetna -->
+    <string name="str_home_title">NACIONALNA BIBLIOTEKA CRNE GORE „ĐURĐE CRNOJEVIĆ“</string>
+    <string name="str_home_body">Nacionalna biblioteka s ponosom baštini tragove Crnojevića štamparije, kao i viševjekovne pismenosti koja je postojala i razvijala se na njenom tlu. Danas je to elitna kulturna ustanova čija misija umnogome prevazilazi njenu osnovnu djelatnost. Ona ima nezaobilaznu kulturnu i obrazovnu ulogu u zemlji i reputaciju pouzdanog partnera u oblasti kulture u inostranstvu. </string>
+    <string name="str_za_korisnike_title">ZA KORISNIKE</string>
+    <string name="str_za_korisnike_txt">Bibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove...</string>
+    <string name="str__opsirnije">OPŠIRNIJE ></string>
+    <string name="str_za_izdavace_title">ZA IZDAVACE</string>
+    <string name="str_za_izdavace_txt">Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne...</string>
+    <string name="str_za_bibliotekare_title">ZA BIBLIOTEKARE</string>
+    <string name="str_za_bibliotekare_txt">Nacionalna biblioteka, kao nacionalna i matična biblioteka Crne Gore, stara se o usavršavanju...</string>
+    <!--endregion Pocetna-->
+
+
+    <!--region usluge-->
+    <!--region za korisnik-->
+    <string name="str_za_korisnike_body">Čitaonice i članstvo
+        Bibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove institucije.
+
+        Savremeno opremljene čitaonice za korišćenje građe Osnovnog fonda i Posebnih zbirki nalaze se u zgradi bivšeg Italijanskog poslanstva. To su Naučna čitaonica, E-čitaonica (za korišćenje elektronskih publikacija, Interneta, COBISS sistema), Čitaonica muzikalija (za korišćenje svih vrsta muzičke građe: muzičkih rukopisa, nota, audio-video zapisa i dokumenata), i Čitaonica kartografije.
+
+        Korisnici Muzejskog fonda, Zbirke stare i rijetke knjige i Legata mogu koristiti građu u čitaonici u zgradi bivšeg Francuskog poslanstva.
+
+        Svaki član Nacionalne biblioteke može koristiti sve fondove biblioteke, ali i elektronski katalog biblioteke i uzajamni elektronski katalog, koji su dostupni 24 časa za pretraživanje preko interneta:
+
+        E-KATALOG NBCG
+        <!--http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001-->
+
+        E-KATALOG CRNE GORE
+        <!--http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib-->
+
+        Za publikacije koje su objavljene prije 1991. godine postoji Lisni katalog, formiran 1949. godine. U sklopu njega nalaze se posebni lisni katalozi: alfabetski katalog knjiga, alfabetski katalog serijskih publikacija, lisni katalozi posebnih zbirki, lisni predmetni katalog i lisni stručni katalog.
+
+        U čitaonicama Nacionalne biblioteke iznajmljena bibliotečka građa može se fotografisati, kopirati, skenirati i prepisati, naravno, u skladu sa Zakonom o autorskim pravima i internim Pravilima o korišćenju bibliotečke građe.
+
+        Članarina može biti godišnja (od dana upisa), mjesečna ili trodnevna.
+
+        Bibliotečka građa je dostupna pod jednakim uslovima svim građanima Crne Gore i stranim licima sa navršenih 18 godina. Prilikom upisa, budući korisnik je dužan dati tačne lične podatke i predočiti ličnu kartu ili neki drugi identifikacioni dokument. Izuzetno, mogu se upisati i lica ispod 18 godina (maturanti) – po odobrenju. Strani državljani koji borave u Crnoj Gori mogu koristiti bibliotečku građu uz važeći pasoš.
+
+        Radno vrijeme čitaonica je od 7 do 19 časova radnim danima, a subotom od 7 do 14 časova.
+
+        Međubibliotečka pozajmica
+        Nacionalna biblioteka ima razvijenu međubibliotečku pozajmicu sa svim bibliotekama u Crnoj Gori, a sa bibliotekama iz inostranstva posuđivanje se obavlja putem međunarodne pozajmice. Pozajmljene publikacije koriste se najduže 30 dana i to u prostorijama biblioteke preko koje su tražene. Na pozajmicu se daju isključivo knjige i kopije članaka iz serijskih publikacija.
+
+        Publikacije izdate do 1950. godine ne izdaju se na pozajmicu.
+
+        Kontakt informacije
+        Čitaonice:
+
+        informatori: Milenija Vračar, Nada Drašković
+        tel. +382 41-231-143, lokal 122
+        e-mail: citaonica@nb-cg.me
+
+        Zbirka rukopisa i dokumenata:
+
+        Boris Kaluđerović, voditelj zbirke
+        tel +382 41 231 143 / lokal 132
+        e-mail: boris.kaludjerovic@nb-cg.me
+
+        Zbirka muzikalija i audiovizuelne građe:
+
+        Dragan Mirković, voditelj zbirke
+        tel +382 41 231 143 / l. 132
+        e-mail: dragan.mirkovic@nb-cg.me
+
+        Kartografsko-geografska zbirka:
+
+        Danijela Radulović, voditelj zbirke
+        tel +382 41 234-236, 231-143 lok. 109
+        e-mail: danijela.radulovic@nb-cg.me
+
+        Montenegrina, Stara i rijetka knjiga i Legati:
+
+        Slavica Glendža
+        tel. +382 41 232-133; 231-722
+        e-mail: slavica.glendza@nb-cg.me
+
+        Međubibliotečka pozajmica:
+
+        Milenija Vračar
+        radno vrijeme: 9-17 sati
+        tel: +382 41-231-143, lokal 122
+        e-mail: medjubibliotecka@nb-cg.me
+
+        Adresa:
+
+        Nacionalna biblioteka Crne Gore “Ðurde Crnojević”
+        Služba međubibliotečke pozajmice
+        Bulevar crnogorskih junaka 163, 81250 Cetinje
+
+        PRAVILNIK O USLOVIMA I NAČINJU KORIŠĆENJA BIBLIOTEČKO-INFORMACIONE GRAĐE I USLUGA
+
+        NBCG CJENOVNIK USLUGA
+
+        ZAHTJEV ZA KOPIRANJE</string>
+
+
+
 
 </resources>
 

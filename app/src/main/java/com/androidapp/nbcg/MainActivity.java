@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity
     private void prepareMenuData() {
 
         //region Pocetna
-        MenuModel menuModel = new MenuModel( str_pocetna, true, false, 0);
+        MenuModel menuModel = new MenuModel( str_pocetna, true, false, R.drawable.ic_house);
         headerList.add(menuModel);
 
         if (!menuModel.hasChildren) {
@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity
         //endregion Pocetna
 
         //region O nama
-        menuModel = new MenuModel(str_o_nama+"  >", true, true, 0);
+        menuModel = new MenuModel(str_o_nama+"  >", true, true, R.drawable.ic_team);
         headerList.add(menuModel);
 
         List<MenuModel> childModelsList = new ArrayList<>();
@@ -329,7 +329,7 @@ public class MainActivity extends AppCompatActivity
         //endregion O nama
 
         //region Katalozi
-        menuModel = new MenuModel(str_katalozi +"  >", true, true, 0);
+        menuModel = new MenuModel(str_katalozi +"  >", true, true, R.drawable.ic_catalog);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
@@ -352,7 +352,7 @@ public class MainActivity extends AppCompatActivity
         //endregion Katalozi
 
         //region Usluge
-        menuModel = new MenuModel(str_usluge + "  >", true, true, 0);
+        menuModel = new MenuModel(str_usluge + "  >", true, true, R.drawable.ic_customer);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
@@ -369,7 +369,7 @@ public class MainActivity extends AppCompatActivity
         //endregion Usluge
 
         //region Kolekcije
-        menuModel = new MenuModel(str_kolekcije + "  >", true, true, 0);
+        menuModel = new MenuModel(str_kolekcije + "  >", true, true, R.drawable.ic_books_stack_of_three);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
@@ -400,7 +400,7 @@ public class MainActivity extends AppCompatActivity
         //endregion Kolekcije
 
         //region Dogadjaji
-        menuModel = new MenuModel(str_dogadjaji, true, false, 0);
+        menuModel = new MenuModel(str_dogadjaji, true, false, R.drawable.ic_calendar);
         headerList.add(menuModel);
 
         if (!menuModel.hasChildren) {
@@ -409,7 +409,7 @@ public class MainActivity extends AppCompatActivity
         //endregion Dogadjaji
 
         //region Nasa izdanja
-        menuModel = new MenuModel(str_nasa_izdanja + "  >", true, true, 0);
+        menuModel = new MenuModel(str_nasa_izdanja + "  >", true, true, R.drawable.ic_library);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
@@ -426,7 +426,7 @@ public class MainActivity extends AppCompatActivity
         //endregion Nasa izdanja
 
         //region Kontakt
-        menuModel = new MenuModel(str_kontakt, true, false, 0);
+        menuModel = new MenuModel(str_kontakt, true, false, R.drawable.ic_contact);
         headerList.add(menuModel);
 
         if (!menuModel.hasChildren) {

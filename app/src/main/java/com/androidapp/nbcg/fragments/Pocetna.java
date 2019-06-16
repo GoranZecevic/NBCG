@@ -4,11 +4,20 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
+import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
+import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
 
 
 public class Pocetna extends Fragment {
@@ -17,6 +26,16 @@ public class Pocetna extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private View thisFragment;
+    ViewFlipper v_flipper;
+
+    int[] images = {
+            R.drawable.slide1,
+            R.drawable.slide2,
+            R.drawable.slide3
+    };
+
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -24,7 +43,6 @@ public class Pocetna extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public Pocetna() {
-        // Required empty public constructor
     }
 
     /**
@@ -48,18 +66,74 @@ public class Pocetna extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+
+//        if (getArguments() != null) {
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
+//        }
     }
+
+    public void flip_image(int i){
+        ImageView view  = new ImageView((Context) getHost());
+        view.setBackgroundResource(i);
+        v_flipper.addView(view);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation((Context) getHost(), android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation((Context) getHost(), android.R.anim.slide_out_right);
+    }
+
+    // Required empty public constructor
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pocetna, container, false);
+        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_pocetna, null);
+
+        v_flipper = (ViewFlipper)thisFragment.findViewById(R.id.v_flipper);
+        for(int i=0; i<images.length; i++){
+            flip_image(images[i]);
+        }
+
+        buttonHandler(new ZaKorisnike(), R.id.za_korisnike_btn);
+        buttonHandler(new ZaKorisnike(), R.id.za_korisnike_opsirnije_btn);
+
+        buttonHandler(new ZaIzdavace(), R.id.za_izdavace_btn);
+        buttonHandler(new ZaIzdavace(), R.id.za_izdavace_opsirnije_btn);
+
+        buttonHandler(new ZaBibliotekare(), R.id.za_bibiliotekare_btn);
+        buttonHandler(new ZaBibliotekare(), R.id.za_bibliotekare_opsirnije_btn);
+
+        return thisFragment;
     }
+
+
+    // region helpers
+    private void newFragment(Fragment fragment){
+        Fragment newFragment = fragment;
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, newFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void buttonHandler(final Fragment fragment, int buttonId){
+        Button button = (Button) thisFragment.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            Fragment proxyFragment = fragment;
+            @Override
+            public void onClick(View v)
+            {
+                newFragment(proxyFragment);
+            }
+        });
+    }
+    // endregion helpers
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -99,4 +173,7 @@ public class Pocetna extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
+
 }
