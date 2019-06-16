@@ -1,12 +1,10 @@
 package com.androidapp.nbcg;
 
 
-import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,8 +14,42 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
 import android.widget.ExpandableListView;
+
+import com.androidapp.nbcg.fragments.Dogadjaji;
+import com.androidapp.nbcg.fragments.Katalozi.COBISS;
+import com.androidapp.nbcg.fragments.Katalozi.CgBibliografija;
+import com.androidapp.nbcg.fragments.Katalozi.ECG;
+import com.androidapp.nbcg.fragments.Katalozi.ENBCG;
+import com.androidapp.nbcg.fragments.Katalozi.TekucaBibliografija;
+import com.androidapp.nbcg.fragments.Katalozi.VirtuelnaBiblioteka;
+import com.androidapp.nbcg.fragments.Kolekcije.DigitalnaBiblioteka;
+import com.androidapp.nbcg.fragments.Kolekcije.KartografskaZbirka;
+import com.androidapp.nbcg.fragments.Kolekcije.Legati;
+import com.androidapp.nbcg.fragments.Kolekcije.LikovnoGraficka;
+import com.androidapp.nbcg.fragments.Kolekcije.Montenegrina;
+import com.androidapp.nbcg.fragments.Kolekcije.MuzikalijeAudiovizuelna;
+import com.androidapp.nbcg.fragments.Kolekcije.OsnovniFond;
+import com.androidapp.nbcg.fragments.Kolekcije.RukopisiArhivalije;
+import com.androidapp.nbcg.fragments.Kolekcije.SerijskePublikacije;
+import com.androidapp.nbcg.fragments.Kolekcije.StareRijetkeKnjige;
+import com.androidapp.nbcg.fragments.Kontakt;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.E_Publikacije;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.IzdavackaDjelatnost;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanja;
+import com.androidapp.nbcg.fragments.O_Nama.DonatoriPrijatelji;
+import com.androidapp.nbcg.fragments.O_Nama.Istorija;
+import com.androidapp.nbcg.fragments.O_Nama.IzvestajiRada;
+import com.androidapp.nbcg.fragments.O_Nama.JavneNabavke;
+import com.androidapp.nbcg.fragments.O_Nama.Objekti;
+import com.androidapp.nbcg.fragments.O_Nama.Organizacija;
+import com.androidapp.nbcg.fragments.O_Nama.Saradnja;
+import com.androidapp.nbcg.fragments.Pocetna;
+import com.androidapp.nbcg.fragments.O_Nama.UvodnaRijec;
+import com.androidapp.nbcg.fragments.O_Nama.VizijaMisija;
+import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
+import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
+import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    //menu main titles
+    //region menu main titles
     private String str_pocetna;
     private String str_o_nama;
     private String str_katalozi;
@@ -36,9 +68,10 @@ public class MainActivity extends AppCompatActivity
     private String str_dogadjaji;
     private String str_nasa_izdanja;
     private String str_kontakt;
+    //endregion menu main titles
 
     //menu sub titles
-    //o nama
+    //region o nama
     private String str_uvodna;
     private String str_vizmis;
     private String str_istorija;
@@ -48,21 +81,24 @@ public class MainActivity extends AppCompatActivity
     private String str_saradnja;
     private String str_donatori;
     private String str_jav_nab;
+    //endregion o nama
 
-    //katalozi
+    //region katalozi
     private String str_virt;
     private String str_ecg;
     private String str_enbcg;
     private String str_cobis;
     private String str_cgbibl;
     private String str_tekbibl;
+    //endregion katalozi
 
-    //usluge
+    //region usluge
     private String str_korisnici;
     private String str_izdavaci;
     private String str_bibliotekari;
+    //endregion usluge
 
-    //kolekcije
+    //region kolekcije
     private String str_osnovni;
     private String str_montenegrina;
     private String str_star_retk;
@@ -73,19 +109,26 @@ public class MainActivity extends AppCompatActivity
     private String str_ser_publ;
     private String str_legati;
     private String str_dig_bibl;
+    //endregion kolekcije
 
-    //nasa izdanja
+    //region nasa izdanja
     private String str_izd_del;
     private String str_katalog;
     private String str_epub;
+    //endregion nasa izdanja
 
+
+    View view_Group;
 
     ExpandableListAdapter expandableListAdapter;
     ExpandableListView expandableListView;
     List<MenuModel> headerList = new ArrayList<>();
     HashMap<MenuModel, List<MenuModel>> childList = new HashMap<>();
 
+
+
     public MainActivity() {
+
     }
 
     @Override
@@ -95,7 +138,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Menu titles
+        if(savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Pocetna()).commit();
+        }
+
+        //region Menu titles
         str_pocetna = getString(R.string.title_pocetna);
         str_o_nama = getString(R.string.title_o_nama);
         str_katalozi = getString(R.string.title_katalozi);
@@ -104,9 +152,10 @@ public class MainActivity extends AppCompatActivity
         str_dogadjaji = getString(R.string.title_dogadjaji);
         str_nasa_izdanja = getString(R.string.title_nasa_izdanja);
         str_kontakt = getString(R.string.title_kontakt);
+        //endregion Menu titles
 
         //Menu sub titles
-        // o nama
+        //region o nama
         str_uvodna = getString(R.string.subt_uvodna);
         str_vizmis = getString(R.string.subt_vizmis);
         str_istorija = getString(R.string.subt_istorija);
@@ -116,21 +165,24 @@ public class MainActivity extends AppCompatActivity
         str_saradnja = getString(R.string.subt_saradnja);
         str_donatori = getString(R.string.subt_donatori);
         str_jav_nab = getString(R.string.subt_jav_nab);
+        //endregion o nama
 
-        //katalozi
+        //region katalozi
         str_virt = getString(R.string.subt_virt);
         str_ecg = getString(R.string.subt_ecg);
         str_enbcg = getString(R.string.subt_enbcg);
         str_cobis = getString(R.string.subt_cobis);
         str_cgbibl = getString(R.string.subt_cgbibl);
         str_tekbibl = getString(R.string.subt_tekbibl);
+        //endregion katalozi
 
-        //usluge
+        //region usluge
         str_korisnici  = getString(R.string.subt_korisnici);
         str_izdavaci  = getString(R.string.subt_izdavaci);
         str_bibliotekari  = getString(R.string.subt_bibliotekari);
+        //endregion usluge
 
-        //kolekcije
+        //region kolekcije
         str_osnovni  = getString(R.string.subt_osnovni);
         str_montenegrina = getString(R.string.subt_montenegrina);
         str_star_retk = getString(R.string.subt_star_retk);
@@ -141,11 +193,13 @@ public class MainActivity extends AppCompatActivity
         str_ser_publ = getString(R.string.subt_ser_publ);
         str_legati = getString(R.string.subt_legati);
         str_dig_bibl = getString(R.string.subt_dig_bibl);
+        //endregion kolekcije
 
-        //nasa izdanja
+        //region nasa izdanja
         str_izd_del = getString(R.string.subt_izd_del);
         str_katalog = getString(R.string.subt_katalog);
         str_epub = getString(R.string.subt_epub);
+        //endregion nasa izdanja
 
 
         //Mail button action listener
@@ -172,7 +226,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
@@ -211,167 +264,175 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else
-        if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-//        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+//        // Handle navigation view item clicks here.
+//        int id = item.getItemId();
+//
+////        if (id == R.id.nav_camera) {
+////            // Handle the camera action
+////        } else
+//        if (id == R.id.nav_gallery) {
+//
+//        } else if (id == R.id.nav_slideshow) {
+//
+////        } else if (id == R.id.nav_manage) {
+//
+//        } else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
+//
+//        }
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
     private void prepareMenuData() {
 
-        //Pocetna
-        MenuModel menuModel = new MenuModel( str_pocetna, true, false, "https://www.journaldev.com/9333/android-webview-example-tutorial"); //Menu of Android Tutorial. No sub menus
+        //region Pocetna
+        MenuModel menuModel = new MenuModel( str_pocetna, true, false, 0);
         headerList.add(menuModel);
 
         if (!menuModel.hasChildren) {
             childList.put(menuModel, null);
         }
+        //endregion Pocetna
 
-        //O nama
-        menuModel = new MenuModel(str_o_nama+"  >", true, true, ""); //Menu of Java Tutorials
+        //region O nama
+        menuModel = new MenuModel(str_o_nama+"  >", true, true, 0);
         headerList.add(menuModel);
 
         List<MenuModel> childModelsList = new ArrayList<>();
-        MenuModel childModel = new MenuModel(str_uvodna, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        MenuModel childModel = new MenuModel(str_uvodna, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_vizmis, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_vizmis, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_istorija, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_istorija, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_objekti, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_objekti, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_organizacija, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_organizacija, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_zv_rad, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_zv_rad, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_saradnja, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_saradnja, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_donatori, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_donatori, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_jav_nab, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_jav_nab, false, false, 0);
         childModelsList.add(childModel);
 
 
         if (menuModel.hasChildren) {
             childList.put(menuModel, childModelsList);
         }
+        //endregion O nama
 
-        //Katalozi
-        menuModel = new MenuModel(str_katalozi +"  >", true, true, ""); //Menu of Java Tutorials
+        //region Katalozi
+        menuModel = new MenuModel(str_katalozi +"  >", true, true, 0);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
-        childModel = new MenuModel(str_virt, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_virt, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_ecg, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_ecg, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_enbcg, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_enbcg, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_cobis, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_cobis, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_cgbibl, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_cgbibl, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_tekbibl, false, false, "https://www.journaldev.com/19187/java-fileinputstream");
+        childModel = new MenuModel(str_tekbibl, false, false, 0);
         childModelsList.add(childModel);
 
         if (menuModel.hasChildren) {
             childList.put(menuModel, childModelsList);
         }
+        //endregion Katalozi
 
-        //Usluge
-        menuModel = new MenuModel(str_usluge + "  >", true, true, ""); //Menu of Java Tutorials
+        //region Usluge
+        menuModel = new MenuModel(str_usluge + "  >", true, true, 0);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
-        childModel = new MenuModel(str_korisnici, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_korisnici, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_izdavaci, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_izdavaci, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_bibliotekari, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_bibliotekari, false, false, 0);
         childModelsList.add(childModel);
 
         if (menuModel.hasChildren) {
             childList.put(menuModel, childModelsList);
         }
+        //endregion Usluge
 
-        //Kolekcije
-        menuModel = new MenuModel(str_kolekcije + "  >", true, true, ""); //Menu of Java Tutorials
+        //region Kolekcije
+        menuModel = new MenuModel(str_kolekcije + "  >", true, true, 0);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
-        childModel = new MenuModel(str_osnovni, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_osnovni, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_montenegrina, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_montenegrina, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_star_retk, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_star_retk, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_rukopisi, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_rukopisi, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_kartog, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_kartog, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_muzikalije, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_muzikalije, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_lik_graf, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_lik_graf, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_ser_publ, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_ser_publ, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_legati, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_legati, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_dig_bibl, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_dig_bibl, false, false, 0);
         childModelsList.add(childModel);
 
         if (menuModel.hasChildren) {
             childList.put(menuModel, childModelsList);
         }
+        //endregion Kolekcije
 
-        //Dogadjaji
-        menuModel = new MenuModel(str_dogadjaji, true, false, "https://www.journaldev.com/9333/android-webview-example-tutorial"); //Menu of Android Tutorial. No sub menus
+        //region Dogadjaji
+        menuModel = new MenuModel(str_dogadjaji, true, false, 0);
         headerList.add(menuModel);
 
         if (!menuModel.hasChildren) {
             childList.put(menuModel, null);
         }
+        //endregion Dogadjaji
 
-        //Nasa izdanja
-        menuModel = new MenuModel(str_nasa_izdanja + "  >", true, true, ""); //Menu of Java Tutorials
+        //region Nasa izdanja
+        menuModel = new MenuModel(str_nasa_izdanja + "  >", true, true, 0);
         headerList.add(menuModel);
 
         childModelsList = new ArrayList<>();
-        childModel = new MenuModel(str_izd_del, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_izd_del, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_katalog, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_katalog, false, false, 0);
         childModelsList.add(childModel);
-        childModel = new MenuModel(str_epub, false, false, "https://www.journaldev.com/7153/core-java-tutorial");
+        childModel = new MenuModel(str_epub, false, false, 0);
         childModelsList.add(childModel);
 
         if (menuModel.hasChildren) {
             childList.put(menuModel, childModelsList);
         }
+        //endregion Nasa izdanja
 
-        //Kontakt
-        menuModel = new MenuModel(str_kontakt, true, false, "https://www.journaldev.com/9333/android-webview-example-tutorial"); //Menu of Android Tutorial. No sub menus
+        //region Kontakt
+        menuModel = new MenuModel(str_kontakt, true, false, 0);
         headerList.add(menuModel);
 
         if (!menuModel.hasChildren) {
             childList.put(menuModel, null);
         }
+        //endregion Kontakt
     }
 
     private void populateExpandableList() {
@@ -380,36 +441,300 @@ public class MainActivity extends AppCompatActivity
         expandableListView.setAdapter(expandableListAdapter);
 
         expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+
             @Override
-            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+            public boolean onGroupClick(final ExpandableListView parent, View v, int groupPosition, long id) {
 
                 if (headerList.get(groupPosition).isGroup) {
                     if (!headerList.get(groupPosition).hasChildren) {
-                        WebView webView = findViewById(R.id.webView);
-                        webView.loadUrl(headerList.get(groupPosition).url);
+//                        WebView webView = findViewById(R.id.webView);
+//                        webView.loadUrl(headerList.get(groupPosition).url);
                         onBackPressed();
+
+                        switch (groupPosition) {
+                            //region Pocetna
+                            case 0:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                        new Pocetna()).commit();
+                                groupPosition = -1;
+                                getSupportActionBar().setTitle(str_pocetna); break;
+                            // endregion Pocetna
+                            //region Dogadjaji
+                            case 5:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                        new Dogadjaji()).commit();
+                                groupPosition = -1;
+                                getSupportActionBar().setTitle(str_dogadjaji); break;
+                            //endregion Dogadjaji
+                            //region Kontakt
+                            case 7:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                        new Kontakt()).commit();
+                                groupPosition = -1;
+                                getSupportActionBar().setTitle(str_kontakt); break;
+                            //endregion Kontakt
+                        }
                     }
                 }
 
                 return false;
             }
         });
+
 
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
-                if (childList.get(headerList.get(groupPosition)) != null) {
-                    MenuModel model = childList.get(headerList.get(groupPosition)).get(childPosition);
-                    if (model.url.length() > 0) {
-                        WebView webView = findViewById(R.id.webView);
-                        webView.loadUrl(model.url);
-                        onBackPressed();
-                    }
+                v.setSelected(true);
+                if (view_Group != null) {
+                    view_Group.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
+                view_Group = v;
+                view_Group.setBackgroundColor(Color.parseColor("#F21E1E"));
+
+                if (childList.get(headerList.get(groupPosition)) != null) {
+//                    MenuModel model = childList.get(headerList.get(groupPosition)).get(childPosition);
+
+//                    if (model.url.length() > 0) {
+//                        WebView webView = findViewById(R.id.webView);
+//                        webView.loadUrl(model.url);
+//                        onBackPressed();
+
+                        switch (groupPosition){
+                            //region O nama
+                            case 1:
+                                switch (childPosition){
+                                    case 0:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new UvodnaRijec()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_uvodna);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 1:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new VizijaMisija()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_vizmis);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 2:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new Istorija()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_istorija);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 3:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new Objekti()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_objekti);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 4:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new Organizacija()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_organizacija);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 5:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new IzvestajiRada()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_zv_rad);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 6:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new Saradnja()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_saradnja);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 7:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new DonatoriPrijatelji()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_donatori);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 8:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new JavneNabavke()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_jav_nab);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                }
+                                //endregion O nama
+                            //region  Katalozi
+                            case 2:
+                                switch (childPosition){
+                                    case 0:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new VirtuelnaBiblioteka()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_virt);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 1:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new ECG()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_ecg);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 2:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new ENBCG()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_enbcg);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 3:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new COBISS()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_cobis);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 4:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new CgBibliografija()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_cgbibl);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 5:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new TekucaBibliografija()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_tekbibl);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+
+                                }
+                                //endregion  Katalozi
+                            //region Usluge
+                            case 3:
+                                switch (childPosition){
+                                    case 0:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new ZaKorisnike()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_korisnici);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 1:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new ZaIzdavace()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_izdavaci);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 2:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new ZaBibliotekare()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_bibliotekari);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+
+                                }
+                                //endregion Usluge
+                            //region Kolekcije
+                            case 4:
+                                switch (childPosition){
+                                    case 0:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new OsnovniFond()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_osnovni);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 1:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new Montenegrina()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_montenegrina);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 2:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new StareRijetkeKnjige()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_star_retk);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 3:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new RukopisiArhivalije()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_rukopisi);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 4:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new KartografskaZbirka()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_kartog);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 5:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new MuzikalijeAudiovizuelna()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_muzikalije);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 6:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new LikovnoGraficka()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_lik_graf);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 7:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new SerijskePublikacije()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_ser_publ);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 8:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new Legati()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_legati);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 9:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new DigitalnaBiblioteka()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_dig_bibl);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                }
+                                //endregion Kolekcije
+                            //region Nasa izdanja
+                            case 6:
+                                switch (childPosition){
+                                    case 0:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new IzdavackaDjelatnost()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_izd_del);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 1:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new KatalogIzdanja()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_katalog);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                    case 2:
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                                new E_Publikacije()).commit();
+                                        onBackPressed();
+                                        getSupportActionBar().setTitle(str_epub);
+                                        childPosition = -1 ;  groupPosition = -1; break;
+                                }
+                                //endregion Nasa izdanja
+                        }
+                    }
+//                }
 
                 return false;
             }
         });
+
+        expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            int previousItem = -1;
+
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                if(groupPosition != previousItem )
+                    expandableListView.collapseGroup(previousItem );
+                previousItem = groupPosition;
+            }
+
+
+        });
+
     }
 }

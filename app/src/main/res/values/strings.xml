@@ -67,6 +67,9 @@
     <string name="subt_katalog">Katalog izdanja</string>
     <string name="subt_epub">E-publikacije</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!--end menu subtitles-->
 
 
