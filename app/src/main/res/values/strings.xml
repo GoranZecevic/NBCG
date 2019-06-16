@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">NBCG</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <!--Menu titles-->
+    <string name="title_pocetna">Početna</string>
+    <string name="title_o_nama">O nama</string>
+    <string name="title_katalozi">Katalozi</string>
+    <string name="title_usluge">Usluge</string>
+    <string name="title_kolekcije">Kolekcije</string>
+    <string name="title_dogadjaji">Događaji</string>
+    <string name="title_nasa_izdanja">Naša izdanja</string>
+    <string name="title_kontakt">Kontakt</string>
+    <!--end menu titles-->
+
+    <!--Menu subtitles-->
+    <!--o nama-->
+    <string name="subt_uvodna">Uvodna riječ</string>
+    <string name="subt_vizmis">Vizija i misija</string>
+    <string name="subt_istorija">Istorija</string>
+    <string name="subt_objekti">Objekti</string>
+    <string name="subt_organizacija">Organizacija</string>
+    <string name="subt_izv_rad">Izvještaji o radu i programi rada</string>
+    <string name="subt_saradnja">Saradnja</string>
+    <string name="subt_donatori">Donatori i prijatelji</string>
+    <string name="subt_jav_nab">Javne nabavke</string>
+
+    <!--katalozi-->
+    <string name="subt_virt">Virtuelna biblioteka Crne Gore</string>
+    <string name="subt_ecg">E-katalog Crne Gore</string>
+    <string name="subt_enbcg">E-katalog NBCG</string>
+    <string name="subt_cobis">COBISS.NET</string>
+    <string name="subt_cgbibl">Crnogorska bibliografija (1494-1994)</string>
+    <string name="subt_tekbibl">Tekuća bibliografija</string>
+
+    <!--usuge-->
+    <string name="subt_korisnici">Za korisnike</string>
+    <string name="subt_izdavaci">Za izdavače</string>
+    <string name="subt_bibliotekari">Za bibliotekare</string>
+
+    <!--kolekcije-->
+    <string name="subt_osnovni">Osnovni fond</string>
+    <string name="subt_montenegrina">Montenegrina</string>
+    <string name="subt_star_retk">Zbirka stare i rijetke knjige</string>
+    <string name="subt_rukopisi">Rukopisi i arhivalije</string>
+    <string name="subt_kartog">Kartografska zbirka</string>
+    <string name="subt_muzikalije">Muzikalije i audiovizuelna građa</string>
+    <string name="subt_lik_graf">Likovno-grafička zbirka</string>
+    <string name="subt_ser_publ">Serijske publikacije</string>
+    <string name="subt_legati">Legati</string>
+    <string name="subt_dig_bibl">Digitalna biblioteka</string>
+
+    <!--nasa izdanja-->
+    <string name="subt_izd_del">Izdavačka djelatnost NBCG</string>
+    <string name="subt_katalog">Katalog izdanja</string>
+    <string name="subt_epub">E-publikacije</string>
+
+    <!--end menu subtitles-->
+
+
+</resources>
+
+
+
+
