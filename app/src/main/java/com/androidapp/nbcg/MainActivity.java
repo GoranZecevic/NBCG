@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity
     HashMap<MenuModel, List<MenuModel>> childList = new HashMap<>();
 
     public MainActivity() {
-
     }
 
     @Override
