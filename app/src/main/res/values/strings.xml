@@ -167,7 +167,7 @@
 
         ZAHTJEV ZA KOPIRANJE    </string>
 
-
+<!--region za izdavace-->
     <string name="str_za_izdavace_body">
         Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne Gore i dodjeljuje međunarodne standardne oznake ISBN, ISSN i ISMN za monografske i serijske publikacije, štampane muzikalije, kao i ostalu bibliotečku građu.
 
@@ -267,7 +267,16 @@ ZAKON O AUTORSKIM I SRODNIM PRAVIMA
 
 ZAKON O IZDAVACKOJ DJELATNOSTI
     </string>
+    <!--region za izdavace-->
 
+    <!--region virtuelna biblioteka crne gore-->
+    <string name="str_virtuelna_biblioteka_cg_body">
+        Virtuelna biblioteka Crne Gore (VBCG), jedan od najznačajnijih projekata Nacionalne biblioteke Crne Gore „Đurđe Crnojević“, od 1989. godine povezuje biblioteke u Crnoj Gori u jedinstven informacijski sistem, kako bi se korisnicima biblioteka na jednostavan način obezbijedio pristup do informacija i dokumenata u elektronskom obliku.
+Elektronski katalog Nacionalne biblioteke sadrži više stotina hiljada bibliografskih zapisa, u koje spadaju knjige, serijske publikacije, članci iz časopisa i novina, kao i publikacije iz posebnih zbirki.
+Elektronski katalog NBCG dostupan je preko Internet adrese: http://vbcg.vbcg.me
+    </string>
+
+    <!--end region virtuelna biblioteka crne gore-->
 
 </resources>
 
