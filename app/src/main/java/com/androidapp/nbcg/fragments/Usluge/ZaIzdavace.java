@@ -90,10 +90,7 @@ public class ZaIzdavace extends Fragment {
                              Bundle savedInstanceState) {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_za_izdavace, null);
 
-        v_flipper = (ViewFlipper)thisFragment.findViewById(R.id.v_flipper_za_izdavace);
-        for(int i=0; i<images.length; i++){
-            flip_image(images[i]);
-        }
+
 
         return thisFragment;
     }

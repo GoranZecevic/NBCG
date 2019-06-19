@@ -7,6 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
+
+import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
+import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
+import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
+import com.androidapp.nbcg.helper.Helpers;
 
 import com.androidapp.nbcg.R;
 
@@ -27,6 +34,17 @@ public class Istorija extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Helpers helper = new Helpers();
+
+    private View thisFragment;
+    ViewFlipper v_flipper;
+
+    int[] images = {
+            R.drawable.slide1,
+            R.drawable.slide2,
+            R.drawable.slide3
+    };
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,7 +83,15 @@ public class Istorija extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_istorija, container, false);
+        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_istorija, null);
+
+        v_flipper = (ViewFlipper)thisFragment.findViewById(R.id.v_flipper_istorija);
+        for(int i=0; i<images.length; i++){
+            flip_image(images[i]);
+        }
+
+
+        return thisFragment;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -73,6 +99,17 @@ public class Istorija extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+    }
+
+    public void flip_image(int i){
+        ImageView view  = new ImageView((Context) getHost());
+        view.setBackgroundResource(i);
+        v_flipper.addView(view);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation((Context) getHost(), android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation((Context) getHost(), android.R.anim.slide_out_right);
     }
 
 //    @Override
