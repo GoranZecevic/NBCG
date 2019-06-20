@@ -7,8 +7,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
+import android.widget.Toast;
 
+import com.androidapp.nbcg.CustomExpandableListAdapter;
+import com.androidapp.nbcg.ExpandableListDataPump;
 import com.androidapp.nbcg.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +36,13 @@ public class IzvestajiRada extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View thisFragment;
+
+    ExpandableListView expandableListView;
+    ExpandableListAdapter expandableListAdapter;
+    List<String> expandableListTitle;
+    HashMap<String, List<String>> expandableListDetail;
 
     private OnFragmentInteractionListener mListener;
 
@@ -59,13 +75,60 @@ public class IzvestajiRada extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_izvestaji_rada, container, false);
+        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_izvestaji_rada, null);
+
+
+        expandableListView = (ExpandableListView) thisFragment.findViewById(R.id.expandableListView);
+        expandableListDetail = ExpandableListDataPump.getData();
+        expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
+        expandableListAdapter = new CustomExpandableListAdapter(thisFragment.getContext(), expandableListTitle, expandableListDetail);
+        expandableListView.setAdapter(expandableListAdapter);
+        expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                Toast.makeText(thisFragment.getContext(),
+                        expandableListTitle.get(groupPosition) + " List Expanded.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+                Toast.makeText(thisFragment.getContext(),
+                        expandableListTitle.get(groupPosition) + " List Collapsed.",
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                Toast.makeText(thisFragment.getContext(),
+                        expandableListTitle.get(groupPosition)
+                                + " -> "
+                                + expandableListDetail.get(
+                                expandableListTitle.get(groupPosition)).get(
+                                childPosition), Toast.LENGTH_SHORT
+                ).show();
+                return false;
+            }
+        });
+
+
+
+        return thisFragment;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
