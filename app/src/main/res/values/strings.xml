@@ -110,7 +110,6 @@ COBISS Centar
 Tel: +382 41 234-243 ></string>
 
 
-
     <!--region usluge-->
     <!--region za korisnik-->
     <string name="str_za_korisnike_body">Čitaonice i članstvo
@@ -193,7 +192,7 @@ Tel: +382 41 234-243 ></string>
 
         ZAHTJEV ZA KOPIRANJE    </string>
 
-<!--region za izdavace-->
+    <!--region za izdavace-->
     <string name="str_za_izdavace_body">
         Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne Gore i dodjeljuje međunarodne standardne oznake ISBN, ISSN i ISMN za monografske i serijske publikacije, štampane muzikalije, kao i ostalu bibliotečku građu.
 
