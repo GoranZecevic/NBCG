@@ -4,68 +4,161 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
+import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.models.KatalogIzdanja;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link E_Publikacije.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link E_Publikacije#newInstance} factory method to
- * create an instance of this fragment.
- */
+import org.apache.commons.lang3.StringUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+
 public class E_Publikacije extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private String language;
+
+    private RecyclerView recycleView;
+    private ArrayList<KatalogIzdanja> arrayList;
+    private KatalogIzdanjaAdapter adapter;
+
+
+    private RequestQueue requestQueue;
+    private View thisFragment;
 
     private OnFragmentInteractionListener mListener;
 
     public E_Publikacije() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment E_Publikacije.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static E_Publikacije newInstance(String param1, String param2) {
         E_Publikacije fragment = new E_Publikacije();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        language = "mne";
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_e__publikacije, container, false);
+        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_e__publikacije, null);
+
+        arrayList = new ArrayList<>();
+        requestQueue = Volley.newRequestQueue(this.getContext());
+
+        recycleView = (RecyclerView)thisFragment.findViewById(R.id.recycler_view_epublikacij);
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recycleView.setLayoutManager(layoutManager);
+        PARSEDATA();
+
+        return thisFragment;
+    }
+
+    public void PARSEDATA() {
+        final String URL = ApiUrls.GET_EPUBLIKACIJE ;
+
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("server_response");
+                            System.out.println("Response: "+ response);
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject hit = jsonArray.getJSONObject(i);
+
+                                int id =  hit.getInt("ID");
+                                System.out.println("Id: "+ id);
+
+                                String datumod = hit.getString("DATUMOD");
+                                System.out.println("Datum: "+ datumod);
+
+                                String naslov = hit.getString("NASLOV");
+                                switch (language){
+                                    case "mne": naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
+                                    case "en": naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
+                                }
+                                System.out.println("Naslov: "+ naslov);
+
+                                String opis = hit.getString("OPIS");
+                                switch (language){
+                                    case "mne": opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
+                                    case "en": opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
+                                }
+                                System.out.println("Opis: "+ opis);
+
+
+                                String tekst = hit.getString("TEKST");
+                                switch (language){
+                                    case "mne": tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
+                                    case "en": tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
+                                }
+                                System.out.println("Tekst: "+ tekst);
+
+                                String link = hit.getString("LINK");
+                                switch (language){
+                                    case "mne": link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
+                                    case "en": link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
+                                }
+                                System.out.println("Link: "+ link);
+
+
+                                double cijena = hit.getDouble("CIJENA");
+                                System.out.println("Cijena: "+ cijena);
+
+
+                                String tipNaslova = hit.getString("TIPOVI_NASLOV");
+                                switch (language){
+                                    case "mne": tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
+                                    case "en": tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
+                                }
+                                System.out.println("Tip naslova: "+ tipNaslova);
+
+                                System.out.println(" ");
+
+                                arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova));
+
+                            }
+
+                            adapter = new KatalogIzdanjaAdapter(thisFragment , arrayList);
+
+                            recycleView.setAdapter(adapter);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                });
+        requestQueue.add(request);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -75,33 +168,12 @@ public class E_Publikacije extends Fragment {
         }
     }
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
