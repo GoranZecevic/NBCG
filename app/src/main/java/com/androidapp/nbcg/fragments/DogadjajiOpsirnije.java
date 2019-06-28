@@ -3,6 +3,7 @@ package com.androidapp.nbcg.fragments;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,13 +81,13 @@ public class DogadjajiOpsirnije extends Fragment {
 
 
             TextView naslovTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_naslov);
-            naslovTxt.setText(naslov);
+            naslovTxt.setText(Html.fromHtml(naslov));
             TextView datumOdTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_datumod);
-            datumOdTxt.setText(datumod);
+            datumOdTxt.setText(Html.fromHtml(datumod));
             TextView tipNovostiTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_tip_novpsti);
-            tipNovostiTxt.setText(tip_novpsti);
+            tipNovostiTxt.setText(Html.fromHtml(tip_novpsti));
             TextView opisTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_opis);
-            opisTxt.setText(opis);
+            opisTxt.setText(Html.fromHtml(opis));
         }
 
 

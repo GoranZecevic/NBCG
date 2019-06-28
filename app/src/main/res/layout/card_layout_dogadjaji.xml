@@ -2,111 +2,134 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/vijesti_card_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/vijesti_card_layout">
+    android:orientation="vertical">
 
 
-<android.support.v7.widget.CardView
-    android:id="@+id/vijesti_card"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@color/cardview_dark_background"
-    android:layout_marginTop="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginLeft="10dp">
-
-    <android.support.constraint.ConstraintLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/vijesti_card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="220dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/cardview_dark_background">
 
-        <ImageView
-            android:id="@+id/img_dogadjaji"
-            android:background="@drawable/ic_linkedin_logo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/dogadjaji_opsirnije_btn"
-            android:layout_width="109dp"
-            android:layout_height="66dp"
-            android:layout_marginBottom="8dp"
-            android:text="OPSIRNIJE"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_dogadjaji" />
-
-        <TextView
-            android:id="@+id/print_naslov"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/print_datumod"
-            android:layout_width="116dp"
-            android:layout_height="21dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
-            app:layout_constraintTop_toBottomOf="@+id/print_naslov" />
-
-        <TextView
-            android:id="@+id/print_tip_novosti"
-            android:layout_width="117dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="21dp"
-            app:layout_constraintStart_toEndOf="@+id/print_datumod"
-            app:layout_constraintTop_toTopOf="@+id/print_naslov" />
-
-        <TextView
-            android:id="@+id/print_description"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/print_datumod"/>
-
-        <TextView
-            android:id="@+id/print_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/common_plus_signin_btn_text_dark"
-            app:layout_constraintBaseline_toBaselineOf="@+id/print_datumod"
-            app:layout_constraintEnd_toStartOf="@+id/print_datumod"
-            app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
-            android:visibility="invisible"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/print_opis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBaseline_toBaselineOf="@+id/print_id"
-            app:layout_constraintEnd_toStartOf="@+id/print_description"
-            app:layout_constraintStart_toEndOf="@+id/print_naslov"
-            android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/img_dogadjaji"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_linkedin_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/dogadjaji_opsirnije_btn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="OPSIRNIJE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_dogadjaji" />
 
 
-    </android.support.constraint.ConstraintLayout>
+            <TextView
+                android:id="@+id/print_naslov"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:text="Naslov text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
+                app:layout_constraintTop_toTopOf="@+id/img_dogadjaji" />
 
-</android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/print_datumod"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="datum"
+                app:layout_constraintEnd_toStartOf="@+id/print_tip_novosti"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
+                app:layout_constraintTop_toBottomOf="@+id/print_naslov" />
+
+            <TextView
+                android:id="@+id/print_tip_novosti"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="tip novosti"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/print_datumod"
+                app:layout_constraintTop_toBottomOf="@+id/print_naslov" />
+
+            <ScrollView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Description text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
+                app:layout_constraintTop_toBottomOf="@+id/print_tip_novosti">
+
+                <TextView
+                    android:id="@+id/print_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </ScrollView>
+
+            <!--<TextView-->
+            <!--android:id="@+id/print_id"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/common_plus_signin_btn_text_dark"-->
+            <!--app:layout_constraintBaseline_toBaselineOf="@+id/print_datumod"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/print_datumod"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"-->
+            <!--android:visibility="invisible"/>-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/print_opis"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintBaseline_toBaselineOf="@+id/print_id"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/print_description"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/print_naslov"-->
+            <!--android:visibility="invisible"/>-->
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>

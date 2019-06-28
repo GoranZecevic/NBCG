@@ -4,8 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +18,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjaOpsirnije;
+import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.KatalogIzdanja;
 
 import java.util.List;
 
 public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaAdapter.ViewHolder>  {
+
+    Helpers helper = new Helpers();
 
     List<KatalogIzdanja> katalogIzdanjaLista;
     View kataloziIzdanjaFragment;
@@ -38,11 +47,7 @@ public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaA
         return new KatalogIzdanjaAdapter.ViewHolder(view);
     }
 
-    private void goToUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        context.startActivity(launchBrowser);
-    }
+
 
 
     @Override
@@ -60,12 +65,12 @@ public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaA
 
         holder.katalogIzdanjaId.setText(String.valueOf(katalogIzdanaj.getId()));
         holder.datumod.setText(katalogIzdanaj.getDatumod());
-        holder.naslov.setText(katalogIzdanaj.getNaslov());
-        holder.opis.setText(katalogIzdanaj.getOpis());
-        holder.tekst.setText(katalogIzdanaj.getTekst());
-        holder.link.setText(katalogIzdanaj.getLink());
+        holder.naslov.setText(Html.fromHtml(katalogIzdanaj.getNaslov()));
+        holder.opis.setText(Html.fromHtml(katalogIzdanaj.getOpis()));
+        holder.tekst.setText(Html.fromHtml(katalogIzdanaj.getTekst()));
+        holder.link.setText(Html.fromHtml(katalogIzdanaj.getLink()));
         holder.cijena.setText(String.valueOf(katalogIzdanaj.getCijena()));
-        holder.tip_naslova.setText(katalogIzdanaj.getTipovi_naslova());
+        holder.tip_naslova.setText(Html.fromHtml(katalogIzdanaj.getTipovi_naslova()));
 
         holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -74,26 +79,26 @@ public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaA
                 System.out.println("Opsirnije radi!" + newId);
 
 
-                goToUrl ( "https://www.nb-cg.me/download.php?file=43");
+//                helper.goToUrl ( "https://www.nb-cg.me/download.php?file=43", context);
 
-//                KatalogIzdanjaOpsirnije katalogIzdanjaOpsirnije = new KatalogIzdanjaOpsirnije();
-//
-//                Bundle bundel = new Bundle();
-//                bundel.putString("datumod", DATUMOD);
-//                bundel.putString("naslov", NASLOV);
-//                bundel.putString("opis", OPIS);
-//                bundel.putString("tekst", TEKST);
-//                bundel.putString("link", LINK);
-//                bundel.putDouble("cijena", CIJENA);
-//                bundel.putString("tip_naslova", TIP_NASLOVA);
-//
-//                katalogIzdanjaOpsirnije.setArguments(bundel);
-//
-//                FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = manager.beginTransaction();
-//                fragmentTransaction.replace(R.id.fragment_container, katalogIzdanjaOpsirnije);
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                KatalogIzdanjaOpsirnije katalogIzdanjaOpsirnije = new KatalogIzdanjaOpsirnije();
+
+                Bundle bundel = new Bundle();
+                bundel.putString("datumod", DATUMOD);
+                bundel.putString("naslov", NASLOV);
+                bundel.putString("opis", OPIS);
+                bundel.putString("tekst", TEKST);
+                bundel.putString("link", LINK);
+                bundel.putDouble("cijena", CIJENA);
+                bundel.putString("tip_naslova", TIP_NASLOVA);
+
+                katalogIzdanjaOpsirnije.setArguments(bundel);
+
+                FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = manager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, katalogIzdanjaOpsirnije);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
             }
         });

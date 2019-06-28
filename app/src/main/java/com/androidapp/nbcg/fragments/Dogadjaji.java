@@ -25,6 +25,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class Dogadjaji extends Fragment {
@@ -98,7 +100,9 @@ public class Dogadjaji extends Fragment {
 //                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
+                                datumod = datumod.substring(0, datumod.indexOf(" "));
 //                                System.out.println("Datum: "+ datumod);
+
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){

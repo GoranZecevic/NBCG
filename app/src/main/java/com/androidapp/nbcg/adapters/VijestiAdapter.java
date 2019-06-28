@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 import com.androidapp.nbcg.fragments.DogadjajiOpsirnije;
 import com.androidapp.nbcg.models.Vijesti;
 import com.androidapp.nbcg.R;
+
+import java.util.Date;
 import java.util.List;
 
 public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHolder> {
@@ -50,12 +53,12 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
         final String TIP_NOVOSTI = vijesti.getTip_novosti();
         final String OPIS = vijesti.getOpis();
 
-            holder.vijestiId.setText(String.valueOf(vijesti.getId()));
+//            holder.vijestiId.setText(String.valueOf(vijesti.getId()));
             holder.datumod.setText(vijesti.getDatumod());
-            holder.naslov.setText(vijesti.getNaslov());
-            holder.opis.setText(vijesti.getOpis());
-            holder.description.setText(vijesti.getDescription());
-            holder.tip_novosti.setText(vijesti.getTip_novosti());
+            holder.naslov.setText(Html.fromHtml(vijesti.getNaslov()));
+//            holder.opis.setText(vijesti.getOpis());
+            holder.description.setText(Html.fromHtml(vijesti.getDescription()));
+            holder.tip_novosti.setText(Html.fromHtml(vijesti.getTip_novosti()));
 
             holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -67,7 +70,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
 
                     Bundle bundel = new Bundle();
                     bundel.putString("naslov", NASLOV);
-                    bundel.putString("datumod", DATUMOD);
+                    bundel.putString("datumod", String.valueOf(DATUMOD));
                     bundel.putString("tip_novpsti", TIP_NOVOSTI);
                     bundel.putString("opis", OPIS);
 
@@ -100,10 +103,10 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
         {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.vijesti_card);
-            vijestiId = (TextView)itemView.findViewById(R.id.print_id);
+//            vijestiId = (TextView)itemView.findViewById(R.id.print_id);
             datumod = (TextView)itemView.findViewById(R.id.print_datumod);
             naslov = (TextView)itemView.findViewById(R.id.print_naslov);
-            opis = (TextView)itemView.findViewById(R.id.print_opis);
+//            opis = (TextView)itemView.findViewById(R.id.print_opis);
             description = (TextView)itemView.findViewById(R.id.print_description);
             tip_novosti = (TextView)itemView.findViewById(R.id.print_tip_novosti);
             opsirnijeBtn = (Button)itemView.findViewById(R.id.dogadjaji_opsirnije_btn);

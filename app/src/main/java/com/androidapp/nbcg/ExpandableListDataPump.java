@@ -1,41 +1,221 @@
 package com.androidapp.nbcg;
 
+import android.content.Context;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.models.Izvestaji;
+
+import org.apache.commons.lang3.StringUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ExpandableListDataPump {
-    public static HashMap<String, List<String>> getData() {
-        HashMap<String, List<String>> expandableListDetail = new HashMap<String, List<String>>();
+public class ExpandableListDataPump  {
 
-        List<String> izvestaji = new ArrayList<String>();
-        izvestaji.add("Izvestaj 1");
-        izvestaji.add("Izvestaj 2");
-        izvestaji.add("Izvestaj 3");
-        izvestaji.add("Izvestaj 4");
 
-        List<String> programi = new ArrayList<String>();
-        programi.add("Program 1");
-        programi.add("Program 2");
-        programi.add("Program 3");
-        programi.add("Program 4");
+    private Context context;
 
-        List<String> nalozi = new ArrayList<String>();
-        nalozi.add("Putni nalozi 1");
-        nalozi.add("Putni nalozi 2");
-        nalozi.add("Putni nalozi 3");
-        nalozi.add("Putni nalozi 4");
+    private String language = "mne";
 
-        List<String> kartice = new ArrayList<String>();
-        kartice.add("Analiticke kartice 1");
-        kartice.add("Analiticke kartice 2");
-        kartice.add("Analiticke kartice 3");
-        kartice.add("Analiticke kartice 4");
+    private static ArrayList<Izvestaji> programiRadaLista = new ArrayList<>();
+    private static ArrayList<Izvestaji> izvestajiRadaList = new ArrayList<>();
+    private static ArrayList<Izvestaji> putniNaloziLista = new ArrayList<>();
+    private static ArrayList<Izvestaji> analitickeKarticeLista = new ArrayList<>();
 
-        expandableListDetail.put("Izvestaji o radu", izvestaji);
-        expandableListDetail.put("Programi rada", programi);
-        expandableListDetail.put("Putni nalozi", nalozi);
-        expandableListDetail.put("Analiticke kartice", kartice);
+    private RequestQueue requestQueue;
+
+    public ExpandableListDataPump(Context context){
+        this.context=context;
+        requestQueue = Volley.newRequestQueue(this.context);
+
+        getIzvestajiRada();
+        getProgramiRada();
+        getPutniNalozi();
+        getAnalitickeKartice();
+    }
+
+    public static HashMap<String, List<Izvestaji>> getData() {
+
+        HashMap<String, List<Izvestaji>> expandableListDetail = new HashMap<String, List<Izvestaji>>();
+
+        List<String> izvestaji= new ArrayList<>();
+        List<String> programi = new ArrayList<>();
+        List<String> nalozi = new ArrayList<>();
+        List<String> kartice = new ArrayList<>();
+
+
+        for(int i=0; i< izvestajiRadaList.size(); i++){
+            izvestaji.add(izvestajiRadaList.get(i).getNaslov());
+        }
+
+        for(int i=0; i< programiRadaLista.size(); i++){
+            programi.add(programiRadaLista.get(i).getNaslov());
+        }
+
+        for(int i=0; i< putniNaloziLista.size(); i++){
+            nalozi.add(putniNaloziLista.get(i).getNaslov());
+        }
+
+        for(int i=0; i< analitickeKarticeLista.size(); i++){
+            kartice.add(analitickeKarticeLista.get(i).getNaslov());
+        }
+
+        expandableListDetail.put("Izvestaji o radu", izvestajiRadaList);
+        expandableListDetail.put("Putni nalozi", putniNaloziLista);
+        expandableListDetail.put("Programi rada", programiRadaLista);
+        expandableListDetail.put("Analiticke kartice", analitickeKarticeLista);
+
         return expandableListDetail;
     }
+
+    public void getIzvestajiRada() {
+        final String URL = ApiUrls.GET_IZVESTAJI_RADA ;
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("server_response");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject hit = jsonArray.getJSONObject(i);
+
+                                String naslov = hit.getString("NASLOV");
+                                naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]");
+
+                                String fajl = hit.getString("FAJL");
+
+                                izvestajiRadaList.add(new Izvestaji(naslov, fajl));
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                });
+        requestQueue.add(request);
+    }
+
+    public void getProgramiRada() {
+        final String URL = ApiUrls.GET_PROGRAMI_RADA ;
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("server_response");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject hit = jsonArray.getJSONObject(i);
+
+                                String naslov = hit.getString("NASLOV");
+                                naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]");
+
+                                String fajl = hit.getString("FAJL");
+
+                                programiRadaLista.add(new Izvestaji(naslov, fajl));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                });
+        requestQueue.add(request);
+    }
+
+    public void getPutniNalozi() {
+        final String URL = ApiUrls.GET_PUTNI_NALOZI ;
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("server_response");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject hit = jsonArray.getJSONObject(i);
+
+                                String naslov = hit.getString("NASLOV");
+                                naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]");
+
+                                String fajl = hit.getString("FAJL");
+
+                                putniNaloziLista.add(new Izvestaji(naslov, fajl));
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                });
+        requestQueue.add(request);
+    }
+
+    public void getAnalitickeKartice() {
+        final String URL = ApiUrls.GET_ANALITICKE_KARTICE ;
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("server_response");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject hit = jsonArray.getJSONObject(i);
+
+                                String naslov = hit.getString("NASLOV");
+                                naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]");
+
+                                String fajl = hit.getString("FAJL");
+
+                                analitickeKarticeLista.add(new Izvestaji(naslov, fajl));
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                });
+        requestQueue.add(request);
+    }
+
+
 }

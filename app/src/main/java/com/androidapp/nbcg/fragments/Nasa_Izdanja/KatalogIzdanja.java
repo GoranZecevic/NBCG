@@ -32,7 +32,6 @@ import java.util.ArrayList;
 
 public class KatalogIzdanja extends Fragment {
 
-
     private String language;
 
     private RecyclerView recycleView;
@@ -87,30 +86,31 @@ public class KatalogIzdanja extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-                            System.out.println("Response: "+ response);
+//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-                                System.out.println("Id: "+ id);
+//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
-                                System.out.println("Datum: "+ datumod);
+                                datumod = datumod.substring(0, datumod.indexOf(" "));
+//                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
                                     case "mne": naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
                                     case "en": naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Naslov: "+ naslov);
+//                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
                                     case "mne": opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
                                     case "en": opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Opis: "+ opis);
+//                                System.out.println("Opis: "+ opis);
 
 
                                 String tekst = hit.getString("TEKST");
@@ -118,18 +118,18 @@ public class KatalogIzdanja extends Fragment {
                                     case "mne": tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
                                     case "en": tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Tekst: "+ tekst);
+//                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
                                     case "mne": link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
                                     case "en": link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Link: "+ link);
+//                                System.out.println("Link: "+ link);
 
 
                                 double cijena = hit.getDouble("CIJENA");
-                                System.out.println("Cijena: "+ cijena);
+//                                System.out.println("Cijena: "+ cijena);
 
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
@@ -137,9 +137,9 @@ public class KatalogIzdanja extends Fragment {
                                     case "mne": tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
                                     case "en": tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Tip naslova: "+ tipNaslova);
+//                                System.out.println("Tip naslova: "+ tipNaslova);
 
-                                System.out.println(" ");
+//                                System.out.println(" ");
 
                                 arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova));
 
@@ -172,16 +172,6 @@ public class KatalogIzdanja extends Fragment {
         }
     }
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
 
     @Override
     public void onDetach() {
