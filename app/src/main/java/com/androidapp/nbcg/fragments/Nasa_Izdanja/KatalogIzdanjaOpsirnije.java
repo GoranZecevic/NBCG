@@ -1,70 +1,49 @@
 package com.androidapp.nbcg.fragments.Nasa_Izdanja;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.Helpers;
+import com.bumptech.glide.Glide;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link KatalogIzdanjaOpsirnije.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link KatalogIzdanjaOpsirnije#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class KatalogIzdanjaOpsirnije extends Fragment {
 
+    Helpers helper = new Helpers();
 
     private View thisFragment;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Button btnPoruci;
 
     private OnFragmentInteractionListener mListener;
 
     public KatalogIzdanjaOpsirnije() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment KatalogIzdanjaOpsirnije.
-     */
-    // TODO: Rename and change types and number of parameters
     public static KatalogIzdanjaOpsirnije newInstance(String param1, String param2) {
         KatalogIzdanjaOpsirnije fragment = new KatalogIzdanjaOpsirnije();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -82,23 +61,62 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
             String link = bundle.getString("link");
             double cijena = bundle.getDouble("cijena");
             String tip_naslova = bundle.getString("tip_naslova");
+            String fajl = bundle.getString("fajl");
 
 
             TextView datumOdTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_datumod);
             datumOdTxt.setText(datumod);
             TextView naslovTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_naslov);
-            naslovTxt.setText(naslov);
+            naslovTxt.setText(Html.fromHtml(naslov));
             TextView opisTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_opis);
-            opisTxt.setText(opis);
+            opisTxt.setText(Html.fromHtml(opis));
             TextView tekstTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_tekst);
-            tekstTxt.setText(tekst);
+            tekstTxt.setText(Html.fromHtml(tekst));
             TextView linkTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_link);
-            linkTxt.setText(link);
+            linkTxt.setText(Html.fromHtml(link));
             TextView cijenaTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_cijena);
             cijenaTxt.setText(String.valueOf(cijena));
             TextView tipNaslovaTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_tip_nslova);
-            tipNaslovaTxt.setText(String.valueOf(tip_naslova));
+            tipNaslovaTxt.setText(Html.fromHtml(String.valueOf(tip_naslova)));
+
+            ImageView slika = (ImageView)thisFragment.findViewById(R.id.kat_izd_ops_img);
+            Glide.with(thisFragment).load(ApiUrls.GET_PICTURES_FULL_SIZE+fajl).into(slika);
         }
+
+        btnPoruci = (Button)thisFragment.findViewById(R.id.poruci_btn);
+
+        btnPoruci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText imeTxtView = (EditText)thisFragment.findViewById(R.id.ime_input);
+                String ime = imeTxtView.getText().toString();
+
+                EditText prezimeTxtView = (EditText)thisFragment.findViewById(R.id.prezime_input);
+                String prezime = prezimeTxtView.getText().toString();
+
+                EditText telefonTxtView = (EditText)thisFragment.findViewById(R.id.telefon_input);
+                String telefon = telefonTxtView.getText().toString();
+
+                EditText adresaTxtView = (EditText)thisFragment.findViewById(R.id.adresa_input);
+                String adresa = adresaTxtView.getText().toString();
+
+                EditText emailTxtView = (EditText)thisFragment.findViewById(R.id.email_input);
+                String email = emailTxtView.getText().toString();
+
+                if(ime.equals("") || prezime.equals("") || telefon.equals("") || adresa.equals("") || email.equals("")){
+                    helper.alert(thisFragment.getContext(), "Nedostaju podaci","Molimo Vas popunite sva polja. Hvala!" );
+                }else if(email.indexOf('@') == -1){
+                    helper.alert(thisFragment.getContext(), "Email nije validan","Uneseni email nije validan!" );
+                }
+                else{
+                    closeKeyboard();
+                    helper.alert(thisFragment.getContext(), "Uspesna porudzbina","Hvala Vam na porudzbini!" );
+
+                    getFragmentManager().popBackStack();
+                }
+            }
+        });
 
 
         return thisFragment;
@@ -110,36 +128,24 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
-//
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    //Close keyboard
+    public void closeKeyboard(){
+        View view = getActivity().getCurrentFocus();
+        if (view != null) {
+            InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
 }

@@ -10,6 +10,10 @@ public class ApiUrls {
     public static final String GET_PUTNI_NALOZI = "http://192.168.0.32/nbcrnegore/get_putni_nalozi.php";
     public static final String GET_ANALITICKE_KARTICE = "http://192.168.0.32/nbcrnegore/get_analiticka_kartica.php";
     public static final String GET_DOCUMENTS = "https://www.nb-cg.me/fajlovi/";
+    public static final String GET_PICTURES = "https://www.nb-cg.me/tumber.php?src=fajlovi/";
+    public static final String GET_PICTURES_FULL_SIZE = "https://www.nb-cg.me/fajlovi/";
+    public static final String FILE_DOWNLOAD = "https://www.nb-cg.me/download.php?file=";
+
 
 
 }

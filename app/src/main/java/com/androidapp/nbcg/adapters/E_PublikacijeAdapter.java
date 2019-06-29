@@ -1,10 +1,6 @@
 package com.androidapp.nbcg.adapters;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -17,38 +13,37 @@ import android.widget.TextView;
 
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjaOpsirnije;
-import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.KatalogIzdanja;
+import com.androidapp.nbcg.helper.Helpers;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaAdapter.ViewHolder>  {
+public class E_PublikacijeAdapter extends RecyclerView.Adapter<E_PublikacijeAdapter.ViewHolder>  {
 
-    Helpers helper = new Helpers();
+        Helpers helper = new Helpers();
 
-    List<KatalogIzdanja> katalogIzdanjaLista;
-    View kataloziIzdanjaFragment;
-    private Context mContext;
+        List<KatalogIzdanja> katalogIzdanjaLista;
+        View kataloziIzdanjaFragment;
+        private Context mContext;
 
-    public KatalogIzdanjaAdapter(View kataloziIzdanjaFragment, List<KatalogIzdanja> katalogIzdanjaLista)
-    {
-        this.kataloziIzdanjaFragment =  kataloziIzdanjaFragment;
-        this.katalogIzdanjaLista = katalogIzdanjaLista;
-    }
+        public E_PublikacijeAdapter(View kataloziIzdanjaFragment, List<KatalogIzdanja> katalogIzdanjaLista)
+        {
+            this.kataloziIzdanjaFragment =  kataloziIzdanjaFragment;
+            this.katalogIzdanjaLista = katalogIzdanjaLista;
+        }
 
-    @Override
-    public KatalogIzdanjaAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view ;
-        LayoutInflater mInflater = LayoutInflater.from(kataloziIzdanjaFragment.getContext());
-        view = mInflater.inflate(R.layout.card_layout_katalog_izdanja,parent,false);
-        mContext = kataloziIzdanjaFragment.getContext();
-        return new KatalogIzdanjaAdapter.ViewHolder(view);
-    }
+        @Override
+        public E_PublikacijeAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                View view ;
+                LayoutInflater mInflater = LayoutInflater.from(kataloziIzdanjaFragment.getContext());
+                view = mInflater.inflate(R.layout.card_layout_katalog_izdanja,parent,false);
+                mContext = kataloziIzdanjaFragment.getContext();
+                return new E_PublikacijeAdapter.ViewHolder(view);
+                }
 
-    @Override
-    public void onBindViewHolder(KatalogIzdanjaAdapter.ViewHolder holder, final int position) {
+        @Override
+        public void onBindViewHolder(E_PublikacijeAdapter.ViewHolder holder, final int position) {
         final KatalogIzdanja katalogIzdanaj = katalogIzdanjaLista.get(position);
 
         final int newId = katalogIzdanaj.getId();
@@ -70,46 +65,24 @@ public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaA
         holder.cijena.setText(String.valueOf(katalogIzdanaj.getCijena()));
         holder.tip_naslova.setText(Html.fromHtml(katalogIzdanaj.getTipovi_naslova()));
 
-        Glide.with(mContext).load(ApiUrls.GET_PICTURES+FAJL).into(holder.slika);
+        Glide.with(mContext).load(FAJL).into(holder.slika);
 
         holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
+        @Override
+        public void onClick(View v) {
                 System.out.println("Opsirnije radi!" + newId);
 
+                helper.goToUrl (ApiUrls.FILE_DOWNLOAD + newId, mContext);
 
-//                helper.goToUrl ( "https://www.nb-cg.me/download.php?file=43", context);
+                }
+            });
+        }
 
-                KatalogIzdanjaOpsirnije katalogIzdanjaOpsirnije = new KatalogIzdanjaOpsirnije();
-
-                Bundle bundel = new Bundle();
-                bundel.putString("datumod", DATUMOD);
-                bundel.putString("naslov", NASLOV);
-                bundel.putString("opis", OPIS);
-                bundel.putString("tekst", TEKST);
-                bundel.putString("link", LINK);
-                bundel.putDouble("cijena", CIJENA);
-                bundel.putString("tip_naslova", TIP_NASLOVA);
-                bundel.putString("fajl", FAJL);
-
-                katalogIzdanjaOpsirnije.setArguments(bundel);
-
-                FragmentManager manager = ((AppCompatActivity)mContext).getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = manager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, katalogIzdanjaOpsirnije);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-
-            }
-        });
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return katalogIzdanjaLista.size();
-    }
+        @Override
+        public int getItemCount() {
+                return katalogIzdanjaLista.size();
+                }
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {

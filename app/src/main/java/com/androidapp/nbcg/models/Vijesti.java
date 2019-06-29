@@ -10,14 +10,25 @@ public class Vijesti {
     private String opis;
     private String description;
     private String tip_novosti;
+    private String fajl;
 
-    public Vijesti(int id, String datumod, String naslov, String opis, String description, String tip_novosti) {
+
+    public Vijesti(int id, String datumod, String naslov, String opis, String description, String tip_novosti, String fajl) {
         this.id = id;
         this.datumod = datumod;
         this.naslov = naslov;
         this.opis = opis;
         this.description = description;
         this.tip_novosti = tip_novosti;
+        this.fajl = fajl;
+    }
+
+    public String getFajl() {
+        return fajl;
+    }
+
+    public void setFajl(String fajl) {
+        this.fajl = fajl;
     }
 
     public int getId() {

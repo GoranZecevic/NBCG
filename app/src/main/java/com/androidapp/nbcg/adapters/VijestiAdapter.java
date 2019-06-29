@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androidapp.nbcg.fragments.DogadjajiOpsirnije;
 import com.androidapp.nbcg.models.Vijesti;
 import com.androidapp.nbcg.R;
+import com.bumptech.glide.Glide;
 
 import java.util.Date;
 import java.util.List;
@@ -25,7 +27,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
 
     List<Vijesti> VijestiLista;
     View dogadjajiFragment;
-    private Context context;
+    private Context mContext;
 
     public VijestiAdapter(View dogadjajiFragment, List<Vijesti> VijestiLIsta)
     {
@@ -38,7 +40,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
         View view ;
         LayoutInflater mInflater = LayoutInflater.from(dogadjajiFragment.getContext());
         view = mInflater.inflate(R.layout.card_layout_dogadjaji,parent,false);
-        context = dogadjajiFragment.getContext();
+        mContext = dogadjajiFragment.getContext();
         return new ViewHolder(view);
     }
 
@@ -52,6 +54,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
         final String DATUMOD = vijesti.getDatumod();
         final String TIP_NOVOSTI = vijesti.getTip_novosti();
         final String OPIS = vijesti.getOpis();
+        final String FAJL = vijesti.getFajl();
 
 //            holder.vijestiId.setText(String.valueOf(vijesti.getId()));
             holder.datumod.setText(vijesti.getDatumod());
@@ -59,6 +62,8 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
 //            holder.opis.setText(vijesti.getOpis());
             holder.description.setText(Html.fromHtml(vijesti.getDescription()));
             holder.tip_novosti.setText(Html.fromHtml(vijesti.getTip_novosti()));
+
+        Glide.with(mContext).load(FAJL).into(holder.slika);
 
             holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -76,7 +81,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
 
                     dogadjajiOpsirnije.setArguments(bundel);
 
-                    FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+                    FragmentManager manager = ((AppCompatActivity)mContext).getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = manager.beginTransaction();
                     fragmentTransaction.replace(R.id.fragment_container, dogadjajiOpsirnije);
                     fragmentTransaction.addToBackStack(null);
@@ -95,7 +100,9 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         TextView vijestiId, datumod, naslov, opis, description, tip_novosti;
+        ImageView slika;
         Button opsirnijeBtn;
+
 
         CardView cv;
 
@@ -109,6 +116,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
 //            opis = (TextView)itemView.findViewById(R.id.print_opis);
             description = (TextView)itemView.findViewById(R.id.print_description);
             tip_novosti = (TextView)itemView.findViewById(R.id.print_tip_novosti);
+            slika = (ImageView)itemView.findViewById(R.id.img_dogadjaji);
             opsirnijeBtn = (Button)itemView.findViewById(R.id.dogadjaji_opsirnije_btn);
 
         }

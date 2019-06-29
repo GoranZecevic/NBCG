@@ -17,9 +17,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
-import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.models.Vijesti;
+import com.androidapp.nbcg.helper.Helpers;
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -31,6 +30,8 @@ import java.util.ArrayList;
 
 
 public class KatalogIzdanja extends Fragment {
+
+    private Helpers helper = new Helpers();
 
     private String language;
 
@@ -57,7 +58,7 @@ public class KatalogIzdanja extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        language = "mne";
+        language = "en";
     }
 
     @Override
@@ -96,34 +97,48 @@ public class KatalogIzdanja extends Fragment {
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = datumod.substring(0, datumod.indexOf(" "));
+                                datumod = helper.dateConverter(datumod);
 //                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
-                                    case "mne": naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
-                                    case "en": naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
+                                    case "mne": naslov = helper.mne(naslov); break;
+                                    case "en":
+                                        String temp = helper.eng(naslov);
+                                        if(!temp.equals("")) naslov = helper.eng(naslov);
+                                        else naslov = helper.mne(naslov); break;
+
                                 }
 //                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
-                                    case "mne": opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
-                                    case "en": opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
+                                    case "mne": opis =  helper.mne(opis); break;
+                                    case "en":
+                                        String temp = helper.eng(opis);
+                                        if(!temp.equals("")) opis = helper.eng(opis);
+                                        else opis = helper.mne(opis); break;
                                 }
 //                                System.out.println("Opis: "+ opis);
 
 
                                 String tekst = hit.getString("TEKST");
                                 switch (language){
-                                    case "mne": tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
-                                    case "en": tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
+                                    case "mne": tekst = helper.mne(tekst); break;
+                                    case "en":
+                                        String temp = helper.eng(tekst);
+                                        if(!temp.equals("")) tekst = helper.eng(tekst);
+                                        else tekst = helper.mne(tekst); break;
                                 }
 //                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
-                                    case "mne": link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
-                                    case "en": link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
+                                    case "mne": link = helper.mne(link); break;
+                                    case "en":
+                                        String temp = helper.eng(link);
+                                        if(!temp.equals("")) link = helper.eng(link);
+                                        else link = helper.mne(link); break;
                                 }
 //                                System.out.println("Link: "+ link);
 
@@ -134,14 +149,18 @@ public class KatalogIzdanja extends Fragment {
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
                                 switch (language){
-                                    case "mne": tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
-                                    case "en": tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
+                                    case "mne": tipNaslova = helper.mne(tipNaslova); break;
+                                    case "en": tipNaslova = helper.eng(tipNaslova); break;
                                 }
 //                                System.out.println("Tip naslova: "+ tipNaslova);
 
+                                String fajl = hit.getString("FAJL");
+                                fajl = fajl;
+//                                System.out.println("Fajl: "+ fajl);
+
 //                                System.out.println(" ");
 
-                                arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova));
+                                arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova, fajl));
 
                             }
 

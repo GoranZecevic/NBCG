@@ -300,6 +300,7 @@ ZAKON O IZDAVACKOJ DJELATNOSTI
 Elektronski katalog Nacionalne biblioteke sadrži više stotina hiljada bibliografskih zapisa, u koje spadaju knjige, serijske publikacije, članci iz časopisa i novina, kao i publikacije iz posebnih zbirki.
 Elektronski katalog NBCG dostupan je preko Internet adrese: http://vbcg.vbcg.me
     </string>
+    <string name="title_activity_splash">SplashActivity</string>
 
     <!--end region virtuelna biblioteka crne gore-->
 

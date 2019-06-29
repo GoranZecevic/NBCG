@@ -10,8 +10,9 @@ public class KatalogIzdanja {
     private String link;
     private double cijena;
     private String tipovi_naslova;
+    private String fajl;
 
-    public KatalogIzdanja(int id, String datumod, String naslov, String opis, String tekst, String link, double cijena, String tipovi_naslova) {
+    public KatalogIzdanja(int id, String datumod, String naslov, String opis, String tekst, String link, double cijena, String tipovi_naslova, String fajl) {
         this.id = id;
         this.datumod = datumod;
         this.naslov = naslov;
@@ -20,6 +21,16 @@ public class KatalogIzdanja {
         this.link = link;
         this.cijena = cijena;
         this.tipovi_naslova = tipovi_naslova;
+        this.fajl = fajl;
+
+    }
+
+    public String getFajl() {
+        return fajl;
+    }
+
+    public void setFajl(String fajl) {
+        this.fajl = fajl;
     }
 
     public int getId() {

@@ -17,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.adapters.E_PublikacijeAdapter;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.models.KatalogIzdanja;
@@ -35,7 +36,7 @@ public class E_Publikacije extends Fragment {
 
     private RecyclerView recycleView;
     private ArrayList<KatalogIzdanja> arrayList;
-    private KatalogIzdanjaAdapter adapter;
+    private E_PublikacijeAdapter adapter;
 
 
     private RequestQueue requestQueue;
@@ -85,30 +86,30 @@ public class E_Publikacije extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-                            System.out.println("Response: "+ response);
+//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-                                System.out.println("Id: "+ id);
+//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
-                                System.out.println("Datum: "+ datumod);
+//                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
                                     case "mne": naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
                                     case "en": naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Naslov: "+ naslov);
+//                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
                                     case "mne": opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
                                     case "en": opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Opis: "+ opis);
+//                                System.out.println("Opis: "+ opis);
 
 
                                 String tekst = hit.getString("TEKST");
@@ -116,18 +117,18 @@ public class E_Publikacije extends Fragment {
                                     case "mne": tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
                                     case "en": tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Tekst: "+ tekst);
+//                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
                                     case "mne": link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
                                     case "en": link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Link: "+ link);
+//                                System.out.println("Link: "+ link);
 
 
                                 double cijena = hit.getDouble("CIJENA");
-                                System.out.println("Cijena: "+ cijena);
+//                                System.out.println("Cijena: "+ cijena);
 
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
@@ -135,15 +136,19 @@ public class E_Publikacije extends Fragment {
                                     case "mne": tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
                                     case "en": tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
                                 }
-                                System.out.println("Tip naslova: "+ tipNaslova);
+//                                System.out.println("Tip naslova: "+ tipNaslova);
 
-                                System.out.println(" ");
+                                String fajl = hit.getString("FAJL");
+                                fajl = ApiUrls.GET_PICTURES + fajl;
+                                System.out.println("Fajl: "+ fajl);
 
-                                arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova));
+//                                System.out.println(" ");
+
+                                arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova, fajl));
 
                             }
 
-                            adapter = new KatalogIzdanjaAdapter(thisFragment , arrayList);
+                            adapter = new E_PublikacijeAdapter(thisFragment , arrayList);
 
                             recycleView.setAdapter(adapter);
 

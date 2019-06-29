@@ -5,10 +5,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.androidapp.nbcg.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -28,6 +30,8 @@ public class Kontakt extends Fragment implements OnMapReadyCallback {
     MapView mMapView;
     View mView;
 
+    FloatingActionButton kontakBtn;
+
     public Kontakt() {
     }
 
@@ -45,6 +49,16 @@ public class Kontakt extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_kontakt, container, false);
+
+        kontakBtn = (FloatingActionButton)mView.findViewById(R.id.emailBtn);
+
+        kontakBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Klik radi! Yup");
+            }
+        });
+
         return mView;
     }
 

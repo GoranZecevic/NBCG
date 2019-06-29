@@ -18,6 +18,7 @@ import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.Vijesti;
 
 import org.apache.commons.lang3.StringUtils;
@@ -31,6 +32,7 @@ import java.util.ArrayList;
 
 public class Dogadjaji extends Fragment {
 
+    Helpers helper = new Helpers();
 
     private String language;
 
@@ -60,7 +62,7 @@ public class Dogadjaji extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        language = "mne";
+        language = "en";
 
 
     }
@@ -101,42 +103,56 @@ public class Dogadjaji extends Fragment {
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = datumod.substring(0, datumod.indexOf(" "));
+                                datumod = helper.dateConverter(datumod);
 //                                System.out.println("Datum: "+ datumod);
 
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
-                                    case "mne": naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
-                                    case "en": naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
+                                    case "mne": naslov = helper.mne(naslov); break;
+                                    case "en":
+                                        String temp = helper.eng(naslov);
+                                        if(!temp.equals("")) naslov = helper.eng(naslov);
+                                        else naslov = helper.mne(naslov); break;
                                 }
+
 //                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
-                                    case "mne": opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
-                                    case "en": opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
+                                    case "mne": opis = helper.mne(opis); break;
+                                    case "en":
+                                        String temp = helper.eng(opis);
+                                        if(!temp.equals("")) opis = helper.eng(opis);
+                                        else opis = helper.mne(opis); break;
                                 }
 //                                System.out.println("Opis: "+ opis);
 
 
                                 String description = hit.getString("DESCRIPTION");
                                 switch (language){
-                                    case "mne": description = StringUtils.substringBetween(description, "[0]", "[/0]"); break;
-                                    case "en": description = StringUtils.substringBetween(description, "[1]", "[/1]"); break;
+                                    case "mne": description = helper.mne(description); break;
+                                    case "en":
+                                        String temp = helper.eng(description);
+                                        if(!temp.equals("")) description = helper.eng(description);
+                                        else description = helper.mne(description); break;
                                 }
 //                                System.out.println("Description: "+ description);
 
                                 String tip_novosti = hit.getString("TIP_NOVOSTI");
                                 switch (language){
-                                    case "mne": tip_novosti = StringUtils.substringBetween(tip_novosti, "[0]", "[/0]"); break;
-                                    case "en": tip_novosti = StringUtils.substringBetween(tip_novosti, "[1]", "[/1]"); break;
+                                    case "mne": tip_novosti = helper.mne(tip_novosti); break;
+                                    case "en": tip_novosti = helper.eng(tip_novosti); break;
                                 }
 //                                System.out.println("Tip_novosti: "+ tip_novosti);
 
+                                String fajl = hit.getString("FAJL");
+                                fajl = ApiUrls.GET_PICTURES + fajl;
+//                                System.out.println("Fajl: "+ fajl);
 
 //                                System.out.println(" ");
 
-                                arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti));
+                                arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti, fajl));
 
                             }
 
