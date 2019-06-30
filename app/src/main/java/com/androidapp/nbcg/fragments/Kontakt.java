@@ -7,12 +7,14 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.helper.Helpers;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -31,6 +33,8 @@ public class Kontakt extends Fragment implements OnMapReadyCallback {
     View mView;
 
     FloatingActionButton kontakBtn;
+
+    Helpers helper = new Helpers();
 
     public Kontakt() {
     }
@@ -56,6 +60,10 @@ public class Kontakt extends Fragment implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 System.out.println("Klik radi! Yup");
+                Fragment mail = new KontaktEmail();
+                FragmentManager fm = getFragmentManager();
+                helper.openFragment(mail, fm);
+
             }
         });
 

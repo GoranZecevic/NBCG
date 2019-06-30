@@ -3,67 +3,42 @@ package com.androidapp.nbcg.fragments;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.Helpers;
+import com.bumptech.glide.Glide;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link DogadjajiOpsirnije.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link DogadjajiOpsirnije#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DogadjajiOpsirnije extends Fragment {
 
     private View thisFragment;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    String language = "mne";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Helpers helper = new Helpers();
 
     private OnFragmentInteractionListener mListener;
 
     public DogadjajiOpsirnije() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DogadjajiOpsirnije.
-     */
-    // TODO: Rename and change types and number of parameters
     public static DogadjajiOpsirnije newInstance(String param1, String param2) {
         DogadjajiOpsirnije fragment = new DogadjajiOpsirnije();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -74,10 +49,14 @@ public class DogadjajiOpsirnije extends Fragment {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_dogadjaji_opsirnije, null);
 
         if(bundle != null){
+            final int id  = bundle.getInt("id");
             String naslov  = bundle.getString("naslov");
             String datumod = bundle.getString("datumod");
             String tip_novpsti = bundle.getString("tip_novpsti");
             String opis = bundle.getString("opis");
+            String podnaslov = bundle.getString("description");
+            String fajl = bundle.getString("fajl");
+            final String link = bundle.getString("link");
 
 
             TextView naslovTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_naslov);
@@ -86,10 +65,56 @@ public class DogadjajiOpsirnije extends Fragment {
             datumOdTxt.setText(Html.fromHtml(datumod));
             TextView tipNovostiTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_tip_novpsti);
             tipNovostiTxt.setText(Html.fromHtml(tip_novpsti));
+            ImageView image = (ImageView)thisFragment.findViewById(R.id.opsirnije_dogadjaji_img);
+            Glide.with(thisFragment).load(ApiUrls.GET_PICTURES_FULL_SIZE + fajl).into(image);
+            TextView podnaslovTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_podnaslov);
+            podnaslovTxt.setText(Html.fromHtml(podnaslov));
+
             TextView opisTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_opis);
             opisTxt.setText(Html.fromHtml(opis));
-        }
 
+            ImageButton fb = (ImageButton)thisFragment.findViewById(R.id.dog_opsi_vb_btn_fb);
+            fb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(language.equals("mne")) helper.goToUrl(ApiUrls.SHARE_FB_MNE+link, thisFragment.getContext());
+                    else if(language.equals("eng")) helper.goToUrl(ApiUrls.SHARE_FB_ENG+link, thisFragment.getContext());;
+                }
+            });
+
+            ImageButton tw = (ImageButton)thisFragment.findViewById(R.id.dog_opsi_vb_btn_tw);
+            tw.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(language.equals("mne")) helper.goToUrl(ApiUrls.SHARE_TW_MNE+link, thisFragment.getContext());
+                    else if(language.equals("eng")) helper.goToUrl(ApiUrls.SHARE_TW_ENG+link, thisFragment.getContext());;
+                }
+            });
+
+            ImageButton ln = (ImageButton)thisFragment.findViewById(R.id.dog_opsi_vb_btn_ln);
+            ln.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(language.equals("mne")) helper.goToUrl(ApiUrls.SHARE_LN_MNE+link, thisFragment.getContext());
+                    else if(language.equals("eng")) helper.goToUrl(ApiUrls.SHARE_LN_ENG+link, thisFragment.getContext());;
+                }
+            });
+
+            Button galerijaBtn = (Button)thisFragment.findViewById(R.id.btnGalerija);
+            galerijaBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fm = getFragmentManager();
+                    Galerija galerija = new Galerija();
+
+                    Bundle bundel = new Bundle();
+                    bundel.putInt("id", id);
+                    galerija.setArguments(bundel);
+
+                    helper.openFragment(galerija, fm);
+                }
+            });
+        }
 
         return thisFragment;
     }
@@ -100,17 +125,6 @@ public class DogadjajiOpsirnije extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
-
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
 
     @Override
     public void onDetach() {

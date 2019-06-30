@@ -10,26 +10,24 @@ public class Vijesti {
     private String opis;
     private String description;
     private String tip_novosti;
+    private String link;
     private String fajl;
 
 
-    public Vijesti(int id, String datumod, String naslov, String opis, String description, String tip_novosti, String fajl) {
+
+
+    public Vijesti(int id, String datumod, String naslov, String opis, String description, String tip_novosti, String fajl, String link ) {
         this.id = id;
         this.datumod = datumod;
         this.naslov = naslov;
         this.opis = opis;
         this.description = description;
         this.tip_novosti = tip_novosti;
+        this.link = link;
         this.fajl = fajl;
     }
 
-    public String getFajl() {
-        return fajl;
-    }
 
-    public void setFajl(String fajl) {
-        this.fajl = fajl;
-    }
 
     public int getId() {
         return id;
@@ -77,5 +75,21 @@ public class Vijesti {
 
     public void setTip_novosti(String tip_novosti) {
         this.tip_novosti = tip_novosti;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getFajl() {
+        return fajl;
+    }
+
+    public void setFajl(String fajl) {
+        this.fajl = fajl;
     }
 }

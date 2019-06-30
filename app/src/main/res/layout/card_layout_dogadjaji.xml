@@ -108,25 +108,32 @@
 
             </ScrollView>
 
-            <!--<TextView-->
-            <!--android:id="@+id/print_id"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@color/common_plus_signin_btn_text_dark"-->
-            <!--app:layout_constraintBaseline_toBaselineOf="@+id/print_datumod"-->
-            <!--app:layout_constraintEnd_toStartOf="@+id/print_datumod"-->
-            <!--app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"-->
-            <!--android:visibility="invisible"/>-->
+            <TextView
+            android:id="@+id/print_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/common_plus_signin_btn_text_dark"
+            app:layout_constraintBaseline_toBaselineOf="@+id/print_datumod"
+            app:layout_constraintEnd_toStartOf="@+id/print_datumod"
+            app:layout_constraintStart_toEndOf="@+id/img_dogadjaji"
+            android:visibility="gone"/>
 
 
-            <!--<TextView-->
-            <!--android:id="@+id/print_opis"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--app:layout_constraintBaseline_toBaselineOf="@+id/print_id"-->
-            <!--app:layout_constraintEnd_toStartOf="@+id/print_description"-->
-            <!--app:layout_constraintStart_toEndOf="@+id/print_naslov"-->
-            <!--android:visibility="invisible"/>-->
+            <TextView
+            android:id="@+id/print_opis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/print_id"
+            app:layout_constraintStart_toEndOf="@+id/print_naslov"
+            android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/print_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@+id/print_id"
+                app:layout_constraintStart_toEndOf="@+id/print_naslov"
+                android:visibility="gone"/>
 
 
         </android.support.constraint.ConstraintLayout>

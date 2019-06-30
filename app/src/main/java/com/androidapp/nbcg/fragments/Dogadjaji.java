@@ -32,6 +32,8 @@ import java.util.ArrayList;
 
 public class Dogadjaji extends Fragment {
 
+    private OnFragmentInteractionListener mListener;
+
     Helpers helper = new Helpers();
 
     private String language;
@@ -46,7 +48,6 @@ public class Dogadjaji extends Fragment {
 
 
 
-    private OnFragmentInteractionListener mListener;
 
     public Dogadjaji() {
     }
@@ -54,7 +55,6 @@ public class Dogadjaji extends Fragment {
 
     public static Dogadjaji newInstance(String param1, String param2) {
         Dogadjaji fragment = new Dogadjaji();
-
         return fragment;
     }
 
@@ -62,8 +62,7 @@ public class Dogadjaji extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        language = "en";
-
+        language = "mne";
 
     }
 
@@ -93,7 +92,7 @@ public class Dogadjaji extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-                            System.out.println("Response: "+ response);
+//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
@@ -110,7 +109,7 @@ public class Dogadjaji extends Fragment {
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
                                     case "mne": naslov = helper.mne(naslov); break;
-                                    case "en":
+                                    case "eng":
                                         String temp = helper.eng(naslov);
                                         if(!temp.equals("")) naslov = helper.eng(naslov);
                                         else naslov = helper.mne(naslov); break;
@@ -121,7 +120,7 @@ public class Dogadjaji extends Fragment {
                                 String opis = hit.getString("OPIS");
                                 switch (language){
                                     case "mne": opis = helper.mne(opis); break;
-                                    case "en":
+                                    case "eng":
                                         String temp = helper.eng(opis);
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
@@ -132,7 +131,7 @@ public class Dogadjaji extends Fragment {
                                 String description = hit.getString("DESCRIPTION");
                                 switch (language){
                                     case "mne": description = helper.mne(description); break;
-                                    case "en":
+                                    case "eng":
                                         String temp = helper.eng(description);
                                         if(!temp.equals("")) description = helper.eng(description);
                                         else description = helper.mne(description); break;
@@ -142,17 +141,22 @@ public class Dogadjaji extends Fragment {
                                 String tip_novosti = hit.getString("TIP_NOVOSTI");
                                 switch (language){
                                     case "mne": tip_novosti = helper.mne(tip_novosti); break;
-                                    case "en": tip_novosti = helper.eng(tip_novosti); break;
+                                    case "eng": tip_novosti = helper.eng(tip_novosti); break;
                                 }
-//                                System.out.println("Tip_novosti: "+ tip_novosti);
+
+                                String link = hit.getString("LINK");
+                                switch (language){
+                                    case "mne": link = helper.mne(link); break;
+                                    case "eng": link = helper.eng(link); break;
+                                }
+//                                System.out.println("LInk: "+ link);
 
                                 String fajl = hit.getString("FAJL");
-                                fajl = ApiUrls.GET_PICTURES + fajl;
 //                                System.out.println("Fajl: "+ fajl);
 
 //                                System.out.println(" ");
 
-                                arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti, fajl));
+                                arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti, fajl, link));
 
                             }
 

@@ -67,7 +67,7 @@ public class E_PublikacijeAdapter extends RecyclerView.Adapter<E_PublikacijeAdap
 
         Glide.with(mContext).load(FAJL).into(holder.slika);
 
-        holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
+        holder.preuzetiBtn.setOnClickListener(new View.OnClickListener() {
 
         @Override
         public void onClick(View v) {
@@ -88,7 +88,7 @@ public class E_PublikacijeAdapter extends RecyclerView.Adapter<E_PublikacijeAdap
     {
         TextView katalogIzdanjaId, datumod, naslov, opis, tekst, link, cijena, tip_naslova;
         ImageView slika;
-        Button opsirnijeBtn;
+        Button preuzetiBtn;
 
         CardView cv;
 
@@ -105,7 +105,8 @@ public class E_PublikacijeAdapter extends RecyclerView.Adapter<E_PublikacijeAdap
             cijena = (TextView)itemView.findViewById(R.id.print_cijena_katalog_izdanaj);
             tip_naslova = (TextView)itemView.findViewById(R.id.print_tip_naslova_katalog_izdanaj);
             slika = (ImageView)itemView.findViewById(R.id.img_katalog);
-            opsirnijeBtn = (Button)itemView.findViewById(R.id.katalog_izdanja_opsirnije_btn);
+            preuzetiBtn = (Button)itemView.findViewById(R.id.katalog_izdanja_opsirnije_btn);
+            preuzetiBtn.setText("Preuzeti");
 
         }
 

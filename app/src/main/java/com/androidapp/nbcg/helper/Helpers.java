@@ -6,11 +6,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
+
+import com.androidapp.nbcg.R;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -77,6 +81,18 @@ public class Helpers extends Fragment {
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
+    }
+
+
+    //Open new fragment
+    public void openFragment(Fragment fragment, FragmentManager fragmentManager){
+        Fragment newFragment = fragment;
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        transaction.replace(R.id.fragment_container, newFragment);
+        transaction.addToBackStack(null);
+
+        transaction.commit();
     }
 
 

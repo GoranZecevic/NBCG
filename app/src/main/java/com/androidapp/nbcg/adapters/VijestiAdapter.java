@@ -15,12 +15,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.fragments.DogadjajiOpsirnije;
 import com.androidapp.nbcg.models.Vijesti;
 import com.androidapp.nbcg.R;
 import com.bumptech.glide.Glide;
 
-import java.util.Date;
 import java.util.List;
 
 public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHolder> {
@@ -54,42 +54,49 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
         final String DATUMOD = vijesti.getDatumod();
         final String TIP_NOVOSTI = vijesti.getTip_novosti();
         final String OPIS = vijesti.getOpis();
+        final String DESCRIPTION = vijesti.getDescription();
+        final String LINK = newId+"-"+vijesti.getLink();
+
         final String FAJL = vijesti.getFajl();
 
-//            holder.vijestiId.setText(String.valueOf(vijesti.getId()));
-            holder.datumod.setText(vijesti.getDatumod());
-            holder.naslov.setText(Html.fromHtml(vijesti.getNaslov()));
-//            holder.opis.setText(vijesti.getOpis());
-            holder.description.setText(Html.fromHtml(vijesti.getDescription()));
-            holder.tip_novosti.setText(Html.fromHtml(vijesti.getTip_novosti()));
+        holder.vijestiId.setText(String.valueOf(vijesti.getId()));
+        holder.datumod.setText(vijesti.getDatumod());
+        holder.naslov.setText(Html.fromHtml(vijesti.getNaslov()));
+        holder.opis.setText(vijesti.getOpis());
+        holder.description.setText(Html.fromHtml(vijesti.getDescription()));
+        holder.link.setText(Html.fromHtml(vijesti.getLink()));
+        holder.tip_novosti.setText(Html.fromHtml(vijesti.getTip_novosti()));
 
-        Glide.with(mContext).load(FAJL).into(holder.slika);
+        Glide.with(mContext).load(ApiUrls.GET_PICTURES + FAJL).into(holder.slika);
 
-            holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
+        holder.opsirnijeBtn.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
-                    System.out.println("Opsirnije radi!" + newId);
 
-                    DogadjajiOpsirnije dogadjajiOpsirnije = new DogadjajiOpsirnije();
+                DogadjajiOpsirnije dogadjajiOpsirnije = new DogadjajiOpsirnije();
 
-                    Bundle bundel = new Bundle();
-                    bundel.putString("naslov", NASLOV);
-                    bundel.putString("datumod", String.valueOf(DATUMOD));
-                    bundel.putString("tip_novpsti", TIP_NOVOSTI);
-                    bundel.putString("opis", OPIS);
+                Bundle bundel = new Bundle();
 
-                    dogadjajiOpsirnije.setArguments(bundel);
+                bundel.putInt("id", newId);
+                bundel.putString("naslov", NASLOV);
+                bundel.putString("datumod", String.valueOf(DATUMOD));
+                bundel.putString("tip_novpsti", TIP_NOVOSTI);
+                bundel.putString("opis", OPIS);
+                bundel.putString("description", DESCRIPTION);
+                bundel.putString("fajl", FAJL);
+                bundel.putString("link", LINK);
 
-                    FragmentManager manager = ((AppCompatActivity)mContext).getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = manager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container, dogadjajiOpsirnije);
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                dogadjajiOpsirnije.setArguments(bundel);
 
-                }
-            });
+                FragmentManager manager = ((AppCompatActivity)mContext).getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = manager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, dogadjajiOpsirnije);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
+            }
+        });
     }
 
     @Override
@@ -99,7 +106,7 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView vijestiId, datumod, naslov, opis, description, tip_novosti;
+        TextView vijestiId, datumod, naslov, opis, description, tip_novosti, link;
         ImageView slika;
         Button opsirnijeBtn;
 
@@ -110,13 +117,14 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
         {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.vijesti_card);
-//            vijestiId = (TextView)itemView.findViewById(R.id.print_id);
-            datumod = (TextView)itemView.findViewById(R.id.print_datumod);
+            vijestiId = (TextView)itemView.findViewById(R.id.print_id);
             naslov = (TextView)itemView.findViewById(R.id.print_naslov);
-//            opis = (TextView)itemView.findViewById(R.id.print_opis);
-            description = (TextView)itemView.findViewById(R.id.print_description);
+            datumod = (TextView)itemView.findViewById(R.id.print_datumod);
             tip_novosti = (TextView)itemView.findViewById(R.id.print_tip_novosti);
             slika = (ImageView)itemView.findViewById(R.id.img_dogadjaji);
+            opis = (TextView)itemView.findViewById(R.id.print_opis);
+            description = (TextView)itemView.findViewById(R.id.print_description);
+            link = (TextView)itemView.findViewById(R.id.print_link);
             opsirnijeBtn = (Button)itemView.findViewById(R.id.dogadjaji_opsirnije_btn);
 
         }

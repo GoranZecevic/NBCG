@@ -113,6 +113,8 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
                     closeKeyboard();
                     helper.alert(thisFragment.getContext(), "Uspesna porudzbina","Hvala Vam na porudzbini!" );
 
+                    //TO DO: proslediti podatke na neki call
+
                     getFragmentManager().popBackStack();
                 }
             }
