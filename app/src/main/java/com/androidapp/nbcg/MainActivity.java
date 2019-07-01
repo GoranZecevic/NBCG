@@ -1,12 +1,8 @@
 package com.androidapp.nbcg;
 
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -52,6 +48,7 @@ import com.androidapp.nbcg.fragments.O_Nama.VizijaMisija;
 import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
 import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
 import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
+import com.androidapp.nbcg.models.MenuModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,6 +56,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static int lang = 0;
 
     //region menu main titles
     private String str_pocetna;
@@ -240,36 +239,29 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.crnogorski) {
+            lang = 0;
+
+            getSupportActionBar().setTitle(str_pocetna);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Pocetna()).commit();
             return true;
         }
+        else if(id == R.id.english) {
+            lang = 1;
 
+            getSupportActionBar().setTitle(str_pocetna);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Pocetna()).commit();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-//        // Handle navigation view item clicks here.
-//        int id = item.getItemId();
-//
-////        if (id == R.id.nav_camera) {
-////            // Handle the camera action
-////        } else
-//        if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-////        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
-//
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
@@ -433,8 +425,6 @@ public class MainActivity extends AppCompatActivity
 
                 if (headerList.get(groupPosition).isGroup) {
                     if (!headerList.get(groupPosition).hasChildren) {
-//                        WebView webView = findViewById(R.id.webView);
-//                        webView.loadUrl(headerList.get(groupPosition).url);
                         onBackPressed();
 
                         switch (groupPosition) {

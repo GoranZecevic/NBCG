@@ -15,6 +15,7 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.androidapp.nbcg.ExpandableListDataPump;
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
 import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
@@ -23,6 +24,7 @@ import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
 
 public class Pocetna extends Fragment {
 
+    public int language = MainActivity.lang;
 
     private View thisFragment;
     ViewFlipper v_flipper;
@@ -65,6 +67,8 @@ public class Pocetna extends Fragment {
                              Bundle savedInstanceState) {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_pocetna, null);
 
+        System.out.println("Jezik je: "+ language);
+
         if(exist != true){
             ExpandableListDataPump expandableListDataPump = new ExpandableListDataPump(thisFragment.getContext());
             exist = true;
@@ -103,6 +107,7 @@ public class Pocetna extends Fragment {
         Button button = (Button) thisFragment.findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener()
         {
+
             Fragment proxyFragment = fragment;
             @Override
             public void onClick(View v)

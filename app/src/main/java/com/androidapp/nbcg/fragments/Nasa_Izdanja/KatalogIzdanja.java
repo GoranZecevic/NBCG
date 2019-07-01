@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
@@ -33,7 +34,7 @@ public class KatalogIzdanja extends Fragment {
 
     private Helpers helper = new Helpers();
 
-    private String language;
+    public int language = MainActivity.lang;
 
     private RecyclerView recycleView;
     private ArrayList<com.androidapp.nbcg.models.KatalogIzdanja> arrayList;
@@ -58,7 +59,6 @@ public class KatalogIzdanja extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        language = "en";
     }
 
     @Override
@@ -102,8 +102,8 @@ public class KatalogIzdanja extends Fragment {
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
-                                    case "mne": naslov = helper.mne(naslov); break;
-                                    case "en":
+                                    case 0: naslov = helper.mne(naslov); break;
+                                    case 1:
                                         String temp = helper.eng(naslov);
                                         if(!temp.equals("")) naslov = helper.eng(naslov);
                                         else naslov = helper.mne(naslov); break;
@@ -113,8 +113,8 @@ public class KatalogIzdanja extends Fragment {
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
-                                    case "mne": opis =  helper.mne(opis); break;
-                                    case "en":
+                                    case 0: opis =  helper.mne(opis); break;
+                                    case 1:
                                         String temp = helper.eng(opis);
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
@@ -124,8 +124,8 @@ public class KatalogIzdanja extends Fragment {
 
                                 String tekst = hit.getString("TEKST");
                                 switch (language){
-                                    case "mne": tekst = helper.mne(tekst); break;
-                                    case "en":
+                                    case 0: tekst = helper.mne(tekst); break;
+                                    case 1:
                                         String temp = helper.eng(tekst);
                                         if(!temp.equals("")) tekst = helper.eng(tekst);
                                         else tekst = helper.mne(tekst); break;
@@ -134,8 +134,8 @@ public class KatalogIzdanja extends Fragment {
 
                                 String link = hit.getString("LINK");
                                 switch (language){
-                                    case "mne": link = helper.mne(link); break;
-                                    case "en":
+                                    case 0: link = helper.mne(link); break;
+                                    case 1:
                                         String temp = helper.eng(link);
                                         if(!temp.equals("")) link = helper.eng(link);
                                         else link = helper.mne(link); break;
@@ -149,8 +149,8 @@ public class KatalogIzdanja extends Fragment {
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
                                 switch (language){
-                                    case "mne": tipNaslova = helper.mne(tipNaslova); break;
-                                    case "en": tipNaslova = helper.eng(tipNaslova); break;
+                                    case 0: tipNaslova = helper.mne(tipNaslova); break;
+                                    case 1: tipNaslova = helper.eng(tipNaslova); break;
                                 }
 //                                System.out.println("Tip naslova: "+ tipNaslova);
 

@@ -1,4 +1,4 @@
-package com.androidapp.nbcg;
+package com.androidapp.nbcg.models;
 
 public class MenuModel {
 

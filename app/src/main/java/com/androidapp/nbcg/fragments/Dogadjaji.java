@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
@@ -36,7 +37,7 @@ public class Dogadjaji extends Fragment {
 
     Helpers helper = new Helpers();
 
-    private String language;
+    public int language = MainActivity.lang;
 
     private RecyclerView recycleView;
     private ArrayList<Vijesti> arrayList;
@@ -61,8 +62,6 @@ public class Dogadjaji extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        language = "mne";
 
     }
 
@@ -108,8 +107,8 @@ public class Dogadjaji extends Fragment {
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
-                                    case "mne": naslov = helper.mne(naslov); break;
-                                    case "eng":
+                                    case 0: naslov = helper.mne(naslov); break;
+                                    case 1:
                                         String temp = helper.eng(naslov);
                                         if(!temp.equals("")) naslov = helper.eng(naslov);
                                         else naslov = helper.mne(naslov); break;
@@ -119,8 +118,8 @@ public class Dogadjaji extends Fragment {
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
-                                    case "mne": opis = helper.mne(opis); break;
-                                    case "eng":
+                                    case 0: opis = helper.mne(opis); break;
+                                    case 1:
                                         String temp = helper.eng(opis);
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
@@ -130,8 +129,8 @@ public class Dogadjaji extends Fragment {
 
                                 String description = hit.getString("DESCRIPTION");
                                 switch (language){
-                                    case "mne": description = helper.mne(description); break;
-                                    case "eng":
+                                    case 0: description = helper.mne(description); break;
+                                    case 1:
                                         String temp = helper.eng(description);
                                         if(!temp.equals("")) description = helper.eng(description);
                                         else description = helper.mne(description); break;
@@ -140,14 +139,14 @@ public class Dogadjaji extends Fragment {
 
                                 String tip_novosti = hit.getString("TIP_NOVOSTI");
                                 switch (language){
-                                    case "mne": tip_novosti = helper.mne(tip_novosti); break;
-                                    case "eng": tip_novosti = helper.eng(tip_novosti); break;
+                                    case 0: tip_novosti = helper.mne(tip_novosti); break;
+                                    case 1: tip_novosti = helper.eng(tip_novosti); break;
                                 }
 
                                 String link = hit.getString("LINK");
                                 switch (language){
-                                    case "mne": link = helper.mne(link); break;
-                                    case "eng": link = helper.eng(link); break;
+                                    case 0: link = helper.mne(link); break;
+                                    case 1: link = helper.eng(link); break;
                                 }
 //                                System.out.println("LInk: "+ link);
 

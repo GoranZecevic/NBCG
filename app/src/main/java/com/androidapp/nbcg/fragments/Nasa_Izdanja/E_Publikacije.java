@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.E_PublikacijeAdapter;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
@@ -32,7 +33,7 @@ import java.util.ArrayList;
 
 public class E_Publikacije extends Fragment {
 
-    private String language;
+    public int language = MainActivity.lang;
 
     private RecyclerView recycleView;
     private ArrayList<KatalogIzdanja> arrayList;
@@ -57,7 +58,6 @@ public class E_Publikacije extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        language = "mne";
     }
 
     @Override
@@ -99,30 +99,30 @@ public class E_Publikacije extends Fragment {
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
-                                    case "mne": naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
-                                    case "en": naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
+                                    case 0: naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
+                                    case 1: naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
                                 }
 //                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
-                                    case "mne": opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
-                                    case "en": opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
+                                    case 0: opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
+                                    case 1: opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
                                 }
 //                                System.out.println("Opis: "+ opis);
 
 
                                 String tekst = hit.getString("TEKST");
                                 switch (language){
-                                    case "mne": tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
-                                    case "en": tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
+                                    case 0: tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
+                                    case 1: tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
                                 }
 //                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
-                                    case "mne": link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
-                                    case "en": link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
+                                    case 0: link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
+                                    case 1: link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
                                 }
 //                                System.out.println("Link: "+ link);
 
@@ -133,8 +133,8 @@ public class E_Publikacije extends Fragment {
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
                                 switch (language){
-                                    case "mne": tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
-                                    case "en": tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
+                                    case 0: tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
+                                    case 1: tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
                                 }
 //                                System.out.println("Tip naslova: "+ tipNaslova);
 
