@@ -4,31 +4,20 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.helper.Helpers;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ZaKorisnike.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ZaKorisnike#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ZaKorisnike extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    Helpers helper = new Helpers();
 
     private View thisFragment;
     ViewFlipper v_flipper;
@@ -42,34 +31,17 @@ public class ZaKorisnike extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public ZaKorisnike() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ZaKorisnike.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ZaKorisnike newInstance(String param1, String param2) {
         ZaKorisnike fragment = new ZaKorisnike();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     public void flip_image(int i){
@@ -86,8 +58,8 @@ public class ZaKorisnike extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_za_korisnike, null);
+        getActionBar().setTitle("Za korisnike");
 
         v_flipper = (ViewFlipper)thisFragment.findViewById(R.id.v_flipper_za_korisnike);
         for(int i=0; i<images.length; i++){
@@ -104,33 +76,16 @@ public class ZaKorisnike extends Fragment {
         }
     }
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+    public ActionBar getActionBar() {
+        return ((MainActivity) getActivity()).getSupportActionBar();
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

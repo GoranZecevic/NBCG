@@ -8,12 +8,15 @@ import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 
 import org.apache.commons.lang3.StringUtils;

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -14,9 +15,12 @@ import android.widget.ViewFlipper;
 
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.helper.Helpers;
 
 
 public class ZaBibliotekare extends Fragment {
+
+    Helpers helper = new Helpers();
 
     private View thisFragment;
     ViewFlipper v_flipper;
@@ -58,6 +62,7 @@ public class ZaBibliotekare extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_za_bibliotekare, null);
+        getActionBar().setTitle("Za bibliotekare");
 
         v_flipper = (ViewFlipper)thisFragment.findViewById(R.id.v_flipper_za_bibliotekare);
         for(int i=0; i<images.length; i++){
@@ -74,33 +79,16 @@ public class ZaBibliotekare extends Fragment {
         }
     }
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+    public ActionBar getActionBar() {
+        return ((MainActivity) getActivity()).getSupportActionBar();
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

@@ -3,6 +3,7 @@ package com.androidapp.nbcg.fragments;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -69,6 +70,7 @@ public class Dogadjaji extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_dogadjaji, null);
+        getActionBar().setTitle("Dogadjaji");
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
@@ -193,4 +195,9 @@ public class Dogadjaji extends Fragment {
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }
+
+    public ActionBar getActionBar() {
+        return ((MainActivity) getActivity()).getSupportActionBar();
+    }
+
 }
