@@ -1,5 +1,6 @@
-package com.androidapp.nbcg.fragments;
+package com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,54 +22,44 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
-import com.androidapp.nbcg.adapters.VijestiAdapter;
+import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.fragments.Dogadjajis.IzlozbaFilter;
 import com.androidapp.nbcg.fragments.Dogadjajis.KoncertFilter;
 import com.androidapp.nbcg.fragments.Dogadjajis.NajavaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.OstalevijestiFilter;
 import com.androidapp.nbcg.fragments.Dogadjajis.PosjetaFilter;
 import com.androidapp.nbcg.fragments.Dogadjajis.PromocijaFilter;
 import com.androidapp.nbcg.fragments.Dogadjajis.StruckiskupFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.VijestiFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.VirtuelnaizlozbaFilter;
 import com.androidapp.nbcg.helper.Helpers;
-import com.androidapp.nbcg.models.Vijesti;
+import com.androidapp.nbcg.models.KatalogIzdanja;
 
-import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-public class Dogadjaji extends Fragment {
-
-    private OnFragmentInteractionListener mListener;
-
-    Helpers helper = new Helpers();
+public class PosebnaIzdanjaFilter extends Fragment {
+    private Helpers helper = new Helpers();
 
     public int language = MainActivity.lang;
 
     private RecyclerView recycleView;
-    private ArrayList<Vijesti> arrayList;
-    private VijestiAdapter adapter;
-
+    private ArrayList<KatalogIzdanja> arrayList;
+    private KatalogIzdanjaAdapter adapter;
 
     private RequestQueue requestQueue;
     private View thisFragment;
 
     private FloatingActionButton btnFilter;
 
+    private com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanja.OnFragmentInteractionListener mListener;
 
-    public Dogadjaji() {
+    public PosebnaIzdanjaFilter() {
     }
 
-
-    public static Dogadjaji newInstance(String param1, String param2) {
-        Dogadjaji fragment = new Dogadjaji();
+    public static PosebnaIzdanjaFilter newInstance(String param1, String param2) {
+        PosebnaIzdanjaFilter fragment = new PosebnaIzdanjaFilter();
         return fragment;
     }
 
@@ -82,10 +72,11 @@ public class Dogadjaji extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_dogadjaji, null);
-        getActionBar().setTitle("Dogadjaji");
+        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_posebna_izdanja_filter, null);
 
-        btnFilter = (FloatingActionButton)thisFragment.findViewById(R.id.dogadjajiFilter);
+        getActionBar().setTitle("Katalog izdanja");
+
+        btnFilter = (FloatingActionButton)thisFragment.findViewById(R.id.katalogFilter);
 
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +88,7 @@ public class Dogadjaji extends Fragment {
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
 
-        recycleView = (RecyclerView)thisFragment.findViewById(R.id.recycler_view_dogadjaji);
+        recycleView = (RecyclerView)thisFragment.findViewById(R.id.recycler_view_katalog_izdanja);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recycleView.setLayoutManager(layoutManager);
         PARSEDATA();
@@ -106,7 +97,7 @@ public class Dogadjaji extends Fragment {
     }
 
     public void PARSEDATA() {
-        final String URL = ApiUrls.GET_VIJESTI ;
+        final String URL = ApiUrls.GET_POSEBNA_IZDANJA_FILTER ;
 
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
@@ -128,7 +119,6 @@ public class Dogadjaji extends Fragment {
                                 datumod = helper.dateConverter(datumod);
 //                                System.out.println("Datum: "+ datumod);
 
-
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
                                     case 0: naslov = helper.mne(naslov); break;
@@ -136,13 +126,13 @@ public class Dogadjaji extends Fragment {
                                         String temp = helper.eng(naslov);
                                         if(!temp.equals("")) naslov = helper.eng(naslov);
                                         else naslov = helper.mne(naslov); break;
-                                }
 
+                                }
 //                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
-                                    case 0: opis = helper.mne(opis); break;
+                                    case 0: opis =  helper.mne(opis); break;
                                     case 1:
                                         String temp = helper.eng(opis);
                                         if(!temp.equals("")) opis = helper.eng(opis);
@@ -151,39 +141,49 @@ public class Dogadjaji extends Fragment {
 //                                System.out.println("Opis: "+ opis);
 
 
-                                String description = hit.getString("DESCRIPTION");
+                                String tekst = hit.getString("TEKST");
                                 switch (language){
-                                    case 0: description = helper.mne(description); break;
+                                    case 0: tekst = helper.mne(tekst); break;
                                     case 1:
-                                        String temp = helper.eng(description);
-                                        if(!temp.equals("")) description = helper.eng(description);
-                                        else description = helper.mne(description); break;
+                                        String temp = helper.eng(tekst);
+                                        if(!temp.equals("")) tekst = helper.eng(tekst);
+                                        else tekst = helper.mne(tekst); break;
                                 }
-//                                System.out.println("Description: "+ description);
-
-                                String tip_novosti = hit.getString("TIP_NOVOSTI");
-                                switch (language){
-                                    case 0: tip_novosti = helper.mne(tip_novosti); break;
-                                    case 1: tip_novosti = helper.eng(tip_novosti); break;
-                                }
+//                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
                                     case 0: link = helper.mne(link); break;
-                                    case 1: link = helper.eng(link); break;
+                                    case 1:
+                                        String temp = helper.eng(link);
+                                        if(!temp.equals("")) link = helper.eng(link);
+                                        else link = helper.mne(link); break;
                                 }
-//                                System.out.println("LInk: "+ link);
+//                                System.out.println("Link: "+ link);
+
+
+                                double cijena = hit.getDouble("CIJENA");
+//                                System.out.println("Cijena: "+ cijena);
+
+
+                                String tipNaslova = hit.getString("TIPOVI_NASLOV");
+                                switch (language){
+                                    case 0: tipNaslova = helper.mne(tipNaslova); break;
+                                    case 1: tipNaslova = helper.eng(tipNaslova); break;
+                                }
+//                                System.out.println("Tip naslova: "+ tipNaslova);
 
                                 String fajl = hit.getString("FAJL");
+                                fajl = fajl;
 //                                System.out.println("Fajl: "+ fajl);
 
 //                                System.out.println(" ");
 
-                                arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti, fajl, link));
+                                arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova, fajl));
 
                             }
 
-                            adapter = new VijestiAdapter(thisFragment , arrayList);
+                            adapter = new KatalogIzdanjaAdapter(thisFragment , arrayList);
 
                             recycleView.setAdapter(adapter);
 
@@ -201,27 +201,6 @@ public class Dogadjaji extends Fragment {
         requestQueue.add(request);
     }
 
-
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
-    }
-
-    public ActionBar getActionBar() {
-        return ((MainActivity) getActivity()).getSupportActionBar();
-    }
-
     public void showAlertDialogButtonClicked(View view) {
 
         // setup the alert builder
@@ -229,41 +208,36 @@ public class Dogadjaji extends Fragment {
 //        builder.setTitle("Filteri");
 
         // add a list
-        String[] filteri = {"Vijest", "Najava", "Izlozba", "Promocija", "Posheta", "Strucni skup", "Koncert", "Virtuelna izlozba", "Ostale vijesti", "Ponisti filtere"};
+        String[] filteri = {"Fototipska izdanja", "Posebna izdanja", "Bibliografija", "Bio-bibliografija", "Serijske publikacije", "Katalozi", "Prirucnici","Ponistite filtere"};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case 0:
-                        helper.openFragment(new VijestiFilter(), getFragmentManager());
+                        helper.openFragment(new FototipskaIzdanjaFilter(), getFragmentManager());
                         break;
                     case 1:
-                        helper.openFragment(new NajavaFilter(), getFragmentManager());
+                        helper.openFragment(new PosebnaIzdanjaFilter(), getFragmentManager());
                         break;
                     case 2:
-                        helper.openFragment(new IzlozbaFilter(), getFragmentManager());
+                        helper.openFragment(new BibliografijaFilter(), getFragmentManager());
                         break;
                     case 3:
-                        helper.openFragment(new PromocijaFilter(), getFragmentManager());
+                        helper.openFragment(new BiobibliografijaFilter(), getFragmentManager());
                         break;
                     case 4:
-                        helper.openFragment(new PosjetaFilter(), getFragmentManager());
+                        helper.openFragment(new SerijskepublikacijeFilter(), getFragmentManager());
                         break;
                     case 5:
-                        helper.openFragment(new StruckiskupFilter(), getFragmentManager());
+                        helper.openFragment(new KataloziFilter(), getFragmentManager());
                         break;
                     case 6:
-                        helper.openFragment(new KoncertFilter(), getFragmentManager());
+                        helper.openFragment(new PrirucniciFilter(), getFragmentManager());
                         break;
                     case 7:
-                        helper.openFragment(new VirtuelnaizlozbaFilter(), getFragmentManager());
+                        helper.openFragment(new com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanja(), getFragmentManager());
                         break;
-                    case 8:
-                        helper.openFragment(new OstalevijestiFilter(), getFragmentManager());
-                        break;
-                    case 9:
-                        helper.openFragment(new Dogadjaji(), getFragmentManager());
-                        break;
+
                 }
             }
         });
@@ -273,4 +247,25 @@ public class Dogadjaji extends Fragment {
         dialog.show();
     }
 
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+    public ActionBar getActionBar() {
+        return ((MainActivity) getActivity()).getSupportActionBar();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
+    }
 }

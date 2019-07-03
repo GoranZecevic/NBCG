@@ -1,18 +1,17 @@
-package com.androidapp.nbcg.fragments;
+package com.androidapp.nbcg.fragments.Dogadjajis;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,30 +23,19 @@ import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.fragments.Dogadjajis.IzlozbaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.KoncertFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.NajavaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.OstalevijestiFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.PosjetaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.PromocijaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.StruckiskupFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.VijestiFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.VirtuelnaizlozbaFilter;
+import com.androidapp.nbcg.fragments.Dogadjaji;
 import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.Vijesti;
 
-import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-public class Dogadjaji extends Fragment {
 
-    private OnFragmentInteractionListener mListener;
+public class PosjetaFilter extends Fragment {
+    private PosjetaFilter.OnFragmentInteractionListener mListener;
 
     Helpers helper = new Helpers();
 
@@ -57,19 +45,18 @@ public class Dogadjaji extends Fragment {
     private ArrayList<Vijesti> arrayList;
     private VijestiAdapter adapter;
 
+    FloatingActionButton btnFilter;
+
 
     private RequestQueue requestQueue;
-    private View thisFragment;
 
-    private FloatingActionButton btnFilter;
+    private View mView;
 
-
-    public Dogadjaji() {
+    public PosjetaFilter() {
     }
 
-
-    public static Dogadjaji newInstance(String param1, String param2) {
-        Dogadjaji fragment = new Dogadjaji();
+    public static PosjetaFilter newInstance(String param1, String param2) {
+        PosjetaFilter fragment = new PosjetaFilter();
         return fragment;
     }
 
@@ -82,31 +69,49 @@ public class Dogadjaji extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_dogadjaji, null);
-        getActionBar().setTitle("Dogadjaji");
+        mView =  inflater.inflate(R.layout.fragment_posjeta_filter, container, false);
 
-        btnFilter = (FloatingActionButton)thisFragment.findViewById(R.id.dogadjajiFilter);
+        btnFilter = (FloatingActionButton)mView.findViewById(R.id.dogadjajiFilter);
 
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAlertDialogButtonClicked(thisFragment);
+                showAlertDialogButtonClicked(mView);
             }
         });
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
 
-        recycleView = (RecyclerView)thisFragment.findViewById(R.id.recycler_view_dogadjaji);
+        recycleView = (RecyclerView)mView.findViewById(R.id.recycler_view_dogadjaji);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recycleView.setLayoutManager(layoutManager);
         PARSEDATA();
 
-        return thisFragment;
+        return mView;
+
+    }
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 
     public void PARSEDATA() {
-        final String URL = ApiUrls.GET_VIJESTI ;
+        final String URL = ApiUrls.GET_POSJETA_FILTER ;
 
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
@@ -183,7 +188,7 @@ public class Dogadjaji extends Fragment {
 
                             }
 
-                            adapter = new VijestiAdapter(thisFragment , arrayList);
+                            adapter = new VijestiAdapter(mView , arrayList);
 
                             recycleView.setAdapter(adapter);
 
@@ -201,35 +206,14 @@ public class Dogadjaji extends Fragment {
         requestQueue.add(request);
     }
 
-
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
-    }
-
-    public ActionBar getActionBar() {
-        return ((MainActivity) getActivity()).getSupportActionBar();
-    }
-
     public void showAlertDialogButtonClicked(View view) {
 
         // setup the alert builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(thisFragment.getContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
 //        builder.setTitle("Filteri");
 
         // add a list
-        String[] filteri = {"Vijest", "Najava", "Izlozba", "Promocija", "Posheta", "Strucni skup", "Koncert", "Virtuelna izlozba", "Ostale vijesti", "Ponisti filtere"};
+        String[] filteri = {"Vijest", "Najava", "Izlozba", "Promocija", "Posheta", "Strucni skup", "Koncert", "Virtuelna izlozba", "Ostale vijesti","Ponisti filtere"};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -272,5 +256,4 @@ public class Dogadjaji extends Fragment {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
 }

@@ -10,10 +10,31 @@ public class ApiUrls {
     public static final String GET_PUTNI_NALOZI = "http://192.168.0.15/nbcrnegore/get_putni_nalozi.php";
     public static final String GET_ANALITICKE_KARTICE = "http://192.168.0.15/nbcrnegore/get_analiticka_kartica.php";
     public static final String GET_SLIKE = "http://192.168.0.15/nbcrnegore/get_slike.php";
+
+    public static final String GET_VIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_vijesti_filter.php";
+    public static final String GET_NAJAVA_FILTER = "http://192.168.0.15/nbcrnegore/get_najava_filter.php";
+    public static final String GET_IZLOZBA_FILTER = "http://192.168.0.15/nbcrnegore/get_izlozba_filter.php";
+    public static final String GET_PROMOCIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_promocija_filter.php";
+    public static final String GET_POSJETA_FILTER = "http://192.168.0.15/nbcrnegore/get_posjeta_filter.php";
+    public static final String GET_STRUCNISKUP_FILTER = "http://192.168.0.15/nbcrnegore/get_strucniskup_filter.php";
+    public static final String GET_KONCERT_FILTER = "http://192.168.0.15/nbcrnegore/get_koncert_filter.php";
+    public static final String GET_VIRTUELNAIZLOZBA_FILTER = "http://192.168.0.15/nbcrnegore/get_virtuelnaizlozba_filter.php";
+    public static final String GET_OSTALEVIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_ostalevijesti_filter.php";
+
+    public static final String GET_FOTOTIPSKA_IZDANJA_FILTER = "http://192.168.0.15/nbcrnegore/get_fototipskaizdanja_filter.php";
+    public static final String GET_POSEBNA_IZDANJA_FILTER = "http://192.168.0.15/nbcrnegore/get_posebnaizdanja_filter.php";
+    public static final String GET_BIBLIOGRAFIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_bibliografija_filter.php";
+    public static final String GET_BIOBIBLIOGRAFIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_biobibliografija_filter.php";
+    public static final String GET_SERIJSKE_PUBLIKACIJE_FILTER = "http://192.168.0.15/nbcrnegore/get_serijskepublikacije_filter.php";
+    public static final String GET_KATALOZI_FILTER = "http://192.168.0.15/nbcrnegore/get_katalozi_filter.php";
+    public static final String GET_PRIRUCNICI_FILTER = "http://192.168.0.15/nbcrnegore/get_prirucnici_filter.php";
+
     public static final String GET_DOCUMENTS = "https://www.nb-cg.me/fajlovi/";
     public static final String GET_PICTURES = "https://www.nb-cg.me/tumber.php?src=fajlovi/";
     public static final String GET_PICTURES_FULL_SIZE = "https://www.nb-cg.me/fajlovi/";
+
     public static final String FILE_DOWNLOAD = "https://www.nb-cg.me/download.php?file=";
+
     public static final String SHARE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nb-cg.me/me/dogadjaji/";
     public static final String SHARE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nb-cg.me/en/events/";
     public static final String SHARE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nb-cg.me/me/dogadjaji/";

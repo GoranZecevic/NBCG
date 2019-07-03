@@ -1,8 +1,12 @@
 package com.androidapp.nbcg.fragments.Nasa_Izdanja;
 
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,6 +23,23 @@ import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.fragments.Dogadjaji;
+import com.androidapp.nbcg.fragments.Dogadjajis.IzlozbaFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.KoncertFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.NajavaFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.OstalevijestiFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.PosjetaFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.PromocijaFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.StruckiskupFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.VijestiFilter;
+import com.androidapp.nbcg.fragments.Dogadjajis.VirtuelnaizlozbaFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.BibliografijaFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.BiobibliografijaFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.FototipskaIzdanjaFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.KataloziFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.PosebnaIzdanjaFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.PrirucniciFilter;
+import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.SerijskepublikacijeFilter;
 import com.androidapp.nbcg.helper.Helpers;
 
 
@@ -40,10 +61,10 @@ public class KatalogIzdanja extends Fragment {
     private ArrayList<com.androidapp.nbcg.models.KatalogIzdanja> arrayList;
     private KatalogIzdanjaAdapter adapter;
 
-
     private RequestQueue requestQueue;
     private View thisFragment;
 
+    private FloatingActionButton btnFilter;
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,6 +86,18 @@ public class KatalogIzdanja extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja, null);
+
+        getActionBar().setTitle("Katalog izdanja");
+
+        btnFilter = (FloatingActionButton)thisFragment.findViewById(R.id.katalogFilter);
+
+        btnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Kliknuo");
+                showAlertDialogButtonClicked(thisFragment);
+            }
+        });
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
@@ -182,7 +215,51 @@ public class KatalogIzdanja extends Fragment {
         requestQueue.add(request);
     }
 
+    public void showAlertDialogButtonClicked(View view) {
 
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(thisFragment.getContext());
+//        builder.setTitle("Filteri");
+
+        // add a list
+        String[] filteri = {"Fototipska izdanja", "Posebna izdanja", "Bibliografija", "Bio-bibliografija", "Serijske publikacije", "Katalozi", "Prirucnici", "Ponistite filtere"};
+        builder.setItems(filteri, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case 0:
+                        helper.openFragment(new FototipskaIzdanjaFilter(), getFragmentManager());
+                        break;
+                    case 1:
+                        helper.openFragment(new PosebnaIzdanjaFilter(), getFragmentManager());
+                        break;
+                    case 2:
+                        helper.openFragment(new BibliografijaFilter(), getFragmentManager());
+                        break;
+                    case 3:
+                        helper.openFragment(new BiobibliografijaFilter(), getFragmentManager());
+                        break;
+                    case 4:
+                        helper.openFragment(new SerijskepublikacijeFilter(), getFragmentManager());
+                        break;
+                    case 5:
+                        helper.openFragment(new KataloziFilter(), getFragmentManager());
+                        break;
+                    case 6:
+                        helper.openFragment(new PrirucniciFilter(), getFragmentManager());
+                        break;
+                    case 7:
+                        helper.openFragment(new KatalogIzdanja(), getFragmentManager());
+                        break;
+
+                }
+            }
+        });
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -191,6 +268,9 @@ public class KatalogIzdanja extends Fragment {
         }
     }
 
+    public ActionBar getActionBar() {
+        return ((MainActivity) getActivity()).getSupportActionBar();
+    }
 
     @Override
     public void onDetach() {
