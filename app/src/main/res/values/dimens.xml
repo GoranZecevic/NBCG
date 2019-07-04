@@ -7,8 +7,13 @@
     <dimen name="fab_margin">16dp</dimen>
 
 
-    <dimen name="title_size">16dp</dimen>
+    <dimen name="title_size">20dp</dimen>
     <dimen name="over_txt_size">36dp</dimen>
+    <dimen name="over_txt_size_small">20dp</dimen>
+
+    <dimen name="v8">8dp</dimen>
+
+
 
 
 </resources>

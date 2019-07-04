@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.androidapp.nbcg.ExpandableListDataPump;
@@ -36,16 +37,16 @@ public class Pocetna extends Fragment {
     public int language = MainActivity.lang;
     Helpers helper = new Helpers();
 
-    private View thisFragment;
+    private View mView;
     ViewFlipper v_flipper;
     private static  boolean exist;
 
     Button btnKatalogKolekcije;
 
     int[] images = {
-            R.drawable.slide1,
-            R.drawable.slide2,
-            R.drawable.slide3
+            R.drawable.hall1,
+            R.drawable.hall2,
+            R.drawable.hall3
     };
 
     private OnFragmentInteractionListener mListener;
@@ -63,6 +64,7 @@ public class Pocetna extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+
     public void flip_image(int i){
         ImageView view  = new ImageView((Context) getHost());
         view.setBackgroundResource(i);
@@ -77,17 +79,19 @@ public class Pocetna extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_pocetna, null);
+        mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_pocetna, null);
         getActionBar().setTitle("Pocetna");
+
+        textPopulate();
 
         System.out.println("Jezik je: "+ language);
 
         if(exist != true){
-            ExpandableListDataPump expandableListDataPump = new ExpandableListDataPump(thisFragment.getContext());
+            ExpandableListDataPump expandableListDataPump = new ExpandableListDataPump(mView.getContext());
             exist = true;
         }
 
-        v_flipper = (ViewFlipper)thisFragment.findViewById(R.id.v_flipper);
+        v_flipper = (ViewFlipper)mView.findViewById(R.id.v_flipper);
         for(int i=0; i<images.length; i++){
             flip_image(images[i]);
         }
@@ -122,7 +126,7 @@ public class Pocetna extends Fragment {
 
         imageButtonHandlerWeb(ApiUrls.FB, R.id.nbcg_fb);
 
-        return thisFragment;
+        return mView;
     }
 
 
@@ -138,7 +142,7 @@ public class Pocetna extends Fragment {
     }
 
     private void buttonHandler(final Fragment fragment, final int buttonId){
-        Button button = (Button) thisFragment.findViewById(buttonId);
+        Button button = (Button) mView.findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener()
         {
             Fragment proxyFragment = fragment;
@@ -152,12 +156,12 @@ public class Pocetna extends Fragment {
     }
 
     private void buttonHandlerWeb(final String url, final int buttonId){
-        Button button = (Button) thisFragment.findViewById(buttonId);
+        Button button = (Button) mView.findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener()
         {
             int id = buttonId;
             Helpers help = new Helpers();
-            Context ctx = thisFragment.getContext();
+            Context ctx = mView.getContext();
             @Override
             public void onClick(View v)
             {
@@ -167,12 +171,12 @@ public class Pocetna extends Fragment {
     }
 
     private void imageButtonHandlerWeb(final String url, final int buttonId){
-        ImageButton button = (ImageButton) thisFragment.findViewById(buttonId);
+        ImageButton button = (ImageButton) mView.findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener()
         {
             int id = buttonId;
             Helpers help = new Helpers();
-            Context ctx = thisFragment.getContext();
+            Context ctx = mView.getContext();
             @Override
             public void onClick(View v)
             {
@@ -204,6 +208,87 @@ public class Pocetna extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    public void textPopulate(){
+        TextView title = (TextView) mView.findViewById(R.id.str_home_title_inner);
+        String titleStr= "";
+        switch (language){
+            case 0: titleStr = helper.mne(getResources().getString(R.string.str_home_title)); break;
+            case 1: titleStr = helper.eng(getResources().getString(R.string.str_home_title)); break;
+        }
+        title.setText(titleStr);
+
+        TextView home_body = (TextView) mView.findViewById(R.id.str_home_body);
+        String homeBodyStr= "";
+        switch (language){
+            case 0: homeBodyStr = helper.mne(getResources().getString(R.string.str_home_body)); break;
+            case 1: homeBodyStr = helper.eng(getResources().getString(R.string.str_home_body)); break;
+        }
+        home_body.setText(homeBodyStr);
+
+        Button zaKorisnikeBtn =(Button) mView.findViewById(R.id.za_korisnike_btn);
+        String zaKorisnikeStr= "";
+        switch (language){
+            case 0: zaKorisnikeStr = helper.mne(getResources().getString(R.string.str_za_korisnike_title)); break;
+            case 1: zaKorisnikeStr = helper.eng(getResources().getString(R.string.str_za_korisnike_title)); break;
+        }
+        zaKorisnikeBtn.setText(zaKorisnikeStr);
+
+        TextView zaKorisnike = (TextView) mView.findViewById(R.id.za_korisnike_txt);
+        String zaKorisnikeTxtStr= "";
+        switch (language){
+            case 0: zaKorisnikeTxtStr = helper.mne(getResources().getString(R.string.str_za_korisnike_txt)); break;
+            case 1: zaKorisnikeTxtStr = helper.eng(getResources().getString(R.string.str_za_korisnike_txt)); break;
+        }
+        zaKorisnike.setText(zaKorisnikeTxtStr);
+
+        Button opsitnijeZaKorisnkike = (Button)mView.findViewById(R.id.za_korisnike_opsirnije_btn);
+        Button opsitnijeZaIzdavace = (Button)mView.findViewById(R.id.za_izdavace_opsirnije_btn);
+        Button opsitnijeZaBibliotekare = (Button)mView.findViewById(R.id.za_bibliotekare_opsirnije_btn);
+        Button opsitnijeDogadjaji = (Button)mView.findViewById(R.id.dogadjaji_opsirnije_btn);
+        String opsirnijeStr= "";
+        switch (language){
+            case 0: opsirnijeStr = helper.mne(getResources().getString(R.string.str__opsirnije)); break;
+            case 1: opsirnijeStr = helper.eng(getResources().getString(R.string.str__opsirnije)); break;
+        }
+        opsitnijeZaKorisnkike.setText(opsirnijeStr);
+        opsitnijeZaIzdavace.setText(opsirnijeStr);
+        opsitnijeZaBibliotekare.setText(opsirnijeStr);
+        opsitnijeDogadjaji.setText(opsirnijeStr);
+
+        Button zaIzdavaceBtn =(Button) mView.findViewById(R.id.za_izdavace_btn);
+        String zaIzdavaceStr= "";
+        switch (language){
+            case 0: zaIzdavaceStr = helper.mne(getResources().getString(R.string.str_za_izdavace_title)); break;
+            case 1: zaIzdavaceStr = helper.eng(getResources().getString(R.string.str_za_izdavace_title)); break;
+        }
+        zaIzdavaceBtn.setText(zaIzdavaceStr);
+
+        TextView zaIzdavace = (TextView) mView.findViewById(R.id.za_izavace_txt);
+        String zaIzdavaceTxtStr= "";
+        switch (language){
+            case 0: zaIzdavaceTxtStr = helper.mne(getResources().getString(R.string.str_za_izdavace_txt)); break;
+            case 1: zaIzdavaceTxtStr = helper.eng(getResources().getString(R.string.str_za_izdavace_txt)); break;
+        }
+        zaIzdavace.setText(zaIzdavaceTxtStr);
+
+        Button zaBibliotekareBtn =(Button) mView.findViewById(R.id.za_bibiliotekare_btn);
+        String zaBibliotekareStr= "";
+        switch (language){
+            case 0: zaBibliotekareStr = helper.mne(getResources().getString(R.string.str_za_bibliotekare_title)); break;
+            case 1: zaBibliotekareStr = helper.eng(getResources().getString(R.string.str_za_bibliotekare_title)); break;
+        }
+        zaBibliotekareBtn.setText(zaBibliotekareStr);
+
+        TextView zaBibliotekare = (TextView) mView.findViewById(R.id.za_bibliotekare_txt);
+        String zaBibliotekareTxtStr= "";
+        switch (language){
+            case 0: zaBibliotekareTxtStr = helper.mne(getResources().getString(R.string.str_za_bibliotekare_txt)); break;
+            case 1: zaBibliotekareTxtStr = helper.eng(getResources().getString(R.string.str_za_bibliotekare_txt)); break;
+        }
+        zaBibliotekare.setText(zaBibliotekareTxtStr);
+
+
+    }
 
 
 }

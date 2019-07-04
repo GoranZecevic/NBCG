@@ -73,15 +73,16 @@
     <!--end menu subtitles-->
 
     <!--region Pocetna -->
-    <string name="str_home_title">NACIONALNA BIBLIOTEKA CRNE GORE „ĐURĐE CRNOJEVIĆ“</string>
-    <string name="str_home_body">Nacionalna biblioteka s ponosom baštini tragove Crnojevića štamparije, kao i viševjekovne pismenosti koja je postojala i razvijala se na njenom tlu. Danas je to elitna kulturna ustanova čija misija umnogome prevazilazi njenu osnovnu djelatnost. Ona ima nezaobilaznu kulturnu i obrazovnu ulogu u zemlji i reputaciju pouzdanog partnera u oblasti kulture u inostranstvu. </string>
-    <string name="str_za_korisnike_title">ZA KORISNIKE</string>
-    <string name="str_za_korisnike_txt">Bibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove...</string>
-    <string name="str__opsirnije">OPŠIRNIJE ></string>
-    <string name="str_za_izdavace_title">ZA IZDAVACE</string>
-    <string name="str_za_izdavace_txt">Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne...</string>
-    <string name="str_za_bibliotekare_title">ZA BIBLIOTEKARE</string>
-    <string name="str_za_bibliotekare_txt">Nacionalna biblioteka, kao nacionalna i matična biblioteka Crne Gore, stara se o usavršavanju...</string>
+    <string name="str_home_title">[0]Nacionalna biblioteka Crne Gore „Đurđe Crnojević“[/0][1]National Library of Montenegro "Đurđe Crnojević" [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_home_body">[0]Nacionalna biblioteka s ponosom baštini tragove Crnojevića štamparije, kao i viševjekovne pismenosti koja je postojala i razvijala se na njenom tlu. Danas je to elitna kulturna ustanova čija misija umnogome prevazilazi njenu osnovnu djelatnost. Ona ima nezaobilaznu kulturnu i obrazovnu ulogu u zemlji i reputaciju pouzdanog partnera u oblasti kulture u inostranstvu.
+[/0][1]National Library of Montenegro "Đurđe Crnojević" (NLM), as one of those with the deepest roots among the national libraries in this part of Europe, is a real treasury of Montenegrin written heritage, intellectual memory of the nation and one of the symbols of culture in the country.[/1][2][/2][3][/3][4][/4][5][/5] </string>
+    <string name="str_za_korisnike_title">[0]ZA KORISNIKE[/0][1]FOR USERS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_korisnike_txt">[0]Bibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove...[/0][1]Library Materials of the National Library of Montenegro are primarily used in the reading rooms of the NLM “Đurđe Crnojević”.[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str__opsirnije">[0]OPŠIRNIJE >[/0][1]MORE > [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_izdavace_title">[0]ZA IZDAVAČE[/0][1]FOR PUBLISHERS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_izdavace_txt">[0]Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne...[/0][1]National Library prepares CIP (Cataloguing in Publication) upon request from the publishers from Montenegro ... [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_bibliotekare_title">[0]ZA BIBLIOTEKARE[/0][1]FOR LIBRARIANS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_bibliotekare_txt">[0]Nacionalna biblioteka, kao nacionalna i matična biblioteka Crne Gore, stara se o usavršavanju...[/0][1]The National Library of Montenegro as the parent library in Montenegro, take care of the training of personnel... [/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion Pocetna-->
 
     <string name="str__kontakt_opsirno">Centrala
