@@ -95,6 +95,15 @@ public class UvodnaRijec extends Fragment {
 
     public void textPopulate(){
 
+        Button header = (Button)mView.findViewById(R.id.o_nama_title);
+        String headerStr= "";
+        switch (language){
+            case 0: headerStr = helper.mne(getResources().getString(R.string.str_onama_title)); break;
+            case 1: headerStr = helper.eng(getResources().getString(R.string.str_onama_title)); break;
+        }
+        header.setText(headerStr);
+
+
         TextView title = (TextView)mView.findViewById(R.id.str_za_izdavace_title);
         String titleStr= "";
         switch (language){
@@ -119,13 +128,7 @@ public class UvodnaRijec extends Fragment {
         }
         body.setText(bodyStr);
 
-        Button header = (Button)mView.findViewById(R.id.o_nama_title);
-        String headerStr= "";
-        switch (language){
-            case 0: headerStr = helper.mne(getResources().getString(R.string.str_onama_title)); break;
-            case 1: headerStr = helper.eng(getResources().getString(R.string.str_onama_title)); break;
-        }
-        header.setText(headerStr);
+
 
         TextView podjeli = (TextView)mView.findViewById(R.id.podjeli);
         String podjeliStr= "";

@@ -14,7 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import com.androidapp.nbcg.fragments.Dogadjaji;
 import com.androidapp.nbcg.fragments.Katalozi.COBISS;
@@ -50,6 +52,7 @@ import com.androidapp.nbcg.fragments.O_Nama.VizijaMisija;
 import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
 import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
 import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
+import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.MenuModel;
 
 import java.util.ArrayList;
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public static int lang = 0;
+
+    private Helpers helper = new Helpers();
 
     //region menu main titles
     private String str_pocetna;
@@ -130,6 +135,7 @@ public class MainActivity extends AppCompatActivity
 
 
     public MainActivity() {
+        //textPopulate();
 
     }
 
@@ -137,6 +143,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -218,6 +225,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        textPopulate();
     }
 
     @Override
@@ -252,14 +260,17 @@ public class MainActivity extends AppCompatActivity
             lang = 0;
 
             getSupportActionBar().setTitle(str_pocetna);
+            str_pocetna = "Pocetna";
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
             return true;
+
         }
         else if(id == R.id.english) {
             lang = 1;
 
             getSupportActionBar().setTitle(str_pocetna);
+            str_pocetna = "Landing page";
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
             return true;
@@ -720,6 +731,34 @@ public class MainActivity extends AppCompatActivity
 
 
         });
+
+    }
+
+    public void textPopulate(){
+        switch (lang){
+            case 0:
+                str_pocetna = helper.mne(getResources().getString(R.string.title_pocetna));
+                str_o_nama = helper.mne(getResources().getString(R.string.title_o_nama));
+                str_katalozi = helper.mne(getResources().getString(R.string.title_katalozi));
+                str_usluge = helper.mne(getResources().getString(R.string.title_usluge));
+                str_kolekcije = helper.mne(getResources().getString(R.string.title_kolekcije));
+                str_dogadjaji = helper.mne(getResources().getString(R.string.title_dogadjaji));
+                str_nasa_izdanja = helper.mne(getResources().getString(R.string.title_nasa_izdanja));
+                str_kontakt = helper.mne(getResources().getString(R.string.title_kontakt));
+            break;
+            case 1:
+                str_pocetna = helper.eng(getResources().getString(R.string.title_pocetna));
+                str_o_nama = helper.eng(getResources().getString(R.string.title_o_nama));
+                str_katalozi = helper.eng(getResources().getString(R.string.title_katalozi));
+                str_usluge = helper.eng(getResources().getString(R.string.title_usluge));
+                str_kolekcije = helper.eng(getResources().getString(R.string.title_kolekcije));
+                str_dogadjaji = helper.eng(getResources().getString(R.string.title_dogadjaji));
+                str_nasa_izdanja = helper.eng(getResources().getString(R.string.title_nasa_izdanja));
+                str_kontakt = helper.eng(getResources().getString(R.string.title_kontakt));
+            break;
+        }
+
+
 
     }
 }

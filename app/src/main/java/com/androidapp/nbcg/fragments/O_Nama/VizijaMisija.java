@@ -1,89 +1,74 @@
 package com.androidapp.nbcg.fragments.O_Nama;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.Helpers;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link VizijaMisija.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link VizijaMisija#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class VizijaMisija extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    public int language = MainActivity.lang;
+    Helpers helper = new Helpers();
+
+    private View mView;
 
     private OnFragmentInteractionListener mListener;
 
     public VizijaMisija() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment VizijaMisija.
-     */
-    // TODO: Rename and change types and number of parameters
     public static VizijaMisija newInstance(String param1, String param2) {
         VizijaMisija fragment = new VizijaMisija();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vizija_misija, container, false);
+        mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_vizija_misija, null);
+        textPopulate();
+
+        if(language == 1){
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_ENG, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_ENG, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_ENG, R.id.vb_btn_ln);
+        }
+
+        if(language == 0) {
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_MNE, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_MNE, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_MNE, R.id.vb_btn_ln);
+        }
+
+
+        return mView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
     }
-
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
 
     @Override
     public void onDetach() {
@@ -91,18 +76,107 @@ public class VizijaMisija extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void textPopulate(){
+
+        Button header = (Button)mView.findViewById(R.id.o_nama_title);
+        String headerStr= "";
+        switch (language){
+            case 0: headerStr = helper.mne(getResources().getString(R.string.str_onama_title)); break;
+            case 1: headerStr = helper.eng(getResources().getString(R.string.str_onama_title)); break;
+        }
+        header.setText(headerStr);
+
+        TextView title = (TextView)mView.findViewById(R.id.str_za_izdavace_title);
+        String titleStr= "";
+        switch (language){
+            case 0: titleStr = helper.mne(getResources().getString(R.string.str_vizija_misija_title)); break;
+            case 1: titleStr = helper.eng(getResources().getString(R.string.str_vizija_misija_title)); break;
+        }
+        title.setText(titleStr);
+
+        TextView bold = (TextView)mView.findViewById(R.id.vb_bold);
+        String boldStr= "";
+        switch (language){
+            case 0: boldStr = helper.mne(getResources().getString(R.string.str_vizija_misija_bold)); break;
+            case 1: boldStr = helper.eng(getResources().getString(R.string.str_vizija_misija_bold)); break;
+        }
+        bold.setText(boldStr);
+
+        TextView body = (TextView)mView.findViewById(R.id.vb_body);
+        String bodyStr= "";
+        switch (language){
+            case 0: bodyStr = helper.mne(getResources().getString(R.string.str_vizija_misija_body)); break;
+            case 1: bodyStr = helper.eng(getResources().getString(R.string.str_vizija_misija_body)); break;
+        }
+        body.setText(bodyStr);
+
+        TextView podjeli = (TextView)mView.findViewById(R.id.podjeli);
+        String podjeliStr= "";
+        switch (language){
+            case 0: podjeliStr = helper.mne(getResources().getString(R.string.str_podelite)); break;
+            case 1: podjeliStr = helper.eng(getResources().getString(R.string.str_podelite)); break;
+        }
+        podjeli.setText(podjeliStr);
+
+    }
+
+    // region helpers
+    private void newFragment(Fragment fragment){
+        Fragment newFragment = fragment;
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, newFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void buttonHandler(final Fragment fragment, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            Fragment proxyFragment = fragment;
+            int id = buttonId;
+            @Override
+            public void onClick(View v)
+            {
+                newFragment(proxyFragment);
+            }
+        });
+    }
+
+    private void buttonHandlerWeb(final String url, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
+    }
+
+    private void imageButtonHandlerWeb(final String url, final int buttonId){
+        ImageButton button = (ImageButton) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
     }
 }

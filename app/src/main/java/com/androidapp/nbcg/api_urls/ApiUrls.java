@@ -60,6 +60,13 @@ public class ApiUrls {
     public static final String UVODNA_RIJEC_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/introduction";
     public static final String UVODNA_RIJEC_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/introduction";
 
+    public static final String VIZIJA_MISIJA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/vizija-i-misija";
+    public static final String VIZIJA_MISIJA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/vizija-i-misija";
+    public static final String VIZIJA_MISIJA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/vizija-i-misija";
+    public static final String VIZIJA_MISIJA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/vision-and-mission";
+    public static final String VIZIJA_MISIJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/vision-and-mission";
+    public static final String VIZIJA_MISIJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/vision-and-mission";
+
 
 
 

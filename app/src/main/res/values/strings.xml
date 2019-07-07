@@ -17,27 +17,27 @@
     <string name="str_podelite">[0]PODJELITE[/0][1]SHARE[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--region Menu titles-->
-    <string name="title_pocetna">Početna</string>
-    <string name="title_o_nama">O nama</string>
-    <string name="title_katalozi">Katalozi</string>
-    <string name="title_usluge">Usluge</string>
-    <string name="title_kolekcije">Kolekcije</string>
-    <string name="title_dogadjaji">Događaji</string>
-    <string name="title_nasa_izdanja">Naša izdanja</string>
-    <string name="title_kontakt">Kontakt</string>
+    <string name="title_pocetna">[0]Početna[/0][1]Landing page[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_o_nama">[0]O Nama[/0][1]About Us[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_katalozi">[0]Katalozi[/0][1]Catalogues[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_usluge">[0]Usluge[/0][1]Services[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_kolekcije">[0]Kolekcije[/0][1]Collections[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_dogadjaji">[0]Događaji[/0][1]Events[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_nasa_izdanja">[0]Naša izdanja[/0][1]Our publications[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="title_kontakt">[0]Kontakt[/0][1]Contact[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion menu titles-->
 
     <!--Menu subtitles-->
     <!--region o nama-->
-    <string name="subt_uvodna">Uvodna riječ</string>
-    <string name="subt_vizmis">Vizija i misija</string>
-    <string name="subt_istorija">Istorija</string>
-    <string name="subt_objekti">Objekti</string>
-    <string name="subt_organizacija">Organizacija</string>
-    <string name="subt_izv_rad">Izvještaji o radu i programi rada</string>
-    <string name="subt_saradnja">Saradnja</string>
-    <string name="subt_donatori">Donatori i prijatelji</string>
-    <string name="subt_jav_nab">Javne nabavke</string>
+    <string name="subt_uvodna">[0]Uvodna riječ[/0][1]Introduction[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_vizmis">[0]Viyija i Misija[/0][1]Vision and Mission[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_istorija">[0]Istorija[/0][1]History[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_objekti">[0]Objekti[/0][1]Buildins[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_organizacija">[0]Organizacija[/0][1]Organization[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_izv_rad">[0]Izveštaji o radu i programi rada[/0][1]Reports and Programs[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_saradnja">[0]Saradnja[/0][1]Cooperation[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_donatori">[0]Donatori i prijatelji[/0][1]Donors and Friends[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_jav_nab">[0]Javne nabavke[/0][1]Public procurement[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion o nama-->
 
     <!--region katalozi-->
@@ -122,8 +122,34 @@
         <p>Montenegrin state has been founded on the letters as well, and its National Library is proud to inherit traces of the Crnojević’s printing house, as well as centuries of literacy that existed and flourished on its soil. Today it is the elite cultural institution whose mission goes far beyond its basic activity. It has an inevitable cultural and educational role in the country and the reputation of a reliable partner in the field of culture abroad. \n \n</p>
         <p>Bogić Rakočević \n \n Director of NLM “Đurđe Crnojević” \n \n </p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_biografija">[0]Bogić Rakočević - Biografija[/0][1]Bogić Rakočević - Biography[/1][2][/2][3][/3][4][/4][5][/5]</string>
-
     <!--endregion Uvodna rijec-->
+
+    <!-- region Vizija i misija -->
+
+    <!-- endregion Vizija i misija -->
+    <string name="str_vizija_misija_title">[0]Vizija i misija[/0][1]Vision and Mission[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_vizija_misija_bold">[0]NBCG “Đurđe Crnojević” je nacionalna biblioteka Crne Gore. Ona je riznica pisane kulturne baštine koja čuva materijalne dokaze o crnogorskoj kulturnoj stvarnosti, o postanku i indentitetu naroda.[/0][1]The National Library of Montenegro “Đurđe Crnojević” is a treasury of written cultural heritage preserving material evidence of Montenegrin cultural reality, on the emergence and identity of the nation. That’s why the National Library is one of fundamental cultural institutions of Montenegro. [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_vizija_misija_body">[0]<p>Zato je jedna od temeljnih kulturnih institucija države. Prikuplja i čuva pisane i elektronske izvore, omogućava njihovu dostupnost i brine se o njihovoj zaštiti. Objavljujući crnogorsku nacionalnu bibliografiju, promoviše crnogorsku pisanu kulturnu baštinu i stara se o kulturnim potrebama stanovništva.\n\n</p>
+        <p>Digitalne tehnologije i internet joj otvaraju nove puteve do korisnika, poboljšanje i povećanje obima usluga i modernizuju njeno ukupno poslovanje. U skladu sa načelom opšte dostupnosti informacijama afirmiše princip jednakosti i demokratičnosti. Kao državna matična biblioteka stara se za razvoj bibliotekarstva u Crnoj Gori. Svojim znanjem i iskustvom pomaže u radu ostalih biblioteka, koristeći povezivanje i praksu velikih biblioteka u okruženju, Evropi i svijetu.\n\n</p>
+        <p>Nakon međunarodnog priznanja Crne Gore, Biblioteka je preuzela sve nadležnosti i obaveze, domaće i međunarodne, koje su imale zajedničke institucije Srbije i Crne Gore.\n\n</p>
+        <p>Vizija razvoja Nacionalne biblioteke Crne Gore “Đurđe Crnojević” podrazumijeva:\n\n</p>
+        <p><ul>
+            <li>-Da služi znanju, obrazovanju, pamćenju i pismenosti;\n</li>
+            <li> -Da omogući opšti pristup informacijama kao i stručnim, obrazovnim i kulturnim sadržajima;\n</li>
+            <li> -Da služi kao osnova i podsticaj za ukupan razvoj, napredak i snaženje Crne Gore;\n</li>
+            <li> -Da služi i podstiče istraživanje, učenje, zabavu i kreativnost;\n</li>
+            <li> -Da služi svim građanima Crne Gore bez razlike i ograničenja.\n\n</li></ul></p>
+[/0][1]NLM collects and keeps written and electronic sources, enables their retrieval and cares for their preservation. By publishing Montenegrin national bibliography, it promotes Montenegrin written cultural heritage and caters for cultural needs of the population.<div>\n \n
+            <div><p>Digital technologies and Internet open new lines of communication with its customers, the improvement and increased scope of services and modernize its business in total. In accordance with the principle of general information availability, it affirms the principle of equity and democracy. As the central state library, it takes account of the development of library science in Montenegro. With its knowledge and experience, it assists other libraries in their operation using networking and practices of the larger libraries in the region, Europe and worldwide. \n\n</p>
+                <p>After the international recognition of Montenegro, the library has taken over all responsibilities and liabilities, domestic and international, that common institutions of Serbia and Montenegro has taken care about earlier. \n \n</p>
+                <p>Vision of the Library Development is to: \n \n </p>
+                <p><ul>
+                    <li>-Serve knowledge, education, memory and literacy;\n</li>
+                    <li> -Enable general access to information, as well as professional, educational and cultural contents;\n</li>
+                    <li> -Serve as a basis and an impetus for overall development, progress and strengthening of Montenegro;\n</li>
+                    <li> -Serve the purposes of and foster research, learning, entertainment and creativity;\n</li>
+                    <li> -Serve all citizens of Montenegro without any distinctions and limitations.\n\n</li>
+                </ul></p>\n \n</div></div>[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--endregion O Nama-->
 

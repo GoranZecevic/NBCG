@@ -21,15 +21,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints">
 
-
-            <!--<ImageView-->
-                <!--android:id="@+id/img_kataozi"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:background="@drawable/onama"></ImageView>-->
-
-
-
             <Button
                 android:id="@+id/o_nama_title"
                 android:layout_width="match_parent"
