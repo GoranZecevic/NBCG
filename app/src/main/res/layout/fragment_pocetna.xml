@@ -104,7 +104,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/v16"
-        android:layout_marginBottom="@dimen/v16"
+        android:layout_marginLeft="@dimen/v8"
+        android:layout_marginRight="@dimen/v8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -120,17 +121,12 @@
                 android:id="@+id/str_home_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/v8"
-                android:layout_marginLeft="@dimen/v8"
                 android:layout_marginTop="@dimen/v8"
-                android:layout_marginEnd="@dimen/v8"
-                android:layout_marginRight="@dimen/v8"
                 android:layout_marginBottom="@dimen/v8"
                 android:text="@string/str_home_body"
                 android:textColor="@color/cardview_dark_background"
                 app:layout_constraintBottom_toTopOf="@+id/za_korisnike_btn"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
@@ -284,15 +280,12 @@
 
             <TextView
                 android:id="@+id/dogadjaji_txt"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/v8"
-                android:layout_marginLeft="@dimen/v8"
-                android:layout_marginTop="@dimen/v8"
-                android:layout_marginEnd="@dimen/v8"
-                android:layout_marginRight="@dimen/v8"
                 android:text="Pogledajte sve tekuce i prosle dogadjaje"
                 android:textColor="@color/cardview_dark_background"
+                android:gravity="left"
+                android:layout_marginTop="@dimen/v8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dogadjaji_btn" />
@@ -318,8 +311,7 @@
                 android:textColor="@color/white"
                 android:text="Katalozi i kolekcije"
                 android:textSize="@dimen/over_txt_size_small"
-                android:layout_marginStart="@dimen/v4"
-                android:layout_marginEnd="@dimen/v4"
+                android:layout_marginTop="@dimen/v16"
                 android:paddingTop="@dimen/v10"
                 android:paddingBottom="@dimen/v10"
                 android:layout_width="match_parent"
@@ -327,7 +319,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dogadjaji_opsirnije_btn"
-                android:layout_marginLeft="@dimen/v4" />
+                />
 
             <Button
                 android:id="@+id/enbcg_btn"

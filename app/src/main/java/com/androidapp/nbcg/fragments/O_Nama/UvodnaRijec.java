@@ -1,17 +1,22 @@
 package com.androidapp.nbcg.fragments.O_Nama;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
 
 
@@ -46,6 +51,25 @@ public class UvodnaRijec extends Fragment {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_uvodna_rijec, null);
         textPopulate();
 
+
+        Button btnBiografija = (Button)mView.findViewById(R.id.bogic_biografija);
+
+        if(language == 1){
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_ENG, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_ENG, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_ENG, R.id.vb_btn_ln);
+            btnBiografija.setVisibility(View.GONE);
+        }
+
+        if(language == 0) {
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_MNE, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_MNE, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_MNE, R.id.vb_btn_ln);
+            buttonHandlerWeb(ApiUrls.BIOGRAFIJA_BR, R.id.bogic_biografija);
+        }
+
+
+
         return mView;
     }
 
@@ -67,6 +91,8 @@ public class UvodnaRijec extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+
+
     public void textPopulate(){
 
         TextView title = (TextView)mView.findViewById(R.id.str_za_izdavace_title);
@@ -76,6 +102,14 @@ public class UvodnaRijec extends Fragment {
             case 1: titleStr = helper.eng(getResources().getString(R.string.str_uvodna_rijec_title)); break;
         }
         title.setText(titleStr);
+
+        TextView bold = (TextView)mView.findViewById(R.id.vb_bold);
+        String boldStr= "";
+        switch (language){
+            case 0: boldStr = helper.mne(getResources().getString(R.string.str_uvodna_rijec_bold)); break;
+            case 1: boldStr = helper.eng(getResources().getString(R.string.str_uvodna_rijec_bold)); break;
+        }
+        bold.setText(boldStr);
 
         TextView body = (TextView)mView.findViewById(R.id.vb_body);
         String bodyStr= "";
@@ -92,5 +126,78 @@ public class UvodnaRijec extends Fragment {
             case 1: headerStr = helper.eng(getResources().getString(R.string.str_onama_title)); break;
         }
         header.setText(headerStr);
+
+        TextView podjeli = (TextView)mView.findViewById(R.id.podjeli);
+        String podjeliStr= "";
+        switch (language){
+            case 0: podjeliStr = helper.mne(getResources().getString(R.string.str_podelite)); break;
+            case 1: podjeliStr = helper.eng(getResources().getString(R.string.str_podelite)); break;
+        }
+        podjeli.setText(podjeliStr);
+
+        Button biografija = (Button)mView.findViewById(R.id.bogic_biografija);
+        String biografijaStr= "";
+        switch (language){
+            case 0: biografijaStr = helper.mne(getResources().getString(R.string.str_biografija)); break;
+            case 1: biografijaStr = helper.eng(getResources().getString(R.string.str_biografija)); break;
+        }
+        biografija.setText(biografijaStr);
+    }
+
+
+
+    // region helpers
+    private void newFragment(Fragment fragment){
+        Fragment newFragment = fragment;
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, newFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void buttonHandler(final Fragment fragment, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            Fragment proxyFragment = fragment;
+            int id = buttonId;
+            @Override
+            public void onClick(View v)
+            {
+                newFragment(proxyFragment);
+            }
+        });
+    }
+
+    private void buttonHandlerWeb(final String url, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
+    }
+
+    private void imageButtonHandlerWeb(final String url, final int buttonId){
+        ImageButton button = (ImageButton) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
     }
 }

@@ -130,61 +130,6 @@ public class Pocetna extends Fragment {
     }
 
 
-    // region helpers
-    private void newFragment(Fragment fragment){
-        Fragment newFragment = fragment;
-
-        FragmentManager manager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = manager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, newFragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
-
-    private void buttonHandler(final Fragment fragment, final int buttonId){
-        Button button = (Button) mView.findViewById(buttonId);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            Fragment proxyFragment = fragment;
-            int id = buttonId;
-            @Override
-            public void onClick(View v)
-            {
-                newFragment(proxyFragment);
-            }
-        });
-    }
-
-    private void buttonHandlerWeb(final String url, final int buttonId){
-        Button button = (Button) mView.findViewById(buttonId);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            int id = buttonId;
-            Helpers help = new Helpers();
-            Context ctx = mView.getContext();
-            @Override
-            public void onClick(View v)
-            {
-                help.goToUrl(url, ctx);
-            }
-        });
-    }
-
-    private void imageButtonHandlerWeb(final String url, final int buttonId){
-        ImageButton button = (ImageButton) mView.findViewById(buttonId);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            int id = buttonId;
-            Helpers help = new Helpers();
-            Context ctx = mView.getContext();
-            @Override
-            public void onClick(View v)
-            {
-                help.goToUrl(url, ctx);
-            }
-        });
-    }
-
 
 
     public void onButtonPressed(Uri uri) {
@@ -381,6 +326,63 @@ public class Pocetna extends Fragment {
             case 1: posetiteNasStr = helper.eng(getResources().getString(R.string.str_posetine_nas)); break;
         }
         posetiteNas.setText(posetiteNasStr);
+    }
+
+
+
+    // region helpers
+    private void newFragment(Fragment fragment){
+        Fragment newFragment = fragment;
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, newFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void buttonHandler(final Fragment fragment, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            Fragment proxyFragment = fragment;
+            int id = buttonId;
+            @Override
+            public void onClick(View v)
+            {
+                newFragment(proxyFragment);
+            }
+        });
+    }
+
+    private void buttonHandlerWeb(final String url, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
+    }
+
+    private void imageButtonHandlerWeb(final String url, final int buttonId){
+        ImageButton button = (ImageButton) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
     }
 
 

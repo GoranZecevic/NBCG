@@ -51,6 +51,14 @@ public class ApiUrls {
     public static final String YOUTUBE = "https://www.youtube.com/channel/UCYRdX0JWuofg-S7aBCif-1Q?&ab_channel=NacionalnabibliotekaCG%C4%90ur%C4%91eCrnojevi%C4%87";
     public static final String FB = "https://www.facebook.com/nacionalnabibliotekacg";
 
+    public static final String BIOGRAFIJA_BR = "https://www.nb-cg.me/fajlovi/p1d3h1bnea1mt2cd8gn06fq1rsk4.pdf";
+
+    public static final String UVODNA_RIJEC_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/uvodna-rijec";
+    public static final String UVODNA_RIJEC_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/uvodna-rijec";
+    public static final String UVODNA_RIJEC_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/uvodna-rijec";
+    public static final String UVODNA_RIJEC_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/introduction";
+    public static final String UVODNA_RIJEC_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/introduction";
+    public static final String UVODNA_RIJEC_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/introduction";
 
 
 

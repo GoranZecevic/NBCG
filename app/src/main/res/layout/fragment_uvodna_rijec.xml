@@ -10,7 +10,7 @@
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/header"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
@@ -113,6 +113,7 @@
                     android:layout_marginRight="8dp"
                     android:text="@string/str_virtuelna_biblioteka_cg_body"
                     android:textColor="@color/cardview_dark_background"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/bogic" />
@@ -133,6 +134,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/vb_bold" />
 
+                <Button
+                    android:id="@+id/bogic_biografija"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@android:color/transparent"
+                    android:text="Biografija"
+                    android:textStyle="italic"
+                    android:textColor="@color/gold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vb_body"/>
+
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
@@ -144,32 +158,48 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/vb_body">
+                    app:layout_constraintTop_toBottomOf="@+id/bogic_biografija">
+
+                    <TextView
+                        android:id="@+id/podjeli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/v8"
+                        android:paddingBottom="@dimen/v8"
+                        android:background="@color/gold"
+                        android:text="PODELITE"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageButton
                         android:id="@+id/vb_btn_fb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/ic_facebook"
+                        android:background="@drawable/ic_social_facebook_circular_button"
                         android:textSize="@dimen/over_txt_size"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/vb_btn_tw"
                         app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/podjeli" />
 
                     <ImageButton
                         android:id="@+id/vb_btn_tw"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/ic_twitter_logo_button"
+                        android:background="@drawable/ic_social_twitter_circular_button"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/vb_btn_ln"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toEndOf="@+id/vb_btn_fb"
-                        app:layout_constraintVertical_bias="1.0" />
+                        app:layout_constraintTop_toBottomOf="@+id/podjeli" />
 
                     <ImageButton
                         android:id="@+id/vb_btn_ln"
@@ -177,12 +207,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/ic_linkedin_logo"
+                        android:background="@drawable/ic_social_linkedin_circular_button"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toEndOf="@+id/vb_btn_tw"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/podjeli" />
 
                 </android.support.constraint.ConstraintLayout>
 

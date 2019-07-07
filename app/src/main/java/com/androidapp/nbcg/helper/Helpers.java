@@ -13,6 +13,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
@@ -89,14 +91,15 @@ public class Helpers extends Fragment {
 
     //Open new fragment
     public void openFragment(Fragment fragment, FragmentManager fragmentManager){
-        Fragment newFragment = fragment;
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        transaction.replace(R.id.fragment_container, newFragment);
-        transaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.addToBackStack(null);
 
-        transaction.commit();
+        fragmentTransaction.commit();
     }
+
 
 
 }
