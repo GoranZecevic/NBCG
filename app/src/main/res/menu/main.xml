@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <item
         android:id="@+id/crnogorski"
-        android:orderInCategory="100"
+        android:icon="@drawable/ic_montenegro"
         android:title="Cnogorski"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/english"
-        android:orderInCategory="100"
+        android:icon="@drawable/ic_united_kingdom"
         android:title="English"
         app:showAsAction="never" />
 </menu>

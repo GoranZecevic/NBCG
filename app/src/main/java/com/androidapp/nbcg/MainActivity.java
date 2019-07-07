@@ -1,8 +1,10 @@
 package com.androidapp.nbcg;
 
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuBuilder;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -228,12 +230,19 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        if(menu instanceof MenuBuilder){
+            MenuBuilder m = (MenuBuilder) menu;
+            m.setOptionalIconsVisible(true);
+        }
+
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -466,8 +475,8 @@ public class MainActivity extends AppCompatActivity
                 if (view_Group != null) {
                     view_Group.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
-                view_Group = v;
-                view_Group.setBackgroundColor(Color.parseColor("#F21E1E"));
+//                view_Group = v;
+//                view_Group.setBackgroundColor(Color.parseColor("#F21E1E"));
 
                 if (childList.get(headerList.get(groupPosition)) != null) {
 //                    MenuModel model = childList.get(headerList.get(groupPosition)).get(childPosition);

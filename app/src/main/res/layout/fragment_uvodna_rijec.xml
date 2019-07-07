@@ -22,30 +22,44 @@
             tools:ignore="MissingConstraints">
 
 
-            <ImageView
-                android:id="@+id/img_kataozi"
+            <!--<ImageView-->
+                <!--android:id="@+id/img_kataozi"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/onama"></ImageView>-->
+
+
+
+            <Button
+                android:id="@+id/o_nama_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/slide2"></ImageView>
+                android:background="@drawable/onama"
+                android:text="@string/str_za_korisnike_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/over_txt_size"/>
 
         </FrameLayout>
 
-        <TextView
-            android:id="@+id/str_za_izdavace_title"
-            android:layout_width="258dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@color/white"
-            android:text="@string/subt_uvodna"
-            android:textAlignment="center"
-            android:textSize="@dimen/title_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+    <TextView
+        android:id="@+id/str_za_izdavace_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/v8"
+        android:paddingBottom="@dimen/v8"
+        android:text="@string/subt_uvodna"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
 
 
         <ScrollView
@@ -68,7 +82,7 @@
                 <FrameLayout
                     android:id="@+id/bogic"
                     android:layout_width="0dp"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
@@ -84,9 +98,24 @@
                         android:id="@+id/bogic_img"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/slide3"></ImageView>
+                        android:background="@drawable/bogic"></ImageView>
 
                 </FrameLayout>
+
+                <TextView
+                    android:id="@+id/vb_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/str_virtuelna_biblioteka_cg_body"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bogic" />
 
 
                 <TextView
@@ -95,14 +124,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:text="@string/str_virtuelna_biblioteka_cg_body"
                     android:textColor="@color/cardview_dark_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/bogic" />
+                    app:layout_constraintTop_toBottomOf="@id/vb_bold" />
 
 
                 <android.support.constraint.ConstraintLayout

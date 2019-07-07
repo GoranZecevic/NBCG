@@ -11,7 +11,14 @@
     <dimen name="over_txt_size">36dp</dimen>
     <dimen name="over_txt_size_small">20dp</dimen>
 
+    <dimen name="v4">4dp</dimen>
     <dimen name="v8">8dp</dimen>
+    <dimen name="v10">10dp</dimen>
+    <dimen name="v16">16dp</dimen>
+    <dimen name="v24">24dp</dimen>
+
+    <dimen name="big_button">200dp</dimen>
+    <dimen name="header">220dp</dimen>
 
 
 

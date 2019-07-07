@@ -6,6 +6,7 @@
 
     <TextView
         android:id="@+id/lblListHeader"
+        android:background="@color/gold"
         android:layout_width="match_parent"
         android:drawablePadding="15dp"
         android:layout_height="?attr/listPreferredItemHeightSmall"

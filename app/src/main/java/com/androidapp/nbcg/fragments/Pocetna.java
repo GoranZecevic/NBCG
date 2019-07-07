@@ -209,6 +209,13 @@ public class Pocetna extends Fragment {
     }
 
     public void textPopulate(){
+        String pocetnaStr= "";
+        switch (language){
+            case 0: pocetnaStr = helper.mne(getResources().getString(R.string.str_pocetna)); break;
+            case 1: pocetnaStr = helper.eng(getResources().getString(R.string.str_pocetna)); break;
+        }
+        getActionBar().setTitle(pocetnaStr);
+
         TextView title = (TextView) mView.findViewById(R.id.str_home_title_inner);
         String titleStr= "";
         switch (language){
@@ -287,7 +294,93 @@ public class Pocetna extends Fragment {
         }
         zaBibliotekare.setText(zaBibliotekareTxtStr);
 
+        Button dogadjajiBtn =(Button) mView.findViewById(R.id.dogadjaji_btn);
+        String dogadjajiStr= "";
+        switch (language){
+            case 0: dogadjajiStr = helper.mne(getResources().getString(R.string.str_dogadjaji_title)); break;
+            case 1: dogadjajiStr = helper.eng(getResources().getString(R.string.str_dogadjaji_title)); break;
+        }
+        dogadjajiBtn.setText(dogadjajiStr);
 
+        TextView dogadjajiOpsirnije = (TextView) mView.findViewById(R.id.dogadjaji_txt);
+        String dogadjajiOpsirnijeStr= "";
+        switch (language){
+            case 0: dogadjajiOpsirnijeStr = helper.mne(getResources().getString(R.string.str_dogadjaji_opsirnije)); break;
+            case 1: dogadjajiOpsirnijeStr = helper.eng(getResources().getString(R.string.str_dogadjaji_opsirnije)); break;
+        }
+        dogadjajiOpsirnije.setText(dogadjajiOpsirnijeStr);
+
+        TextView katalogKolekcije = (TextView) mView.findViewById(R.id.katalozi_kolekcije);
+        String katalogKolekcijeStr= "";
+        switch (language){
+            case 0: katalogKolekcijeStr = helper.mne(getResources().getString(R.string.str_katalozi_kolekcije_title)); break;
+            case 1: katalogKolekcijeStr = helper.eng(getResources().getString(R.string.str_katalozi_kolekcije_title)); break;
+        }
+        katalogKolekcije.setText(katalogKolekcijeStr);
+
+        Button ekatalogNbcg =(Button) mView.findViewById(R.id.enbcg_btn);
+        String ekatalogNbcgStr= "";
+        switch (language){
+            case 0: ekatalogNbcgStr = helper.mne(getResources().getString(R.string.str_ekatlognbcg_title)); break;
+            case 1: ekatalogNbcgStr = helper.eng(getResources().getString(R.string.str_ekatlognbcg_title)); break;
+        }
+        ekatalogNbcg.setText(ekatalogNbcgStr);
+
+        Button dkPpnjNbcg =(Button) mView.findViewById(R.id.ppn_dig_btn);
+        String dkPpnjNbcgStr= "";
+        switch (language){
+            case 0: dkPpnjNbcgStr = helper.mne(getResources().getString(R.string.str_dk_pdpnj_title)); break;
+            case 1: dkPpnjNbcgStr = helper.eng(getResources().getString(R.string.str_dk_pdpnj_title)); break;
+        }
+        dkPpnjNbcg.setText(dkPpnjNbcgStr);
+
+        Button ekcg =(Button) mView.findViewById(R.id.ekatalog_btn);
+        String ekcgStr= "";
+        switch (language){
+            case 0: ekcgStr = helper.mne(getResources().getString(R.string.str_ekcg_title)); break;
+            case 1: ekcgStr = helper.eng(getResources().getString(R.string.str_ekcg_title)); break;
+        }
+        ekcg.setText(ekcgStr);
+
+        Button dbcg =(Button) mView.findViewById(R.id.dig_bibl_btn);
+        String dbcgStr= "";
+        switch (language){
+            case 0: dbcgStr = helper.mne(getResources().getString(R.string.str_dbcg_title)); break;
+            case 1: dbcgStr = helper.eng(getResources().getString(R.string.str_dbcg_title)); break;
+        }
+        dbcg.setText(dbcgStr);
+
+        Button katalogIzdanaj =(Button) mView.findViewById(R.id.katal_izd_btn);
+        String katalogIzdanajStr= "";
+        switch (language){
+            case 0: katalogIzdanajStr = helper.mne(getResources().getString(R.string.str_katalog_izdanja_title)); break;
+            case 1: katalogIzdanajStr = helper.eng(getResources().getString(R.string.str_katalog_izdanja_title)); break;
+        }
+        katalogIzdanaj.setText(katalogIzdanajStr);
+
+        Button cgBibliografija =(Button) mView.findViewById(R.id.cg_bibliog_btn);
+        String cgBibliografijajStr= "";
+        switch (language){
+            case 0: cgBibliografijajStr = helper.mne(getResources().getString(R.string.str_cg_bibliografija_title)); break;
+            case 1: cgBibliografijajStr = helper.eng(getResources().getString(R.string.str_cg_bibliografija_title)); break;
+        }
+        cgBibliografija.setText(cgBibliografijajStr);
+
+        Button europeana =(Button) mView.findViewById(R.id.europeana_btn);
+        String europeanaStr= "";
+        switch (language){
+            case 0: europeanaStr = helper.mne(getResources().getString(R.string.str_europeana_title)); break;
+            case 1: europeanaStr = helper.eng(getResources().getString(R.string.str_europeana_title)); break;
+        }
+        europeana.setText(europeanaStr);
+
+        TextView posetiteNas =(TextView) mView.findViewById(R.id.podjeli);
+        String posetiteNasStr= "";
+        switch (language){
+            case 0: posetiteNasStr = helper.mne(getResources().getString(R.string.str_posetine_nas)); break;
+            case 1: posetiteNasStr = helper.eng(getResources().getString(R.string.str_posetine_nas)); break;
+        }
+        posetiteNas.setText(posetiteNasStr);
     }
 
 

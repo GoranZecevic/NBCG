@@ -73,17 +73,53 @@
     <!--end menu subtitles-->
 
     <!--region Pocetna -->
-    <string name="str_home_title">[0]Nacionalna biblioteka Crne Gore „Đurđe Crnojević“[/0][1]National Library of Montenegro "Đurđe Crnojević" [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_pocetna">[0]Početna[/0][1]Landing page[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_home_title">[0]Nacionalna biblioteka Crne Gore \n „Đurđe Crnojević“[/0][1]National Library of Montenegro \n "Đurđe Crnojević"[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_home_body">[0]Nacionalna biblioteka s ponosom baštini tragove Crnojevića štamparije, kao i viševjekovne pismenosti koja je postojala i razvijala se na njenom tlu. Danas je to elitna kulturna ustanova čija misija umnogome prevazilazi njenu osnovnu djelatnost. Ona ima nezaobilaznu kulturnu i obrazovnu ulogu u zemlji i reputaciju pouzdanog partnera u oblasti kulture u inostranstvu.
 [/0][1]National Library of Montenegro "Đurđe Crnojević" (NLM), as one of those with the deepest roots among the national libraries in this part of Europe, is a real treasury of Montenegrin written heritage, intellectual memory of the nation and one of the symbols of culture in the country.[/1][2][/2][3][/3][4][/4][5][/5] </string>
-    <string name="str_za_korisnike_title">[0]ZA KORISNIKE[/0][1]FOR USERS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_korisnike_title">[0]ZA KORISNIKE[/0][1]FOR USERS[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_za_korisnike_txt">[0]Bibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove...[/0][1]Library Materials of the National Library of Montenegro are primarily used in the reading rooms of the NLM “Đurđe Crnojević”.[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str__opsirnije">[0]OPŠIRNIJE >[/0][1]MORE > [/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_za_izdavace_title">[0]ZA IZDAVAČE[/0][1]FOR PUBLISHERS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str__opsirnije">[0]OPŠIRNIJE >[/0][1]MORE >[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_izdavace_title">[0]ZA IZDAVAČE[/0][1]FOR PUBLISHERS[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_za_izdavace_txt">[0]Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne...[/0][1]National Library prepares CIP (Cataloguing in Publication) upon request from the publishers from Montenegro ... [/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_za_bibliotekare_title">[0]ZA BIBLIOTEKARE[/0][1]FOR LIBRARIANS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_za_bibliotekare_title">[0]ZA BIBLIOTEKARE[/0][1]FOR LIBRARIANS[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_za_bibliotekare_txt">[0]Nacionalna biblioteka, kao nacionalna i matična biblioteka Crne Gore, stara se o usavršavanju...[/0][1]The National Library of Montenegro as the parent library in Montenegro, take care of the training of personnel... [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_dogadjaji_title">[0]DOGAĐAJI[/0][1]EVENTS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_dogadjaji_opsirnije">[0]Pogledajte sve tekuće i prethodne događaje[/0][1]Take a look at all previous and up coming events[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_katalozi_kolekcije_title">[0]KATALOZI I KOLEKCIJE[/0][1]CATALOGUES AND COLLECTIONS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_ekatlognbcg_title">[0]E KATALOG NBCG[/0][1]NLM E-CATALOGUE[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_dk_pdpnj_title">[0]DIGITALNA KOLEKCIJA \n \"PETAR II PETROVIĆ NJEGOŠ\"[/0][1]DIGITAL COLLECTION \n \"PETAR II PETROVIĆ NJEGOŠ\"[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_ekcg_title">[0]E KATALOG CRNE GORE[/0][1]E-CATALOGUE OF MONTENEGRO[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_dbcg_title">[0]DIGITALNA BIBLIOTEKA \n CRNE GORE[/0][1]DIGITAL LIBRARY OF \n MONTENEGRO[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_katalog_izdanja_title">[0]KATALOG IZDANJA[/0][1]CATALOGUE OF PUBLICATIONS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_cg_bibliografija_title">[0]CRNOGORSKA BIBLIOGRAFIJA[/0][1]MONTENEGRIN BIBLIOGRAPHY[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_europeana_title">[0]EUROPEANA[/0][1]EUROPEANA[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_posetine_nas">[0]Posetite nas[/0][1]Visit us[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion Pocetna-->
+
+    <!--region O Nama -->
+
+    <!--region Uvodna rijec -->
+    <string name="str_onama_title">[0]O NAMA[/0][1]ABOUT US[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_uvodna_rijec_title">[0]Uvodna riječ[/0][1]Introduction[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_uvodna_rijec_body">[0]<p><span style="background-color: initial;">Biblioteka u svom razvojnom toku bilježi različite mijene, ali sve vrijeme svog postojanja i trajanja predstavlja jedan od temelja crnogorske državnosti, tradicije i kulture. Počev od 1592/93. godine kada su popisane 42 knjige u Cetinjskom manastiru do savremenog doba kada je dobila moderni centralni depo za smještaj bibliotečkog fonda velike površine, Biblioteka predstavlja mjesto gdje se sabiraju važniji pisani tragovi o Crnogorcima i svim drugim narodima koji žive u Crnoj Gori. Ona je stjecište i zavidne građe objavljene u inostranstvu.</span></p>
+        <p>Nacionalna biblioteka Crne Gore „Đurđe Crnojević“ smještena je na Cetinju, u dva osobena zdanja sagrađena početkom dvadesetog vijeka za potrebe italijanske i francuske diplomatije u Kraljevini Crnoj Gori. Riječ je o graditeljskim biserima koji su rađeni po projektima čuvenih arhitekata Koradinija i Pola Godea.</p><p>Danas ova ustanova posjeduje bibliotečku građu raspoređenu u tri cjeline: Osnovni fond, Muzejski fond i Posebne zbirke, a ima i vrijedne legate. Ona je matična biblioteka narodnim i univerzitetskim bibliotekama u Crnoj Gori. Ovaj jedinstveni hram knjige bilježi izuzetno razvijenu međunarodnu saradnju koja se ogleda u razmjeni publikacija, zajedničkim projektima i učešću u radu niza asocijacija i institucija koje se bave bibliotečkom djelatnošću. Nacionalna biblioteka ima Digitalnu i Virtuelnu biblioteku Crne Gore koje korisnicima omogućavaju korišćenje pisane baštine u elektronskom obliku. Osim osnovne djelatnosti, ona organizuje programe iz različitih umjetničkih oblasti čime upotpunjuje svoju društvenu ulogu sloveći za jednog od najvažnijih činilaca na kulturnoj mapi  Crne Gore.</p>
+        <p>Crnogorska država utemeljena je i na slovima, a njena Nacionalna biblioteka s ponosom baštini tragove Crnojevića štamparije, kao i viševjekovne pismenosti koja je postojala i razvijala se na njenom tlu. Danas je to elitna kulturna ustanova čija misija umnogome prevazilazi njenu osnovnu djelatnost. Ona ima nezaobilaznu kulturnu i obrazovnu ulogu u zemlji i reputaciju pouzdanog partnera u oblasti kulture u inostranstvu.</p><p>Bogić Rakočević<br/>direktor NBCG „Đurđe Crnojević“<br/></p><p><i> <a href="/fajlovi/p1d3h1bnea1mt2cd8gn06fq1rsk4.pdf" target="_blank">Bogić Rakočević – Biografija</a> </i><br/></p>
+        [/0]
+        [1]<p>Though a relatively small country, Montenegro has a rich history and culture of which, among other things, testifies its National Library “Đurđe Crnojević”. It has been named after the ruler of Montenegro who in 1493 founded the first state printing house in the world.</p>
+        <p>During its development, the library has undergone various changes, but for all the time and duration of its existence it has represented one of the cornerstones of Montenegrin independence, tradition and culture. From 1592/93 when 42 books were listed in the Cetinje Monastery to the modern times in which it has got a modern central depot for storing library holdings on large surface area, the library has represented a place where all important written evidence of Montenegrins and all the other people living in Montenegro has been collected. It is the core of the remarkable material published abroad as well.</p>
+        <p>The National Library of Montenegro “Đurđe Crnojević” is located in Cetinje, in two distinctive buildings built in the early twentieth century to serve the needs of Italian and French diplomacy in the Kingdom of Montenegro.These architectural pearls that have been designed by famous architects Corradini and Paul Gaudet.</p>
+        <p>Today this institution holds a library material sorted within three units: Basic Fund, Museum Fund and Special Collections, as well as some valuable legacies. It is the parent library to the public and university libraries in Montenegro. This unique temple of books cherish extremely developed international cooperation that is reflected in the exchange of publications, joint projects and participation in the work of a number of associations and institutions practicing library activities. The National Library holds a Digital and Virtual Library of Montenegro that enable the usage of written heritage in electronic form. In addition to the basic activities, it organizes events from different artistic fields thanks to which it complements its social role, being known as one of the most important factors on the cultural map of Montenegro.</p>
+        <p>Montenegrin state has been founded on the letters as well, and its National Library is proud to inherit traces of the Crnojević’s printing house, as well as centuries of literacy that existed and flourished on its soil. Today it is the elite cultural institution whose mission goes far beyond its basic activity. It has an inevitable cultural and educational role in the country and the reputation of a reliable partner in the field of culture abroad.</p>
+        <p>Bogić Rakočević<br/>Director of NLM “Đurđe Crnojević”<br/></p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+
+    <!--endregion Uvodna rijec-->
+
+    <!--endregion O Nama-->
+
+    [0]Uvodna riječ[/0][1]Introduction[/1][2][/2][3][/3][4][/4][5][/5]
+
+
 
     <string name="str__kontakt_opsirno">Centrala
 Tel: +382 41 231-143
