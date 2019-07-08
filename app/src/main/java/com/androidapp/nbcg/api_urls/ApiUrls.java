@@ -53,6 +53,19 @@ public class ApiUrls {
 
     public static final String BIOGRAFIJA_BR = "https://www.nb-cg.me/fajlovi/p1d3h1bnea1mt2cd8gn06fq1rsk4.pdf";
 
+
+    public static final String DOKUMENT_1 = "https://www.nb-cg.me/fajlovi/p1d7hihe74103m1v6179e1pehi2c4.pdf";
+    public static final String DOKUMENT_2 = "https://www.nb-cg.me/fajlovi/p1d4q55me4nqohohkgqa0kn9i4.pdf";
+    public static final String DOKUMENT_3 = "https://www.nb-cg.me/fajlovi/PRAVILNIK-O-UNUTRASNJOJ-ORGANIZACIJI-I-SISTEMATIZACIJI-RADNIH-MJESTA.pdf";
+    public static final String DOKUMENT_4 = "https://www.nb-cg.me/fajlovi/ODLUKA-PRAVILNIK-O-ORGANIZACIJI-I-SISTEMATIZACIJI-RADNIH-MJESTA-NBCG.pdf";
+    public static final String DOKUMENT_5 = "https://www.nb-cg.me/fajlovi/OBAVJESTENJE-O-JAVNOJ-RASPRAVI-NACRT-PRAVILNIKA-O-ORGANIZACIJI-I-SISTEMATIZACIJI-RADNIH-MJESTA-NBCG.pdf";
+    public static final String DOKUMENT_6 = "https://www.nb-cg.me/fajlovi/ODLUKA-O-IZMJENAMA-I-DOPUNAMA-STATUTA.pdf";
+    public static final String DOKUMENT_7 = "https://www.nb-cg.me/fajlovi/PRAVILNIK-O-NORMAMA-ZA-OBAVLJANJE-RADNIH-ZADATAKA.pdf";
+    public static final String DOKUMENT_8 = "https://www.nb-cg.me/fajlovi/Pravilnik-o-normama.pdf";
+    public static final String DOKUMENT_9 = "https://www.nb-cg.me/fajlovi/izvestaj.pdf";
+    public static final String DOKUMENT_10 = "https://www.nb-cg.me/fajlovi/ODLUKA-O-SPROVODJENJU-PROCEDURE-PRILIKOM-ZAPOSLJAVANJA-U-BIBLIOTECI-prepravljeno.pdf";
+    public static final String DOKUMENT_11 = "https://www.nb-cg.me/fajlovi/p1d6898hi74m0aa9103edb61pu14.pdf";
+
     public static final String UVODNA_RIJEC_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/uvodna-rijec";
     public static final String UVODNA_RIJEC_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/uvodna-rijec";
     public static final String UVODNA_RIJEC_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/uvodna-rijec";
@@ -67,7 +80,25 @@ public class ApiUrls {
     public static final String VIZIJA_MISIJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/vision-and-mission";
     public static final String VIZIJA_MISIJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/vision-and-mission";
 
+    public static final String ISTORIJA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/istorija";
+    public static final String ISTORIJA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/istorija";
+    public static final String ISTORIJA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/istorija";
+    public static final String ISTORIJA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/history";
+    public static final String ISTORIJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/history";
+    public static final String ISTORIJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/history";
 
+    public static final String OBJEKTI_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/objekti";
+    public static final String OBJEKTI_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/objekti";
+    public static final String OBJEKTI_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/objekti";
+    public static final String OBJEKTI_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/buildings";
+    public static final String OBJEKTI_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/buildings";
+    public static final String OBJEKTI_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/buildings";
 
+    public static final String ORGANIZACIJA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/organizacija";
+    public static final String ORGANIZACIJA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/organizacija";
+    public static final String ORGANIZACIJA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/organizacija";
+    public static final String ORGANIZACIJA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/organization";
+    public static final String ORGANIZACIJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/organization";
+    public static final String ORGANIZACIJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/organization";
 
 }

@@ -49,15 +49,15 @@ public class VizijaMisija extends Fragment {
         textPopulate();
 
         if(language == 1){
-            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_ENG, R.id.vb_btn_fb);
-            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_ENG, R.id.vb_btn_tw);
-            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_ENG, R.id.vb_btn_ln);
+            imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_FB_ENG, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_TW_ENG, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_LN_ENG, R.id.vb_btn_ln);
         }
 
         if(language == 0) {
-            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_MNE, R.id.vb_btn_fb);
-            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_MNE, R.id.vb_btn_tw);
-            imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_MNE, R.id.vb_btn_ln);
+            imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_FB_MNE, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_TW_MNE, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_LN_MNE, R.id.vb_btn_ln);
         }
 
 

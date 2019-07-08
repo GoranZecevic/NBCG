@@ -153,9 +153,143 @@
 
     <!--endregion O Nama-->
 
-    [0]Uvodna riječ[/0][1]Introduction[/1][2][/2][3][/3][4][/4][5][/5]
+    <!--region Istorija -->
+    <string name="str_istorija_title">[0]Istorija[/0][1]History[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_istorija_bold">[0]Najvažnije godine u istoriji Nacionalne biblioteke Crne Gore[/0][1]The Most Important Years in the History of the Montenegrin National Library[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_istorija_body">
+        [0]<p><i><b>1592-1593.</b></i>\n
+        Popisane su 42 knjige u Cetinjskom manastiru. U pitanju su prvi sačuvani popisi knjiga u Crnoj Gori.</p> \n\n
+        <p><b>1838.</b><p>\n
+        Crnogorski vladar, vladika i pjesnik Petar II Petrović Njegoš izdvojio je iz Cetinjskog manastira svjetovne knjige od crkvenih, koje su on i njegov duhovni i svjetovni prethodnik Petar I Petrović pribavljali, i prenio ih u svoju rezidenciju, Biljardu. Smatra se da je Njegoševa biblioteka imala funkciju državne biblioteke.</p>\n\n
+        <b>1893.</b>\n
+        Povodom 400-godišnjice Crnojevića štamparije, knjaz Crne Gore Nikola I Petrović Njegoš osnovao je Javnu biblioteku.</p>\n\n
+        <p><b>1896.</b>\n
+        Donesen je Zakon o Knjaževsko-crnogorskoj biblioteci, kojim je Javna biblioteka dobila zadatak da prikuplja sva djela, na svijem jezicima, koja se bave Crnom Gorom, kao i knjige ostalih južnoslovenskih i slovenskih naroda. Ustanovljeno je i zvanje državnog bibliotekara. Biblioteka je bila smještena u prostorijama Zetskog doma na Cetinju, zajedno s Muzejom, gdje je ostala sve do kraja Prvog svjetskog rata.</p>\n\n
+        <p><b>1899.</b>\n
+        Prvi državni bibliotekar u Crnoj Gori, Filip Kovačević, izradio je pravila za uređenje biblioteke, glavni i specijalni katalog i prve štampane kataloške listiće. Time je postavio osnove za primjenu, u to vrijeme savremenih metoda rada u ovoj oblasti u Crnoj Gori.</p>\n\n
+        <p><b>1905.</b>\n
+        Zakonom o štampi u Knjaževini Crnoj Gori Javna biblioteka dobila je pravo na tri obavezna primjerka od svake štampane stvari na teritoriji Crne Gore, čime se znatno uvećao bibliotečki fond.</p>\n\n
+        <p><b>1912.</b>\n
+        Biblioteka dobija naziv Kraljevska i čuva oko 10.000 knjiga, više od 100 rukopisa, od kojih je jedan broj na pergamentu, zatim nekoliko inkunabula iz štamparije Crnojevića i veliki broj izdanja crnogorskih štampara u Veneciji (Božidara i Vićenca Vukovića, i drugih). U fondu su se nalazili svi crnogorski časopisi i novine.</p>\n\n
+        <p><b>1918.</b>\n
+        U ratnim okolnostima uništen je skoro cjelokupan bibliotečki fond Kraljevske biblioteke.</p><p><b>1926.</b>\nUlogu centralne naučne biblioteke za Crnu Goru preuzima Biblioteka Državnog muzeja na Cetinju, nastala pretežno od preostalog fonda nekadašnje dvorske biblioteke.</p>\n\n
+        <p><b>1944.</b>\n
+        Nakon Drugog svjetskog rata i oslobođenja Cetinja, Biblioteka Državnog muzeja obavljala je poslove centralne biblioteke za Crnu Goru.</p>\n\n
+        <p><b>1945.</b>\n
+        Donesena je Uredba o obaveznom primjerku na teritoriji cijele Demokratske Federativne Jugoslavije i Biblioteci se dostavljaju sve publikacije, bez obzira da li su štampane u državnoj ili privatnoj štampariji i bez obzira na način umnožavanja. Broj obaveznih primjeraka bio je 15.</p>\n\n
+        <p><b>1946.</b>\n
+        Ministarstvo prosvjete Narodne Republike Crne Gore 26. marta osnovalo je Zemaljsku centralnu biblioteku na Cetinju, najprije pri Državnom muzeju, a na kraju 1946. godine kao samostalnu instituciju. Bila je smještena u zgradi bivšeg Crkvenog suda na Cetinju, a zatim u nekadašnjem Prestolonasljednikovom dvorcu knjaza Danila (sadašnji Plavi dvorac). Početni knjižni fond sačinjavali su djelovi biblioteka Državne učiteljske škole, Bogoslovije, Društva prijatelja Francuske (osnovanog na Cetinju 1925), Italijanske biblioteke „Dante Aligijeri“ sa Cetinja i nekih konfiskovanih privatnih biblioteka.</p>\n\n
+        <p><b>1950.</b>\n
+        Zahvaljujući obaveznom primjerku svih štampanih publikacija sa prostora bivše FNR Jugoslavije, ali i poklonima i kupovinom od privatnih lica i institucija, bibliotečki fond znatno je uvećan i činilo ga je oko 35.000 obrađenih knjiga.</p>\n\n
+        <p><b>1951.</b>\n
+        Zemaljska centralna biblioteka dobija na korišćenje zgradu nekadašnjeg Francuskog poslanstva na Cetinju.</p>\n\n
+        <p><b>1964.</b>\n
+        Zbog značajnog uvećanja bibliotečkog fonda, zdanje nekadašnjeg Italijanskog poslanstva na Cetinju postaje sjedište Biblioteke.</p>\n\n
+        <p><b>1964.</b>\n
+        Biblioteka je nazvana Centralna narodna biblioteka „Đurđe Crnojević“, po vladaru Crne Gore koji je 1493. osnovao prvu državnu, a drugu ćiriličnu štampariju u Evropi.</p>\n\n
+        <p><b>1981.</b>\n
+        Biblioteka je dobila savremeni Centralni depo za smještaj bibliotečkog fonda, površine 4.500 m2, koji je smješten u okviru kompleksa bivšeg Italijanskog poslanstva.</p>\n\n
+        <p><b>1989.</b>\n
+        Centralna narodna biblioteka uključena je u Bibliotečki informacioni sistem SFR Jugoslavije (BIS) sa kooperativnim automatizovanim unosom bibliografskih podataka.</p>\n\n
+        <p><b>2007.</b>\n
+        U okviru Centralne narodne biblioteke osnovan je Nacionalni COBISS centar Crne Gore, koji povezuje biblioteke u jedinstven informacijski sistem.</p>\n\n
+        <p><b>2008.</b>\n
+        Biblioteka je formirala Centar za mikrofilmovanje i digitalizaciju.</p>\n\n
+        <p><b>2010.</b>\n
+        Završeno rekonstruisanje i moderno opremanje upravne zgrade Biblioteke (bivše Italijansko poslanstvo).</p>\n\n
+        <p><b>2011.</b>\n
+        Digitalizovani svi brojevi Glasa Crnogorca i objavljeno njihovo elektronsko izdanje.</p>\n\n
+        <p><b>2012.</b>\n
+        Centralna narodna biblioteka Crne Gore „Đurđe Crnojević“ preimenovana je u Nacionalnu biblioteku Crne Gore „Đurđe Crnojević“</p>\n\n\n\n
+        <p><b>ĐURĐE CRNOJEVIĆ I OKTOIH</b></p>\n\n
+        <p>Nacionalna biblioteka Crne Gore „Đurđe Crnojević“ dobila je naziv po crnogorskom vladaru Đurđu Crnojeviću, najstarijem sinu osnivača Cetinja, Ivana Crnojevića. Za vrijeme vladavine Crnom Gorom (1490−1496) Đurđe Crnojević pokrenuo je prvu državnu, odnosno drugu ćiriličnu štampariju u Evropi, 1493. godine, čime je Crnu Goru upisao velikim slovima na mapi kulture Evrope.</p>\n\n
+        <p>Štamparija Đurđa Crnojevića, poznata kao Štamparija Crnojevića, 4. januara 1494. godine pečatala (štampala) je prvu ćiriličnu knjigu kod Južnih Slovena, Oktoih prvoglasnik. Nakon nje, štampani su još Oktoih petoglasnik, Psaltir s posljedovanjem, Molitvenik (Trebnik ili Euhologij) i Četvorojevanđelje. Svih pet djela pravoslavne su liturgijske knjige.</p>\n\n
+        <p>Štamparsku presu sa pokretnim slovima, na kojoj je jeromonah Makarije, uz pomoć sedam nepoznatih monaha, štampao Oktoih prvoglasnik, Đurđe Crnojević nabavio je u Veneciji 1492. Vrijednost Obodske štamparije bila su olovna slova, zatim pokretne matrice za inicijale i grafičku ornamentiku, kao i ilustracije koje su u potpunosti rađene u Crnoj Gori.</p>\n\n
+        <p>Pred turskom najezdom, Đurđe Crnojević je 1496. godine napustio Cetinje i Crnu Goru, povukavši se najprije na svoje posjede u okolini Budve a potom u Mletačku republiku. U Milanu je 22. oktobra 1499. godine svojoj ženi, Izabeti Erico, porijeklom iz venecijanske vlastelske porodice, napisao testamentarno pismo, djelo značajne literarne i istorijske vrijednosti, čiji se prepis i prevod čuvaju u Državnom arhivu Venecije. Original nikada nije pronađen, a Nacionalna biblioteka je 1994. godine objavila prevod prepisa testamenta, koji je priredio dr Miloš Milošević.</p>\n\n
+        <p>Osnivač prve državne štamparije u Evropi najvjerovatnije je umro u Anadoliji, pretpostavlja se 1514. godine. Odlaskom Đurđa Crnojevića iz Crne Gore prestala je da postoji i Crnojevića štamparija.</p><p></p>
+        [/0]
+        [1]<p><b>1592-1593.</b>\n
+        42 books registered in the Cetinje Monastery. Those are the first surviving book lists in Montenegro.</p>\n\n
+        <p><b>1838.</b>\n
+        The ruler, bishop and poet Petar II Petrović Njegoš separated secular from church books, all of which have been acquired by him and his predecessor Petar I, and transferred them from Cetinje Monastery to his residence Biljarda. It is considered that Njegoš’s library has functioned as a state library.</p>\n\n
+        <p><b>1893.</b>\n
+        Prince – Bishop Nikola I Petrović decided to establish a public library on the occasion of 400th anniversary of Crnojević printing house.</p>\n\n
+        <p><b>1896.</b>\n
+        The Law of the Principality-Montenegrin Library was adopted and the Public Library was entrusted with the task of collecting all works, in all languages, related to Montenegro and books of the other Yugoslav and Slavonic people. The title of State Librarian was established. The library was housed in the premises of the Royal Theatre Zetski dom in Cetinje, along with the Museum, where it remained until the end of World War I.</p>\n\n
+        <p><b>1899.</b>\n
+        The first State Librarian in Montenegro, Filip Kovačević, established the rules for the arrangement of the Library, the main and specialized catalogue and first printed catalogue cards. Thus he set up the basis for the application of at the time contemporary methods for library work in Montenegro.</p>\n\n
+        <p><b>1905.</b>\n
+        By adopting the Law on Printing in the Principality of Montenegro, the Public Library became entitled to obtain the three obligatory copies of each printed issue in the territory of Montenegro, which significantly increased the Library fund.</p>\n\n
+        <p><b>1912.</b>\n
+        The Library was entitled the Royal Library and at the time it treasured over 10,000 books, more than 100 manuscripts, some of them on parchment, several incunabula from the Crnojević printing house and a large number of publications of Montenegrin printers in Venice (Božidar and Vicenzo Vuković, etc.). All Montenegrin magazines and newspapers were placed in the fund.</p>\n\n
+        <p><b>1918.</b>\n
+        Almost the entire Royal Library fund was destroyed in the war.</p>\n\n
+        <p><b>1926.</b>\n
+        The National Museum’s Library in Cetinje took over the role of the Central Scientific Library of Montenegro. It was mainly created from the remaining holdings of the former Royal Library.</p>\n\n
+        <p><b>1944.</b>\n
+        After the World War II and liberation of Cetinje, the National Museum’s Library functioned as the Central Library in Montenegro.</p>\n\n
+        <p><b>1945.</b>\n
+        The Decree on Legal Deposit was adopted for the entire territory of the Socialist Federal Republic of Yugoslavia and all publications were delivered to the library, regardless of whether they were printed in the state or private printing house and regardless of the method of reproduction. The number of legal deposits was 15.</p>\n\n
+        <p><b>1946.</b>\n
+        On March 26 the Ministry of Education of the People’s Republic of Montenegro established the Central library in Cetinje, first within the National Museum, and at the end of 1946 as an independent institution. It was located in the building of the former Church Court in Cetinje, and after that in the former Castle of Crown of Prince Danilo (today’s Blue Castle building). The initial book holdings consisted of the parts of the libraries of the National Teacher Training School, the Theological School, the Society of Friends of France (established in Cetinje in 1925), the Italian Library “Dante Alighieri” in Cetinje and several confiscated private libraries.</p>\n\n
+        <p><b>1950.</b>\n
+        Thanks to the legal deposit of all printed publications from the territory of former Socialist Federal Republic of Yugoslavia, gifts and the purchase from private individuals and institutions, the library fund was significantly increased and it consisted of approximately 35,000 processed books.</p>\n\n
+        <p><b>1951.</b>\n
+        The Central Library got the right to use the building of the former French Embassy in Cetinje.</p>\n\n
+        <p><b>1964.</b>\n
+        Due to the significant increase of the library holdings, the former Italian Embassy building became the Library’s residence.</p>\n\n
+        <p><b>1964.</b>\n
+        The Library was renamed to Central National Library “Đurđe Crnojević”, after the ruler of Montenegro who in 1493 established the first State printing house and the second Cyrillic printing house in Europe.</p>\n\n
+        <p><b>1981.</b>\n
+        The Library was provided with a contemporary central depot for the accommodation of library holdings, on the area of 4500 m2, which was placed within the complex of the former Italian Embassy.</p>\n\n
+        <p><b>1989.</b>\n
+        The Central National Library was included in the Library Information System of the Socialist Federal Republic of Yugoslavia (LIS) with cooperating automated entry of bibliographic data.</p>\n\n
+        <p><b>2007.</b>\n
+        The National COBISS Centre of Montenegro, which connects libraries into a single information system was established within the NLM.</p>\n\n
+        <p><b>2008.</b>\n
+        The Library established the Microfilming and Digitization Center.</p>\n\n
+        <p><b>2010.</b>\n
+        The rehabilitation and modern equipping of administrative building of the Library (former Italian embassy building) was completed.</p>\n\n
+        <p><b>2011.</b>\n
+        All numbers of the “Glas Crnogorca” were digitized and their electronic publications were issued.</p>\n\n
+        <p><b>2012.</b>\n
+        The Central National Library of Montenegro “Đurđe Crnojević” was renamed to the National Library of Montenegro “Đurđe Crnojević”.</p>\n\n\n\n
+        <p><b>ĐURĐE CRNOJEVIĆ AND OKTOIH</b></p>\n\n
+        <p></p><p>The National Library of Montenegro “Đurđe Crnojević” has been named after Montenegrin ruler Đurđe Crnojević, the eldest son of Ivan Crnojević, the founder of Cetinje.  During his reign in Montenegro (1490-1496) Đurđe Crnojević launched the first state printing house and the second Cyrillic printing house in Europe in 1493, doing which he has written the name of Montenegro on the cultural map of Europe and the world in capital letters.</p>\n\n
+        <p>The Printing House of Đurđe Crnojević on Obod, known as Crnojević printing house, printed the first South Slavic Cyrillic book “Oktoih prvoglasnik” on 4 January 1494. After it, there have been printed “Oktoih petoglasnik”, “Psaltir s posljedovanjem”, “Molitvenik” (“Trebnik” or “Euhologij’) and “Četvorojevanđelje”. All five works are Orthodox liturgical books.</p>\n\n
+        <p>Printing press with movable letters on which the Hieromonk Macarius, with the help of seven unidentified monks, printed the “Oktoih prvoglasnik”, Đurđe Crnojević acquired in Venice in 1492. The value of Obod’s printing house were the letters made of lead, movable matrices for initials and graphic ornamentation and illustrations completely created in Montenegro.</p>\n\n
+        <p>Prior to the Turkish invasion in 1496, Đurđe Crnojević has left Cetinje and Montenegro, retreating first to his property near Budva and then to the Venetian Republic. On 22 October 1499 he sent a Letter of Testamentary to his wife, Izabeta Erico, from a Venetian noble family – a work of great literary and historical value, whose transcript and translation are kept in the State Archives of Venice. The original of the letter has never been found. In 1994, the NLM published a translation of the transcript of the testament, prepared by Dr Miloš Milošević.</p>\n\n
+        <p>The founder of the first State printing house in Europe died probably in Anatolia, presumably in 1514. With the departure of Đurđe Crnojević from Montenegro, Crnojević printing house ceased to exist.</p><p></p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Istorija -->
 
+    <!--region Objekti -->
+    <string name="str_objekti_title">[0]Objekti[/0][1]Buildings[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_objekti_bold">[0]Nacionalna biblioteka Crne Gore „Đurđe Crnojević“ smještena je na dvije lokacije na Cetinju, u dva značajna istorijska zdanja, sagrađena 1910. godine za potrebe italijanske i francuske diplomatije u Kraljevini Crnoj Gori (1910−1918). Obje zgrade predstavljaju kulturno dobro od izuzetnog istorijskog i umjetničkog značaja.[/0][1]The National Library of Montenegro “Đurđe Crnojević” is located at two different sites in Cetinje, in two important historical buildings built in 1910 for the needs of the Italian and French diplomacy in the Kingdom of Montenegro (1910-1918). Both buildings represent a cultural heritage of great historical and artistic importance.[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_objekti_body">
+        [0]<p>Zdanje bivšeg Italijanskog poslanstva izgrađeno je po projektu italijanskog arhitekte Koradinija. Objekat stilski predstavlja epohu klasicizma sa primjesama romantike, što se naročito očitava u enterijeru prizemlja, to jest reprezentativnog hola, čitaonica, sala i ostalih prostorija sa bogatom ornamentalnom plastikom. Ovo zdanje u središtu brižljivo uređenog dvorišta veličine 2,2 hektara, sve do 1915. godine služilo je za potrebe italijanske diplomatije, dok je kasnije mijenjalo namjene. Od 1964. godine koristi je Nacionalna biblioteka.</p>\n\n
+        <p>U ovoj zgradi nalazi se uprava Biblioteke, Odjeljenje za prijem bibliotečke građe zbirke, Odjeljenje za stručnu obradu, Agencije za dodjelu CIP zapisa, ISBN, ISSN i ISMN brojeva, COBISS centar, Matična služba, Bibliografsko odjeljenje, Knjigovezačka radionica, izložbene sale, kao i čitaonice za korišćenje četiri posebne zbirke: Rukopisi i dokumentaciona građa, Kartografska zbirka, Zbirka muzikalija i audiovizelne građe i Likovno-grafička zbirka.</p>\n\n
+        <p>Centralni depo sagrađen uz zgradu bivšeg Italijanskog poslanstva, sa jugozapadne strane, savremeno je sedmoetažno skladište za bibliotečki fond. U njemu se nalaze police sa ukupnom dužinom od 45 km, na kojima su smještene knjige i serijske publikacije Osnovnog fonda.</p><p>Zdanje bivšeg Francuskog poslanstva projektovao je francuski arhitekta Pol Gode. Gode je na ovom projektu sarađivao sa građevinskom kompanijom „Perret Freres“ čiji je menadžer bio čuveni francuski arhitekta Ogist Pere. Smjelo oblikovanom fasadom prekrivenom polihromnim keramičkim pločicama različitih oblika, prvom primjenom armiranog betona na Balkanu i čistotom stila izdvaja se od ostalih reprezentativnih objekata prijestonice. Ovakav način ukrašavanja fasada svojstven je prelazu iz XIX u XX vijek, odnosno secesiji. Objekat je za potrebe francuske diplomatije služio do 1915. godine. U toku II svjetskog rata u njemu je bilo sjedište Uprave policije, a od 1949. godine služi za potrebe Nacionalne biblioteke.</p>\n\n
+        <p>U ovoj zgradi nalaze se Muzejsko odjeljenje, Zbirka stare i rijetke knjige, legati, konzervatorska radionica, čitaonice, kao i Francuski ugao.</p>\n\n
+[/0][1]<p>The building of the former Italian Embassy was built by the project of the Italian architect Corradini. The building style is a representative example of classicism with a touch of romance, which is especially reflected in the interior of the ground floor, i.e. a representative hall, reading rooms, halls and other rooms with rich ornamental foam rubber. Until 1915, this building in the center of carefully landscaped courtyard of 2.2 hectares has served the needs of Italian diplomacy and later it was used in various purposes. Since 1960, it has been used by the National Library.</p>\n\n
+        <p>This building houses the Library Management, Acquisition of Library Materials Department, Professional Processing Department, the Agencies for the allocation of CIP entries, ISBN and ISSN numbers, COBISS Center, Registry Office, Bibliographic Department, Bookbinding Workshop, exhibition halls and reading rooms for accessing to four special collections: Manuscripts and Documents, Cartographic Collection, Collection of Music and Audiovisual Materials and Art – Graphics Collection.</p><p>Central Depot was built as part of the former Italian Embassy building, on its southwest side and it is a contemporary seven – story storage for the library fund. It contains shelves in a total length of 45 km and stores the books and serials from the Basic Fund.</p>\n\n
+        <p><b>The French Embassy building</b> was designed by the French architect Paul Gaudet. Gaudet cooperated on this project with the construction company “Perret Freres” whose manager was the renowned French architect August Perret. With its audaciously shaped façade, covered in polychromatic ceramic tiles in varying shapes and being distinguished as the building with the first application of reinforced concrete in the Balkans and by its purity of style, it stands out among other showcase buildings within the Old Royal Capital. Such method of decorating the facade is characteristic to the turn of the nineteenth to the twentieth century, or Secession. The building was used for the needs of French diplomacy until 1915. During the World War Two it housed the headquarters of the Police Authority, and since 1949 it has been serving the needs of the National Library.</p>\n\n
+        <p>The Museum Department, Old and Rare Books collection, legacies, Conservation Workshop and reading rooms are located in the former French Embassy building, as well as the French Corner.</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Objekti -->
 
+    <!--region Organizacija -->
+    <string name="str_organ_title">[0]Organizacija[/0][1]Organization[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_dokument1">PRAVILNIK O AUTORSKIM HONORARIMA JU NBCG</string>
+    <string name="str_dokument2">STATUT-NBCG</string>
+    <string name="str_dokument3">PRAVILNIK O UNUTRASNJOJ ORGANIZACIJI \n I SISTEMATIZACIJI RADNIH MJESTA</string>
+    <string name="str_dokument4">ODLUKA PRAVILNIK O ORGANIZACIJI I \nSISTEMATIZACIJI RADNIH MJESTA NBCG</string>
+    <string name="str_dokument5">OBAVJESTENJE O JAVNOJ RASPRAVI\n NACRT PRAVILNIKA O ORGANIZACIJI I \nSISTEMATIZACIJI RADNIH MJESTA NBCG</string>
+    <string name="str_dokument6"> ODLUKA O IZMJENAMA I DOPUNAMA STATUTA</string>
+    <string name="str_dokument7">PRAVILNIK O NORMAMA ZA\n OBAVLJANJE RADNIH ZADATAKA U \nJU NACIONALNA BIBLIOTEKA CRNE GORE</string>
+    <string name="str_dokument8">PRAVILNIK O NORMAMA</string>
+    <string name="str_dokument9">IZVJEŠTAJ O SPROVOĐENJU\n PLANA INTEGRITETA ZA 2017. godinu</string>
+    <string name="str_dokument10">ODLUKA O SPROVOĐENJU PROCEDURE\n PRILIKOM ZAPOŠLJAVANJA U BIBLIOTECI</string>
+    <string name="str_dokument11">ODLUKU 0 IMENOVANJU LICA ZA \nPOSREDOVANJE-POSREDNIK</string>
+    <!--endregion Organizacija -->
 
     <string name="str__kontakt_opsirno">Centrala
 Tel: +382 41 231-143
