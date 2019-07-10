@@ -101,4 +101,18 @@ public class ApiUrls {
     public static final String ORGANIZACIJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/organization";
     public static final String ORGANIZACIJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/organization";
 
+    public static final String IZVESTAJI_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/izvjestaji-o-radu-i-programi-rada";
+    public static final String IZVESTAJI_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/izvjestaji-o-radu-i-programi-rada";
+    public static final String IZVESTAJI_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/izvjestaji-o-radu-i-programi-rada";
+    public static final String IZVESTAJI_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/reports-and-programs";
+    public static final String IZVESTAJI_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/reports-and-programs";
+    public static final String IZVESTAJI_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/reports-and-programs";
+
+    public static final String SARADNJA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/saradnja";
+    public static final String SARADNJA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/saradnja";
+    public static final String SARADNJA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/saradnja";
+    public static final String SARADNJA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/cooperation";
+    public static final String SARADNJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/cooperation";
+    public static final String SARADNJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/cooperation";
+
 }

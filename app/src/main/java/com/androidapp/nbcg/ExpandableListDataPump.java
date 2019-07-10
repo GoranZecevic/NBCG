@@ -9,6 +9,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.Izvestaji;
 
 import org.apache.commons.lang3.StringUtils;
@@ -20,12 +21,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class ExpandableListDataPump  {
 
+//    static int language = MainActivity.lang;
 
-    private Context context;
+    private static Context context;
 
-    private String language = "mne";
+    private static Helpers helper = new Helpers();
+
+    private static String izvestaji_o_radu;
+    private static String putni_nalozi;
+    private static String programi_rada;
+    private static String analiticke_kartice;
 
     private static ArrayList<Izvestaji> programiRadaLista = new ArrayList<>();
     private static ArrayList<Izvestaji> izvestajiRadaList = new ArrayList<>();
@@ -45,6 +53,21 @@ public class ExpandableListDataPump  {
     }
 
     public static HashMap<String, List<Izvestaji>> getData() {
+        switch (MainActivity.lang) {
+            case 0:
+                izvestaji_o_radu = helper.mne(context.getResources().getString(R.string.str_izvestaji_body));
+                putni_nalozi = helper.mne(context.getResources().getString(R.string.str_nalozi_body));
+                programi_rada = helper.mne(context.getResources().getString(R.string.str_programi_body));
+                analiticke_kartice = helper.mne(context.getResources().getString(R.string.str_kartice_body));
+                break;
+            case 1:
+                izvestaji_o_radu = helper.eng(context.getResources().getString(R.string.str_izvestaji_body));
+                putni_nalozi = helper.eng(context.getResources().getString(R.string.str_nalozi_body));
+                programi_rada = helper.eng(context.getResources().getString(R.string.str_programi_body));
+                analiticke_kartice = helper.eng(context.getResources().getString(R.string.str_kartice_body));
+                break;
+        }
+
 
         HashMap<String, List<Izvestaji>> expandableListDetail = new HashMap<String, List<Izvestaji>>();
 
@@ -70,10 +93,10 @@ public class ExpandableListDataPump  {
             kartice.add(analitickeKarticeLista.get(i).getNaslov());
         }
 
-        expandableListDetail.put("Izvestaji o radu", izvestajiRadaList);
-        expandableListDetail.put("Putni nalozi", putniNaloziLista);
-        expandableListDetail.put("Programi rada", programiRadaLista);
-        expandableListDetail.put("Analiticke kartice", analitickeKarticeLista);
+        expandableListDetail.put(izvestaji_o_radu, izvestajiRadaList);
+        expandableListDetail.put(putni_nalozi, putniNaloziLista);
+        expandableListDetail.put(programi_rada, programiRadaLista);
+        expandableListDetail.put(analiticke_kartice, analitickeKarticeLista);
 
         return expandableListDetail;
     }

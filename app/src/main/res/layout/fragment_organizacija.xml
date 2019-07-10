@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/onama"
-                android:text="@string/str_za_korisnike_title"
+                android:text="@string/str_onama_title"
                 android:textColor="@color/white"
                 android:textSize="@dimen/over_txt_size"/>
 

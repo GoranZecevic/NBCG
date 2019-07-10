@@ -67,9 +67,9 @@ public class Organizacija extends Fragment {
         }
 
         if(language == 0) {
-            imageButtonHandlerWeb(ApiUrls.OBJEKTI_FB_MNE, R.id.vb_btn_fb);
-            imageButtonHandlerWeb(ApiUrls.OBJEKTI_TW_MNE, R.id.vb_btn_tw);
-            imageButtonHandlerWeb(ApiUrls.OBJEKTI_LN_MNE, R.id.vb_btn_ln);
+            imageButtonHandlerWeb(ApiUrls.ORGANIZACIJA_FB_MNE, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.ORGANIZACIJA_TW_MNE, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.ORGANIZACIJA_LN_MNE, R.id.vb_btn_ln);
         }
 
 

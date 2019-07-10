@@ -291,6 +291,41 @@
     <string name="str_dokument11">ODLUKU 0 IMENOVANJU LICA ZA \nPOSREDOVANJE-POSREDNIK</string>
     <!--endregion Organizacija -->
 
+    <!--region Izvestaji -->
+    <string name="str_izvestaji_title">[0]Izvještaji o radu i programi rada[/0][1]Reports and Programs[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_izvestaji_body">[0]Izvestaji o radu[/0][1]Reports[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_programi_body">[0]Programi rada[/0][1]Programs[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_nalozi_body">[0]Putni nalozi[/0][1]Travel orders[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_kartice_body">[0]Analitičke kartice[/0][1]Analytical cards[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Izvestaji -->
+
+    <!--region Saradnja -->
+    <string name="str_saradnja_title">[0]Saradnja[/0][1]Coopeartion[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_saradnja_body">[0]<p>Nacionalna biblioteka ima bogatu i tradicionalno utemeljenu međunarodnu saradnju sa više od 50 nacionalnih biblioteka iz čitavog svijeta, među kojima su Kongresna biblioteka SAD, nacionalne biblioteke Velike Britanije, Francuske, Italije, Rusije, Češke i, svakako, sa svim nacionalnim bibliotekama zemalja Jugoistočne Evrope.</p><p>Nacionalna biblioteka Crne Gore potpisala je veliki broj memoranduma o saradnji sa nacionalnim bibliotekama kako iz regiona tako i Evrope i svijeta, a članica je i saradnik mnogih međunarodnih bibliotečkih asocijacija i agencija:</p> \n\n
+        <p>IFLA‒ Međunarodni savez bibliotečkih asocijacija i institucija (International Federation of Library Associations and Institutions)</p> \n\n
+        <p>ISSN AGENCIJA ‒ Međunarodna organizacija pri UNESCO-u za dodjelu međunarodnog standardnog broja za serijske publikacije (ISSN – International Standard Serial Number)</p> \n\n
+        <p>ISBN AGENCIJA ‒ Međunarodna organizacija za dodjelu standardnog knjižnog broja (International Standard Book Number)</p> \n\n
+        <p>ISMN AGENCIJA ‒ Međunarodna organizacija za dodjelu standardnog broja muzikalija (International Standard Music Number)</p> \n\n
+        <p>CDNL ‒ Konferencija direktora nacionalnih biblioteka (Conference of Directors of National Libraries)</p> \n\n
+        <p>CENL ‒ Konferencija evropskih nacionalnih biblioteka (Conference of European National Librarians)</p> \n\n
+        <p>EUROPEANA ‒ Evropska virtuelna biblioteka, muzej i arhiv. Nudi pristup milionima knjiga, slika, filmova, muzejskih djela i arhivskih zapisa digitalizovanih širom Evrope. Nacionalna biblioteka sarađuje sa Europeanom na mnogim značajnim projektima, među kojima je i CSEEE (kolekcija nacionalnih biblioteka Istočne i Jugoistočne Evrope koje su dio Europeane).</p> \n\n
+        <p>OCLC ‒ Online Computer Library Center. Neprofitna organizacija koja je istovremeno računarski bibliotekarski servis i istraživačka organizacija čiji je cilj da olakša pristup i pojeftini troškove dobijanja informacija ‒ potpisan ugovor za integrisanje elektronskog kataloga Crne Gore u svjetski katalog (WorldCat)</p> \n\n
+        <p>SEENL ‒ Konferencija direktora nacionalnih biblioteka Jugoistočne Evrope (South East European National Librarians Conference) održava se svake godine.</p> \n\n
+        <p>FORUM SLOVENSKIH KULTURA  – Forum povezuje i promoviše saradnju u oblasti kulture, obrazovanja i nauke trinaest država: Bugarsku, Bosnu i Hercegovinu, Hrvatsku, Makedoniju, Poljsku, Rusiju, Sloveniju, Srbiju, Crnu Goru, Bjelorusiju, Češku, Slovačku i Ukrajinu.</p>\n\n
+        <p>UNESCO PARTICIPACIJA ‒ UNESCO Participacija 2014/2015 „Informaciona i medijska pismenost (IMP) – Strategija i edukacija“ je projekat koji realizuje Nacionalna biblioteka, u saradnji sa ministarstvima kulture i informacionog društva, Zavodom za školstvo i NVO Biblioteka Plus, a čiji je cilj popularizacija vještina informacione i medijske pismenosti u Crnoj Gori.</p>[/0]
+        [1]<p>The National Library has a rich and traditionally founded international cooperation with more than 50 national libraries from around the world, including the US Library of Congress, National Libraries of the United Kingdom, France, Italy, Russia, Czech Republic, and certainly all the National Libraries of the South East Europe countries.</p><p>The National Library of Montenegro has signed a number of Memorandums of Understanding with National Libraries, from the region, Europe and the world, and it is a member of and contributor to many international library associations and agencies:</p>\n\n
+        <p>IFLA – The International Federation of Library Associations and Institutions</p>\n\n
+        <p>ISSN Agency – The UNESCO’s international organization for the allocation of international standard serial number (ISSN – International Standard Serial Number)</p> \n\n
+        <p>ISBN Agency‒ The international organization for the assignment of a standard registry number (The International Standard Book Number)</p>\n\n
+        <p>ISMN AGENCIJA ‒ The international organization for the assignment of the standard music number (The International Standard Music Number)</p>\n\n
+        <p>CDNL ‒ the Conference of Directors of National Libraries</p>\n\n
+        <p>CENL ‒ the Conference of European National Librarians</p>\n\n
+        <p>EUROPEANA – The European virtual library, museum and archive. It offers access to millions of books, paintings, films, museum works and archival records digitized throughout Europe. The National Library cooperates with Europeana on many important projects, including the CSEEE (the Collections of South and Eastern Europe in Europeana).</p>\n\n
+        <p>OCLC ‒ Online Computer Library Center is a non – profit cooperative organization, which is at the same time a librarian computer service and research organization dedicated to the public purposes of furthering access to the world’s information and reducing information costs – signed an agreement for the integration of electronic catalog of Montenegro in the World directory (WorldCat)</p>\n\n
+        <p>SEENL – South East European National Librarians Conference gathers directors of National Libraries of Southeast Europe and it is held annually.</p>\n\n
+        <p>FORUM OF SLAVIC CULTURES – Forum connects and promotes cooperation in culture, education and science in thirteen states: Bulgaria, Bosnia and Herzegovina, Croatia, Macedonia, Poland, Russia, Slovenia, Serbia, Montenegro, Belarus, Czech Republic, Slovakia and Ukraine.</p><p>UNESCO PARTICIPATION – UNESCO Participation 2014/2015 “Media and Information Literacy (MIL) – Strategy and Training“ is a project realized by the National Library in cooperation with the Ministry of Culture, Ministry for Information Society and Telecommunications, Bureau for Education Services and NGO LIBRARY Plus, whose aim is to popularize skills of information and media literacy in Montenegro.</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Saradnja -->
+
     <string name="str__kontakt_opsirno">Centrala
 Tel: +382 41 231-143
 

@@ -9,5 +9,8 @@
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"
+        android:drawableLeft="@drawable/ic_iconfinder_24_2065219"
+        android:drawablePadding="@dimen/v4"
+        />
 </LinearLayout>

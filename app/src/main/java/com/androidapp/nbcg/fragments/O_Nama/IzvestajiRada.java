@@ -1,17 +1,25 @@
 package com.androidapp.nbcg.fragments.O_Nama;
 
+import android.Manifest;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidapp.nbcg.CustomExpandableListAdapter;
 import com.androidapp.nbcg.ExpandableListDataPump;
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
@@ -24,8 +32,9 @@ import java.util.List;
 public class IzvestajiRada extends Fragment {
 
     Helpers helper = new Helpers();
+    private int language = MainActivity.lang;
 
-    private View thisFragment;
+    private View mView;
 
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
@@ -52,31 +61,30 @@ public class IzvestajiRada extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_izvestaji_rada, null);
+        mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_izvestaji_rada, null);
 
-        expandableListView = (ExpandableListView) thisFragment.findViewById(R.id.expandableListView);
+        textPopulate();
+
+        if(language == 1){
+            imageButtonHandlerWeb(ApiUrls.IZVESTAJI_FB_ENG, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.IZVESTAJI_TW_ENG, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.IZVESTAJI_LN_ENG, R.id.vb_btn_ln);
+        }
+
+        if(language == 0) {
+            imageButtonHandlerWeb(ApiUrls.IZVESTAJI_FB_MNE, R.id.vb_btn_fb);
+            imageButtonHandlerWeb(ApiUrls.IZVESTAJI_TW_MNE, R.id.vb_btn_tw);
+            imageButtonHandlerWeb(ApiUrls.IZVESTAJI_LN_MNE, R.id.vb_btn_ln);
+        }
+
+        expandableListView = (ExpandableListView) mView.findViewById(R.id.expandableListView);
         expandableListDetail = ExpandableListDataPump.getData();
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-        expandableListAdapter = new CustomExpandableListAdapter(thisFragment.getContext(), expandableListTitle, expandableListDetail);
+        expandableListAdapter = new CustomExpandableListAdapter(mView.getContext(), expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-
             @Override
             public void onGroupExpand(int groupPosition) {
-//                Toast.makeText(thisFragment.getContext(),
-//                        expandableListTitle.get(groupPosition) + " List Expanded.",
-//                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(thisFragment.getContext(),
-                        expandableListTitle.get(groupPosition) + " List Collapsed.",
-                        Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -85,22 +93,18 @@ public class IzvestajiRada extends Fragment {
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
 
-                System.out.println("Izlaz: "+expandableListDetail.get(
-                        expandableListTitle.get(groupPosition)).get(
-                        childPosition).getFajl());
-                 String extension = expandableListDetail.get(
+                String extension = expandableListDetail.get(
                          expandableListTitle.get(groupPosition)).get(
                          childPosition).getFajl();
                 String url = ApiUrls.GET_DOCUMENTS+extension;
 
-                helper.goToUrl(url, thisFragment.getContext());
+                helper.goToUrl(url, mView.getContext());
 
                 return false;
             }
         });
 
-
-        return thisFragment;
+        return mView;
     }
 
     public void onButtonPressed(Uri uri) {
@@ -120,6 +124,93 @@ public class IzvestajiRada extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    private void textPopulate(){
+        Button header = (Button) mView.findViewById(R.id.o_nama_title);
+        String headerStr = "";
+        switch (language) {
+            case 0:
+                headerStr = helper.mne(getResources().getString(R.string.str_onama_title));
+                break;
+            case 1:
+                headerStr = helper.eng(getResources().getString(R.string.str_onama_title));
+                break;
+        }
+        header.setText(headerStr);
 
+        TextView title = (TextView) mView.findViewById(R.id.str_za_izdavace_title);
+        String titleStr = "";
+        switch (language) {
+            case 0:
+                titleStr = helper.mne(getResources().getString(R.string.str_izvestaji_title));
+                break;
+            case 1:
+                titleStr = helper.eng(getResources().getString(R.string.str_izvestaji_title));
+                break;
+        }
+        title.setText(titleStr);
 
+        TextView podjeli = (TextView)mView.findViewById(R.id.podjeli);
+        String podjeliStr= "";
+        switch (language){
+            case 0: podjeliStr = helper.mne(getResources().getString(R.string.str_podelite)); break;
+            case 1: podjeliStr = helper.eng(getResources().getString(R.string.str_podelite)); break;
+        }
+        podjeli.setText(podjeliStr);
+
+    }
+
+    // region helpers
+    private void newFragment(Fragment fragment){
+        Fragment newFragment = fragment;
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, newFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void buttonHandler(final Fragment fragment, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            Fragment proxyFragment = fragment;
+            int id = buttonId;
+            @Override
+            public void onClick(View v)
+            {
+                newFragment(proxyFragment);
+            }
+        });
+    }
+
+    private void buttonHandlerWeb(final String url, final int buttonId){
+        Button button = (Button) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
+    }
+
+    private void imageButtonHandlerWeb(final String url, final int buttonId){
+        ImageButton button = (ImageButton) mView.findViewById(buttonId);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            int id = buttonId;
+            Helpers help = new Helpers();
+            Context ctx = mView.getContext();
+            @Override
+            public void onClick(View v)
+            {
+                help.goToUrl(url, ctx);
+            }
+        });
+    }
 }
