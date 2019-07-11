@@ -115,4 +115,75 @@ public class ApiUrls {
     public static final String SARADNJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/cooperation";
     public static final String SARADNJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/cooperation";
 
+    public static final String DONORI_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/o-nama/donatori-i-prijatelji";
+    public static final String DONORI_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/o-nama/donatori-i-prijatelji";
+    public static final String DONORI_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/o-nama/donatori-i-prijatelji";
+    public static final String DONORI_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/about-us/donors-and-friends";
+    public static final String DONORI_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/about-us/donors-and-friends";
+    public static final String DONORI_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/about-us/donors-and-friends";
+
+    public static final String VIRT_LAB_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/katalozi/virtuelna-biblioteka-crne-gore";
+    public static final String VIRT_LAB_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/katalozi/virtuelna-biblioteka-crne-gore";
+    public static final String VIRT_LAB_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/katalozi/virtuelna-biblioteka-crne-gore";
+    public static final String VIRT_LAB_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/catalogues/virtual-library-of-montenegro";
+    public static final String VIRT_LAB_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/catalogues/virtual-library-of-montenegro";
+    public static final String VIRT_LAB_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/catalogues/virtual-library-of-montenegro";
+
+    public static final String ECG_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-crne-gore";
+    public static final String ECG_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-crne-gore";
+    public static final String ECG_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-crne-gore";
+    public static final String ECG_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/catalogues/e-catalogue-of-montenegro";
+    public static final String ECG_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/catalogues/e-catalogue-of-montenegro";
+    public static final String ECG_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/catalogues/e-catalogue-of-montenegro";
+
+    public static final String ENBCG_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-nbcg";
+    public static final String ENBCG_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-nbcg";
+    public static final String ENBCG_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-nbcg";
+    public static final String ENBCG_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/catalogues/nlm-e-catalogue";
+    public static final String ENBCG_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/catalogues/nlm-e-catalogue";
+    public static final String ENBCG_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/catalogues/nlm-e-catalogue";
+
+    public static final String COBISS_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-nbcg";
+    public static final String COBISS_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-nbcg";
+    public static final String COBISS_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/katalozi/e-katalog-nbcg";
+    public static final String COBISS_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/catalogues/cobissnet";
+    public static final String COBISS_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/catalogues/cobissnet";
+    public static final String COBISS_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/catalogues/cobissnet";
+
+    public static final String CG_BIBL_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/katalozi/crnogorska-bibliografija-1494-1994";
+    public static final String CG_BIBL_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/katalozi/crnogorska-bibliografija-1494-1994";
+    public static final String CG_BIBL_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/katalozi/crnogorska-bibliografija-1494-1994";
+    public static final String CG_BIBL_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/catalogues/montenegrin-bibliography-1494-1994";
+    public static final String CG_BIBL_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/catalogues/montenegrin-bibliography-1494-1994";
+    public static final String CG_BIBL_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/catalogues/montenegrin-bibliography-1494-1994";
+
+    public static final String TEK_BIBL_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/katalozi/tekuca-bibliografija";
+    public static final String TEK_BIBL_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/katalozi/tekuca-bibliografija";
+    public static final String TEK_BIBL_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/katalozi/tekuca-bibliografija";
+    public static final String TEK_BIBL_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/catalogues/current-bibliography";
+    public static final String TEK_BIBL_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/catalogues/current-bibliography";
+    public static final String TEK_BIBL_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/catalogues/current-bibliography";
+
+    public static final String ZA_KORISNIKE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/usluge/za-korisnike";
+    public static final String ZA_KORISNIKE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/usluge/za-korisnike";
+    public static final String ZA_KORISNIKE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/usluge/za-korisnike";
+    public static final String ZA_KORISNIKE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/services/for-users";
+    public static final String ZA_KORISNIKE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/services/for-users";
+    public static final String ZA_KORISNIKE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/services/for-users";
+
+    public static final String ZA_IZDAVACE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/usluge/za-izdavace";
+    public static final String ZA_IZDAVACE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/usluge/za-izdavace";
+    public static final String ZA_IZDAVACE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/usluge/za-izdavace";
+    public static final String ZA_IZDAVACE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/services/for-publishers";
+    public static final String ZA_IZDAVACE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/services/for-publishers";
+    public static final String ZA_IZDAVACE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/services/for-publishers";
+
+    public static final String ZA_BIBLIOTEKARE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/usluge/za-bibliotekare";
+    public static final String ZA_BIBLIOTEKARE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/usluge/za-bibliotekare";
+    public static final String ZA_BIBLIOTEKARE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/usluge/za-bibliotekare";
+    public static final String ZA_BIBLIOTEKARE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/services/for-librarians";
+    public static final String ZA_BIBLIOTEKARE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/services/for-librarians";
+    public static final String ZA_BIBLIOTEKARE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/services/for-librarians";
+
+
 }

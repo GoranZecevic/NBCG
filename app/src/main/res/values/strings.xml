@@ -125,8 +125,6 @@
     <!--endregion Uvodna rijec-->
 
     <!-- region Vizija i misija -->
-
-    <!-- endregion Vizija i misija -->
     <string name="str_vizija_misija_title">[0]Vizija i misija[/0][1]Vision and Mission[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_vizija_misija_bold">[0]NBCG “Đurđe Crnojević” je nacionalna biblioteka Crne Gore. Ona je riznica pisane kulturne baštine koja čuva materijalne dokaze o crnogorskoj kulturnoj stvarnosti, o postanku i indentitetu naroda.[/0][1]The National Library of Montenegro “Đurđe Crnojević” is a treasury of written cultural heritage preserving material evidence of Montenegrin cultural reality, on the emergence and identity of the nation. That’s why the National Library is one of fundamental cultural institutions of Montenegro. [/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_vizija_misija_body">[0]<p>Zato je jedna od temeljnih kulturnih institucija države. Prikuplja i čuva pisane i elektronske izvore, omogućava njihovu dostupnost i brine se o njihovoj zaštiti. Objavljujući crnogorsku nacionalnu bibliografiju, promoviše crnogorsku pisanu kulturnu baštinu i stara se o kulturnim potrebama stanovništva.\n\n</p>
@@ -150,8 +148,7 @@
                     <li> -Serve the purposes of and foster research, learning, entertainment and creativity;\n</li>
                     <li> -Serve all citizens of Montenegro without any distinctions and limitations.\n\n</li>
                 </ul></p>\n \n</div></div>[/1][2][/2][3][/3][4][/4][5][/5]</string>
-
-    <!--endregion O Nama-->
+    <!-- endregion Vizija i misija -->
 
     <!--region Istorija -->
     <string name="str_istorija_title">[0]Istorija[/0][1]History[/1][2][/2][3][/3][4][/4][5][/5]</string>
@@ -325,6 +322,459 @@
         <p>SEENL – South East European National Librarians Conference gathers directors of National Libraries of Southeast Europe and it is held annually.</p>\n\n
         <p>FORUM OF SLAVIC CULTURES – Forum connects and promotes cooperation in culture, education and science in thirteen states: Bulgaria, Bosnia and Herzegovina, Croatia, Macedonia, Poland, Russia, Slovenia, Serbia, Montenegro, Belarus, Czech Republic, Slovakia and Ukraine.</p><p>UNESCO PARTICIPATION – UNESCO Participation 2014/2015 “Media and Information Literacy (MIL) – Strategy and Training“ is a project realized by the National Library in cooperation with the Ministry of Culture, Ministry for Information Society and Telecommunications, Bureau for Education Services and NGO LIBRARY Plus, whose aim is to popularize skills of information and media literacy in Montenegro.</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion Saradnja -->
+
+    <!--region Donatori -->
+    <string name="str_donatori_title">[0]Donatori i prijatelji[/0][1]Donors and Friends[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_donatori_body">[0]<p>2006.\n\n
+        Početkom 2006. godine  započete su  pripreme u vezi sa realizacijom Projekta restauracije, sanacije i rekonstrukcije objekta NBCG (bivše italijansko poslanstvo) iz sredstava donacije Vlade kraljevine Norveške u ukupnom iznosu od 414290,32 eura.</p> \n\n
+        <p>Radovi na sanaciji, rekonstrukciji i adaptaciji objekta započeti su 2006. a  nastavljeni su naredne godine uvođenjem novog  izvođača.</p><p>NBCG je od Vlade Slovenije i IZUM-a Maribor  dobila donacije u iznosu od 117.248, 00 eura za adaptaciju i opremanje COBISS centra Crne Gore.</p>\n\n
+        <p>2008.\n\n
+        Radovi su izvedeni donatorskim sredstvima Vlade Kraljevine Norveške, Vlade Republike Slovenije, IZUM-a, Maribor i Ministarstva kulture, sporta i medija Crne Gore:</p>\n\n
+        <p>donatorska sredstva Vlade Slovenije i IZUM-a, Maribor ……………………………………….  134.050,00€</p>\n\n
+        <p>sredstva Ministarstva kulture, sporta i medija (glavni objekat) ………………………………. 44.000,00€</p>\n\n
+        <p>sredstva Ministarstva kulture, sporta i medija (centralni depo) ………………………………. 95.151,31€</p>\n\n
+        <p>Opremanje objekata obuhvaćenih i fazom rekonstrukcije je realizovano donatorskim sredstvima:</p>\n\n
+        <p>Vlade Republike Slovenije za COBISS Centar …………………………………………………….. 38.000,00€</p>\n\n
+        <p>IZUM, Maribor – kompjuterska i telekomunikaciona oprema …………………………………  15.117,00€</p>\n\n
+        <p>Vlade Japana oprema za mikrofilmovanje i digitalizaciju mikrofilma ……………………..… 66.690,00€</p>\n\n
+        <p>2009.\n\n
+        Centar za međunarodnu saradnju i razvoj (CMSR) je 2008. godine opredijelio donatorska sredstva za opremanje škola i biblioteka u Crnoj Gori u iznosu od 500.000,00 €. Iz tog paketa pomoći, donator je izdvojio 200.000,00 € za opremanje kancelarijskim namještajem i drugim neophodnim mobilijarom NBCG „Đurđe Crnojević“. U cilju realizacije ovog projekta, sklopljen je Aneks ugovora o podjeli donatorskih sredstava između CMSR-a, Ministarstva prosvjete i nauke Crne Gore, Ministarstva kulture, sporta i medija Crne Gore i NBCG „Đurđe Crnojević“.</p>\n\n
+        <p>2010.\n\n
+        U ovoj godini su nastavljeni radovi na rekonstrukciji I adaptaciji objekta bivšeg Italijanskog poslanstva. Ministarstvo oderni je u 2010. Godini opredijelilo sredstva u iznosu od 10.000,00€ za adaptaciju prizemlja bivšeg Italijanskog poslanstva. Od sredstava „Cetinje – grad oderni“ za završetak adaptacije prizemlja glavnog objekta opredijeljeno je 10.256,70€. Uspješno je završena adaptacija prizemlja objekta, u kojem se nalazi čitaonički prostor, ulazni I svečani hol, namijenjen za organizovanje izložbi, kulturnih događaja, promocija I sl. Nakon završenih radova, I ovaj dio objekta je opremljen odernism I funkcionalnim namještajem koji je dobijen donacijom Vlade Republike Slovenije.</p>\n\n
+        <p>2013.\n\n
+        Na osnovu ugovora o sub-grantu sa međunarodnom organizacijom Regional Cooperation Council Task Force on Culture and Society izvedeni su radovi na zgradi bivšeg Francuskog poslanstva. Hitne intervencije na sanaciji elektroinstalacija koji su obuhvatili demontažu postojećih prekidača i osigurača te ispitivanje strujnih krugova, isporuku i ugradnju automatskih osigurača, elektroinstalacije i rasvjetu u ukupnoj vrijednosti od 7.946,23 €;</p>\n\n
+        <p>Izrađen je glavni projekat za zgradu bivšeg Francuskog poslanstva u vrijednosti od 30.000 €, koje donira „Ljubljana proces“ koji je navedeni posao dodjelio firmi „Građenje“ d.o.o. iz Sarajeva.</p>\n\n
+        <p>Donacija dobijena od Sekretarijata radne grupe za kulturu i društvo–Savjet za regionalnu saradnju (RCCTFCS) iznosi 6.400,00€, a odnosi se na hitnu sanaciju elektroinstalacija u objektu Biblioteke (bivše franscusko poslanstvo).</p>[/0]
+        [1]<p>2006.</p>\n\n
+        <p>In early 2006, we started preparations in connection with the implementation of the Project of restoration, rehabilitation and reconstruction of the facility hosting the National Library of Montenegro “Đurđe Crnojević” (building of the former Italian Embassy) from the funds donated by the Government of the Kingdom of Norway, in total amount of € 414,290.32.</p>\n\n
+        <p>The works on rehabilitation, reconstruction and renovation of the building began in 2006 and continued the next year with the new contractor.</p>\n\n
+        <p>From the Government of Slovenia and IZUM from Maribor, NLM “Đurđe Crnojević” received donation in the amount of € 117,248 for the adaptation and equipping of COBISS center of Montenegro.</p>\n\n
+        <p>2008.</p>\n\n
+        <p>Works were performed thanks to the donation provided by the Government of the Kingdom of Norway, Government of the Republic of Slovenia, IZUM from Maribor and the Ministry of Culture, Sports and Media of Montenegro:</p>\n\n
+        <p>Donor funds of the Government of Slovenia and IZUM, Maribor………………………… € 134,050.00</p>\n\n
+        <p>Funds of the Ministry of Culture, Sports and Media (main building)………………….. € 44,000.00</p>\n\n
+        <p>Funds of the Ministry of Culture, Sports and Media (central depository)………………….. € 95,151.31</p>\n\n
+        <p>Furnishing facilities covered by the first phase of reconstruction was realized thanks to the following donor funds:</p>\n\n
+        <p>Government of the Republic of Slovenia for the COBISS Center…………………………………….. .38.000,00 €</p>\n\n
+        <p>IZUM, Maribor – Computer and telecommunications equipment…………………….. € 15,117.00</p>\n\n
+        <p>The Government of Japan – equipment for microfilming and microfilm digitization……… € 66,690.00</p>\n\n
+        <p>2009.</p>\n\n
+        <p>In 2008, Center for International Cooperation and Development (CMSR) provided funds for equipping schools and libraries in Montenegro, in the amount of 500,000 €. Donor has allocated € 200,000 of the total amount for equipping NLM “Đurđe Crnojević” with the office furniture and other necessary fittings. An annex to the agreement on the division of funds was concluded between CMSR, the Ministry of Education and Science of Montenegro, the Ministry of Culture, Sports and Media of Montenegro and the NLM “Đurđe Crnojević” in the purpose of the project implementation.</p>\n\n
+        <p>2010.</p>\n\n
+        <p>In this year, works on the reconstruction and adaptation of the former Italian Embassy building were continued. The Ministry of Culture in 2010 allocated funds in the amount of € 10,000 for the renovation of the ground floor of the former Italian Embassy. € 10,256.70 from the funds of the project “Cetinje – City of Culture” was allocated to the renovation of the ground floor of the main building. The renovation of the ground floor of the building was successfully completed. It includes a reading-room, entrance hall and formal hall intended for organizing exhibitions, cultural events, promotions and the like. After the work was completed, this part of the building was equipped with modern and functional furniture obtained thanks to the donation of the Government of the Republic of Slovenia.</p>\n\n
+        <p>2013.</p>\n\n
+        <p>Works on the building of the former French Embassy were carried out through the sub-grant agreement with an international organization Regional Cooperation Council Task Force on Culture and Society. Emergency interventions in total amount of € 7,946.23 were conducted in order to repair electrical installations which included dismantling the existing circuit breakers and fuses and circuit testing, delivery and installation of automatic fuses, wiring and lighting;</p><p>A major project for the building of the former French Embassy in the value of € 30,000 was developed thanks to the donation of “Ljubljana Process”, which entrusted this job to the company “Građenje” d.o.o. from Sarajevo.</p><p>The grant received from the Secretariat of the Working Group on Culture and Society – The Regional Cooperation Council (RCCTFCS) amounts € 6,400.00 and it is intended to the urgent rehabilitation of wiring in the Library (the former French Embassy building).</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Donatori -->
+
+    <!--endregion O Nama -->
+
+
+    <!--region Katalozi -->
+    <string name="str_katalozi_title">[0]Katalozi[/0][1]Catalogues[/1][2][/2][3][/3][4][/4][5][/5]</string>
+
+    <!--region Virtuelna biblioteka -->
+    <string name="str_vb_title">[0]Virtuelna biblioteka Crne Gore[/0][1]Virtual Library of Montenegro[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_vb_body">[0]Virtuelna biblioteka Crne Gore (VBCG), jedan od najznačajnijih projekata Nacionalne biblioteke Crne Gore „Đurđe Crnojević“, od 1989. godine povezuje biblioteke u Crnoj Gori u jedinstven informacijski sistem, kako bi se korisnicima biblioteka na jednostavan način obezbijedio pristup do informacija i dokumenata u elektronskom obliku.\n\n
+        Elektronski katalog Nacionalne biblioteke sadrži više stotina hiljada bibliografskih zapisa, u koje spadaju knjige, serijske publikacije, članci iz časopisa i novina, kao i publikacije iz posebnih zbirki.\n\n
+        Elektronski katalog NBCG dostupan je preko Internet adrese: <a href="http://vbcg.vbcg.me" target="_blank"><a href="http://vbcg.vbcg.me/" target="_blank">http://vbcg.vbcg.me</a></a>
+[/0][1]<p>Virtual Library of Montenegro (VLM) is one of the most important projects of the National Library of Montenegro “Đurđe Crnojević”. Since 1989, it has been connecting the libraries in Montenegro into a unique information system, in order to provide a simple access to information and electronic documents to library users.</p><p>The electronic catalogue of NLM contains hundreds of thousands of bibliographic records, including books, serials, articles from magazines and newspapers, as well as publications from the special collections.</p>\n\n
+        <p>The electronic catalogue is available on the Internet at: <a href="http://vbcg.vbcg.me/cobiss/"><a href="http://vbcg.vbcg.me/cobiss/" target="_blank">http://vbcg.vbcg.me</a></a></p>
+[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Virtuelna biblioteka  -->
+
+    <!-- region E katalog crne gore -->
+    <string name="str_ecg_title">[0]E-katalog Crne Gore[/0][1]E – catalogue of Montenegro[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_ecg_body">[0]<p>Sistem uzajamne katalogizacije u COBISS.CG uspostavljen je 13. 12. 2001. U sistemu uzajamne katalogizacije učestvuje 28 crnogorskih biblioteka (nacionalna, univerzitetske, visokoškolske, javne, specijalne i školske biblioteke).Uzajamni katalog sadrži više od 465.000 bibliografskih zapisa (januar 2018.)</p>\n\n
+        <p>Uzajamna katalogizacija omogućuje racionalnu podjelu rada i uštedu u zahtjevnom postupku obrade bibliotečke građe i vođenju kataloga. Svaku jedinicu dovoljno je samo jednom obraditi, posle čega je zapis, preko uzajamne bibliografsko-kataloške baze podataka COBIB, dostupan svim učesnicima u sistemu i u mreži COBISS.Net.</p>\n\n
+        <p>Za uzajamnu katalogizaciju karakteristična je tijesna povezanost lokalnih baza podataka (kataloga) pojedinačnih biblioteka sa uzajamnom bazom podataka (uzajamnim katalogom).Uzajamna baza podataka dostupna je preko Internet adrese:\n\n <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib" target="_blank"><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib</a></a></p>
+[/0][1]<p>Shared cataloguing system in COBISS.CG was established on December 13, 2001. 28 Montenegrin libraries participates in the system of shared cataloging (national, university, academic, public, special and school libraries).</p><p>Shared catalogue contains more than 432,000 bibliographic records (February 2017).</p>\n\n
+    <p>Shared cataloguing enables a rational division of labor and savings in demanding procedure of processing library materials and managing catalogues. Each unit needs to be processed only once, after which the record becomes available to all participants in the system and in the network COBISS.Net via the union bibliographic catalogue database COBIB.</p>\n\n
+    <p>Shared cataloguing is characterized by a close connection of local databases (catalogues) of the individual libraries with shared databases (shared catalogues).</p>\n\n
+    <p>Shared database is available via the Internet address:</p>\n\n
+    <p><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib"><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib</a></a></p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!-- endregion E katalog crne gore -->
+
+    <!--region E-katalog NBCG -->
+
+    <string name="str_enbcg_title">[0]E-katalog NBCG[/0][1]NLM e – catalogue[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_enbcg_body">[0]<p>Elektronski katalog Nacionalne biblioteke Crne Gore “Đurđe Crnojević” dostupan je preko Internet adrese: \n\n
+        <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001</a></a></p>\n\n
+        <p>Pretraživanje elektronskog kataloga moguće je na tri načina: slovno, izborno i komandno pretraživanje.</p>\n\n
+        <p>Zahtjevi za pretraživanje koji imaju isti oblik u ćirilici i u latinici, mogu se napisati ili jednim ili drugim pismom.</p>\n\n
+        <p>Elektronski katalog NBCG sadrži više od 250.000 (januar 2018. godine) bibliografskih zapisa, koji uključuju sve vrste građe i to:</p><ul>\n\n
+            <li>monografske publikacije na svim medijima: knjige, kartografsku građu, zvučne i video zapise, fotodokumente, štampane muzikalije;</li>\n\n
+            <li>serijske publikacije: časopise i novine;</li>\n\n
+            <li>članke iz časopisa i zbornika.</li></ul>[/0]
+        [1]<p>Electronic catalogue of the National Library of Montenegro “Đurđe Crnojević” is available at the Internet address:\n\n
+             <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001</a></a></p>\n\n
+        <p>Search of the electronic catalogue is possible in three ways: alphabetic, selective and on command.</p>\n\n
+        <p>Search requests have the same form in the Cyrillic and Latin alphabet and they can be written in both scripts.</p>\n\n
+        <p>The NLM electronic catalogue contains more than 240.000 (February 2014) bibliographic records, which include all types of materials:</p><ul>\n\n
+            <li>monographic publications on all media: books, cartographic materials, audio and video recordings, photo-documents, printed music;</li>\n\n
+            <li>serials: magazines and newspapers;</li>\n\n
+            <li>articles from journals and proceedings.</li></ul>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+
+    <!--endregion E-katalog NBCG -->
+
+    <!--region COBISS.NET -->
+    <string name="str_cobiss_title">[0]COBISS.NET[/0][1]COBISS.NET[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_cobiss_body">[0]<p>COBISS.NET (Kooperativni online bibliografski sistem i servisi) naziv je mreže koja međusobno povezuje nacionalne bibliografske sisteme Albanije, Bosne i Hercegovine, Bugarske, Makedonije, Slovenije, Srbije i Crne Gore, i koji omogućava besplatan protok bibliografskih informacija.</p>\n\n
+        <p>COBISS Crna Gora (COLIB.CG) predstavlja faktografsku bazu podataka svih crnogorskih bibilioteka i sastavni je dio sistema COBISS.Net.</p>\n\n
+        <p>U sistem COBISS.CG do kraja 2016. godine uključeno je 28 crnogorskih biblioteka, sa mogućnošću uključenja i svih ostalih biblioteka.</p>[/0]
+        [1]<p>COBISS.NET (Co-operative Online Bibliographic System and Services) is the name of the network that links national bibliographic systems of Albania, Bosnia and Herzegovina, Bulgaria, Macedonia, Slovenia, Montenegro and Serbia and allows the free flow of bibliographic information.</p>\n\n
+        <p>COBISS Montenegro (COLIB.CG) is a factual database of all Montenegrin libraries and an integral part of the COBISS.Net system.</p>\n\n
+        <p>Until 2016, in the COBISS.CG system has been included 28 Montenegrin libraries, and there is the possibility of inclusion of all other libraries.</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion COBISS.NET -->
+
+    <!--region Cg bibliografija -->
+    <string name="str_cg_bibl_title">[0]Crnogorska bibliografija (1494-1994)[/0][1]Montenegrin Bibliography (1494-1994)[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_cg_bibl_body">[0]<p>Nacionalna biblioteka Crne Gore „Đurđe Crnojević”, kao nosilac razvoja bibliotečke djelatnosti u državi, pokrenula je i realizovala projekat Digitalna Crnogorska bibliografija. Sve do sada objavljene sveske retrospektivne Crnogorske bibliografije 1494-1994 (CB) su digitalizovane. Time je omogućeno znatno jednostavnije korišćenje i lakši pristup ovoj obimnoj količini bibliografskih informacija. Realizaciju ovog projekta, koji predstavlja značajan korak u daljem razvoju bibliotečko-informacionog sistema i podršku sistemu naučnih informacija u Crnoj Gori, finansiralo je Ministarstvo kulture.</p><p>Digitalizovana Crnogorska bibliografija 1494-1994 dostupna je na sajtu:\n\n
+        <a href="http://www.nbcg-digitalnabibliografija.me/"><a href="http://www.nbcg-digitalnabibliografija.me/" target="_blank">http://www.nbcg-digitalnabibliografija.me</a></a></p>\n\n
+        <p>Istorijat Crnogorske bibliografije</p>\n\n
+        <p>Retrospektivne nacionalne bibliografije nastaju iz težnji za prikazivanjem cjelokupnog duhovnog stvaralaštva jednog naroda, izraženog kroz formu štampane riječi ili u drugom obliku. One predstavljaju jedinstven izvor informacija za proučavanje svih oblasti društvenog života.</p>\n\n
+        <p>Imajući u vidu da su nacionalne – retrospektivne i tekuće bibliografije mnogi narodi odavno izradili, te da one predstavljaju nasušnu naučnu i kulturnu potrebu svakog razvijenog društva, i Nacionalna biblioteka Crne Gore je 1979. godine pokrenula inicijativu za izradu projekta retrospektivne CB, kako bi se na jednom mjestu, između korica jedinstvenog niza knjiga, našlo sve što je u Crnoj Gori i o njenom narodu objavljeno u obliku monografskih publikacija, periodike, rasprava, članaka i književnih priloga u serijskim publikacijama i zbornicima radova – na našem i stranim jezicima.</p>\n\n
+        <p>CB obuhvata veliki vremenski period od pola milenijuma: od prve štampane ćirilične knjige u ovom dijelu Evrope, Oktoiha prvoglasnika iz Crnojevića štamparije, to jest od 1494. godine, do 1994. godine. Pored knjiga, čiji je popis sadržan u I tomu, edicija obuhvata i popis serijskih publikacija, koje čine II tom, od pojave Grlice 1835. godine (prva crnogorska periodična publikacija) do 1994. godine. Treći, ujedno i najobimniji tom, sadrži selektivni popis članaka iz periodike. Do sada je objavljeno petnaest knjiga, za period 1494-1985, dok preostaje rad na još tri rukopisa koja će obuhvatiti period do 1994. U okviru IV toma objavljene su bibliografije na stranim jezicima: ruskom, češkom, italijanskom i engleskom. Bibliografija knjiga o Crnoj Gori na jezicima naroda i nacionalnih manjina sa prostora bivše SFRJ – do 1994. godine je pripremljena i biće publikovana tokom 2012. godine.</p>\n\n
+        <p>Kriterijumi za odabir građe za Crnogorske bibliografije</p>\n\n
+        <p>Projekat Crnogorska bibliografija 1494-1994široko je naučno zasnovan. Pri izboru građe primjenjivana su tri kriterijuma: teritorijalni, nacionalni i predmetni.</p>\n\n
+        <p>Na osnovu teritorijalnog kriterijuma, u CB ušle su:\n\n
+            • Sve knjige, brošure i muzikalije štampane na teritoriji Crne Gore od 1494. godine, bez obzira na jezik, pismo i nacionalno porijeklo autora (od navedenog su izuzeta izdanja štampana za potrebe izdavača sa strane – poslije 1945. godine);\n\n
+            • Sve knjige, brošure i muzikalije koje su izdavači iz Crne Gore štampali van Crne Gore;\n\n
+            • Sve zvanične publikacije štampane na teritoriji Crne Gore, kao i one koje su izdavači iz Crne Gore štampali u drugim sredinama.\n\n
+            • Sve serijske publikacije: listovi, novine, časopisi, zbornici, almanasi, godišnjaci, bilteni i kalendari sa prilozima, spomenice akademija i asocijacija, izvještaji koji izlaze u dužem vremenskom periodu – sa kontinuiranom numeracijom, a koji su štampani, odnosno objavljivani u Crnoj Gori;</p>\n\n
+        <p>Izbor članaka i priloga u serijskim publikacijama po kriterijumima za popis monografskih i serijskih publikacija.</p>\n\n
+        <p>Na osnovu nacionalnog kriterijuma, u Crnogorsku bibliografiju ušle su:\n\n
+            • Sva djela Crnogoraca i drugih autora porijeklom iz Crne Gore objavljena van nje, bez obzira na jezik i pismo;\n\n
+            • Djela štampara porijeklom iz Crne Gore koji su štampali u inostranstvu.</p>\n\n
+        <p>Na osnovu predmetnog kriterijuma, u CB ušla je građa o Crnoj Gori i njenom narodu.</p>\n\n
+        <p>Struktura Crnogorske bibliografije</p>\n\n
+        <p>CB publikovana je u četiri toma, a unutar svakog toma objavljeno je više knjiga, odnosno svezaka u zavisnosti od obima bibliografske građe. Tomovi su određeni ovako:</p>\n\n
+        <p>Tom I – monografske publikacije (knj. 1,2,3,4,5,6,7,8,9,10);</p>\n\n
+        <p>Tom II – serijske publikacije (knj. 1,2);</p>\n\n
+        <p>Tom III – rasprave, članci i književni radovi u serijskim publikacijama (selektivan izbor građe; knj. 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);</p>\n\n
+        <p>Tom IV – eksteriorika – sve što su drugi pisali o Crnoj Gori i njenim žiteljima (selektivan izbor građe; knj. 1,2,3,4,5).</p>\n\n
+        <p>Monografske publikacije obrađene su po međunarodnom standardu ISBD(M), serijske publikacije – prema ISBD(S), dok je građa iz trećeg toma (članci) obrađena prema tadašnjim važećim pravilima za analitičku obradu serijskih publikacija. Kompletna građa (osim IV toma) stručno je obrađena i raspoređena prema UDK sistemu. U IV tomu (drugi o nama) nijesu primjenjivani međunarodni standardi u bibliografskom opisu, već su priređivači radili bibliografske opise po pravilima koja su važila u njihovim zemljama. Knjige sadrže registre autora, prevodilaca i priređivača, kao i predmetne registre, razriješenih inicijala, šifara i pseudonima autora i korišćenih popisa izvora.</p>\n\n
+        <p>Postupci i standardi pri digitalizaciji Crnogorske bibliografije</p>\n\n
+        <p>Za tri decenije intenzivnog rada na projektu CB, ostvareni su impresivni rezultati. Objavljene su 32 knjige u okviru četiri toma, čiji opseg iznosi 15.030 stranica enciklopedijskog formata. U njima je popisano 229.611 bibliografskih jedinica, koje se odnose na inkunabule, paleotipe, knjige, serijske publikacije i priloge iz periodike. Ova baza podataka predstavlja najveći trezor duhovnog života Crne Gore, koji je neophodan instrument za sva naučna i druga istraživanja.</p>\n\n
+        <p>Digitalizovanje retrospektivne bibliografije Crne Gore započeto je skeniranjem cjelokupne građe, pri čemu su skenirane stranice sačuvane u JPG formatu, uz odgovarajući kvalitet za prelistavanje. Od stranica sa registrima, putem programa za optičko prepoznavanje teksta, kreirani su tekstualni fajlovi. Na taj način su stvorene mogućnosti za razne vrste pretraživanja i ispisa, a baza i instalirani programski alati istovremeno služe zadovoljenju korisničkih zahtjeva, kao i redakciji od strane bibliografa.</p>\n\n
+        <p>Jezici koji se koriste za unos, pretragu i prikazivanje bibliografije su Perl, PHP, Javascript, a tip baze je MySQL. Prezentacija je organizovana na dva načina – u onlajn i DVD formatu.</p>\n\n
+        <p>Kod onlajn prezentacije moguća je pretraga baze, a kod DVD prezentacije navigacija je riješena preko odabira registra i pratećih tabela početnih slova unutar registra. Pretraga i sortiranje prilagođeni su ćiriličnom pismu bibliografije. U oba vida prezentacije omogućeno je jednostavno pretraživanje, tako da se od izabranog pojma lako dolazi do broja jedinice. Broj jedinice, dalje, preko linka, vodi do skenirane strane na kojoj je traženi zapis.</p>[/0]
+        [1]<p>The National Library of Montenegro “Đurđe Crnojević” as responsible for the development of library activities in the country, launched and implemented a Digital Montenegrin Bibliography project. All published volumes of the retrospective Montenegrin Bibliography 1494-1994 (MB) have been digitized. This enabled much simpler use and easier access to this extensive amount of bibliographic information. The realization of this project, which represents an important step in the further development of library and information system and support for the scientific information system in Montenegro, has been financed by the Ministry of Culture.</p>\n\n
+        <p>Digitized Montenegrin Bibliography 1494-1994 is available on the website:</p>\n\n
+        <p> <a href="http://www.nbcg-digitalnabibliografija.me/"></a><a href="http://www.nbcg-digitalnabibliografija.me/" target="_blank">www.nbcg-digitalnabibliografija.me</a></p>\n\n
+        <p>History of the Montenegrin Bibliography</p>\n\n
+        <p>Retrospective national bibliographies arise from the pursuit of displaying the entire spiritual creativity of a nation, expressed in the form of printed words or otherwise. They represent a unique source of information for the study of all aspects of social life.</p>\n\n
+        <p>Bearing in mind that many nations have developed the national – retrospective and current bibliographies a long time ago and that they represent an urgent scientific and cultural need of every developed society, the National Library of Montenegro launched in 1979 an initiative to implement a retrospective MB project, in order to compile everything about Montenegro and its people published in the form of monographs, periodicals, treatises, articles and literary supplements in serials and conference proceedings – in native and foreign languages, in one spot – between the covers of a single book set.</p>\n\n
+        <p>MB covers half a millennium long period of time, which starts with the first printed Cyrillic book in this part of Europe “Oktoih Prvoglasnik”, printed in the Crnojević Printing House in 1494, and ends in 1994. Apart from the books listed in the first volume, this edition comprises a list of serials in the second volume, covering the period from the first Montenegrin serial “Grlica”, issued in 1835, until 1994. The third volume is the most extensive one, as it compiles selective lists of articles published in serials. Fifteen books covering the period 1494-1985 have been published to date, whereas the remaining three typescripts are to be issued soon to cover the period until 1994. The fourth volume contains bibliographies in foreign languages: Russian, Czech, Italian and English. The Bibliography of Books on Montenegro in the Languages of Nations and Minorities from Former SFRY – until 1994 has been prepared and is expected to appear by the end of 2012.</p>\n\n
+        <p>Selection Criteria for MB</p>\n\n
+        <p>The Montenegrin Bibliography 1494-1994 is founded upon a wide scientific basis. Three selection criteria have been used for the inclusion of material: territorial, national and subject.</p>\n\n
+        <p>Under the territorial criterion, MB includes:</p>\n\n
+        all books, brochures and printed music published on the territory of Montenegro since 1494 regardless of the language, alphabet and author’s ethnic origin (exempt from this rule are titles printed for the publishers registered elsewhere – after 1945);​all books, brochures and printed music published by Montenegrin publishers, but printed out of Montenegro;all official publications printed in Montenegro, as well as those published by Montenegrin publishers, but printed out of the country;all serials: gazettes, newspapers, journals, almanacs, yearbooks, bulletins and chronicles with supplements, commemorative editions of academies and associations, reports issued over a long period of time bearing continuous numbering, printed or published in Montenegro;<p>Selection of articles and contributions in serials which meet the criteria defined for monographs and serials.</p>\n\n
+        <p>Under the national criterion, the Montenegrin Bibliography comprises:</p>\n\n
+        all works written by Montenegrins and other authors originating from Montenegro published out of Montenegro, regardless of the language and alphabet;works produced by printers of Montenegrin origin, printed abroad.\n\n
+        <p>Following the subject criterion, MB comprises materials related to Montenegro and its people.</p>\n\n
+        <p>Structure of MB</p>\n\n
+        <p>MB is published in four volumes, each containing a number of books / issues, depending on the amount</p>\n\n
+        <p>of bibliographic material. The volumes are structured in the following way:</p>\n\n
+        <p>Volume I – monographs (books 1,2,3,4,5,6,7,8,9,10);</p>\n\n
+        <p>Volume II – serials (books 1, 2);</p>\n\n
+        <p>Volume III – discussions, articles and literary contributions in serials (selective inclusion of works; books 1,</p>\n\n
+        <p>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);</p>\n\n
+        <p>Vol. IV – ’Exteriorica’ – works by foreign authors relating to Montenegro and its people (selective inclusion; books 1, 2, 3, 4, 5).</p>\n\n
+        <p>Monographs are catalogued according to the international ISBD (M) standard, for serials ISBD (S) standard is used, whereas the entries in the third volume (articles) are catalogued in compliance with the then valid rules applied for the analytical cataloguing of serials. All the material (except Vol. IV) is catalogued ; and classified according to the UDC system. International standards for bibliographic description are not applied to Volume IV (foreign authors on Montenegro), however, the editors created bibliographic entries according the rules applied in their respective countries. Each book includes indexes of authors, translators, editors, subjects, identified initials, codes and pseudonyms, and lists of references and resources.</p><p>Procedures and Standards of the Montenegrin Bibliography Digitization</p><p>Over the three decades of hard work on the MB project, outstanding results have been achieved. Within the four volumes 32 books have been published on 15,030 pages of encyclopedic format. They list a total of 229,611 bibliographic entries which refer to incunabula, paleotypes, books, serials, and contributions in serials. This database represents the most comprehensive treasury of the Montenegrin creativity and an indispensable tool for scientific and other research work.</p>\n\n
+        <p>Digitization of the Retrospective Montenegrin Bibliography started with the process of the complete material scanning. The images of scanned pages are stored in JPG format, providing appropriate quality for scrolling and browsing. The pages containing indexes are transformed into textual files by means of software for optical character recognition. This allows various search and printout options, while at the same time the database and the implemented software tools meet users’ needs and offer the possibility of bibliographic editing.</p>\n\n
+        <p>Perl, PHP and Javascript are the languages used for making entries, search and display of the bibliography, and the database type is MySQL. Presentation is made available online and in DVD format.</p><p>The database is searchable online, while the DVD version offers the possibility of navigation by selection among indexes and lists of initial letters given for each index. Searching and sorting are adjusted to the Cyrillic script of the bibliography. Both presentation formats provide simple search in such a way that the selected term easily leads to the corresponding entry. Bibliographic entry provides link to the scanned page which contains the required bibliographic record.</p>
+[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Cg bibliografija -->
+
+    <!--region Tekuca bibliografija -->
+    <string name="str_tek_bibl_title">[0]Tekuća bibliografija[/0][1]Current Bibliography[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_tek_bibl_body">[0]<p>Nacionalna biblioteka Crne Gore „Đurđe Crnojević“, kao nosilac nacionalnog bibliografskog centra, izrađuje i izdaje Tekuće crnogorske bibliografije. U Bibliografskom odjeljenju Biblioteke pripremaju se za publikovanje Tekuće crnogorske bibliografije monografskih publikacija i Tekuće bibliografije priloga u serijskim publikacijama.</p>\n\n
+        <p>Bibliografije se izrađuju na osnovu kreiranih i redigovanih zapisa iz elektronskog kataloga Nacionalne biblioteke.</p>\n\n
+        <p>Ove bibliografije se pripremaju kao posebna izdanja na godišnjem nivou. Do sada je publikovano pet svezaka Bibliografije monografskih publikacija i to: za 2002, 2003, 2004, 2005 i 2006. godinu. Od 2007. godine bibliografije se rade u on line izdanju i dostupne su na sajtu:\n\n
+        <a href="http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/"><a href="http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/" target="_blank">http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/</a></a></p>\n\n
+        <p>U elektronskom izdanju publikovane su bibliografije monografskih publikacija za: 2004, 2005, 2006, 2007, 2008, 2009 i 2010. godinu.</p>\n\n
+        <p>Tekuće crnogorske bibliografije priloga u serijskim publikacijama objavljuju se samo u on line izdanju. Do sada su publikovane bibliografije članaka za: 2009, 2010, 2011 i 2012. godinu.</p>[/0]
+        [1]<p>The National Library of Montenegro “Đurđe Crnojević”, as the national bibliographic center, creates and publishes Current Bibliographies of Montenegro. Montenegrin current bibliographies of monographs and current bibliographies of contributions in serials are prepared for publication at the Bibliographic Department of the Library.</p>\n\n
+        <p>Bibliographies are made on the basis of the created and edited records from the electronic catalogue of the National Library.</p>\n\n
+        <p>These bibliographies are prepared annually, as special editions. Five volumes of the Bibliography of Monographs have been published so far: 2002, 2003, 2004, 2005 and 2006. Since 2007, the bibliographies have their online editions and they have been available at the website:</p>\n\n
+        <p><a href="http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/"><a href="http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/" target="_blank">http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/</a></a></p>\n\n
+        <p>Bibliography of monographs for 2004, 2005, 2006, 2007, 2008, 2009 and 2010 were published in electronic editions.</p>\n\n
+        <p>The current Montenegrin bibliographies of contributions in serials are published only in the online edition. So far, bibliographies of articles for 2009, 2010, 2011 and 2012 have been published.</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Tekuca bibliografija -->
+
+    <!--endregion Katalozi -->
+
+
+    <!-- region Usluge -->
+    <string name="str_usluge_title">[0]Usluge[/0][1]Services[/1][2][/2][3][/3][4][/4][5][/5]</string>
+
+    <!-- region Za korisnike -->
+    <string name="str_korisnici_title">[0]Za Korisnike[/0][1]For Users[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_korisnici_body">[0]Čitaonice i članstvo<p>\nBibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove institucije.</p>\n\n
+        <p>Savremeno opremljene čitaonice za korišćenje građe Osnovnog fonda i Posebnih zbirki nalaze se u zgradi bivšeg Italijanskog poslanstva. To su Naučna čitaonica, E-čitaonica (za korišćenje elektronskih publikacija, Interneta, COBISS sistema), Čitaonica muzikalija (za korišćenje svih vrsta muzičke građe: muzičkih rukopisa, nota, audio-video zapisa i dokumenata), i Čitaonica kartografije.</p>\n\n
+        <p>Korisnici Muzejskog fonda, Zbirke stare i rijetke knjige i Legata mogu koristiti građu u čitaonici u zgradi bivšeg Francuskog poslanstva.</p>\n\n
+        <p>Svaki član Nacionalne biblioteke može koristiti sve fondove biblioteke, ali i elektronski katalog biblioteke i uzajamni elektronski katalog, koji su dostupni 24 časa za pretraživanje preko interneta:</p>\n\n
+        <p>E-KATALOG NBCG\n\n
+        <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001</a></p>\n\n
+        <p>E-KATALOG CRNE GORE\n\n
+        <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib</a></p>\n\n
+        <p>Za publikacije koje su objavljene prije 1991. godine postoji Lisni katalog, formiran 1949. godine. U sklopu njega nalaze se posebni lisni katalozi: alfabetski katalog knjiga, alfabetski katalog serijskih publikacija, lisni katalozi posebnih zbirki, lisni predmetni katalog i lisni stručni katalog.</p>\n\n
+        <p>U čitaonicama Nacionalne biblioteke iznajmljena bibliotečka građa može se fotografisati, kopirati, skenirati i prepisati, naravno, u skladu sa Zakonom o autorskim pravima i internim Pravilima o korišćenju bibliotečke građe.</p>\n\n
+        <p>Članarina može biti godišnja (od dana upisa), mjesečna ili trodnevna.</p>\n\n
+        <p>Bibliotečka građa je dostupna pod jednakim uslovima svim građanima Crne Gore i stranim licima sa navršenih 18 godina. Prilikom upisa, budući korisnik je dužan dati tačne lične podatke i predočiti ličnu kartu ili neki drugi identifikacioni dokument. Izuzetno, mogu se upisati i lica ispod 18 godina (maturanti) – po odobrenju. Strani državljani koji borave u Crnoj Gori mogu koristiti bibliotečku građu uz važeći pasoš.</p>\n\n
+        <p>Radno vrijeme čitaonica je od 7 do 19 časova radnim danima, a subotom od 7 do 14 časova.</p>\n\n
+        Međubibliotečka pozajmica<p>\n\n
+            Nacionalna biblioteka ima razvijenu međubibliotečku pozajmicu sa svim bibliotekama u Crnoj Gori, a sa bibliotekama iz inostranstva posuđivanje se obavlja putem međunarodne pozajmice. Pozajmljene publikacije koriste se najduže 30 dana i to u prostorijama biblioteke preko koje su tražene. Na pozajmicu se daju isključivo knjige i kopije članaka iz serijskih publikacija.</p>\n\n
+        <p>Publikacije izdate do 1950. godine ne izdaju se na pozajmicu.</p>\n\n
+        Kontakt informacije<p>Čitaonice:</p>\n
+        <p>informatori: Milenija Vračar, Nada Drašković\n\n
+            tel. +382 41-231-143, lokal 122\n\n
+            e-mail: citaonica@nb-cg.me</p>\n\n
+        <p>Zbirka rukopisa i dokumenata:</p>\n
+        <p>Boris Kaluđerović, voditelj zbirke\n\n
+            tel +382 41 231 143 / lokal 132\n\n
+            e-mail: boris.kaludjerovic@nb-cg.me</p>\n\n
+        <p>Zbirka muzikalija i audiovizuelne građe:</p>\n
+        <p>Dragan Mirković, voditelj zbirke\n\n
+            tel +382 41 231 143 / l. 132\n\n
+            e-mail: dragan.mirkovic@nb-cg.me</p>\n\n
+        <p>Kartografsko-geografska zbirka:</p>\n
+        <p>Danijela Radulović, voditelj zbirke\n\n
+            tel +382 41 234-236, 231-143 lok. 109\n\n
+            e-mail: danijela.radulovic@nb-cg.me</p>\n\n
+        <p>Montenegrina, Stara i rijetka knjiga i Legati:</p>\n
+        <p>Slavica Glendža\n\n
+            tel. +382 41 232-133; 231-722\n\n
+            e-mail: slavica.glendza@nb-cg.me</p>\n\n
+        <p>Međubibliotečka pozajmica:</p>\n
+        <p>Milenija Vračar\n\n
+            radno vrijeme: 9-17 sati\n\n
+            tel: +382 41-231-143, lokal 122\n\n
+            e-mail: medjubibliotecka@nb-cg.me</p>\n\n
+        <p>Adresa:</p>\n
+        <p>Nacionalna biblioteka Crne Gore “Ðurde Crnojević”\n
+            Služba međubibliotečke pozajmice\n
+            Bulevar crnogorskih junaka 163, 81250 Cetinje</p>\n\n
+        <p><p><a href="/fajlovi/p1d686a79l1b0316ei1l111t5o9ej5.pdf" target="_blank">PRAVILNIK O USLOVIMA I NAČINJU KORIŠĆENJA BIBLIOTEČKO-INFORMACIONE GRAĐE I USLUGA</a></p>\n\n
+        <p><a href="/fajlovi/p1d686a79l1f4i14svlkkk0jmge4.pdf" target="_blank">NBCG CJENOVNIK USLUGA</a></p>\n\n
+        <p><a href="/fajlovi/p1d686a79m1ie0hdu3e21lt1e796.pdf" target="_blank">ZAHTJEV ZA KOPIRANJE MATERIJALA</a></p></p>
+[/0][1]Reading Rooms and Membership<p>\n
+            Library Materials of the National Library of Montenegro are primarily used in the reading rooms of the NLM “Đurđe Crnojević”.</p>\n\n
+        <p>Contemporary equipped reading rooms for the use of library materials of the Basic Fund and Special Collections are located in the former Italian Embassy building. Those are the Science Reading Room, e-Reading Room (for the use of electronic publications, the Internet, COBISS system), Music Reading Room (for the use of all types of music materials: music manuscripts, scores, audio-video records and documents), and Cartography Reading Room.</p>\n\n
+        <p>Users of Museum fund, Old and Rare Books collection and legacies can use library materials in the reading room in the former French Embassy building.</p>\n\n
+        <p>Each member of the National Library can use all the funds of the library, but also the electronic library catalogue and shared electronic catalog, which are available 24 hours for search via internet:\n\n
+            NLM E-CATALOGUE\n\n
+            <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=20001"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=20001" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=20001</a></p>\n\n
+        <p>E-CATALOGUE OF MONTENEGRO\n\n
+            <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib</a></p>\n\n
+        <p>For publications published before 1991, there is a card catalogue, created in 1949. It includes special card catalogues: alphabetical catalogue of books, alphabetical catalogue of serials, card catalogues of special collections, card subject catalogue and card professional catalogue.</p>\n\n
+        <p>In the NLM reading rooms borrowed library materials can be photographed, copied and scanned in accordance with the Copyright Law and the NLM Rulebook on the Use of Library Materials.</p>\n\n
+        <p>Membership can be obtained for a year (from the date of registration), monthly or for a period of three days.\n\n
+            Library materials are available on equal terms to all citizens of Montenegro and foreign persons over 18 years of age. When they register, the future users are required to provide accurate personal information and identity cards or other identification documents. Notwithstanding, the persons under 18 years of age (secondary school last grade pupils) can be registered after approval. Foreign nationals residing in Montenegro can use the library materials with a valid passport.</p>\n\n
+        <p>Working hours of the reading rooms are from 7am to 7pm on weekdays, and from 7am to 2pm on Saturdays.</p>\n\n
+        Interlibrary Loan<p>\n
+            The National Library practices interlibrary loan of publications with libraries from Montenegro and from abroad through international loans. Borrowed publications can be used for no more than 30 days and only in the premises of the library at which they have been requested. Exclusively books and copies of articles from serials are given on loan.\n\n
+            Publications issued before 1950 may not be given on loan.</p>\n
+        Contact Information\n
+        <p>Reading Rooms:\n\n
+            Information Officers: Milenija Vračar, Nada Drašković\n\n
+            Phone: +382 41-231-143, extension telephone number 122\n\n
+            e-mail: citaonica@nb-cg.me</p>\n
+        <p>Manuscripts and Documents Collection:\n\n
+            Boris Kaluđerović, librarian in charge\n\n
+            Phone: +382 41 231 143 / extension 132\n\n
+            e-mail: boris.kaludjerovic@nb-cg.me</p>\n
+        <p>Music and Audiovisual Materials Collection:\n\n
+            Dragan Mirković, librarian in charge\n\n
+            Phone: +382 41 231 143 / extension 132\n\n
+            e-mail: dragan.mirkovic@nb-cg.me</p>\n
+        <p>Cartographic and Geographic Collection:\n\n
+            Danijela Radulović, librarian in charge\n\n
+            Phone: +382 41 234-236, 231-143, extension 109\n\n
+            e-mail: danijela.radulovic@nb-cg.me</p>\n
+        <p>Montenegrina, Old and Rare Books and Legacies:\n\n
+            Slavica Glendža\n\n
+            Phone: +382 41 232-133; 231-722\n\n
+            e-mail: slavica.glendza@nb-cg.me</p>\n
+        <p>Interlibrary Loan:\n\n
+            Milenija Vračar\n\n
+            Working hours: 9am to 5pm\n\n
+            Phone: +382 41-231-143, extension 122\n\n
+            e-mail: medjubibliotecka@nb-cg.me</p>\n
+        <p>Address:\n\n
+            National Library of Montenegro “Ðurđe Crnojević”\n\n
+            Interlibrary Loan Service\n\n
+            Bulevar crnogorskih junaka 163, 81250 Cetinje</p>\n\n
+        <p><p><a href="/fajlovi/p1d686a79l1f4i14svlkkk0jmge4.pdf" target="_blank">NLM PRICE LIST</a></p><p><a href="/fajlovi/p1d686a79m1ie0hdu3e21lt1e796.pdf" target="_blank">REQUEST FOR COPYING MATERIALS</a></p></p>
+[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!-- endregion Za korisnike -->
+
+    <!-- region Za izdavace -->
+    <string name="str_izdavaci_title">[0]Za izdavače[/0][1]For Publishers[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_izdavaci_body">[0]<p>Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne Gore i dodjeljuje međunarodne standardne oznake ISBN, ISSN i ISMN za monografske i serijske publikacije, štampane muzikalije, kao i ostalu bibliotečku građu.</p>\n\n
+        <p>CIP</p>\n\n
+        <p>U Nacionalnoj biblioteci izrađuju se CIP zapisi po međunarodnim standardima za monografske publikacije – ISBD(M), za serijske publikacije – ISBD(CR), za štampane muzikalije – ISBD(PN), za elektronske publikacije – ISBD(ER), za njeknjižnu građu – ISBD(NBM) i za kartografsku građu ISBD(CM). Takav zapis, dat u sažetoj formi, pruža informaciju o bibliografskom i sadržinskom karakteru publikacije.</p>\n\n
+        <p>Obaveze izdavača su da na svakoj novoj publikaciji odštampaju ovaj kataloški zapis koji se radi u bazi podataka COBIB Crna Gora. Na taj način su podaci o publikaciji dostupni putem Interneta i prije njenog objavljivanja.</p>\n\n
+        <p>Nacionalna biblioteka u prosjeku godišnje izradi više od 1.000 CIP zapisa.</p>\n\n
+        <p>ISBN</p>\n\n
+        <p>Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, godišnje dodijeli preko 1.000 ISBN oznaka (International Standard Book Number – međunarodni standardni broj knjige) knjigama i drugim omeđenim publikacijama bez obzira na medij na kojem su objavljene.</p>\n\n
+        <p>ISSN </p>\n\n
+        <p>Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN oznake (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.</p>\n\n
+        <p>Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.</p>\n\n
+        <p>ISMN</p>\n\n
+        <p>Nacionalni ISMN centar za Crnu Goru dodjeljuje ISMN oznake (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkim djelima publikovanim u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta.</p>\n\n
+        <p>OBAVEZNI PRIMJERAK</p>\n\n
+        <p>Izdavači u Crnoj Gori (Zakon o izdavačkoj djelatnosti) u obavezi su da Nacionalnoj biblioteci dostave bez naknade i o svom trošku pet primjeraka svake publikacije neposredno poslije štampanja ili objavljivanja. Obavezni primjerak čine: knjige, serijske publikacije (časopisi i novine), štampane muzikalije, geografske karte, audio-vizuelna građa, elektronske publikacije na fizičkim nosačima, elektronske publikacije distribuirane na internetu, sadržaji internet domena Crne Gore i druge publikacije.</p>\n\n
+        <p>Kontakt osobe za izradu CIP-a za monografske publikacije:</p>\n\n
+        <p>Dragana Mirković (e-mail: cip_monografske@nb-cg.me)\n\n
+            Sanja Martinović (e-mail: cip_monografske@nb-cg.me)\n\n
+            Tel/fax: 041-234-236</p>\n\n
+        <p>Kontakt osobe za izradu CIP-a za serijske publikacije:\n\n
+            Vesna Kovačević (e-mail: cip_serijske@nb-cg.me)\n\n
+            Tel/fax: 041 – 234-236\n\n
+            Tel: 041 – 231-143 lok.130</p>\n\n
+        <p>ISBN </p>\n\n
+        <p>Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, dodijeli prosječno u godini 1.000 ISBN brojeva (International Standard Book Number – međunarodni standardni broj knjige) štampanim knjigama i brošurama u Crnoj Gori.</p>\n\n
+        <p>ISBN se dodjeljuje i publikacijama objavljenim Brajevim pismom i geografskim kartama, knjigama na drugim medijima (CD, Internet…), kao i publikacijama mješovitih medija sa tekstom.</p>\n\n
+        <p>Kontakt:</p>\n\n
+        <p>Nacionalna biblioteka Crne Gore “Đurđe Crnojević”\n\n
+            Bulevar crnogorskih junaka br. 163 Cetinje</p>\n\n
+        <p>NACIONALNA ISBN AGENCIJA\n\n
+            Tel/fax: 041 – 234-236\n\n
+            e-mail: <a href="mailto:isbn@nb-cg.me">isbn@nb-cg.me</a></p>\n\n
+        <p>ISSN </p>\n\n
+        <p>Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN brojeve (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.</p>\n\n
+        <p>Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.</p>\n\n
+        <p><a href="/fajlovi/p1d5ohho0q1dvg14vm12131b5n1gfo5.pdf"><a href="https://www.nb-cg.me/fajlovi/p1d5ohho0q1dvg14vm12131b5n1gfo5.pdf" target="_blank">Upitnik za CIP za serijske publikacije i ISSN</a></a>(pdf)</p>\n\n
+        <p><a href="/fajlovi/p1d5ohho0p19661hjsdrillj13bh4.docx" target="_blank">Upitnik za CIP za serijske publikacije i ISSN</a>(word)</p>\n\n
+        <p>Kontakt:</p>\n\n
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje Bulevar crnogorskih junaka br. 163</p>\n\n
+        <p>NACIONALNI ISSN CENTAR\n\n
+            Vesna Vučković,\n\n
+            Tel: 041- 231 143 lok.144\n\n
+            E-mail:<a href="mailto:isnn@nb-cg.me">issn@nb-cg.me</a></p>\n\n
+        <p>ISMN</p>\n\n
+        <p>Nacionalni ISMN centar za Crnu Goru pri Nacionalnoj biblioteci dodjeljuje ISMN brojeve (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkih djela publikovanih u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta. ISMN se ne dodjeljuje samostalno objavljenim zvučnim zapisima, videozapisima ili zapisima na računalnom mediju. Centar za ISMN Crne Gore počeo je s radom 2016. godine.</p>\n\n
+        <p>Kontakt:</p>\n\n
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje\n\n
+            Bulevar crnogorskih junaka br. 163</p><p>NACIONALNI ISMN CENTAR\n\n
+            Tel: 041- 231-143 lok. 130\n\n
+            Fax: 041- 231 020; 234-236\n\n
+            E-mail:<a href="mailto:issn@nb-cg.me">ismn@nb-cg.me</a></p>\n\n
+        <p>OBAVEZNI PRIMJERAK</p>\n\n
+        <p>Svi izdavači u Crnoj Gori, prema Zakonu o izdavaštvu, dužni su da Nacionalnoj biblioteci besplatno dostave pet primjeraka svake publikacije, na bilo kom mediju, neposredno poslije štampanja ili objavljivanja: knjige, serijske publikacije (časopise i novine), muzikalije, geografske karte, audio i audio-vizuelnu građu (kako na klasičnim, tako i na elektronskim medijima – CD-ROM, DVD…), i veb sajtove sa nacionalnim domenom.</p>\n\n
+        <p><a href="/fajlovi/p1d5ohsgm6t6fq0p1fvd17l6pm05.pdf" target="_blank">ZAKON O BIBLIOTEČKOJ DJELATNOSTI</a></p>\n\n
+        <p><a href="/fajlovi/p1d5ohsgm510u541q28v9aq58d4.pdf" target="_blank">ZAKON O AUTORSKIM I SRODNIM PRAVIMA</a></p>\n\n
+        <p><a href="/fajlovi/p1d5ohsgm71sfm1imp62cl6qlgc6.pdf" target="_blank">ZAKON O IZDAVACKOJ DJELATNOSTI</a></p>
+[/0][1]<p>National Library prepares CIP (Cataloguing in Publication) upon request from the publishers from Montenegro and assigns the international standard ISBN, ISSN and ISMN numbers for monographs and serials, printed music and other library materials.</p>\n\n
+        <p>CIP</p>\n\n
+        <p>CIP records are prepared in the National Library according to the international standards – ISBD (M) – for monographs, ISBD (CR) – for serials ISBD (PN) – for printed music, ISBD (ER) – for electronic publications, ISBD (NBM) –for non-book materials and ISBD (CM) – for cartographic materials. Such a record, given in summary form, provides information on bibliographic and content character of the publication.\n\n
+            Obligation of the publisher is to print catalogue entry on each new publication prepared in the COBIB Montenegro database. In this way, the data on publication are available on the Internet before the publication date.\n\n
+            In average, NLM creates 1,000 CIP records on annual level.</p>\n\n
+        <p>ISBN</p>\n\n
+        <p>National  ISBN  Centre  of  Montenegro, located  in  the  National Library, assigns annually over 1,000 ISBNs (International Standard Book Number) to printed books and pamphlets in Montenegro, regardless of the media in which they have been published.</p>\n\n
+        <p>ISSN  </p>\n\n
+        <p>National ISSN Centre of Montenegro, also located in the NLM, assigns ISSN (International Standard Serial Number) to magazines and newspapers published in Montenegro.\n\n
+            The National Library annually assigns an average of 60 ISSN numbers.</p>\n\n
+        <p>ISMN</p>\n\n
+        <p>ISMN National Centre of Montenegro assigns ISMN (International Standard Music Number) to musical works published in Montenegro. The term printed music includes scores, sections or parts of the multimedia kit.</p>\n\n
+        <p>LEGAL DEPOSIT</p>\n\n
+        <p>Publishers in Montenegro (Law on Publishing) are required to submit to the National Library free of charge and at their own expense five copies of each publication immediately after printing or publishing it. Legal deposit contains: books, serials (magazines and newspapers), printed music, maps, audio-visual materials, electronic publications on physical carriers, electronic publications distributed on the Internet, Internet content of Montenegro’s domain and other publications.</p>\n\n
+        <p>Contact persons for CIP for monographs:\n\n
+            Dragana Mirković (e-mail: cip_monografske@nb-cg.me)\n\n
+            Sanja Martinović (e-mail: cip_monografske@nb-cg.me)\n\n
+            Tel/fax: 041-234-236</p>\n\n
+        <p>Contact persons for CIP for serials:\n\n
+            Vesna Kovačević (e-mail: cip_serijske@nb-cg.me)\n\n
+            Tel/fax: 041 – 234-236\n\n
+            Tel: 041 – 231-143 extension 130</p>\n\n
+        <p>ISBN</p>\n\n
+        <p>National ISSN Centre of Montenegro, located in the NLM, assigns an annual average of 1,000 ISBNs (International Standard Book Number) to printed books and pamphlets in Montenegro.\n\n
+            ISBN is also assigned to publications published in Braille, maps, books in other media (CD, Internet …), as well as to the mixed-media publications with text.</p>\n\n
+        <p>Contact:</p>\n\n
+        <p>National Library of Montenegro “Đurđe Crnojević”\n\n
+            Bulevar crnogorskih junaka 163, Cetinje\n\n
+            NACIONAL ISBN AGENCY\n\n
+            Tel/fax: 041 – 234-236\n\n
+            e-mail: isbn@nb-cg.me</p>\n\n
+        <p>ISSN</p>\n\n
+        <p>National ISSN Centre of Montenegro, also located in the NLM, assigns ISSN (International Standard Serial Number) to magazines and newspapers published in Montenegro.\n\nNational Library annually assigns an average of 60 ISSN numbers.</p>\n\n
+        <p>Contact:\n\n
+            National Library “Đurđe Crnojević” – Cetinje\n\n
+            Bulevar crnogorskih junaka 163\n\n
+            NATIONAL ISSN CENTRE\n\n
+            Vesna Vučković,\n\n
+            Tel: 041- 231 143, extension 144\n\n
+            E-mail: issn@nb-cg.me</p>\n\n
+        <p>ISMN</p>\n\n
+        <p>ISMN National Centre of Montenegro at the National Library assigns ISMN (International Standard Music Number) to musical works published in Montenegro. The term printed music includes scores, sections or parts of the multimedia kit ISMN is not assigned independently to the published sound recordings, videos or recordings on computer media. ISMN Centre of Montenegro became operational in 2016.</p>\n\n
+        <p>Contact:\n\n
+            National Library “Đurđe Crnojević” – Cetinje\n\n
+            Bulevar crnogorskih junaka 163\n\n
+            NATIONAL ISMN CENTRE\n\n
+            Tel: 041- 231-143 extension 130\n\n
+            Fax: 041- 231 020; 234-236\n\n
+            E-mail: ismn@nb-cg.me</p>\n\n
+        <p>LEGAL DEPOSIT</p>\n\n
+        <p>All publishers in Montenegro (Law on Publishing) are required to submit to the National Library free of charge five copies of each publication, on any media, immediately after printing or publishing: books, serials (magazines and newspapers), printed music, maps, audio-visual materials (on classic and electronic media – CDs, DVDs…) and web sites with the national domain.</p>\n\n
+        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-BIBLIOTE%C4%8CKOJ-DJELATNOSTI.pdf">THE LAW ON LIBRARY PRACTICE</a></p>\n\n
+        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-AUTORSKIM-I-SRODNIM-PRAVIMA.pdf">THE LAW ON COPYRIGHT AND RELATED RIGHTS</a></p>\n\n
+        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-IZDAVACKOJ-DJELATNOSTI.pdf">THE LAW ON PUBLISHING</a></p>
+[/1][2][/2][3][/3][4][/4][5][/5]</string>
+
+    <!-- endregion Za izdavace -->
+
+    <!-- region Za Bibliotekare -->
+    <string name="str_bibliotekari_title">[0]Za Bibliotekare[/0][1]For Librarians[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_body">[0]<p>Nacionalna biblioteka, kao nacionalna i matična biblioteka Crne Gore, stara se o usavršavanju kadrova za obavljanje bibliotečke djelatnosti i pruža stručnu pomoć bibliotekarima svih crnogorskih biblioteka.</p>\n\n
+        <p>Nacionalna biblioteka organizuje stručne seminare i radionice iz svih domena bibliotekarstva, informatike i digitalizacije za bibliotekare u Crnoj Gori.</p>\n\n
+        <p>U Nacionalnoj biblioteci, nakon završene obuke za rad u sistemu COBISS, knjižničari i bibliotekari mogu steći licencu za rad u programskom segmentu COBISS-a, to jest dozvolu za kreiranje zapisa u Uzajamnoj bibliografskoj bazi podataka COBIB.CG.</p>\n\n
+        <p>Na osnovu Zakona o bibliotečkoj djelatnosti iz 2010. godine i podzakonskih akata iz 2012. godine (Pravilnik o vrsti i stepenu stručne spreme, programu i načinu polaganja stručnog ispita i stručnim zvanjima za vršenje poslova konzervatorske, muzejske, bibliotečke i arhivske djelatnosti) stručni ispit za sticanje zvanja bibliotekara više ne organizuje Nacionalna biblioteka već Ministarstvo kulture Crne Gore. Stručnjaci Nacionalne biblioteke učestvuju u realizaciji stručnog bibliotečkog ispita za sticanje zvanja bibliotekara, višeg knjižničara i knjižničara.</p>\n\n
+        Licenca za uzajamnu katalogizaciju\n\n
+        <p>Nacionalna biblioteka Crne Gore “Đurđe Crnojević je u skladu sa Pravilnikom o bližim uslovima i načinu izdavanja licence za uzajamnu katalogizaciju formirala je Komisiju za izdavanje licenci u sastavu:</p>\n\n
+        <p>mr Vjenceslava Ševaljević, bibliotekar savjetnik</p>\n\n
+        <p>mr Đurđa Martinović, bibliotekar savjetnik</p>\n\n
+        <p>mr Natalija Bokan, viši bibliotekar.</p>\n\n
+        <p>Zadatak Komisije za je da u skladu sa članom 10 Pravilnika o bližim uslovima i načinu izdavanja dozvole za uzajamnu katalogizaciju, razmotri ispunjenost uslova podnosioca zahtjeva za izdavanje licence, te da u konačnom predloži Nacionalnoj biblioteci izdavanje licence.</p>\n\n
+        <p>Kandidat je dužan za ispit da uradi 30 zapisa monografskih publikacija u testnoj bazi, s tim da za njih ne postoje zapisi ni u lokalnoj, ni u uzajamnoj, ni u seminarskoj, i niti u bilo kojoj bazi u sistemu COBISS.\n\n
+            Troškovi rada Komisije regulisani su Cjenovnikom NBCG. Troškove snosi Biblioteka u kojoj je kandidat zaposlen ili sam kandidat.</p>\n\n
+        <p><a href="/fajlovi/p1d5ohsgm6t6fq0p1fvd17l6pm05.pdf" target="_blank">ZAKON O BIBLIOTEČKOJ DJELATNOSTI</a><a href="http://nb-cg.me/wp-content/uploads/2014/10/ZAKON-O-BIBLIOTE%C4%8CKOJ-DJELATNOSTI.pdf">\n\n
+        </a><a href="/fajlovi/p1d5oj8nm99do13o219118lmcnj5.pdf" target="_blank">PRAVILNIK O BLIZIM USLOVIMA I NACINU VRSENJA MATICNE DJELATNOSTI</a>\n\n
+        <a href=""></a><a href="/fajlovi/p1d5okgr3v124l12b319s2ka713uf4.pdf" target="_blank">PRAVILNIK O BLIŽIM USLOVIMA ZA OBAVLJANJE BIBLIOTEČKE DJELATNOSTI</a>\n\n
+        <a href="/fajlovi/p1d5ok705qn3nke6sei12vsb05.pdf" target="_blank">PRAVILNIK O SADRŽAJU I NAČINU VODJENJA REGISTRA BIBLIOTEKA</a>\n\n
+        <a href="/fajlovi/p1d5ok705q1ttr9s21naf130iauq6.pdf" target="_blank">PRAVILNIK O MJERAMA ZA ČUVANJE I ZAŠTITU BIBLIOTEČKE GRAĐE</a>\n\n
+        <a href="/fajlovi/p1d5ok705qn4r1rqeas7m64cku7.pdf" target="_blank">PRAVILNIK O NACIONALNIM STANDARDIMA I STRUČNIM UPUTSTVIMA ZA OBRADU BIBLIOTEČKE GRAĐE</a>\n\n
+        <a href="/fajlovi/p1d5ok705q6j5193qak116bf1f288.pdf">PRAVILNIK O NACIONALNIM STANDARDIMA ZA DIGITALIZACIJU BIBLIOTEČKE GRAĐE</a>\n\n
+        <a href="/fajlovi/p1d5ok705r2kk1a1r1mn9qin1c0j9.pdf" target="_blank">PRAVILNIK O POSTUPKU ROKOVIMA I NAČINU VRŠENJA REVIZIJE BIBLIOTEČKIH FONDOVA</a>\n\n
+        <a href="/fajlovi/p1d5ok705rnuhlte191r17na1g8la.pdf" target="_blank">PRAVILNIK BLIŽIM USLOVIMA I NAČINU IZDAVANJA LICENCE ZA UZAJAMNU KATALOGIZACIJU</a>\n\n
+        <a href="/fajlovi/p1d5ok705r1n0q17uieeopeb186vb.pdf" target="_blank">PRAVILNIK O VRSTI I STEPENU STRUČNE SPREME, PROGRAMU I NAČINU POLAGANJA STRUČNOG ISPITA I STRUČNIM ZVANJIMA</a><a href="http://nb-cg.me/wp-content/uploads/2017/06/PRAVILNIK-O-VRSTI-I-STEPENU-STRU%C4%8CNE-SPREME-PROGRAMU-I-NA%C4%8CINU-POLAGANJA-STRU%C4%8CNOG-ISPITA-I-STRU%C4%8CNIM-ZVANJIMA.pdf"></a>\n\n
+        <a href="/fajlovi/p1d5ok705r1me1161b1cjc1mpp1pfjc.pdf" target="_blank">PRAVILNIK O VRSTI SADRŽAJU I NAČINU VOĐENJA EVIDENCIJE BIBLIOTEČKE GRAĐE I BIBLIOTEČKE DOKUMENTACIJE</a></p>
+[/0][1]<p>The National Library of Montenegro as the parent library in Montenegro, take care of the training of personnel for carrying out library activities and provides professional assistance to librarians of all Montenegrin libraries.</p>\n\n
+        <p>The National Library organizes seminars and workshops in all domains of librarianship, information science and digitization for librarians in Montenegro.</p>\n\n
+        <p>At the National Library, after the completion of training for work in the COBISS system, library technicians and librarians can acquire a license to work in the program segment COBISS, that is, permission to create records in the shared bibliographic database COBIB.CG.</p>\n\n
+        <p>On the basis of the Law on Library Practice from 2010 and by-laws from 2012 (Rulebook on the Type and Level of Education, Program and Method of Taking the Professional Examination and Professional Titles in order to perform the conservation, museum, library and archive activities), a professional exam for acquiring the Librarian title is no longer organized by the National Library but by the Ministry of Culture of Montenegro. Experts from the National Library participate in the process of organizing the Librarian Exam for acquiring the titles of Librarian, Senior Library Technician and Library Technician.</p>\n\n
+        <p>Cooperative Cataloguing License</p>\n\n
+        <p>In accordance with the Rulebook on Detailed Conditions and Method of Issuing Cooperative Cataloguing License, the National Library of Montenegro “Đurđe Crnojević” formed the license issuing Commission composed of:</p>\n\n
+        mr Vjenceslava Ševaljević, library consultant;mr Đurđa Martinović, library consultant;mr Natalija Bokan, senior librarian\n\n
+        <p>The task for the Commission is to consider the fulfillment of the conditions of the applicant for the license and to propose the license issuing to the National Library in accordance with Article 10 of the Rulebook on Detailed Conditions and Method of Issuing Cooperative Cataloguing License.</p>\n\n
+        <p>The applicant is required to take the exam and make 30 records of monographs in the test base, provided that there are no records for them either in local, shared or seminar base, or in any other database in the COBISS system.</p>\n\n
+        <p>The payments for Commission members are regulated with the NLM price list. The costs are borne by the employer library of the applicant or by the applicant himself.</p>\n\n
+        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-BIBLIOTE%C4%8CKOJ-DJELATNOSTI.pdf">LAW ON LIBRARY PRACTICE</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-BLIZIM-USLOVIMA-I-NACINU-VRSENJA-MATICNE-DJELATNOSTI.pdf">RULEBOOK ON DETAILED CONDITIONS AND METHOD OF PERFORMING PARENT LIBRARY ACTIVITIES</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-BLI%C5%BDIM-USLOVIMA-ZA-OBAVLJANJE-BIBLIOTE%C4%8CKE-DJELATNOSTI.pdf">RULEBOOK ON DETAILED CONDITIONS FOR PERFORMING LIBRARY ACTIVITIES</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-SADR%C5%BDAJU-I-NA%C4%8CINU-VODJENJA-REGISTRA-BIBLIOTEKA.pdf">RULEBOOK ON THE CONTENT AND METHOD OF KEEPING THE LIBRARIES REGISTRIES</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-MJERAMA-ZA-%C4%8CUVANJE-I-ZA%C5%A0TITU-BIBLIOTE%C4%8CKE-GRA%C4%90E.pdf">RULEBOOK ON PREVENTING MEASURES FOR PRESERVATION AND PROTECTION OF LIBRARY MATERIALS </a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-NACIONALNIM-STANDARDIMA-I-STRU%C4%8CNIM-UPUTSTVIMA-ZA-OBRADU-BIBLIOTE%C4%8CKE-GRA%C4%90E.pdf">RULEBOOK ON THE NATIONAL STANDARDS AND PROFESSIONAL GUIDELINES FOR PROCESSING OF LIBRARY MATERIALS</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-NACIONALNIM-STANDARDIMA-ZA-DIGITALIZACIJU-BIBLIOTE%C4%8CKE-GRA%C4%90E.pdf">RULEBOOK ON THE NATIONAL DIGITIZATION STANDARDS FOR LIBRARY MATERIALS</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-POSTUPKU-ROKOVIMA-I-NA%C4%8CINU-VR%C5%A0ENJA-REVIZIJE-BIBLIOTE%C4%8CKIH-FONDOVA.pdf">RULEBOOK ON PROCEDURES, DEADLINES AND METHOD OF AUDITING THE LIBRARY FUNDS</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-BLI%C5%BDIM-USLOVIMA-I-NA%C4%8CINU-IZDAVANJA-LICENCE-ZA-UZAJAMNU-KATALOGIZACIJU.pdf">RULEBOOK ON DETAILED CONDITIONS AND METHOD OF ISSUING COOPERATIVE CATALOGUING LICENSE</a>\n\n
+            <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-VRSTI-I-STEPENU-STRU%C4%8CNE-SPREME-PROGRAMU-I-NA%C4%8CINU-POLAGANJA-STRU%C4%8CNOG-ISPITA-I-STRU%C4%8CNIM-ZVANJIMA.pdf"> RULEBOOK ON THE TYPE AND LEVEL OF QUALIFICATION, PROGRAM AND METHOD OF TAKING THE PROFESSIONAL EXAMINATION AND PROFESSIONAL TITLES</a>\n\n
+        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-VRSTI-SADR%C5%BDAJU-I-NA%C4%8CINU-VO%C4%90ENJA-EVIDENCIJE-BIBLIOTE%C4%8CKE-GRA%C4%90E-I-BIBLIOTE%C4%8CKE-DOKUMENTACIJE.pdf">RULEBOOK ON TYPE, CONTENT AND METHOD OF KEEPING RECORDS OF LIBRARY MATERIALS AND LIBRARY DOCUMENTATION</a></p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!-- endregion Za Bibliotekare -->
+
+    <!-- endregion Usluge -->
+
+
 
     <string name="str__kontakt_opsirno">Centrala
 Tel: +382 41 231-143
