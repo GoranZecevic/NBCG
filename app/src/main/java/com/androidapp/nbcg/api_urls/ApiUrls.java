@@ -2,32 +2,32 @@ package com.androidapp.nbcg.api_urls;
 
 public class ApiUrls {
 
-    public static final String GET_VIJESTI = "http://192.168.0.32/nbcrnegore/get_vijesti.php";
-    public static final String GET_KATALOG_IZDANJA = "http://192.168.0.32/nbcrnegore/get_katalog_izdanja.php";
-    public static final String GET_EPUBLIKACIJE = "http://192.168.0.32/nbcrnegore/get_epublikacije.php";
-    public static final String GET_IZVESTAJI_RADA = "http://192.168.0.32/nbcrnegore/get_izvestaji_rada.php";
-    public static final String GET_PROGRAMI_RADA = "http://192.168.0.32/nbcrnegore/get_programi_rada.php";
-    public static final String GET_PUTNI_NALOZI = "http://192.168.0.32/nbcrnegore/get_putni_nalozi.php";
-    public static final String GET_ANALITICKE_KARTICE = "http://192.168.0.32/nbcrnegore/get_analiticka_kartica.php";
-    public static final String GET_SLIKE = "http://192.168.0.32/nbcrnegore/get_slike.php";
+    public static final String GET_VIJESTI = "http://192.168.0.15/nbcrnegore/get_vijesti.php";
+    public static final String GET_KATALOG_IZDANJA = "http://192.168.0.15/nbcrnegore/get_katalog_izdanja.php";
+    public static final String GET_EPUBLIKACIJE = "http://192.168.0.15/nbcrnegore/get_epublikacije.php";
+    public static final String GET_IZVESTAJI_RADA = "http://192.168.0.15/nbcrnegore/get_izvestaji_rada.php";
+    public static final String GET_PROGRAMI_RADA = "http://192.168.0.15/nbcrnegore/get_programi_rada.php";
+    public static final String GET_PUTNI_NALOZI = "http://192.168.0.15/nbcrnegore/get_putni_nalozi.php";
+    public static final String GET_ANALITICKE_KARTICE = "http://192.168.0.15/nbcrnegore/get_analiticka_kartica.php";
+    public static final String GET_SLIKE = "http://192.168.0.15/nbcrnegore/get_slike.php";
 
-    public static final String GET_VIJESTI_FILTER = "http://192.168.0.32/nbcrnegore/get_vijesti_filter.php";
-    public static final String GET_NAJAVA_FILTER = "http://192.168.0.32/nbcrnegore/get_najava_filter.php";
-    public static final String GET_IZLOZBA_FILTER = "http://192.168.0.32/nbcrnegore/get_izlozba_filter.php";
-    public static final String GET_PROMOCIJA_FILTER = "http://192.168.0.32/nbcrnegore/get_promocija_filter.php";
-    public static final String GET_POSJETA_FILTER = "http://192.168.0.32/nbcrnegore/get_posjeta_filter.php";
-    public static final String GET_STRUCNISKUP_FILTER = "http://192.168.0.32/nbcrnegore/get_strucniskup_filter.php";
-    public static final String GET_KONCERT_FILTER = "http://192.168.0.32/nbcrnegore/get_koncert_filter.php";
-    public static final String GET_VIRTUELNAIZLOZBA_FILTER = "http://192.168.0.32/nbcrnegore/get_virtuelnaizlozba_filter.php";
-    public static final String GET_OSTALEVIJESTI_FILTER = "http://192.168.0.32/nbcrnegore/get_ostalevijesti_filter.php";
+    public static final String GET_VIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_vijesti_filter.php";
+    public static final String GET_NAJAVA_FILTER = "http://192.168.0.15/nbcrnegore/get_najava_filter.php";
+    public static final String GET_IZLOZBA_FILTER = "http://192.168.0.15/nbcrnegore/get_izlozba_filter.php";
+    public static final String GET_PROMOCIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_promocija_filter.php";
+    public static final String GET_POSJETA_FILTER = "http://192.168.0.15/nbcrnegore/get_posjeta_filter.php";
+    public static final String GET_STRUCNISKUP_FILTER = "http://192.168.0.15/nbcrnegore/get_strucniskup_filter.php";
+    public static final String GET_KONCERT_FILTER = "http://192.168.0.15/nbcrnegore/get_koncert_filter.php";
+    public static final String GET_VIRTUELNAIZLOZBA_FILTER = "http://192.168.0.15/nbcrnegore/get_virtuelnaizlozba_filter.php";
+    public static final String GET_OSTALEVIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_ostalevijesti_filter.php";
 
-    public static final String GET_FOTOTIPSKA_IZDANJA_FILTER = "http://192.168.0.32/nbcrnegore/get_fototipskaizdanja_filter.php";
-    public static final String GET_POSEBNA_IZDANJA_FILTER = "http://192.168.0.32/nbcrnegore/get_posebnaizdanja_filter.php";
-    public static final String GET_BIBLIOGRAFIJA_FILTER = "http://192.168.0.32/nbcrnegore/get_bibliografija_filter.php";
-    public static final String GET_BIOBIBLIOGRAFIJA_FILTER = "http://192.168.0.32/nbcrnegore/get_biobibliografija_filter.php";
-    public static final String GET_SERIJSKE_PUBLIKACIJE_FILTER = "http://192.168.0.32/nbcrnegore/get_serijskepublikacije_filter.php";
-    public static final String GET_KATALOZI_FILTER = "http://192.168.0.32/nbcrnegore/get_katalozi_filter.php";
-    public static final String GET_PRIRUCNICI_FILTER = "http://192.168.0.32/nbcrnegore/get_prirucnici_filter.php";
+    public static final String GET_FOTOTIPSKA_IZDANJA_FILTER = "http://192.168.0.15/nbcrnegore/get_fototipskaizdanja_filter.php";
+    public static final String GET_POSEBNA_IZDANJA_FILTER = "http://192.168.0.15/nbcrnegore/get_posebnaizdanja_filter.php";
+    public static final String GET_BIBLIOGRAFIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_bibliografija_filter.php";
+    public static final String GET_BIOBIBLIOGRAFIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_biobibliografija_filter.php";
+    public static final String GET_SERIJSKE_PUBLIKACIJE_FILTER = "http://192.168.0.15/nbcrnegore/get_serijskepublikacije_filter.php";
+    public static final String GET_KATALOZI_FILTER = "http://192.168.0.15/nbcrnegore/get_katalozi_filter.php";
+    public static final String GET_PRIRUCNICI_FILTER = "http://192.168.0.15/nbcrnegore/get_prirucnici_filter.php";
 
     public static final String GET_DOCUMENTS = "https://www.nb-cg.me/fajlovi/";
     public static final String GET_PICTURES = "https://www.nb-cg.me/tumber.php?src=fajlovi/";
@@ -185,5 +185,81 @@ public class ApiUrls {
     public static final String ZA_BIBLIOTEKARE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/services/for-librarians";
     public static final String ZA_BIBLIOTEKARE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/services/for-librarians";
 
+    public static final String OSNOVNI_FOND_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/osnovni-fond";
+    public static final String OSNOVNI_FOND_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/osnovni-fond";
+    public static final String OSNOVNI_FOND_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/osnovni-fond";
+    public static final String OSNOVNI_FOND_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/basic-fund";
+    public static final String OSNOVNI_FOND_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/basic-fund";
+    public static final String OSNOVNI_FOND_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/basic-fund";
+
+    public static final String MONTENEGRINA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/montenegrina";
+    public static final String MONTENEGRINA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/montenegrina";
+    public static final String MONTENEGRINA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/montenegrina";
+    public static final String MONTENEGRINA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/montenegrina";
+    public static final String MONTENEGRINA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/montenegrina";
+    public static final String MONTENEGRINA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/montenegrina";
+
+    public static final String STARE_RIJETKE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/zbirka-stare-i-rijetke-knjige";
+    public static final String STARE_RIJETKE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/zbirka-stare-i-rijetke-knjige";
+    public static final String STARE_RIJETKE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/zbirka-stare-i-rijetke-knjige";
+    public static final String STARE_RIJETKE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/old-and-rare-book-collection";
+    public static final String STARE_RIJETKE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/old-and-rare-book-collection";
+    public static final String STARE_RIJETKE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/old-and-rare-book-collection";
+
+      public static final String RUKOPISI_ARHIVALIJE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/rukopisi-i-arhivalije";
+    public static final String RUKOPISI_ARHIVALIJE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/rukopisi-i-arhivalije";
+    public static final String RUKOPISI_ARHIVALIJE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/rukopisi-i-arhivalije";
+    public static final String RUKOPISI_ARHIVALIJE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/manuscripts-and-archival-records";
+    public static final String RUKOPISI_ARHIVALIJE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/manuscripts-and-archival-records";
+    public static final String RUKOPISI_ARHIVALIJE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/manuscripts-and-archival-records";
+
+    public static final String KARTOGRAFSKA_ZBIRKA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/kartografska-zbirka";
+    public static final String KARTOGRAFSKA_ZBIRKA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/kartografska-zbirka";
+    public static final String KARTOGRAFSKA_ZBIRKA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/kartografska-zbirka";
+    public static final String KARTOGRAFSKA_ZBIRKA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/cartographic-collection";
+    public static final String KARTOGRAFSKA_ZBIRKA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/cartographic-collection";
+    public static final String KARTOGRAFSKA_ZBIRKA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/cartographic-collection";
+
+    public static final String MUZIKALIJA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/muzikalije-i-audiovizuelna-gradja";
+    public static final String MUZIKALIJA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/muzikalije-i-audiovizuelna-gradja";
+    public static final String MUZIKALIJA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/muzikalije-i-audiovizuelna-gradja";
+    public static final String MUZIKALIJA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/music-and-av-material";
+    public static final String MUZIKALIJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/music-and-av-material";
+    public static final String MUZIKALIJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/music-and-av-material";
+
+    public static final String LIKOVNO_GRAFICKA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/likovno-graficka-zbirka";
+    public static final String LIKOVNO_GRAFICKA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/likovno-graficka-zbirka";
+    public static final String LIKOVNO_GRAFICKA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/likovno-graficka-zbirka";
+    public static final String LIKOVNO_GRAFICKA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/the-fine-arts-and-graphics-collection";
+    public static final String LIKOVNO_GRAFICKA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/the-fine-arts-and-graphics-collection";
+    public static final String LIKOVNO_GRAFICKA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/the-fine-arts-and-graphics-collection";
+
+    public static final String SERIJSKE_PUBLIKACIJE_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/serijske-publikacije";
+    public static final String SERIJSKE_PUBLIKACIJE_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/serijske-publikacije";
+    public static final String SERIJSKE_PUBLIKACIJE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/serijske-publikacije";
+    public static final String SERIJSKE_PUBLIKACIJE_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/serials";
+    public static final String SERIJSKE_PUBLIKACIJE_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/serials";
+    public static final String SERIJSKE_PUBLIKACIJE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/serials";
+
+    public static final String LEGATI_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/serijske-publikacije";
+    public static final String LEGATI_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/serijske-publikacije";
+    public static final String LEGATI_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/serijske-publikacije";
+    public static final String LEGATI_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/legacies";
+    public static final String LEGATI_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/legacies";
+    public static final String LEGATI_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/legacies";
+
+    public static final String DIG_LIB_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/kolekcije/digitalna-biblioteka";
+    public static final String DIG_LIB_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/kolekcije/digitalna-biblioteka";
+    public static final String DIG_LIB_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/kolekcije/digitalna-biblioteka";
+    public static final String DIG_LIB_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/collections/digital-library";
+    public static final String DIG_LIB_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/collections/digital-library";
+    public static final String DIG_LIB_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/collections/digital-library";
+
+    public static final String NASA_IZDANJA_FB_MNE = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/me/nasa-izdanja/izdavacka-djelatnost-nbcg";
+    public static final String NASA_IZDANJA_TW_MNE = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/me/nasa-izdanja/izdavacka-djelatnost-nbcg";
+    public static final String NASA_IZDANJA_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/me/nasa-izdanja/izdavacka-djelatnost-nbcg";
+    public static final String NASA_IZDANJA_FB_ENG = "https://facebook.com/sharer.php?u=http://www.nbcg.minmedia.me/en/our-publications/publishing-activity-of-nlm";
+    public static final String NASA_IZDANJA_TW_ENG = "https://twitter.com/intent/tweet?url=http://www.nbcg.minmedia.me/en/our-publications/publishing-activity-of-nlm";
+    public static final String NASA_IZDANJA_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nbcg.minmedia.me/en/our-publications/publishing-activity-of-nlm";
 
 }
