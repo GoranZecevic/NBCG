@@ -10,19 +10,31 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.helper.Helpers;
 
 
 public class KontaktEmail extends Fragment {
 
+    View mView;
+    Button btnPosalji;
+
+    String dataMissingTitle;
+    String dataMissingBody;
+    String emailNotValidTitle;
+    String emailNotValidBody;
+    String questionSendTitle;
+    String questionSendBody;
+
+
     private OnFragmentInteractionListener mListener;
 
     Helpers helper = new Helpers();
 
-    View mView;
-    Button btnPosalji;
+
 
     public KontaktEmail() {
     }
@@ -41,6 +53,8 @@ public class KontaktEmail extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_kontakt_email, container, false);
+
+        textPopulate();
 
         btnPosalji = (Button)mView.findViewById(R.id.pitanje_btn);
 
@@ -63,13 +77,13 @@ public class KontaktEmail extends Fragment {
                 String pitanje = pitanjeTxtView.getText().toString();
 
                 if(ime.equals("") || prezime.equals("") || email.equals("") || telefon.equals("") || pitanje.equals("")) {
-                    helper.alert(mView.getContext(), "Nedostaju podaci","Molimo Vas popunite sva polja. Hvala!" );
+                    helper.alert(mView.getContext(), dataMissingTitle, dataMissingBody );
                 }else if(email.indexOf('@') == -1){
-                    helper.alert(mView.getContext(), "Email nije validan","Uneseni email nije validan!" );
+                    helper.alert(mView.getContext(), emailNotValidTitle, emailNotValidBody );
                 }
                 else{
                     closeKeyboard();
-                    helper.alert(mView.getContext(), "Pitanje prosledjeno","Hvala Vam na interesovanju!" );
+                    helper.alertInfo(mView.getContext(), questionSendTitle, questionSendBody );
 
                     //TO DO: proslediti podatke na neki call
 
@@ -106,6 +120,94 @@ public class KontaktEmail extends Fragment {
         if (view != null) {
             InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
             inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+    private void textPopulate(){
+        TextView title = (TextView)mView.findViewById(R.id.posalji_txt);
+        String titleStr= "";
+        switch (MainActivity.lang){
+            case 0: titleStr = helper.mne(getResources().getString(R.string.str_email_title)); break;
+            case 1: titleStr = helper.eng(getResources().getString(R.string.str_email_title)); break;
+        }
+        title.setText(titleStr);
+
+        EditText name = (EditText) mView.findViewById(R.id.kontakt_ime_input);
+        String nameStr= "";
+        switch (MainActivity.lang){
+            case 0: nameStr = helper.mne(getResources().getString(R.string.str_name_title)); break;
+            case 1: nameStr = helper.eng(getResources().getString(R.string.str_name_title)); break;
+        }
+        name.setHint(nameStr);
+
+        EditText surname = (EditText) mView.findViewById(R.id.kontakt_prezime_input);
+        String surnameStr= "";
+        switch (MainActivity.lang){
+            case 0: surnameStr = helper.mne(getResources().getString(R.string.str_surname_title)); break;
+            case 1: surnameStr = helper.eng(getResources().getString(R.string.str_surname_title)); break;
+        }
+        surname.setHint(surnameStr);
+
+        EditText email = (EditText) mView.findViewById(R.id.kontakt_email_input);
+        String emailStr= "";
+        switch (MainActivity.lang){
+            case 0: emailStr = helper.mne(getResources().getString(R.string.str_emails_title)); break;
+            case 1: emailStr = helper.eng(getResources().getString(R.string.str_emails_title)); break;
+        }
+        email.setHint(emailStr);
+
+        EditText phone = (EditText) mView.findViewById(R.id.kontakt_telefon_input);
+        String phoneStr= "";
+        switch (MainActivity.lang){
+            case 0: phoneStr = helper.mne(getResources().getString(R.string.str_phone_title)); break;
+            case 1: phoneStr = helper.eng(getResources().getString(R.string.str_phone_title)); break;
+        }
+        phone.setHint(phoneStr);
+
+        EditText question = (EditText) mView.findViewById(R.id.pitanje);
+        String questionStr= "";
+        switch (MainActivity.lang){
+            case 0: questionStr = helper.mne(getResources().getString(R.string.str_question_title)); break;
+            case 1: questionStr = helper.eng(getResources().getString(R.string.str_question_title)); break;
+        }
+        question.setHint(questionStr);
+
+        Button btn = (Button)mView.findViewById(R.id.pitanje_btn);
+        String sendStr= "";
+        switch (MainActivity.lang){
+            case 0: sendStr = helper.mne(getResources().getString(R.string.str_question_title)); break;
+            case 1: sendStr = helper.eng(getResources().getString(R.string.str_question_title)); break;
+        }
+        btn.setText(sendStr);
+
+        switch (MainActivity.lang){
+            case 0: dataMissingTitle = helper.mne(getResources().getString(R.string.str_missing_title)); break;
+            case 1: dataMissingTitle = helper.eng(getResources().getString(R.string.str_missing_title)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: dataMissingBody = helper.mne(getResources().getString(R.string.str_missing_body)); break;
+            case 1: dataMissingBody = helper.eng(getResources().getString(R.string.str_missing_body)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: emailNotValidTitle = helper.mne(getResources().getString(R.string.str_emaivalid_title)); break;
+            case 1: emailNotValidTitle = helper.eng(getResources().getString(R.string.str_emaivalid_title)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: emailNotValidBody = helper.mne(getResources().getString(R.string.str_emaivalid_body)); break;
+            case 1: emailNotValidBody = helper.eng(getResources().getString(R.string.str_emaivalid_body)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: questionSendTitle = helper.mne(getResources().getString(R.string.str_pitanje_prosledjeno_title)); break;
+            case 1: questionSendTitle = helper.eng(getResources().getString(R.string.str_pitanje_prosledjeno_title)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: questionSendBody = helper.mne(getResources().getString(R.string.str_pitanje_prosledjeno_body)); break;
+            case 1: questionSendBody = helper.eng(getResources().getString(R.string.str_pitanje_prosledjeno_body)); break;
         }
     }
 }

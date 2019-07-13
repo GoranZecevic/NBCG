@@ -39,6 +39,20 @@ public class VijestiFilter extends Fragment {
 
     Helpers helper = new Helpers();
 
+    private String dogadjaji;
+
+    private String filteri;
+
+    private String vijest;
+    private String najava;
+    private String izlozba;
+    private String promocija;
+    private String posjeta;
+    private String strucniSkup;
+    private String koncert;
+    private String virtuelnaIzlozba;
+    private String ostaleVijesti;
+    private String ponistiFiltere;
     public int language = MainActivity.lang;
 
     private RecyclerView recycleView;
@@ -70,6 +84,7 @@ public class VijestiFilter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView =  inflater.inflate(R.layout.fragment_vijesti_filter, container, false);
+        textPopulate();
 
         btnFilter = (FloatingActionButton)mView.findViewById(R.id.dogadjajiFilter);
 
@@ -213,40 +228,40 @@ public class VijestiFilter extends Fragment {
 //        builder.setTitle("Filteri");
 
         // add a list
-        String[] filteri = {"Vijest", "Najava", "Izlozba", "Promocija", "Posheta", "Strucni skup", "Koncert", "Virtuelna izlozba", "Ostale vijesti","Ponisti filtere"};
+        String[] filteri = {vijest, najava, izlozba, promocija, posjeta, strucniSkup, koncert, virtuelnaIzlozba, ostaleVijesti, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case 0:
-                        helper.openFragment(new VijestiFilter(), getFragmentManager());
+                        helper.openFragment(new VijestiFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 1:
-                        helper.openFragment(new NajavaFilter(), getFragmentManager());
+                        helper.openFragment(new NajavaFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 2:
-                        helper.openFragment(new IzlozbaFilter(), getFragmentManager());
+                        helper.openFragment(new IzlozbaFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 3:
-                        helper.openFragment(new PromocijaFilter(), getFragmentManager());
+                        helper.openFragment(new PromocijaFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 4:
-                        helper.openFragment(new PosjetaFilter(), getFragmentManager());
+                        helper.openFragment(new PosjetaFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 5:
-                        helper.openFragment(new StruckiskupFilter(), getFragmentManager());
+                        helper.openFragment(new StruckiskupFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 6:
-                        helper.openFragment(new KoncertFilter(), getFragmentManager());
+                        helper.openFragment(new KoncertFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 7:
-                        helper.openFragment(new VirtuelnaizlozbaFilter(), getFragmentManager());
+                        helper.openFragment(new VirtuelnaizlozbaFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 8:
-                        helper.openFragment(new OstalevijestiFilter(), getFragmentManager());
+                        helper.openFragment(new OstalevijestiFilter(), getActivity().getSupportFragmentManager());
                         break;
                     case 9:
-                        helper.openFragment(new Dogadjaji(), getFragmentManager());
+                        helper.openFragment(new Dogadjaji(), getActivity().getSupportFragmentManager());
                         break;
                 }
             }
@@ -255,5 +270,38 @@ public class VijestiFilter extends Fragment {
         // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    private void textPopulate(){
+        switch (language) {
+            case 0:
+                dogadjaji = "Događaji";
+                filteri = "Filteri";
+                vijest = "Vijest";
+                najava = "Najava";
+                izlozba = "Izložba";
+                promocija = "Promocija";
+                posjeta = "Posjeta";
+                strucniSkup = "Stručni skup";
+                koncert = "Koncert";
+                virtuelnaIzlozba = "Virtuelna izložba";
+                ostaleVijesti = "Ostale vijesti";
+                ponistiFiltere = "Poništi filtere";
+                break;
+            case 1:
+                dogadjaji = "Events";
+                filteri = "Filters";
+                vijest = "News";
+                najava = "Announcement";
+                izlozba = "Exhibition";
+                promocija = "Promotion";
+                posjeta = "Visit";
+                strucniSkup = "Expert meeting";
+                koncert = "Concert";
+                virtuelnaIzlozba = "Virtual exhibition";
+                ostaleVijesti = "Other news";
+                ponistiFiltere = "Reset filters";
+                break;
+        }
     }
 }

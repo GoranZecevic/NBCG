@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjaOpsirnije;
@@ -113,7 +114,7 @@ public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaA
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView katalogIzdanjaId, datumod, naslov, opis, tekst, link, cijena, tip_naslova;
+        TextView katalogIzdanjaId, datumod, naslov, opis, tekst, link, cijena, cijenaTitle, tip_naslova;
         ImageView slika;
         Button opsirnijeBtn;
 
@@ -130,10 +131,25 @@ public class KatalogIzdanjaAdapter  extends RecyclerView.Adapter<KatalogIzdanjaA
             tekst = (TextView)itemView.findViewById(R.id.print_tekst_katalog_izdanaj);
             link = (TextView)itemView.findViewById(R.id.print_link_katalog_izdanaj);
             cijena = (TextView)itemView.findViewById(R.id.print_cijena_katalog_izdanaj);
+            cijenaTitle = (TextView)itemView.findViewById(R.id.price);
             tip_naslova = (TextView)itemView.findViewById(R.id.print_tip_naslova_katalog_izdanaj);
             slika = (ImageView)itemView.findViewById(R.id.img_katalog);
             opsirnijeBtn = (Button)itemView.findViewById(R.id.katalog_izdanja_opsirnije_btn);
 
+            String opsirnijeStr = "";
+            String cijenaTitl = "";
+            switch (MainActivity.lang) {
+                case 0:
+                    opsirnijeStr = "NARUČITE";
+                    cijenaTitl = "Cijena:";
+                    break;
+                case 1:
+                    opsirnijeStr = "ORDER IT";
+                    cijenaTitl = "Price:";
+                    break;
+            }
+            opsirnijeBtn.setText(opsirnijeStr);
+            cijenaTitle.setText(cijenaTitl);
         }
 
     }

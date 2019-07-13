@@ -25,6 +25,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginTop="@dimen/v8"
+                android:paddingTop="@dimen/v8"
+                android:paddingBottom="@dimen/v8"
+                android:paddingRight="@dimen/v4"
+                android:paddingLeft="@dimen/v4"
                 android:text="Title"
                 android:textAlignment="center"
                 android:background="@color/gold"
@@ -116,7 +121,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/opsirnije_opis" />
 
             <android.support.constraint.ConstraintLayout
-                android:background="@drawable/gold_border"
                 android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,17 +134,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnGalerija">
 
+
+
                 <TextView
                     android:id="@+id/podjeli"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginRight="0dp"
+                    android:paddingTop="@dimen/v8"
+                    android:paddingBottom="@dimen/v8"
                     android:background="@color/gold"
-                    android:text="podjeli"
+                    android:text="PODELITE"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -148,42 +151,43 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/dog_opsi_vb_btn_fb"
+                    android:id="@+id/vb_btn_fb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/ic_facebook"
+                    android:background="@drawable/ic_social_facebook_circular_button"
                     android:textSize="@dimen/over_txt_size"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/dog_opsi_vb_btn_tw"
+                    app:layout_constraintEnd_toStartOf="@+id/vb_btn_tw"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/podjeli" />
 
                 <ImageButton
-                    android:id="@+id/dog_opsi_vb_btn_tw"
+                    android:id="@+id/vb_btn_tw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/ic_twitter_logo_button"
+                    android:background="@drawable/ic_social_twitter_circular_button"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/dog_opsi_vb_btn_ln"
+                    app:layout_constraintEnd_toStartOf="@+id/vb_btn_ln"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/dog_opsi_vb_btn_fb"
-                    app:layout_constraintTop_toBottomOf="@+id/podjeli"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintStart_toEndOf="@+id/vb_btn_fb"
+                    app:layout_constraintTop_toBottomOf="@+id/podjeli" />
 
                 <ImageButton
-                    android:id="@+id/dog_opsi_vb_btn_ln"
+                    android:id="@+id/vb_btn_ln"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/ic_linkedin_logo"
+                    android:background="@drawable/ic_social_linkedin_circular_button"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/dog_opsi_vb_btn_tw"
+                    app:layout_constraintStart_toEndOf="@+id/vb_btn_tw"
                     app:layout_constraintTop_toBottomOf="@+id/podjeli" />
 
 

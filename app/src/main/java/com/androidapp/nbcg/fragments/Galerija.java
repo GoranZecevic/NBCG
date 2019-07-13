@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.GalerijaAdapter;
 import com.androidapp.nbcg.adapters.VijestiAdapter;
@@ -34,7 +35,7 @@ public class Galerija extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private String language;
+    private int language;
 
     Helpers helper = new Helpers();
 
@@ -45,7 +46,6 @@ public class Galerija extends Fragment {
     private int id;
     public View mView;
     private RequestQueue requestQueue;
-
 
     public Galerija() {
     }
@@ -59,8 +59,7 @@ public class Galerija extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        language = "mne";
-
+        language = MainActivity.lang;
     }
 
     @Override
@@ -71,7 +70,6 @@ public class Galerija extends Fragment {
 
         requestQueue = Volley.newRequestQueue(this.getContext());
         Bundle bundle = getArguments();
-
 
         if(bundle != null) {
               id = bundle.getInt("id");

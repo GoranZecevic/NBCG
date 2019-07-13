@@ -16,11 +16,17 @@
 
         <FrameLayout
             android:layout_width="match_parent"
+            android:background="@drawable/gold_border"
             android:layout_height="0dp"
+            android:layout_marginTop="@dimen/v8"
+            android:layout_marginLeft="@dimen/v8"
+            android:layout_marginRight="@dimen/v8"
             android:layout_weight="50"
+            android:layout_marginBottom="@dimen/v8"
             android:id="@+id/user_list_recycler_view">
 
             <com.google.android.gms.maps.MapView
+                android:background="@drawable/gold_border"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/map">
@@ -34,6 +40,7 @@
 
             <ScrollView
                 android:id="@+id/scroll_kontakt"
+                android:layout_marginBottom="@dimen/v24"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="50" >
@@ -44,31 +51,91 @@
                     android:layout_height="0dp"
                     android:layout_weight="50">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/title_kontakt"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/str_za_izdavace_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="@dimen/v16"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/white"
+                        android:background="@color/colorPrimary"
+                        android:paddingTop="@dimen/v8"
+                        android:paddingBottom="@dimen/v8"
+                        android:text="@string/title_kontakt"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/title_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:text="@string/str__kontakt_opsirno"
+                    <FrameLayout
+                    android:id="@+id/b1"
+                    android:background="@color/gold"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_height="@dimen/v8"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/str_za_izdavace_title"></FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/b2"
+                        android:background="@color/gold"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/v4"
+                        android:layout_marginRight="@dimen/v8"
+                        android:layout_marginLeft="@dimen/v8"
+                        android:layout_height="@dimen/v4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/b1"></FrameLayout>
+
+                    <TextView
+                        android:id="@+id/vb_body"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="@dimen/v24"
+                        android:text="@string/title_kontakt"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/b2" />
+
+                    <FrameLayout
+                        android:id="@+id/b3"
+                        android:background="@color/gold"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/v8"
+                        android:layout_marginBottom="@dimen/v4"
+                        android:layout_marginRight="@dimen/v8"
+                        android:layout_marginLeft="@dimen/v8"
+                        android:layout_height="@dimen/v4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vb_body"
+                        app:layout_constraintBottom_toTopOf="@+id/b4"></FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/b4"
+                        android:background="@color/gold"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/v4"
+                        android:layout_marginRight="@dimen/v8"
+                        android:layout_marginLeft="@dimen/v8"
+                        android:layout_height="@dimen/v8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"></FrameLayout>
 
                 </android.support.constraint.ConstraintLayout>
 
@@ -77,13 +144,22 @@
 
     </LinearLayout>
 
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/emailBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="@dimen/v16"
+        android:layout_marginBottom="@dimen/v16"
+        android:src="@drawable/ic_new_email_with_circular_button"
+        app:fabSize="normal"
+        app:elevation="3dp"
+        app:borderWidth="0dp"
+        app:fabCustomSize="75dp"
+        app:pressedTranslationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@color/gold"
+        app:maxImageSize="70dp"
+        android:layout_gravity="bottom|end" />
 
 </android.support.design.widget.CoordinatorLayout>

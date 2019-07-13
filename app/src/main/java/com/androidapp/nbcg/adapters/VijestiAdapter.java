@@ -15,8 +15,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.fragments.DogadjajiOpsirnije;
+import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.Vijesti;
 import com.androidapp.nbcg.R;
 import com.bumptech.glide.Glide;
@@ -25,6 +27,7 @@ import java.util.List;
 
 public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHolder> {
 
+    private Helpers helper = new Helpers();
     List<Vijesti> VijestiLista;
     View dogadjajiFragment;
     private Context mContext;
@@ -126,6 +129,17 @@ public class VijestiAdapter  extends RecyclerView.Adapter<VijestiAdapter.ViewHol
             description = (TextView)itemView.findViewById(R.id.print_description);
             link = (TextView)itemView.findViewById(R.id.print_link);
             opsirnijeBtn = (Button)itemView.findViewById(R.id.dogadjaji_opsirnije_btn);
+
+            String opsirnijeStr = "";
+            switch (MainActivity.lang) {
+                case 0:
+                    opsirnijeStr = "OPŠIRNIJE";
+                    break;
+                case 1:
+                    opsirnijeStr = "MORE";
+                    break;
+            }
+            opsirnijeBtn.setText(opsirnijeStr);
 
         }
 

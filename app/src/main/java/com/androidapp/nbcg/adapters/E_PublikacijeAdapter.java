@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.models.KatalogIzdanja;
@@ -86,7 +87,7 @@ public class E_PublikacijeAdapter extends RecyclerView.Adapter<E_PublikacijeAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView katalogIzdanjaId, datumod, naslov, opis, tekst, link, cijena, tip_naslova;
+        TextView katalogIzdanjaId, datumod, naslov, opis, tekst, link, cijena, cijenaTitle, euro, tip_naslova;
         ImageView slika;
         Button preuzetiBtn;
 
@@ -100,13 +101,33 @@ public class E_PublikacijeAdapter extends RecyclerView.Adapter<E_PublikacijeAdap
             datumod = (TextView)itemView.findViewById(R.id.print_datumod_katalog_izdanaj);
             naslov = (TextView)itemView.findViewById(R.id.print_naslov_katalog_izdanaj);
             opis = (TextView)itemView.findViewById(R.id.print_opis_katalog_izdanaj);
+            opis.setVisibility(View.VISIBLE);
             tekst = (TextView)itemView.findViewById(R.id.print_tekst_katalog_izdanaj);
             link = (TextView)itemView.findViewById(R.id.print_link_katalog_izdanaj);
+
             cijena = (TextView)itemView.findViewById(R.id.print_cijena_katalog_izdanaj);
+            cijena.setVisibility(View.GONE);
+
+            cijenaTitle = (TextView)itemView.findViewById(R.id.price);
+            cijenaTitle.setVisibility(View.GONE);
+
+            euro = (TextView)itemView.findViewById(R.id.e);
+            euro.setVisibility(View.GONE);
+
             tip_naslova = (TextView)itemView.findViewById(R.id.print_tip_naslova_katalog_izdanaj);
             slika = (ImageView)itemView.findViewById(R.id.img_katalog);
             preuzetiBtn = (Button)itemView.findViewById(R.id.katalog_izdanja_opsirnije_btn);
-            preuzetiBtn.setText("Preuzeti");
+
+            String preuzeti = "";
+            switch (MainActivity.lang) {
+                case 0:
+                    preuzeti = "PREUZETI";
+                    break;
+                case 1:
+                    preuzeti = "DOWNLOAD";
+                    break;
+            }
+            preuzetiBtn.setText(preuzeti);
 
         }
 

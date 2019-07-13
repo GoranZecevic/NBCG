@@ -53,6 +53,18 @@ public class FototipskaIzdanjaFilter extends Fragment {
     private RequestQueue requestQueue;
     private View thisFragment;
 
+    private String katalogIzdanja;
+
+    private String filteri;
+    private String fototipskaIzdanja;
+    private String posebnaIzdanaj;
+    private String bibliografija;
+    private String bioBibliografija;
+    private String serijskePublikacije;
+    private String katalozi;
+    private String prirucnici;
+    private String ponistiFiltere;
+
     private FloatingActionButton btnFilter;
 
     private com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanja.OnFragmentInteractionListener mListener;
@@ -75,8 +87,9 @@ public class FototipskaIzdanjaFilter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja, null);
+        textPopulate();
 
-        getActionBar().setTitle("Katalog izdanja");
+        getActionBar().setTitle(katalogIzdanja);
 
         btnFilter = (FloatingActionButton)thisFragment.findViewById(R.id.katalogFilter);
 
@@ -210,7 +223,7 @@ public class FototipskaIzdanjaFilter extends Fragment {
 //        builder.setTitle("Filteri");
 
         // add a list
-        String[] filteri = {"Fototipska izdanja", "Posebna izdanja", "Bibliografija", "Bio-bibliografija", "Serijske publikacije", "Katalozi", "Prirucnici","Ponistite filtere"};
+        String[] filteri = {fototipskaIzdanja, posebnaIzdanaj, bibliografija, bioBibliografija, serijskePublikacije, katalozi, prirucnici, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -268,5 +281,34 @@ public class FototipskaIzdanjaFilter extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void textPopulate(){
+        switch (language) {
+            case 0:
+                filteri = "Filteri";
+                katalogIzdanja = "Ktalog Izdanja";
+                fototipskaIzdanja = "Fototipska Izdanja";
+                posebnaIzdanaj = "Posebna Izdanja";
+                bibliografija = "Bibliografija";
+                bioBibliografija = "Bio-bibliografija";
+                serijskePublikacije = "Serijske publikacije";
+                katalozi = "Katalozi";
+                prirucnici = "Priručnici";
+                ponistiFiltere = "Poništi filtere";
+                break;
+            case 1:
+                filteri = "Filters";
+                katalogIzdanja = "Ktalog Izdanja";
+                fototipskaIzdanja = "Catalogue of Publications";
+                posebnaIzdanaj = "Special Edition";
+                bibliografija = "Bibliography";
+                bioBibliografija = "Bio - bibliography";
+                serijskePublikacije = "Serials";
+                katalozi = "Catalogues";
+                prirucnici = "Handbooks";
+                ponistiFiltere = "Reset filters";
+                break;
+        }
     }
 }

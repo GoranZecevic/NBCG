@@ -25,19 +25,6 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Helpers extends Fragment {
 
-//
-//    public void flip_image(int i, ViewFlipper v_flipper, Fragment hostFragment){
-//        ImageView view  = new ImageView((Context) hostFragment.getHost());
-//        view.setBackgroundResource(i);
-//        v_flipper.addView(view);
-//        v_flipper.setFlipInterval(4000);
-//        v_flipper.setAutoStart(true);
-//
-//        v_flipper.setInAnimation((Context) getHost(), android.R.anim.slide_in_left);
-//        v_flipper.setOutAnimation((Context) getHost(), android.R.anim.slide_out_right);
-//    }
-//
-
     // Open url address
     public void goToUrl (String url, Context context) {
         Uri uriUrl = Uri.parse(url);
@@ -88,10 +75,24 @@ public class Helpers extends Fragment {
                 .show();
     }
 
+    //Allert box
+    public void alertInfo(Context context, String titleText, String bodyText){
+        new AlertDialog.Builder(context)
+                .setTitle(titleText)
+                .setMessage(bodyText)
+
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .show();
+    }
+
 
     //Open new fragment
     public void openFragment(Fragment fragment, FragmentManager fragmentManager){
-        fragmentManager = getFragmentManager();
+        Fragment newFragment = fragment;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.replace(R.id.fragment_container, fragment);

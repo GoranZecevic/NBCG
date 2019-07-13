@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
@@ -22,7 +23,7 @@ public class DogadjajiOpsirnije extends Fragment {
 
     private View thisFragment;
 
-    String language = "mne";
+    int language = MainActivity.lang;
 
     private Helpers helper = new Helpers();
 
@@ -71,36 +72,55 @@ public class DogadjajiOpsirnije extends Fragment {
             podnaslovTxt.setText(Html.fromHtml(podnaslov));
 
             TextView opisTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_opis);
+            TextView podjeliTxt = (TextView)thisFragment.findViewById(R.id.podjeli);
+            switch (language) {
+                case 0:
+                    podjeliTxt.setText("PODJELI");
+                    break;
+                case 1:
+                    podjeliTxt.setText("SHARE");
+                    break;
+            }
+
+
             opisTxt.setText(Html.fromHtml(opis));
 
-            ImageButton fb = (ImageButton)thisFragment.findViewById(R.id.dog_opsi_vb_btn_fb);
+            ImageButton fb = (ImageButton)thisFragment.findViewById(R.id.vb_btn_fb);
             fb.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(language.equals("mne")) helper.goToUrl(ApiUrls.SHARE_FB_MNE+link, thisFragment.getContext());
-                    else if(language.equals("eng")) helper.goToUrl(ApiUrls.SHARE_FB_ENG+link, thisFragment.getContext());;
+                    if(language == 0) helper.goToUrl(ApiUrls.SHARE_FB_MNE+link, thisFragment.getContext());
+                    else if(language == 1) helper.goToUrl(ApiUrls.SHARE_FB_ENG+link, thisFragment.getContext());;
                 }
             });
 
-            ImageButton tw = (ImageButton)thisFragment.findViewById(R.id.dog_opsi_vb_btn_tw);
+            ImageButton tw = (ImageButton)thisFragment.findViewById(R.id.vb_btn_tw);
             tw.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(language.equals("mne")) helper.goToUrl(ApiUrls.SHARE_TW_MNE+link, thisFragment.getContext());
-                    else if(language.equals("eng")) helper.goToUrl(ApiUrls.SHARE_TW_ENG+link, thisFragment.getContext());;
+                    if(language == 0) helper.goToUrl(ApiUrls.SHARE_TW_MNE+link, thisFragment.getContext());
+                    else if(language == 1) helper.goToUrl(ApiUrls.SHARE_TW_ENG+link, thisFragment.getContext());;
                 }
             });
 
-            ImageButton ln = (ImageButton)thisFragment.findViewById(R.id.dog_opsi_vb_btn_ln);
+            ImageButton ln = (ImageButton)thisFragment.findViewById(R.id.vb_btn_ln);
             ln.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(language.equals("mne")) helper.goToUrl(ApiUrls.SHARE_LN_MNE+link, thisFragment.getContext());
-                    else if(language.equals("eng")) helper.goToUrl(ApiUrls.SHARE_LN_ENG+link, thisFragment.getContext());;
+                    if(language == 0) helper.goToUrl(ApiUrls.SHARE_LN_MNE+link, thisFragment.getContext());
+                    else if(language == 1) helper.goToUrl(ApiUrls.SHARE_LN_ENG+link, thisFragment.getContext());;
                 }
             });
 
             Button galerijaBtn = (Button)thisFragment.findViewById(R.id.btnGalerija);
+            switch (language) {
+                case 0:
+                    galerijaBtn.setText("GALERIJA");
+                    break;
+                case 1:
+                    galerijaBtn.setText("GALLERY");
+                    break;
+            }
             galerijaBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

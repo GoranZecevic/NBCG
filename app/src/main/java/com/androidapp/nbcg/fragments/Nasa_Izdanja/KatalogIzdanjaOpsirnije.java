@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
@@ -27,7 +28,16 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
 
     Helpers helper = new Helpers();
 
-    private View thisFragment;
+    Button btnPosalji;
+
+    String dataMissingTitle;
+    String dataMissingBody;
+    String emailNotValidTitle;
+    String emailNotValidBody;
+    String questionSendTitle;
+    String questionSendBody;
+
+    private View mView;
 
     private Button btnPoruci;
 
@@ -51,7 +61,8 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
                              Bundle savedInstanceState) {
         Bundle bundle = getArguments();
 
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja_opsirnije, null);
+        mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja_opsirnije, null);
+        textPopulate();
 
         if(bundle != null){
             String datumod = bundle.getString("datumod");
@@ -64,54 +75,54 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
             String fajl = bundle.getString("fajl");
 
 
-            TextView datumOdTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_datumod);
+            TextView datumOdTxt = (TextView)mView.findViewById(R.id.opsirnije_datumod);
             datumOdTxt.setText(datumod);
-            TextView naslovTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_naslov);
+            TextView naslovTxt = (TextView)mView.findViewById(R.id.opsirnije_naslov);
             naslovTxt.setText(Html.fromHtml(naslov));
-            TextView opisTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_opis);
+            TextView opisTxt = (TextView)mView.findViewById(R.id.opsirnije_opis);
             opisTxt.setText(Html.fromHtml(opis));
-            TextView tekstTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_tekst);
+            TextView tekstTxt = (TextView)mView.findViewById(R.id.opsirnije_tekst);
             tekstTxt.setText(Html.fromHtml(tekst));
-            TextView linkTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_link);
+            TextView linkTxt = (TextView)mView.findViewById(R.id.opsirnije_link);
             linkTxt.setText(Html.fromHtml(link));
-            TextView cijenaTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_cijena);
+            TextView cijenaTxt = (TextView)mView.findViewById(R.id.opsirnije_cijena);
             cijenaTxt.setText(String.valueOf(cijena));
-            TextView tipNaslovaTxt = (TextView)thisFragment.findViewById(R.id.opsirnije_tip_nslova);
+            TextView tipNaslovaTxt = (TextView)mView.findViewById(R.id.opsirnije_tip_nslova);
             tipNaslovaTxt.setText(Html.fromHtml(String.valueOf(tip_naslova)));
 
-            ImageView slika = (ImageView)thisFragment.findViewById(R.id.kat_izd_ops_img);
-            Glide.with(thisFragment).load(ApiUrls.GET_PICTURES_FULL_SIZE+fajl).into(slika);
+            ImageView slika = (ImageView)mView.findViewById(R.id.kat_izd_ops_img);
+            Glide.with(mView).load(ApiUrls.GET_PICTURES_FULL_SIZE+fajl).into(slika);
         }
 
-        btnPoruci = (Button)thisFragment.findViewById(R.id.poruci_btn);
+        btnPoruci = (Button)mView.findViewById(R.id.poruci_btn);
 
         btnPoruci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                EditText imeTxtView = (EditText)thisFragment.findViewById(R.id.ime_input);
+                EditText imeTxtView = (EditText)mView.findViewById(R.id.ime_input);
                 String ime = imeTxtView.getText().toString();
 
-                EditText prezimeTxtView = (EditText)thisFragment.findViewById(R.id.prezime_input);
+                EditText prezimeTxtView = (EditText)mView.findViewById(R.id.prezime_input);
                 String prezime = prezimeTxtView.getText().toString();
 
-                EditText telefonTxtView = (EditText)thisFragment.findViewById(R.id.telefon_input);
+                EditText telefonTxtView = (EditText)mView.findViewById(R.id.telefon_input);
                 String telefon = telefonTxtView.getText().toString();
 
-                EditText adresaTxtView = (EditText)thisFragment.findViewById(R.id.adresa_input);
+                EditText adresaTxtView = (EditText)mView.findViewById(R.id.adresa_input);
                 String adresa = adresaTxtView.getText().toString();
 
-                EditText emailTxtView = (EditText)thisFragment.findViewById(R.id.email_input);
+                EditText emailTxtView = (EditText)mView.findViewById(R.id.email_input);
                 String email = emailTxtView.getText().toString();
 
                 if(ime.equals("") || prezime.equals("") || telefon.equals("") || adresa.equals("") || email.equals("")){
-                    helper.alert(thisFragment.getContext(), "Nedostaju podaci","Molimo Vas popunite sva polja. Hvala!" );
+                    helper.alert(mView.getContext(), dataMissingTitle, dataMissingBody );
                 }else if(email.indexOf('@') == -1){
-                    helper.alert(thisFragment.getContext(), "Email nije validan","Uneseni email nije validan!" );
+                    helper.alert(mView.getContext(), emailNotValidTitle, emailNotValidBody );
                 }
                 else{
                     closeKeyboard();
-                    helper.alert(thisFragment.getContext(), "Uspesna porudzbina","Hvala Vam na porudzbini!" );
+                    helper.alert(mView.getContext(), questionSendTitle, questionSendBody );
 
                     //TO DO: proslediti podatke na neki call
 
@@ -121,7 +132,7 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
         });
 
 
-        return thisFragment;
+        return mView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -147,6 +158,94 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
         if (view != null) {
             InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
             inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+    private void textPopulate(){
+        TextView title = (TextView)mView.findViewById(R.id.poruci_txt);
+        String titleStr= "";
+        switch (MainActivity.lang){
+            case 0: titleStr = helper.mne(getResources().getString(R.string.str_poruci_title)); break;
+            case 1: titleStr = helper.eng(getResources().getString(R.string.str_poruci_title)); break;
+        }
+        title.setText(titleStr);
+
+        EditText name = (EditText) mView.findViewById(R.id.ime_input);
+        String nameStr= "";
+        switch (MainActivity.lang){
+            case 0: nameStr = helper.mne(getResources().getString(R.string.str_name_title)); break;
+            case 1: nameStr = helper.eng(getResources().getString(R.string.str_name_title)); break;
+        }
+        name.setHint(nameStr);
+
+        EditText surname = (EditText) mView.findViewById(R.id.prezime_input);
+        String surnameStr= "";
+        switch (MainActivity.lang){
+            case 0: surnameStr = helper.mne(getResources().getString(R.string.str_surname_title)); break;
+            case 1: surnameStr = helper.eng(getResources().getString(R.string.str_surname_title)); break;
+        }
+        surname.setHint(surnameStr);
+
+        EditText email = (EditText) mView.findViewById(R.id.email_input);
+        String emailStr= "";
+        switch (MainActivity.lang){
+            case 0: emailStr = helper.mne(getResources().getString(R.string.str_emails_title)); break;
+            case 1: emailStr = helper.eng(getResources().getString(R.string.str_emails_title)); break;
+        }
+        email.setHint(emailStr);
+
+        EditText phone = (EditText) mView.findViewById(R.id.telefon_input);
+        String phoneStr= "";
+        switch (MainActivity.lang){
+            case 0: phoneStr = helper.mne(getResources().getString(R.string.str_phone_title)); break;
+            case 1: phoneStr = helper.eng(getResources().getString(R.string.str_phone_title)); break;
+        }
+        phone.setHint(phoneStr);
+
+        EditText address = (EditText) mView.findViewById(R.id.adresa_input);
+        String addressStr= "";
+        switch (MainActivity.lang){
+            case 0: addressStr = helper.mne(getResources().getString(R.string.str_address_title)); break;
+            case 1: addressStr = helper.eng(getResources().getString(R.string.str_address_title)); break;
+        }
+        address.setHint(addressStr);
+
+        Button btn = (Button)mView.findViewById(R.id.poruci_btn);
+        String sendStr= "";
+        switch (MainActivity.lang){
+            case 0: sendStr = helper.mne(getResources().getString(R.string.str_poruci_title)); break;
+            case 1: sendStr = helper.eng(getResources().getString(R.string.str_poruci_title)); break;
+        }
+        btn.setText(sendStr);
+
+        switch (MainActivity.lang){
+            case 0: dataMissingTitle = helper.mne(getResources().getString(R.string.str_missing_title)); break;
+            case 1: dataMissingTitle = helper.eng(getResources().getString(R.string.str_missing_title)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: dataMissingBody = helper.mne(getResources().getString(R.string.str_missing_body)); break;
+            case 1: dataMissingBody = helper.eng(getResources().getString(R.string.str_missing_body)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: emailNotValidTitle = helper.mne(getResources().getString(R.string.str_emaivalid_title)); break;
+            case 1: emailNotValidTitle = helper.eng(getResources().getString(R.string.str_emaivalid_title)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: emailNotValidBody = helper.mne(getResources().getString(R.string.str_emaivalid_body)); break;
+            case 1: emailNotValidBody = helper.eng(getResources().getString(R.string.str_emaivalid_body)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: questionSendTitle = helper.mne(getResources().getString(R.string.str_poruceno_title)); break;
+            case 1: questionSendTitle = helper.eng(getResources().getString(R.string.str_poruceno_title)); break;
+        }
+
+        switch (MainActivity.lang){
+            case 0: questionSendBody = helper.mne(getResources().getString(R.string.str_poruceno_body)); break;
+            case 1: questionSendBody = helper.eng(getResources().getString(R.string.str_poruceno_body)); break;
         }
     }
 

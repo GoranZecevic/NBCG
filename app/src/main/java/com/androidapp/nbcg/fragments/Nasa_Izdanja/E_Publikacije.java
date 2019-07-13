@@ -21,6 +21,7 @@ import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.E_PublikacijeAdapter;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.KatalogIzdanja;
 
 import org.apache.commons.lang3.StringUtils;
@@ -34,6 +35,8 @@ import java.util.ArrayList;
 public class E_Publikacije extends Fragment {
 
     public int language = MainActivity.lang;
+
+    Helpers helper = new Helpers();
 
     private RecyclerView recycleView;
     private ArrayList<KatalogIzdanja> arrayList;
@@ -95,6 +98,7 @@ public class E_Publikacije extends Fragment {
 //                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
+                                datumod = helper.dateConverter(datumod);
 //                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");

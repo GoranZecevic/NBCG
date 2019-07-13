@@ -368,7 +368,6 @@
 
     <!--endregion O Nama -->
 
-
     <!--region Katalozi -->
     <string name="str_katalozi_title">[0]Katalozi[/0][1]Catalogues[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
@@ -503,7 +502,6 @@
     <!--endregion Tekuca bibliografija -->
 
     <!--endregion Katalozi -->
-
 
     <!-- region Usluge -->
     <string name="str_usluge_title">[0]Usluge[/0][1]Services[/1][2][/2][3][/3][4][/4][5][/5]</string>
@@ -940,7 +938,6 @@
 
     <!--endregion Zbirka stare i rijetke knjige-->
 
-
     <!--region Nasa izdanja -->
     <string name="str_nasa_izdanja_title">[0]Nasa izdanja[/0][1]Our publications[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
@@ -966,229 +963,62 @@
 
     <!--endregion Nasa izdanja -->
 
-
-
-
-
-    <string name="str__kontakt_opsirno">Centrala
-Tel: +382 41 231-143
-
-Direktor
-Tel: +382 41 231-726
-Fax: +382 41 233-370
-
-CIP/ ISBN / ISSN
-Tel: +382 41 234-236
-
-Čitaonica
-Tel: +382 41 231-726
-Lokal 122
-
-Računovodstvo
-Tel: +382 41 231-170
-Fax:+382 41 231-170
-
-Muzejsko odeljenje
-Tel: +382 41 232-133
-Tel: +382 41 231-722
-
-COBISS Centar
-Tel: +382 41 234-243 ></string>
-
-
-    <!--region usluge-->
-    <!--region za korisnik-->
-    <string name="str_za_korisnike_body">Čitaonice i članstvo
-        Bibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove institucije.
-
-        Savremeno opremljene čitaonice za korišćenje građe Osnovnog fonda i Posebnih zbirki nalaze se u zgradi bivšeg Italijanskog poslanstva. To su Naučna čitaonica, E-čitaonica (za korišćenje elektronskih publikacija, Interneta, COBISS sistema), Čitaonica muzikalija (za korišćenje svih vrsta muzičke građe: muzičkih rukopisa, nota, audio-video zapisa i dokumenata), i Čitaonica kartografije.
-
-        Korisnici Muzejskog fonda, Zbirke stare i rijetke knjige i Legata mogu koristiti građu u čitaonici u zgradi bivšeg Francuskog poslanstva.
-
-        Svaki član Nacionalne biblioteke može koristiti sve fondove biblioteke, ali i elektronski katalog biblioteke i uzajamni elektronski katalog, koji su dostupni 24 časa za pretraživanje preko interneta:
-
-        E-KATALOG NBCG
-        <!--http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001-->
-
-        E-KATALOG CRNE GORE
-        <!--http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib-->
-
-        Za publikacije koje su objavljene prije 1991. godine postoji Lisni katalog, formiran 1949. godine. U sklopu njega nalaze se posebni lisni katalozi: alfabetski katalog knjiga, alfabetski katalog serijskih publikacija, lisni katalozi posebnih zbirki, lisni predmetni katalog i lisni stručni katalog.
-
-        U čitaonicama Nacionalne biblioteke iznajmljena bibliotečka građa može se fotografisati, kopirati, skenirati i prepisati, naravno, u skladu sa Zakonom o autorskim pravima i internim Pravilima o korišćenju bibliotečke građe.
-
-        Članarina može biti godišnja (od dana upisa), mjesečna ili trodnevna.
-
-        Bibliotečka građa je dostupna pod jednakim uslovima svim građanima Crne Gore i stranim licima sa navršenih 18 godina. Prilikom upisa, budući korisnik je dužan dati tačne lične podatke i predočiti ličnu kartu ili neki drugi identifikacioni dokument. Izuzetno, mogu se upisati i lica ispod 18 godina (maturanti) – po odobrenju. Strani državljani koji borave u Crnoj Gori mogu koristiti bibliotečku građu uz važeći pasoš.
-
-        Radno vrijeme čitaonica je od 7 do 19 časova radnim danima, a subotom od 7 do 14 časova.
-
-        Međubibliotečka pozajmica
-        Nacionalna biblioteka ima razvijenu međubibliotečku pozajmicu sa svim bibliotekama u Crnoj Gori, a sa bibliotekama iz inostranstva posuđivanje se obavlja putem međunarodne pozajmice. Pozajmljene publikacije koriste se najduže 30 dana i to u prostorijama biblioteke preko koje su tražene. Na pozajmicu se daju isključivo knjige i kopije članaka iz serijskih publikacija.
-
-        Publikacije izdate do 1950. godine ne izdaju se na pozajmicu.
-
-        Kontakt informacije
-        Čitaonice:
-
-        informatori: Milenija Vračar, Nada Drašković
-        tel. +382 41-231-143, lokal 122
-        e-mail: citaonica@nb-cg.me
-
-        Zbirka rukopisa i dokumenata:
-
-        Boris Kaluđerović, voditelj zbirke
-        tel +382 41 231 143 / lokal 132
-        e-mail: boris.kaludjerovic@nb-cg.me
-
-        Zbirka muzikalija i audiovizuelne građe:
-
-        Dragan Mirković, voditelj zbirke
-        tel +382 41 231 143 / l. 132
-        e-mail: dragan.mirkovic@nb-cg.me
-
-        Kartografsko-geografska zbirka:
-
-        Danijela Radulović, voditelj zbirke
-        tel +382 41 234-236, 231-143 lok. 109
-        e-mail: danijela.radulovic@nb-cg.me
-
-        Montenegrina, Stara i rijetka knjiga i Legati:
-
-        Slavica Glendža
-        tel. +382 41 232-133; 231-722
-        e-mail: slavica.glendza@nb-cg.me
-
-        Međubibliotečka pozajmica:
-
-        Milenija Vračar
-        radno vrijeme: 9-17 sati
-        tel: +382 41-231-143, lokal 122
-        e-mail: medjubibliotecka@nb-cg.me
-
-        Adresa:
-
-        Nacionalna biblioteka Crne Gore “Ðurde Crnojević”
-        Služba međubibliotečke pozajmice
-        Bulevar crnogorskih junaka 163, 81250 Cetinje
-
-        PRAVILNIK O USLOVIMA I NAČINJU KORIŠĆENJA BIBLIOTEČKO-INFORMACIONE GRAĐE I USLUGA
-
-        NBCG CJENOVNIK USLUGA
-
-        ZAHTJEV ZA KOPIRANJE    </string>
-
-    <!--region za izdavace-->
-    <string name="str_za_izdavace_body">
-        Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne Gore i dodjeljuje međunarodne standardne oznake ISBN, ISSN i ISMN za monografske i serijske publikacije, štampane muzikalije, kao i ostalu bibliotečku građu.
-
-CIP
-
-U Nacionalnoj biblioteci izrađuju se CIP zapisi po međunarodnim standardima za monografske publikacije – ISBD(M), za serijske publikacije – ISBD(CR), za štampane muzikalije – ISBD(PN), za elektronske publikacije – ISBD(ER), za njeknjižnu građu – ISBD(NBM) i za kartografsku građu –  ISBD(CM). Takav zapis, dat u sažetoj formi, pruža informaciju o bibliografskom i sadržinskom karakteru publikacije.
-
-Obaveze izdavača su da na svakoj novoj publikaciji odštampaju ovaj kataloški zapis koji se radi u bazi podataka COBIB Crna Gora. Na taj način su podaci o publikaciji dostupni putem Interneta i prije njenog objavljivanja.
-
-Nacionalna biblioteka u prosjeku godišnje izradi više od 1.000 CIP zapisa.
-
-ISBN
-
-Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, godišnje dodijeli preko 1.000 ISBN oznaka (International Standard Book Number – međunarodni standardni broj knjige) knjigama i drugim omeđenim publikacijama bez obzira na medij na kojem su objavljene.
-
-ISSN
-
-Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN oznake (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.
-
-Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.
-
-ISMN
-
-Nacionalni ISMN centar za Crnu Goru dodjeljuje ISMN oznake (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkim djelima publikovanim u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta.
-
- OBAVEZNI PRIMJERAK
-
-Izdavači u Crnoj Gori (Zakon o izdavačkoj djelatnosti) u obavezi su da Nacionalnoj biblioteci dostave bez naknade i o svom trošku pet primjeraka svake publikacije neposredno poslije štampanja ili objavljivanja. Obavezni primjerak čine: knjige, serijske publikacije (časopisi i  novine), štampane muzikalije, geografske karte, audio-vizuelna građa, elektronske publikacije na fizičkim nosačima, elektronske publikacije distribuirane na internetu, sadržaji internet domena Crne Gore i druge publikacije.
-
-Kontakt osobe za izradu CIP-a za monografske publikacije:
-
-Dragana Mirković (e-mail: cip_monografske@nb-cg.me)
-Sanja Martinović (e-mail: cip_monografske@nb-cg.me)
-Tel/fax: 041-234-236
-
-Kontakt osobe za izradu CIP-a za serijske publikacije:
-Vesna Kovačević (e-mail: cip_serijske@nb-cg.me)
-Tel/fax: 041 – 234-236
-Tel: 041 – 231-143 lok.130
-
-ISBN
-
-Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, dodijeli prosječno u godini 1.000 ISBN brojeva (International Standard Book Number – međunarodni standardni broj knjige) štampanim knjigama i brošurama u Crnoj Gori.
-
-ISBN se dodjeljuje i publikacijama objavljenim Brajevim pismom i geografskim kartama, knjigama na drugim medijima (CD, Internet…), kao i publikacijama mješovitih medija sa tekstom.
-
-Kontakt:
-
-Nacionalna biblioteka Crne Gore “Đurđe Crnojević”
-Bulevar crnogorskih junaka br. 163 Cetinje
-
-NACIONALNA ISBN AGENCIJA
-Tel/fax: 041 – 234-236
-e-mail: isbn@nb-cg.me
-
-ISSN
-
-Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN brojeve (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.
-
-Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.
-
-Upitnik za CIP za serijske publikacije i ISSN  (pdf)
-
-Upitnik za CIP za serijske publikacije i ISSN  (word)
-
-Kontakt:
-
-Nacionalna biblioteka “Đurđe Crnojević” – Cetinje
-Bulevar crnogorskih junaka br. 163
-
-NACIONALNI ISSN CENTAR
-Vesna Vučković,
-Tel: 041- 231 143 lok.144
-E-mail: issn@nb-cg.me
-
-ISMN
-
-Nacionalni ISMN centar za Crnu Goru pri Nacionalnoj biblioteci dodjeljuje ISMN brojeve (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkih djela publikovanih u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta. ISMN se ne dodjeljuje samostalno objavljenim zvučnim zapisima, videozapisima ili zapisima na računalnom mediju. Centar za ISMN Crne Gore počeo je s radom 2016. godine.
-
-Kontakt:
-
-Nacionalna biblioteka “Đurđe Crnojević” – Cetinje
-Bulevar crnogorskih junaka br. 163
-
-NACIONALNI ISMN CENTAR
-Tel: 041- 231-143 lok. 130
-Fax: 041- 231 020; 234-236
-E-mail: ismn@nb-cg.me
-
-OBAVEZNI PRIMJERAK
-
-Svi izdavači u Crnoj Gori, prema Zakonu o izdavaštvu, dužni su da Nacionalnoj biblioteci besplatno dostave pet primjeraka svake publikacije, na bilo kom mediju, neposredno poslije štampanja ili objavljivanja: knjige, serijske publikacije (časopise i novine), muzikalije, geografske karte, audio i audio-vizuelnu građu (kako na klasičnim, tako i na elektronskim medijima – CD-ROM, DVD…), i veb sajtove sa nacionalnim domenom.
-
-ZAKON O BIBLIOTEČKOJ DJELATNOSTI
-
-ZAKON O AUTORSKIM I SRODNIM PRAVIMA
-
-ZAKON O IZDAVACKOJ DJELATNOSTI
-    </string>
-    <!--region za izdavace-->
-
-    <!--region virtuelna biblioteka crne gore-->
-    <string name="str_virtuelna_biblioteka_cg_body">
-        Virtuelna biblioteka Crne Gore (VBCG), jedan od najznačajnijih projekata Nacionalne biblioteke Crne Gore „Đurđe Crnojević“, od 1989. godine povezuje biblioteke u Crnoj Gori u jedinstven informacijski sistem, kako bi se korisnicima biblioteka na jednostavan način obezbijedio pristup do informacija i dokumenata u elektronskom obliku.
-Elektronski katalog Nacionalne biblioteke sadrži više stotina hiljada bibliografskih zapisa, u koje spadaju knjige, serijske publikacije, članci iz časopisa i novina, kao i publikacije iz posebnih zbirki.
-Elektronski katalog NBCG dostupan je preko Internet adrese: http://vbcg.vbcg.me
-    </string>
-    <string name="title_activity_splash">SplashActivity</string>
-
-    <!--end region virtuelna biblioteka crne gore-->
+    <!--region Kontakt -->
+
+    <string name="str_kontakt_title">[0]Kontakt info[/0][1]Contact info[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_kontakt_body">[0]\nCentrala \n
+        Tel: +382 41 231-143\n\n
+        <b>Direktor\n</b>
+        Tel: +382 41 231-726\n
+        Fax: +382 41 233-370\n\n
+        <b>CIP/ ISBN / ISSN\n</b>
+        Tel: +382 41 234-236\n\n
+        <b>Čitaonica\n</b>
+        Tel: +382 41 231-726\n
+        Lokal 122\n\n
+        <b>Računovodstvo\n</b>
+        Tel: +382 41 231-170\n
+        Fax:+382 41 231-170\n\n
+        <b>Muzejsko odeljenje\n</b>
+        Tel: +382 41 232-133\n
+        <b>Tel: +382 41 231-722\n\n</b>
+        COBISS Centar\n
+        Tel: +382 41 234-243[/0]
+        [1]Head Office\n
+        Tel: +382 41 231-143\n\n
+        Director\n
+        Tel: +382 41 231-726\n
+        Fax: +382 41 233-370\n\n
+        CIP/ ISBN / ISSN\n
+        Tel: +382 41 234-236\n\n
+        Reading Room\n
+        Tel: +382 41 231-726\n
+        Extension Number 122\n\n
+        Accountancy\n
+        Tel: +382 41 231-170\n
+        Fax:+382 41 231-170\n\n
+        Museum Department\n
+        Tel: +382 41 232-133\n
+        Tel: +382 41 231-722\n\n
+        COBISS Center\n
+        Tel: +382 41 234-243[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_email_title">[0]EMAIL[/0][1]EMAIL[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_name_title">[0]Ime[/0][1]Name[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_surname_title">[0]Prezime[/0][1]Surname[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_emails_title">[0]Email[/0][1]Email[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_phone_title">[0]Telefon[/0][1]Phone[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_question_title">[0]POŠALJI[/0][1]SEND[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_address_title">[0]Adresa[/0][1]Address[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_poruci_title">[0]PORUČI[/0][1]ORDER IT[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_missing_title">[0]Nedostaju podaci![/0][1]Data are missing![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_missing_body">[0]Molimo Vas popunite sva polja. Hvala![/0][1]Please fill all inputs. Thank You![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_emaivalid_title">[0]Email nije validan![/0][1]Email it\'s not valid![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_emaivalid_body">[0]Uneseni email nije validan![/0][1]Entered email it\'s not valid![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_pitanje_prosledjeno_title">[0]Pitanje prosledjeno![/0][1]Question sent![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_pitanje_prosledjeno_body">[0]Hvala Vam na interesovanju![/0][1] Thank You for Your interest![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_poruceno_title">[0]Uspešno poručeno![/0][1]Successful order![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_poruceno_body">[0]Uspešno ste poručili. Hvala Vam![/0][1]You have successfully make this order. Thank You![/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Kontakt -->
 
 </resources>
 
