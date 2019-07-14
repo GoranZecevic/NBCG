@@ -11,6 +11,7 @@ public class ApiUrls {
     public static final String GET_ANALITICKE_KARTICE = "http://192.168.0.15/nbcrnegore/get_analiticka_kartica.php";
     public static final String GET_SLIKE = "http://192.168.0.15/nbcrnegore/get_slike.php";
     public static final String GET_JAVNE_NABAVKE= "http://192.168.0.15/nbcrnegore/get_javnenabavke.php";
+    public static final String GET_ORGANIZACIJA= "http://192.168.0.15/nbcrnegore/get_organizacije.php";
 
     public static final String GET_VIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_vijesti_filter.php";
     public static final String GET_NAJAVA_FILTER = "http://192.168.0.15/nbcrnegore/get_najava_filter.php";

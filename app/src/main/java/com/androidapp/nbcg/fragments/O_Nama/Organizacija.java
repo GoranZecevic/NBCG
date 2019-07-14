@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +15,40 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
+import com.androidapp.nbcg.adapters.JavneNabavkeAdapter;
+import com.androidapp.nbcg.adapters.OrganizacijaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
+import com.androidapp.nbcg.models.JavneNabavke;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 
 public class Organizacija extends Fragment {
 
+    private RequestQueue requestQueue;
+    private String noConnectionTitle;
+    private String noConnectionBody;
+    private ArrayList<JavneNabavke> arrayList;
+
     private View mView;
     private Helpers helper = new Helpers();
     private int language = MainActivity.lang;
+
+    private OrganizacijaAdapter adapter;
+    private RecyclerView recycleView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -48,17 +73,12 @@ public class Organizacija extends Fragment {
 
         textPopulate();
 
-        buttonHandlerWeb(ApiUrls.DOKUMENT_1, R.id.button1);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_2, R.id.button2);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_3, R.id.button3);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_4, R.id.button4);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_5, R.id.button5);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_6, R.id.button6);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_7, R.id.button7);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_8, R.id.button8);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_9, R.id.button9);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_10, R.id.button10);
-        buttonHandlerWeb(ApiUrls.DOKUMENT_11, R.id.button11);
+        arrayList = new ArrayList<>();
+        requestQueue = Volley.newRequestQueue(this.getContext());
+        recycleView = (RecyclerView)mView.findViewById(R.id.recycler_view_organizacija);
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recycleView.setLayoutManager(layoutManager);
+        PARSEDATA();
 
         if(language == 1){
             imageButtonHandlerWeb(ApiUrls.ORGANIZACIJA_FB_ENG, R.id.vb_btn_fb);
@@ -72,17 +92,14 @@ public class Organizacija extends Fragment {
             imageButtonHandlerWeb(ApiUrls.ORGANIZACIJA_LN_MNE, R.id.vb_btn_ln);
         }
 
-
         return mView;
     }
-
 
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
     }
-
 
     @Override
     public void onDetach() {
@@ -94,7 +111,66 @@ public class Organizacija extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    public void PARSEDATA() {
+        final String URL = ApiUrls.GET_ORGANIZACIJA ;
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("server_response");
+//                            System.out.println("Response: "+ response);
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject hit = jsonArray.getJSONObject(i);
+
+                                int id =  hit.getInt("ID");
+//                                System.out.println("Id: "+ id);
+
+
+                                String naslov = hit.getString("NASLOV");
+                                naslov = helper.mne(naslov);
+
+                                String fajl = hit.getString("FAJL");
+//                                System.out.println("Fajl: "+ fajl);
+
+//                                System.out.println(" ");
+
+                                arrayList.add(new com.androidapp.nbcg.models.JavneNabavke(id, naslov, fajl ));
+                            }
+
+                            adapter = new OrganizacijaAdapter(mView , arrayList);
+
+                            recycleView.setAdapter(adapter);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                        helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
+                    }
+                });
+        requestQueue.add(request);
+    }
+
     public void textPopulate() {
+
+        switch (language) {
+            case 0:
+                noConnectionTitle = "Nema interneta!";
+                noConnectionBody = "Za izlistavanje sadržaja ove strane potrebna Vam je internet konekcija!";
+                break;
+            case 1:
+                noConnectionTitle = "No internet connection!";
+                noConnectionBody = "To access content of this page You need internet connection!";
+                break;
+        }
 
         Button header = (Button) mView.findViewById(R.id.o_nama_title);
         String headerStr = "";

@@ -132,19 +132,14 @@ public class MainActivity extends AppCompatActivity
     List<MenuModel> headerList = new ArrayList<>();
     HashMap<MenuModel, List<MenuModel>> childList = new HashMap<>();
 
-
-
     public MainActivity() {
-        //textPopulate();
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
+        textPopulate();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -153,64 +148,6 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
         }
-
-        //region Menu titles
-        str_pocetna = getString(R.string.title_pocetna);
-        str_o_nama = getString(R.string.title_o_nama);
-        str_katalozi = getString(R.string.title_katalozi);
-        str_usluge = getString(R.string.title_usluge);
-        str_kolekcije = getString(R.string.title_kolekcije);
-        str_dogadjaji = getString(R.string.title_dogadjaji);
-        str_nasa_izdanja = getString(R.string.title_nasa_izdanja);
-        str_kontakt = getString(R.string.title_kontakt);
-        //endregion Menu titles
-
-        //Menu sub titles
-        //region o nama
-        str_uvodna = getString(R.string.subt_uvodna);
-        str_vizmis = getString(R.string.subt_vizmis);
-        str_istorija = getString(R.string.subt_istorija);
-        str_objekti = getString(R.string.subt_objekti);
-        str_organizacija = getString(R.string.subt_organizacija);
-        str_zv_rad = getString(R.string.subt_izv_rad);
-        str_saradnja = getString(R.string.subt_saradnja);
-        str_donatori = getString(R.string.subt_donatori);
-        str_jav_nab = getString(R.string.subt_jav_nab);
-        //endregion o nama
-
-        //region katalozi
-        str_virt = getString(R.string.subt_virt);
-        str_ecg = getString(R.string.subt_ecg);
-        str_enbcg = getString(R.string.subt_enbcg);
-        str_cobis = getString(R.string.subt_cobis);
-        str_cgbibl = getString(R.string.subt_cgbibl);
-        str_tekbibl = getString(R.string.subt_tekbibl);
-        //endregion katalozi
-
-        //region usluge
-        str_korisnici  = getString(R.string.subt_korisnici);
-        str_izdavaci  = getString(R.string.subt_izdavaci);
-        str_bibliotekari  = getString(R.string.subt_bibliotekari);
-        //endregion usluge
-
-        //region kolekcije
-        str_osnovni  = getString(R.string.subt_osnovni);
-        str_montenegrina = getString(R.string.subt_montenegrina);
-        str_star_retk = getString(R.string.subt_star_retk);
-        str_rukopisi = getString(R.string.subt_rukopisi);
-        str_kartog = getString(R.string.subt_kartog);
-        str_muzikalije = getString(R.string.subt_muzikalije);
-        str_lik_graf = getString(R.string.subt_lik_graf);
-        str_ser_publ = getString(R.string.subt_ser_publ);
-        str_legati = getString(R.string.subt_legati);
-        str_dig_bibl = getString(R.string.subt_dig_bibl);
-        //endregion kolekcije
-
-        //region nasa izdanja
-        str_izd_del = getString(R.string.subt_izd_del);
-        str_katalog = getString(R.string.subt_katalog);
-        str_epub = getString(R.string.subt_epub);
-        //endregion nasa izdanja
 
         expandableListView = findViewById(R.id.expandableListView);
         prepareMenuData();
@@ -225,7 +162,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        textPopulate();
     }
 
     @Override
@@ -260,7 +196,6 @@ public class MainActivity extends AppCompatActivity
             lang = 0;
 
             getSupportActionBar().setTitle(str_pocetna);
-            str_pocetna = "Pocetna";
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
             return true;
@@ -270,7 +205,6 @@ public class MainActivity extends AppCompatActivity
             lang = 1;
 
             getSupportActionBar().setTitle(str_pocetna);
-            str_pocetna = "Landing page";
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
             return true;
@@ -286,7 +220,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void prepareMenuData() {
-
         //region Pocetna
         MenuModel menuModel = new MenuModel( str_pocetna, true, false, R.drawable.ic_house);
         headerList.add(menuModel);
@@ -486,16 +419,9 @@ public class MainActivity extends AppCompatActivity
                 if (view_Group != null) {
                     view_Group.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
-//                view_Group = v;
-//                view_Group.setBackgroundColor(Color.parseColor("#F21E1E"));
 
                 if (childList.get(headerList.get(groupPosition)) != null) {
-//                    MenuModel model = childList.get(headerList.get(groupPosition)).get(childPosition);
 
-//                    if (model.url.length() > 0) {
-//                        WebView webView = findViewById(R.id.webView);
-//                        webView.loadUrl(model.url);
-//                        onBackPressed();
 
                         switch (groupPosition){
                             //region O nama
@@ -745,6 +671,42 @@ public class MainActivity extends AppCompatActivity
                 str_dogadjaji = helper.mne(getResources().getString(R.string.title_dogadjaji));
                 str_nasa_izdanja = helper.mne(getResources().getString(R.string.title_nasa_izdanja));
                 str_kontakt = helper.mne(getResources().getString(R.string.title_kontakt));
+
+                str_uvodna = helper.mne(getResources().getString(R.string.str_uvodna_rijec_title));;
+                str_vizmis = helper.mne(getResources().getString(R.string.str_vizija_misija_title));
+                str_istorija = helper.mne(getResources().getString(R.string.str_istorija_title));
+                str_objekti = helper.mne(getResources().getString(R.string.str_objekti_title));
+                str_organizacija = helper.mne(getResources().getString(R.string.str_organ_title));
+                str_zv_rad = helper.mne(getResources().getString(R.string.str_izvestaji_title));
+                str_saradnja = helper.mne(getResources().getString(R.string.str_saradnja_title));
+                str_donatori = helper.mne(getResources().getString(R.string.str_donatori_title));
+                str_jav_nab = helper.mne(getResources().getString(R.string.str_nabavke_title));
+
+                str_virt = helper.mne(getResources().getString(R.string.str_vb_title));
+                str_ecg = helper.mne(getResources().getString(R.string.str_ecg_title));
+                str_enbcg = helper.mne(getResources().getString(R.string.str_enbcg_title));
+                str_cobis = helper.mne(getResources().getString(R.string.str_cobiss_title));
+                str_cgbibl = helper.mne(getResources().getString(R.string.str_cg_bibl_title));
+                str_tekbibl = helper.mne(getResources().getString(R.string.str_tek_bibl_title));
+
+                str_korisnici  =  helper.mne(getResources().getString(R.string.str_korisnici_title));
+                str_izdavaci  =  helper.mne(getResources().getString(R.string.str_izdavaci_title));
+                str_bibliotekari  =  helper.mne(getResources().getString(R.string.str_bibliotekari_title));
+
+                str_osnovni  = helper.mne(getResources().getString(R.string.str_osnovni_fond_title));
+                str_montenegrina = helper.mne(getResources().getString(R.string.str_montenegrina_title));
+                str_star_retk = helper.mne(getResources().getString(R.string.str_stare_rijetke_title));
+                str_rukopisi = helper.mne(getResources().getString(R.string.str_rukopisi_arhivalije_title));
+                str_kartog = helper.mne(getResources().getString(R.string.str_kartografska_zbirka_title));
+                str_muzikalije = helper.mne(getResources().getString(R.string.str_muzikalije_title));
+                str_lik_graf = helper.mne(getResources().getString(R.string.str_likovno_graficka_zbirka_title));
+                str_ser_publ = helper.mne(getResources().getString(R.string.str_serijske_publikacije_title));
+                str_legati = helper.mne(getResources().getString(R.string.str_legati_title));
+                str_dig_bibl = helper.mne(getResources().getString(R.string.str_dig_bibl_title));
+
+                str_izd_del = helper.mne(getResources().getString(R.string.str_djelatnost_title));
+                str_katalog = helper.mne(getResources().getString(R.string.str_kat_izdanja_title));
+                str_epub = helper.mne(getResources().getString(R.string.str_e_publikacije_title));
             break;
             case 1:
                 str_pocetna = helper.eng(getResources().getString(R.string.title_pocetna));
@@ -755,6 +717,42 @@ public class MainActivity extends AppCompatActivity
                 str_dogadjaji = helper.eng(getResources().getString(R.string.title_dogadjaji));
                 str_nasa_izdanja = helper.eng(getResources().getString(R.string.title_nasa_izdanja));
                 str_kontakt = helper.eng(getResources().getString(R.string.title_kontakt));
+
+                str_uvodna = helper.eng(getResources().getString(R.string.str_uvodna_rijec_title));;
+                str_vizmis = helper.eng(getResources().getString(R.string.str_vizija_misija_title));
+                str_istorija = helper.eng(getResources().getString(R.string.str_istorija_title));
+                str_objekti = helper.eng(getResources().getString(R.string.str_objekti_title));
+                str_organizacija = helper.eng(getResources().getString(R.string.str_organ_title));
+                str_zv_rad = helper.eng(getResources().getString(R.string.str_izvestaji_title));
+                str_saradnja = helper.eng(getResources().getString(R.string.str_saradnja_title));
+                str_donatori = helper.eng(getResources().getString(R.string.str_donatori_title));
+                str_jav_nab = helper.eng(getResources().getString(R.string.str_nabavke_title));
+
+                str_virt = helper.eng(getResources().getString(R.string.str_vb_title));
+                str_ecg = helper.eng(getResources().getString(R.string.str_ecg_title));
+                str_enbcg = helper.eng(getResources().getString(R.string.str_enbcg_title));
+                str_cobis = helper.eng(getResources().getString(R.string.str_cobiss_title));
+                str_cgbibl = helper.eng(getResources().getString(R.string.str_cg_bibl_title));
+                str_tekbibl = helper.eng(getResources().getString(R.string.str_tek_bibl_title));
+
+                str_korisnici  =  helper.eng(getResources().getString(R.string.str_korisnici_title));
+                str_izdavaci  =  helper.eng(getResources().getString(R.string.str_izdavaci_title));
+                str_bibliotekari  =  helper.eng(getResources().getString(R.string.str_bibliotekari_title));
+
+                str_osnovni  = helper.eng(getResources().getString(R.string.str_osnovni_fond_title));
+                str_montenegrina = helper.eng(getResources().getString(R.string.str_montenegrina_title));
+                str_star_retk = helper.eng(getResources().getString(R.string.str_stare_rijetke_title));
+                str_rukopisi = helper.eng(getResources().getString(R.string.str_rukopisi_arhivalije_title));
+                str_kartog = helper.eng(getResources().getString(R.string.str_kartografska_zbirka_title));
+                str_muzikalije = helper.eng(getResources().getString(R.string.str_muzikalije_title));
+                str_lik_graf = helper.eng(getResources().getString(R.string.str_likovno_graficka_zbirka_title));
+                str_ser_publ = helper.eng(getResources().getString(R.string.str_serijske_publikacije_title));
+                str_legati = helper.eng(getResources().getString(R.string.str_legati_title));
+                str_dig_bibl = helper.eng(getResources().getString(R.string.str_dig_bibl_title));
+
+                str_izd_del = helper.eng(getResources().getString(R.string.str_djelatnost_title));
+                str_katalog = helper.eng(getResources().getString(R.string.str_kat_izdanja_title));
+                str_epub = helper.eng(getResources().getString(R.string.str_e_publikacije_title));
             break;
         }
 

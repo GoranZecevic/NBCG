@@ -46,7 +46,7 @@
         android:background="@color/colorPrimary"
         android:paddingTop="@dimen/v8"
         android:paddingBottom="@dimen/v8"
-        android:text="@string/subt_rukopisi"
+        android:text="subt_rukopisi"
         android:textAlignment="center"
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"

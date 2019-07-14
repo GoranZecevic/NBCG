@@ -7,13 +7,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
-
     <string name="str_podelite">[0]PODJELITE[/0][1]SHARE[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--region Menu titles-->
@@ -27,10 +20,9 @@
     <string name="title_kontakt">[0]Kontakt[/0][1]Contact[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion menu titles-->
 
-    <!--Menu subtitles-->
     <!--region o nama-->
     <string name="subt_uvodna">[0]Uvodna riječ[/0][1]Introduction[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="subt_vizmis">[0]Viyija i Misija[/0][1]Vision and Mission[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="subt_vizmis">[0]Vizija i Misija[/0][1]Vision and Mission[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="subt_istorija">[0]Istorija[/0][1]History[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="subt_objekti">[0]Objekti[/0][1]Buildins[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="subt_organizacija">[0]Organizacija[/0][1]Organization[/1][2][/2][3][/3][4][/4][5][/5]</string>
@@ -39,45 +31,6 @@
     <string name="subt_donatori">[0]Donatori i prijatelji[/0][1]Donors and Friends[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="subt_jav_nab">[0]Javne nabavke[/0][1]Public procurement[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion o nama-->
-
-    <!--region katalozi-->
-    <string name="subt_virt">Virtuelna biblioteka Crne Gore</string>
-    <string name="subt_ecg">E-katalog Crne Gore</string>
-    <string name="subt_enbcg">E-katalog NBCG</string>
-    <string name="subt_cobis">COBISS.NET</string>
-    <string name="subt_cgbibl">Crnogorska bibliografija (1494-1994)</string>
-    <string name="subt_tekbibl">Tekuća bibliografija</string>
-    <!--endregion katalozi-->
-
-    <!--region usuge-->
-    <string name="subt_korisnici">Za korisnike</string>
-    <string name="subt_izdavaci">Za izdavače</string>
-    <string name="subt_bibliotekari">Za bibliotekare</string>
-    <!--endregion usuge-->
-
-    <!--region kolekcije-->
-    <string name="subt_osnovni">Osnovni fond</string>
-    <string name="subt_montenegrina">Montenegrina</string>
-    <string name="subt_star_retk">Zbirka stare i rijetke knjige</string>
-    <string name="subt_rukopisi">Rukopisi i arhivalije</string>
-    <string name="subt_kartog">Kartografska zbirka</string>
-    <string name="subt_muzikalije">Muzikalije i audiovizuelna građa</string>
-    <string name="subt_lik_graf">Likovno-grafička zbirka</string>
-    <string name="subt_ser_publ">Serijske publikacije</string>
-    <string name="subt_legati">Legati</string>
-    <string name="subt_dig_bibl">Digitalna biblioteka</string>
-    <!--endregion kolekcije-->
-
-    <!-- region nasa izdanja-->
-    <string name="subt_izd_del">Izdavačka djelatnost NBCG</string>
-    <string name="subt_katalog">Katalog izdanja</string>
-    <string name="subt_epub">E-publikacije</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!-- endregion nasa izdanja-->
-
-    <!--endregion menu subtitles-->
 
     <!--region Pocetna -->
     <string name="str_pocetna">[0]Početna[/0][1]Landing page[/1][2][/2][3][/3][4][/4][5][/5]</string>
@@ -967,6 +920,14 @@
             <li>Handbooks </li></ul>[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--endregion Izdavačka djelatnost NBCG -->
+
+    <!--region Katalog izdanja -->
+        <string name="str_kat_izdanja_title">[0]Katalog izdanja[/0][1]Catalogue of publications[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion Katalog izdanja -->
+
+    <!--region E publikacija -->
+    <string name="str_e_publikacije_title">[0]E-Publikacije[/0][1]Electronic publications[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <!--endregion E publikacija -->
 
     <!--endregion Nasa izdanja -->
 
