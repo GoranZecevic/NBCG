@@ -53,6 +53,9 @@ public class StruckiskupFilter extends Fragment {
     private String ostaleVijesti;
     private String ponistiFiltere;
 
+    private String noConnectionTitle;
+    private String noConnectionBody;
+
     public int language = MainActivity.lang;
 
     private RecyclerView recycleView;
@@ -216,6 +219,7 @@ public class StruckiskupFilter extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });
         requestQueue.add(request);
@@ -275,6 +279,8 @@ public class StruckiskupFilter extends Fragment {
     private void textPopulate(){
         switch (language) {
             case 0:
+                noConnectionTitle = "Nema interneta!";
+                noConnectionBody = "Za pregled događaja potrebna Vam je internet konekcija!";
                 dogadjaji = "Događaji";
                 filteri = "Filteri";
                 vijest = "Vijest";
@@ -289,6 +295,8 @@ public class StruckiskupFilter extends Fragment {
                 ponistiFiltere = "Poništi filtere";
                 break;
             case 1:
+                noConnectionTitle = "No internet connection!";
+                noConnectionBody = "You need internet connection to see events!";
                 dogadjaji = "Events";
                 filteri = "Filters";
                 vijest = "News";

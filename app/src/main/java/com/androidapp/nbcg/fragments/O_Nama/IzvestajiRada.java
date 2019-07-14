@@ -27,7 +27,9 @@ import com.androidapp.nbcg.models.Izvestaji;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class IzvestajiRada extends Fragment {
 
@@ -35,6 +37,9 @@ public class IzvestajiRada extends Fragment {
     private int language = MainActivity.lang;
 
     private View mView;
+
+    String listaPraznaTitle;
+    String listaPraznaBody;
 
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
@@ -85,6 +90,54 @@ public class IzvestajiRada extends Fragment {
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
             public void onGroupExpand(int groupPosition) {
+
+                if(expandableListDetail.get("Izvestaji o radu") != null &&
+                        expandableListDetail.get("Putni nalozi") != null &&
+                        expandableListDetail.get("Analitičke kartice") != null &&
+                        expandableListDetail.get("Programi rada") != null
+                ){
+                    int izvestaji = expandableListDetail.get("Izvestaji o radu").size();
+                    int nalozi = expandableListDetail.get("Putni nalozi").size();
+                    int analiticke = expandableListDetail.get("Analitičke kartice").size();
+                    int programi = expandableListDetail.get("Programi rada").size();
+
+                    if(izvestaji == 0 && groupPosition == 0){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                    if(nalozi == 0 && groupPosition == 1){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                    if(analiticke == 0 && groupPosition == 2){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                    if(programi == 0 && groupPosition == 3){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                }
+
+                if(expandableListDetail.get("Reports") != null &&
+                        expandableListDetail.get("Travel orders") != null &&
+                        expandableListDetail.get("Analytical cards") != null &&
+                        expandableListDetail.get("Programs") != null
+                ){
+                    int izvestaji = expandableListDetail.get("Reports").size();
+                    int nalozi = expandableListDetail.get("Travel orders").size();
+                    int analiticke = expandableListDetail.get("Analytical cards").size();
+                    int programi = expandableListDetail.get("Programs").size();
+
+                    if(programi == 0 && groupPosition == 0){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                    if(analiticke == 0 && groupPosition == 1){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                    if(izvestaji == 0 && groupPosition == 2){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                    if(nalozi == 0 && groupPosition == 3){
+                        helper.alert(mView.getContext(), listaPraznaTitle, listaPraznaBody );
+                    }
+                }
             }
         });
 
@@ -156,6 +209,18 @@ public class IzvestajiRada extends Fragment {
             case 1: podjeliStr = helper.eng(getResources().getString(R.string.str_podelite)); break;
         }
         podjeli.setText(podjeliStr);
+
+        switch (language){
+            case 0:
+                listaPraznaTitle = "Nema podataka!";
+                listaPraznaBody = "Nema podataka, molimo Vas proverite interent konekciju.";
+                break;
+            case 1:
+                listaPraznaTitle = "No data!";
+                listaPraznaBody = "Data are missing, please check Your internet connection.";
+                break;
+        }
+
 
     }
 

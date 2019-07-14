@@ -47,7 +47,7 @@ public class SerijskepublikacijeFilter extends Fragment {
     private KatalogIzdanjaAdapter adapter;
 
     private RequestQueue requestQueue;
-    private View thisFragment;
+    private View mView;
 
     private String katalogIzdanja;
 
@@ -60,6 +60,9 @@ public class SerijskepublikacijeFilter extends Fragment {
     private String katalozi;
     private String prirucnici;
     private String ponistiFiltere;
+
+    private String noConnectionTitle;
+    private String noConnectionBody;
 
     private FloatingActionButton btnFilter;
 
@@ -82,30 +85,30 @@ public class SerijskepublikacijeFilter extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_serijskepublikacije_filter, null);
+        mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_serijskepublikacije_filter, null);
         textPopulate();
 
         getActionBar().setTitle(katalogIzdanja);
 
-        btnFilter = (FloatingActionButton)thisFragment.findViewById(R.id.katalogFilter);
+        btnFilter = (FloatingActionButton)mView.findViewById(R.id.katalogFilter);
 
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 System.out.println("Kliknuo");
-                showAlertDialogButtonClicked(thisFragment);
+                showAlertDialogButtonClicked(mView);
             }
         });
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
 
-        recycleView = (RecyclerView)thisFragment.findViewById(R.id.recycler_view_katalog_izdanja);
+        recycleView = (RecyclerView)mView.findViewById(R.id.recycler_view_katalog_izdanja);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recycleView.setLayoutManager(layoutManager);
         PARSEDATA();
 
-        return thisFragment;
+        return mView;
     }
 
     public void PARSEDATA() {
@@ -195,7 +198,7 @@ public class SerijskepublikacijeFilter extends Fragment {
 
                             }
 
-                            adapter = new KatalogIzdanjaAdapter(thisFragment , arrayList);
+                            adapter = new KatalogIzdanjaAdapter(mView , arrayList);
 
                             recycleView.setAdapter(adapter);
 
@@ -208,6 +211,7 @@ public class SerijskepublikacijeFilter extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });
         requestQueue.add(request);
@@ -216,7 +220,7 @@ public class SerijskepublikacijeFilter extends Fragment {
     public void showAlertDialogButtonClicked(View view) {
 
         // setup the alert builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(thisFragment.getContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
 //        builder.setTitle("Filteri");
 
         // add a list
@@ -283,6 +287,8 @@ public class SerijskepublikacijeFilter extends Fragment {
     private void textPopulate(){
         switch (language) {
             case 0:
+                noConnectionTitle = "Nema interneta!";
+                noConnectionBody = "Za pregled kataloga izdanja potrebna Vam je internet konekcija!";
                 filteri = "Filteri";
                 katalogIzdanja = "Ktalog Izdanja";
                 fototipskaIzdanja = "Fototipska Izdanja";
@@ -295,6 +301,8 @@ public class SerijskepublikacijeFilter extends Fragment {
                 ponistiFiltere = "Poništi filtere";
                 break;
             case 1:
+                noConnectionTitle = "No internet connection!";
+                noConnectionBody = "You need internet connection to see our catalogues!";
                 filteri = "Filters";
                 katalogIzdanja = "Ktalog Izdanja";
                 fototipskaIzdanja = "Catalogue of Publications";

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/javne_nabavke_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/javne_nabavke_card"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_marginLeft="@dimen/v8"
+        android:layout_marginRight="@dimen/v8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nabavke_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/gold"
+                android:text="test text"
+                android:layout_marginLeft="@dimen/v8"
+                android:layout_marginRight="@dimen/v8"
+                android:layout_marginTop="@dimen/v8"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/nabavke_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/v8"
+                android:paddingTop="@dimen/v24"
+                android:paddingBottom="@dimen/v24"
+                android:drawablePadding="@dimen/v8"
+                android:layout_marginRight="@dimen/v8"
+                android:layout_marginLeft="@dimen/v8"
+                android:paddingLeft="@dimen/v16"
+                android:drawableLeft="@drawable/ic_iconfinder_24_2065219"
+                android:text="button"
+                android:gravity="left|center"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nabavke_id" />
+
+            <TextView
+                android:id="@+id/nabavke_fajl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nabavke_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/gold"
+                android:text="test text"
+                android:layout_marginLeft="@dimen/v8"
+                android:layout_marginRight="@dimen/v8"
+                android:layout_marginTop="@dimen/v8"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

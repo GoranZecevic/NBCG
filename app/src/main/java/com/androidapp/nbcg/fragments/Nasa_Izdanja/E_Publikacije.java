@@ -42,9 +42,11 @@ public class E_Publikacije extends Fragment {
     private ArrayList<KatalogIzdanja> arrayList;
     private E_PublikacijeAdapter adapter;
 
+    private String noConnectionTitle;
+    private String noConnectionBody;
 
     private RequestQueue requestQueue;
-    private View thisFragment;
+    private View mView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -66,17 +68,17 @@ public class E_Publikacije extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        thisFragment = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_e__publikacije, null);
+        mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_e__publikacije, null);
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
 
-        recycleView = (RecyclerView)thisFragment.findViewById(R.id.recycler_view_epublikacij);
+        recycleView = (RecyclerView)mView.findViewById(R.id.recycler_view_epublikacij);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recycleView.setLayoutManager(layoutManager);
         PARSEDATA();
 
-        return thisFragment;
+        return mView;
     }
 
     public void PARSEDATA() {
@@ -152,7 +154,7 @@ public class E_Publikacije extends Fragment {
 
                             }
 
-                            adapter = new E_PublikacijeAdapter(thisFragment , arrayList);
+                            adapter = new E_PublikacijeAdapter(mView , arrayList);
 
                             recycleView.setAdapter(adapter);
 
@@ -164,7 +166,18 @@ public class E_Publikacije extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
+                        error.printStackTrace(); switch (language) {
+                            case 0:
+                                noConnectionTitle = "Nema interneta!";
+                                noConnectionBody = "Kako bi preuzeli E-Publikacije potrebna Vam je internet konekcija!";
+                                break;
+                            case 1:
+                                noConnectionTitle = "No internet connection!";
+                                noConnectionBody = "You need internet connection to download Electronic Publications!";
+                                break;
+
+                        }
+                        helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });
         requestQueue.add(request);

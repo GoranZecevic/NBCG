@@ -366,6 +366,13 @@
         <p>Works on the building of the former French Embassy were carried out through the sub-grant agreement with an international organization Regional Cooperation Council Task Force on Culture and Society. Emergency interventions in total amount of € 7,946.23 were conducted in order to repair electrical installations which included dismantling the existing circuit breakers and fuses and circuit testing, delivery and installation of automatic fuses, wiring and lighting;</p><p>A major project for the building of the former French Embassy in the value of € 30,000 was developed thanks to the donation of “Ljubljana Process”, which entrusted this job to the company “Građenje” d.o.o. from Sarajevo.</p><p>The grant received from the Secretariat of the Working Group on Culture and Society – The Regional Cooperation Council (RCCTFCS) amounts € 6,400.00 and it is intended to the urgent rehabilitation of wiring in the Library (the former French Embassy building).</p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion Donatori -->
 
+    <!--region Javne nabavka -->
+
+    <!--endregion Javne nabavka -->
+    <string name="str_nabavke_title">[0]Javne nabavke[/0][1]Public procurement[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_nabavke_dok1">[0]PRAVILNIK za postupanje JU NBCG “Đurde Crnojević” prilikom sprovođenja postupka nabavki male vrijednosti[/0][1]RULES for the conduct of the Public Utility Company NBCG "Đurde Crnojević" during the implementation of the low value procurement procedure[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_nabavke_dok2">[0]OBRAZAC – ZAHTJEV ZA NABAVKAMA MALE VRIJEDNOSTI[/0][1]FORM - REQUEST FOR PURCHASE OF SMALL VALUE[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_nabavke_dok3">[0]OBRAZAC – NABAVKA MALE VRIJEDNOSTI[/0][1]FORM - PURCHASE OF SMALL VALUE[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion O Nama -->
 
     <!--region Katalozi -->
