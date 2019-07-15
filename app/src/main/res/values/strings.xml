@@ -899,7 +899,7 @@
     <!--endregion Zbirka stare i rijetke knjige-->
 
     <!--region Nasa izdanja -->
-    <string name="str_nasa_izdanja_title">[0]Nasa izdanja[/0][1]Our publications[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_nasa_izdanja_title">[0]Naša izdanja[/0][1]Our publications[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--region Izdavačka djelatnost NBCG -->
     <string name="str_djelatnost_title">[0]Izdavačka djelatnost NBCG[/0][1]Publishing Activity of NLM[/1][2][/2][3][/3][4][/4][5][/5]</string>

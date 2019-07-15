@@ -124,6 +124,9 @@ public class MainActivity extends AppCompatActivity
     private String str_epub;
     //endregion nasa izdanja
 
+    DrawerLayout drawer;
+
+    Toolbar toolbar;
 
     View view_Group;
 
@@ -141,7 +144,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         textPopulate();
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         if(savedInstanceState == null){
@@ -149,11 +152,16 @@ public class MainActivity extends AppCompatActivity
                     new Pocetna()).commit();
         }
 
+        navigation();
+
+    }
+
+    private void navigation(){
         expandableListView = findViewById(R.id.expandableListView);
         prepareMenuData();
         populateExpandableList();
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -161,7 +169,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
     @Override
@@ -196,6 +203,8 @@ public class MainActivity extends AppCompatActivity
             lang = 0;
 
             getSupportActionBar().setTitle(str_pocetna);
+            navigation();
+
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
             return true;
@@ -205,6 +214,7 @@ public class MainActivity extends AppCompatActivity
             lang = 1;
 
             getSupportActionBar().setTitle(str_pocetna);
+            navigation();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Pocetna()).commit();
             return true;
@@ -220,6 +230,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void prepareMenuData() {
+        textPopulate();
+
+        if(headerList.size() != 0) headerList.clear();
+        if(childList.size() != 0) childList.clear();
+
         //region Pocetna
         MenuModel menuModel = new MenuModel( str_pocetna, true, false, R.drawable.ic_house);
         headerList.add(menuModel);
