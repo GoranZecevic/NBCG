@@ -154,6 +154,15 @@ public class Pocetna extends Fragment {
     }
 
     public void textPopulate(){
+
+        Button pocetnaBtn =(Button) mView.findViewById(R.id.o_nama_title);
+        String pocetnaBtnStr= "";
+        switch (language){
+            case 0: pocetnaBtnStr = helper.mne(getResources().getString(R.string.str_pocetna)); break;
+            case 1: pocetnaBtnStr = helper.eng(getResources().getString(R.string.str_pocetna)); break;
+        }
+        pocetnaBtn.setText(pocetnaBtnStr);
+
         String pocetnaStr= "";
         switch (language){
             case 0: pocetnaStr = helper.mne(getResources().getString(R.string.str_pocetna)); break;

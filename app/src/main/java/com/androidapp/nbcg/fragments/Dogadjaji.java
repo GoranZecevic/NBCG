@@ -43,6 +43,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -153,6 +155,8 @@ public class Dogadjaji extends Fragment {
 
 
                                 String naslov = hit.getString("NASLOV");
+//                                naslov = replacer(naslov);
+//                                naslov =  URLDecoder.decode(naslov, "UTF-8");
                                 switch (language){
                                     case 0: naslov = helper.mne(naslov); break;
                                     case 1:
@@ -164,6 +168,8 @@ public class Dogadjaji extends Fragment {
 //                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
+//                                opis = replacer(opis);
+//                                opis =  URLDecoder.decode(opis, "UTF-8");
                                 switch (language){
                                     case 0: opis = helper.mne(opis); break;
                                     case 1:
@@ -175,6 +181,8 @@ public class Dogadjaji extends Fragment {
 
 
                                 String description = hit.getString("DESCRIPTION");
+//                                description = replacer(description);
+//                                description =  URLDecoder.decode(description, "UTF-8");
                                 switch (language){
                                     case 0: description = helper.mne(description); break;
                                     case 1:
@@ -185,6 +193,8 @@ public class Dogadjaji extends Fragment {
 //                                System.out.println("Description: "+ description);
 
                                 String tip_novosti = hit.getString("TIP_NOVOSTI");
+//                                tip_novosti = replacer(tip_novosti);
+//                                tip_novosti =  URLDecoder.decode(tip_novosti, "UTF-8");
                                 switch (language){
                                     case 0: tip_novosti = helper.mne(tip_novosti); break;
                                     case 1: tip_novosti = helper.eng(tip_novosti); break;
@@ -224,7 +234,6 @@ public class Dogadjaji extends Fragment {
                 });
         requestQueue.add(request);
     }
-
 
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
