@@ -60,6 +60,8 @@ public class ECG extends Fragment {
             imageButtonHandlerWeb(ApiUrls.ECG_LN_MNE, R.id.vb_btn_ln);
         }
 
+        buttonHandlerWeb(ApiUrls.VBCG_EKCG, R.id.link);
+
         return mView;
     }
 

@@ -60,6 +60,8 @@ public class VirtuelnaBiblioteka extends Fragment {
             imageButtonHandlerWeb(ApiUrls.VIRT_LAB_LN_MNE, R.id.vb_btn_ln);
         }
 
+        buttonHandlerWeb(ApiUrls.VBCG_VIRTUELNA_BIBLIOTEKA, R.id.link);
+
         return mView;
     }
 

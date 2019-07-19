@@ -59,6 +59,9 @@ public class TekucaBibliografija extends Fragment {
             imageButtonHandlerWeb(ApiUrls.TEK_BIBL_LN_MNE, R.id.vb_btn_ln);
         }
 
+
+        buttonHandlerWeb(ApiUrls.VBCG_TEKUCA_BIBLIOGRAFIJA, R.id.link);
+
         return mView;
     }
 
@@ -100,13 +103,21 @@ public class TekucaBibliografija extends Fragment {
         title.setText(titleStr);
 
 
-        TextView body = (TextView)mView.findViewById(R.id.vb_body);
-        String bodyStr= "";
+        TextView body1 = (TextView)mView.findViewById(R.id.vb_body1);
+        String bodyStr1= "";
         switch (language){
-            case 0: bodyStr = helper.mne(getResources().getString(R.string.str_tek_bibl_body)); break;
-            case 1: bodyStr = helper.eng(getResources().getString(R.string.str_tek_bibl_body)); break;
+            case 0: bodyStr1 = helper.mne(getResources().getString(R.string.str_tek_bibl_body1)); break;
+            case 1: bodyStr1 = helper.eng(getResources().getString(R.string.str_tek_bibl_body1)); break;
         }
-        body.setText(bodyStr);
+        body1.setText(bodyStr1);
+
+        TextView body2 = (TextView)mView.findViewById(R.id.vb_body2);
+        String bodyStr2= "";
+        switch (language){
+            case 0: bodyStr2 = helper.mne(getResources().getString(R.string.str_tek_bibl_body2)); break;
+            case 1: bodyStr2 = helper.eng(getResources().getString(R.string.str_tek_bibl_body2)); break;
+        }
+        body2.setText(bodyStr2);
 
 
 

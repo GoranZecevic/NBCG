@@ -72,7 +72,7 @@
 
 
                 <TextView
-                    android:id="@+id/vb_body"
+                    android:id="@+id/vb_body1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -86,6 +86,199 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <Button
+                    android:id="@+id/link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v24"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://dlib.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body1" />
+
+                <Button
+                    android:id="@+id/link1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link" />
+                <Button
+                    android:id="@+id/link2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link1" />
+                <Button
+                    android:id="@+id/link3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link2" />
+                <Button
+                    android:id="@+id/link4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link3" />
+                <Button
+                    android:id="@+id/link5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link4" />
+                <Button
+                    android:id="@+id/link6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link5" />
+                <Button
+                    android:id="@+id/link7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link6" />
+                <Button
+                    android:id="@+id/link8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link7" />
+
+                <TextView
+                    android:id="@+id/vb_body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="subt_virt"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link8"/>
+
+                <Button
+                    android:id="@+id/link9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="www.nbcg-digitalnabibliografija.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body2" />
+
+                <TextView
+                    android:id="@+id/vb_body3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="subt_virt"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link9"/>
+
+                <Button
+                    android:id="@+id/link10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/v16"
+                    android:paddingTop="0dp"
+                    android:layout_marginStart="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:text="http://www.webarhiv.me"
+                    android:textColor="@color/gold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body3" />
+
+                <TextView
+                    android:id="@+id/vb_body4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="subt_virt"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link10"/>
+
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
@@ -97,7 +290,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/vb_body">
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body4">
 
                     <TextView
                         android:id="@+id/podjeli"

@@ -275,6 +275,27 @@ public class ApiUrls {
     public static final String JAVNE_NABAVKE_OBRAZA2 = "http://www.nbcg.minmedia.me/img/OBRAZAC-zahtjev-za-nabavkama-male-vrijednosti.docx";
     public static final String JAVNE_NABAVKE_OBRAZA3 = "http://www.nbcg.minmedia.me/img/OBRAZAC-NABAVKA-MALE-VRIJEDNOSTI.docx";
 
+    public static final String VBCG_VIRTUELNA_BIBLIOTEKA = "http://vbcg.vbcg.me/";
+    public static final String VBCG_EKCG = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib";
+    public static final String VBCG_ENBCG = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001";
+    public static final String VBCG_CG_BIBLIOGRAFIJA = "http://www.nbcg-digitalnabibliografija.me/";
+    public static final String VBCG_TEKUCA_BIBLIOGRAFIJA = "http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/";
+
+    public static final String DIGLIB_LINK1 = "http://dlib.me/";
+    public static final String DIGLIB_LINK2 = "http://www.nbcg-digitalnabibliografija.me/";
+    public static final String DIGLIB_LINK3 = "http://www.webarhiv.me/";
+
+    public static final String KNIGE = "http://dlib.me/zbirka.php?z=knjige";
+    public static final String NOVINE = "http://dlib.me/zbirka.php?z=novine-i-casopisi";
+    public static final String RUKOPISI = "http://dlib.me/zbirka.php?z=rukopisi-i-dokumenta";
+    public static final String KARTE = "http://dlib.me/zbirka.php?z=karte-i-planovi";
+    public static final String PLAKATI = "http://dlib.me/zbirka.php?z=plakati-i-likovna-gradja";
+    public static final String FOTOGRAFIJE = "http://dlib.me/zbirka.php?z=fotografije-i-razglednice";
+    public static final String MUZICKA = "http://dlib.me/zbirka.php?z=muzicka-i-video-gradja";
+    public static final String TEMATSKE = "http://dlib.me/zbirka.php?z=tematske-zbirke";
+
+
+
 
 
 }
