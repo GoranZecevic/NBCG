@@ -70,7 +70,7 @@ public class DigitalnaBiblioteka extends Fragment {
         buttonHandlerWeb(ApiUrls.PLAKATI, R.id.link5);
         buttonHandlerWeb(ApiUrls.FOTOGRAFIJE, R.id.link6);
         buttonHandlerWeb(ApiUrls.MUZICKA, R.id.link7);
-        buttonHandlerWeb(ApiUrls.DIGLIB_LINK3, R.id.link8);
+        buttonHandlerWeb(ApiUrls.TEMATSKE, R.id.link8);
 
         return mView;
     }

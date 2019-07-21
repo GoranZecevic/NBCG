@@ -109,6 +109,171 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/v_flipper" />
 
+                <Button
+                    android:id="@+id/link1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body" />
+
+                <Button
+                    android:id="@+id/link2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link1" />
+
+                <Button
+                    android:id="@+id/link3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link2" />
+
+                <Button
+                    android:id="@+id/link4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link3" />
+
+                <Button
+                    android:id="@+id/link5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link4" />
+
+                <Button
+                    android:id="@+id/link6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link5" />
+
+                <Button
+                    android:id="@+id/link7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link6" />
+
+                <Button
+                    android:id="@+id/link8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link7" />
+
+                <Button
+                    android:id="@+id/link9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link8" />
+
+                <Button
+                    android:id="@+id/link10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link9" />
+
+                <Button
+                    android:id="@+id/link11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v16"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="Upitnik za CIP za serijske publikacije i ISSN  (word)"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link10" />
+
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
@@ -120,7 +285,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/vb_body">
+                    app:layout_constraintTop_toBottomOf="@+id/link11">
 
                     <TextView
                         android:id="@+id/podjeli"

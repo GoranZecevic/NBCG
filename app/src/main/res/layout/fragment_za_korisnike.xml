@@ -96,7 +96,7 @@
 
 
                 <TextView
-                    android:id="@+id/vb_body"
+                    android:id="@+id/vb_body1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -110,6 +110,109 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/v_flipper" />
 
+                <Button
+                    android:id="@+id/link1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginBottom="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body1" />
+
+                <TextView
+                    android:id="@+id/vb_body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/title_kontakt"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/link1" />
+
+                <Button
+                    android:id="@+id/link2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginBottom="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body2" />
+
+                <TextView
+                    android:id="@+id/vb_body3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/title_kontakt"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/link2" />
+
+                <Button
+                    android:id="@+id/link3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="PRAVILNIK O USLOVIMA I NAČINJU KORIŠĆENJA BIBLIOTEČKO-INFORMACIONE GRAĐE I USLUGA"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body3" />
+
+
+                <Button
+                    android:id="@+id/link4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="NBCG CJENOVNIK USLUGA"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link3" />
+
+                <Button
+                    android:id="@+id/link5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gold"
+                    android:layout_marginTop="@dimen/v8"
+                    android:layout_marginBottom="@dimen/v8"
+                    android:layout_marginLeft="@dimen/v8"
+                    android:layout_marginRight="@dimen/v8"
+                    android:text="ZAHTJEV ZA KOPIRANJE"
+                    android:gravity="left|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link4" />
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
@@ -121,7 +224,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/vb_body">
+                    app:layout_constraintTop_toBottomOf="@+id/link5">
 
                     <TextView
                         android:id="@+id/podjeli"

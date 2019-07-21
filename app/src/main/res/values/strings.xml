@@ -470,15 +470,25 @@
 
     <!-- region Za korisnike -->
     <string name="str_korisnici_title">[0]Za Korisnike[/0][1]For Users[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_korisnici_body">[0]Čitaonice i članstvo<p>\nBibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove institucije.</p>\n\n
+    <string name="str_korisnici_body1">[0]Čitaonice i članstvo<p>\nBibliotečka građa crnogorske nacionalne biblioteke koristi se prevashodno u čitaonicama ove institucije.</p>\n\n
         <p>Savremeno opremljene čitaonice za korišćenje građe Osnovnog fonda i Posebnih zbirki nalaze se u zgradi bivšeg Italijanskog poslanstva. To su Naučna čitaonica, E-čitaonica (za korišćenje elektronskih publikacija, Interneta, COBISS sistema), Čitaonica muzikalija (za korišćenje svih vrsta muzičke građe: muzičkih rukopisa, nota, audio-video zapisa i dokumenata), i Čitaonica kartografije.</p>\n\n
         <p>Korisnici Muzejskog fonda, Zbirke stare i rijetke knjige i Legata mogu koristiti građu u čitaonici u zgradi bivšeg Francuskog poslanstva.</p>\n\n
         <p>Svaki član Nacionalne biblioteke može koristiti sve fondove biblioteke, ali i elektronski katalog biblioteke i uzajamni elektronski katalog, koji su dostupni 24 časa za pretraživanje preko interneta:</p>\n\n
-        <p>E-KATALOG NBCG\n\n
-        <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001</a></p>\n\n
-        <p>E-KATALOG CRNE GORE\n\n
-        <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib</a></p>\n\n
-        <p>Za publikacije koje su objavljene prije 1991. godine postoji Lisni katalog, formiran 1949. godine. U sklopu njega nalaze se posebni lisni katalozi: alfabetski katalog knjiga, alfabetski katalog serijskih publikacija, lisni katalozi posebnih zbirki, lisni predmetni katalog i lisni stručni katalog.</p>\n\n
+        <p>E-KATALOG NBCG</p>[/0]
+        [1]Reading Rooms and Membership<p>\n
+            Library Materials of the National Library of Montenegro are primarily used in the reading rooms of the NLM “Đurđe Crnojević”.</p>\n\n
+        <p>Contemporary equipped reading rooms for the use of library materials of the Basic Fund and Special Collections are located in the former Italian Embassy building. Those are the Science Reading Room, e-Reading Room (for the use of electronic publications, the Internet, COBISS system), Music Reading Room (for the use of all types of music materials: music manuscripts, scores, audio-video records and documents), and Cartography Reading Room.</p>\n\n
+        <p>Users of Museum fund, Old and Rare Books collection and legacies can use library materials in the reading room in the former French Embassy building.</p>\n\n
+        <p>Each member of the National Library can use all the funds of the library, but also the electronic library catalogue and shared electronic catalog, which are available 24 hours for search via internet:</p>\n\n
+            NLM E-CATALOGUE[/1]</string>
+
+    <string name="str_korisnici_body2">
+        [0]<p>E-KATALOG CRNE GORE</p>[/0]
+        [1]<p>E-CATALOGUE OF MONTENEGRO</p>[/1]
+    </string>
+
+    <string name="str_korisnici_body3">
+        [0] <p>Za publikacije koje su objavljene prije 1991. godine postoji Lisni katalog, formiran 1949. godine. U sklopu njega nalaze se posebni lisni katalozi: alfabetski katalog knjiga, alfabetski katalog serijskih publikacija, lisni katalozi posebnih zbirki, lisni predmetni katalog i lisni stručni katalog.</p>\n\n
         <p>U čitaonicama Nacionalne biblioteke iznajmljena bibliotečka građa može se fotografisati, kopirati, skenirati i prepisati, naravno, u skladu sa Zakonom o autorskim pravima i internim Pravilima o korišćenju bibliotečke građe.</p>\n\n
         <p>Članarina može biti godišnja (od dana upisa), mjesečna ili trodnevna.</p>\n\n
         <p>Bibliotečka građa je dostupna pod jednakim uslovima svim građanima Crne Gore i stranim licima sa navršenih 18 godina. Prilikom upisa, budući korisnik je dužan dati tačne lične podatke i predočiti ličnu kartu ili neki drugi identifikacioni dokument. Izuzetno, mogu se upisati i lica ispod 18 godina (maturanti) – po odobrenju. Strani državljani koji borave u Crnoj Gori mogu koristiti bibliotečku građu uz važeći pasoš.</p>\n\n
@@ -514,20 +524,8 @@
         <p>Adresa:</p>\n
         <p>Nacionalna biblioteka Crne Gore “Ðurde Crnojević”\n
             Služba međubibliotečke pozajmice\n
-            Bulevar crnogorskih junaka 163, 81250 Cetinje</p>\n\n
-        <p><p><a href="/fajlovi/p1d686a79l1b0316ei1l111t5o9ej5.pdf" target="_blank">PRAVILNIK O USLOVIMA I NAČINJU KORIŠĆENJA BIBLIOTEČKO-INFORMACIONE GRAĐE I USLUGA</a></p>\n\n
-        <p><a href="/fajlovi/p1d686a79l1f4i14svlkkk0jmge4.pdf" target="_blank">NBCG CJENOVNIK USLUGA</a></p>\n\n
-        <p><a href="/fajlovi/p1d686a79m1ie0hdu3e21lt1e796.pdf" target="_blank">ZAHTJEV ZA KOPIRANJE MATERIJALA</a></p></p>
-[/0][1]Reading Rooms and Membership<p>\n
-            Library Materials of the National Library of Montenegro are primarily used in the reading rooms of the NLM “Đurđe Crnojević”.</p>\n\n
-        <p>Contemporary equipped reading rooms for the use of library materials of the Basic Fund and Special Collections are located in the former Italian Embassy building. Those are the Science Reading Room, e-Reading Room (for the use of electronic publications, the Internet, COBISS system), Music Reading Room (for the use of all types of music materials: music manuscripts, scores, audio-video records and documents), and Cartography Reading Room.</p>\n\n
-        <p>Users of Museum fund, Old and Rare Books collection and legacies can use library materials in the reading room in the former French Embassy building.</p>\n\n
-        <p>Each member of the National Library can use all the funds of the library, but also the electronic library catalogue and shared electronic catalog, which are available 24 hours for search via internet:\n\n
-            NLM E-CATALOGUE\n\n
-            <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=20001"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=20001" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=20001</a></p>\n\n
-        <p>E-CATALOGUE OF MONTENEGRO\n\n
-            <a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib"></a><a href="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib" target="_blank">http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&amp;base=cobib</a></p>\n\n
-        <p>For publications published before 1991, there is a card catalogue, created in 1949. It includes special card catalogues: alphabetical catalogue of books, alphabetical catalogue of serials, card catalogues of special collections, card subject catalogue and card professional catalogue.</p>\n\n
+            Bulevar crnogorskih junaka 163, 81250 Cetinje</p>\n\n[/0]
+        [1]<p> <p>For publications published before 1991, there is a card catalogue, created in 1949. It includes special card catalogues: alphabetical catalogue of books, alphabetical catalogue of serials, card catalogues of special collections, card subject catalogue and card professional catalogue.</p>\n\n
         <p>In the NLM reading rooms borrowed library materials can be photographed, copied and scanned in accordance with the Copyright Law and the NLM Rulebook on the Use of Library Materials.</p>\n\n
         <p>Membership can be obtained for a year (from the date of registration), monthly or for a period of three days.\n\n
             Library materials are available on equal terms to all citizens of Montenegro and foreign persons over 18 years of age. When they register, the future users are required to provide accurate personal information and identity cards or other identification documents. Notwithstanding, the persons under 18 years of age (secondary school last grade pupils) can be registered after approval. Foreign nationals residing in Montenegro can use the library materials with a valid passport.</p>\n\n
@@ -564,14 +562,23 @@
         <p>Address:\n\n
             National Library of Montenegro “Ðurđe Crnojević”\n\n
             Interlibrary Loan Service\n\n
-            Bulevar crnogorskih junaka 163, 81250 Cetinje</p>\n\n
-        <p><p><a href="/fajlovi/p1d686a79l1f4i14svlkkk0jmge4.pdf" target="_blank">NLM PRICE LIST</a></p><p><a href="/fajlovi/p1d686a79m1ie0hdu3e21lt1e796.pdf" target="_blank">REQUEST FOR COPYING MATERIALS</a></p></p>
-[/1][2][/2][3][/3][4][/4][5][/5]</string>
+            Bulevar crnogorskih junaka 163, 81250 Cetinje</p></p>[/1]
+    </string>
+
+    <string name="str_korisnici_btn2">
+        [0]<p>NBCG CJENOVNIK USLUGA</p>[/0]
+        [1]<p>NLM PRICE LIST</p>[/1]
+    </string>
+
+    <string name="str_korisnici_btn3">
+        [0]<p>ZAHTJEV ZA KOPIRANJE</p>[/0]
+        [1]<p>REQUEST FOR COPYING MATERIALS</p>[/1]
+    </string>
     <!-- endregion Za korisnike -->
 
     <!-- region Za izdavace -->
     <string name="str_izdavaci_title">[0]Za izdavače[/0][1]For Publishers[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_izdavaci_body">[0]<p>Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne Gore i dodjeljuje međunarodne standardne oznake ISBN, ISSN i ISMN za monografske i serijske publikacije, štampane muzikalije, kao i ostalu bibliotečku građu.</p>\n\n
+    <string name="str_izdavaci_body1">[0]\n<p>Nacionalna biblioteka izrađuje CIP (Katalogizacija u publikaciji) na zahtjev izdavača iz Crne Gore i dodjeljuje međunarodne standardne oznake ISBN, ISSN i ISMN za monografske i serijske publikacije, štampane muzikalije, kao i ostalu bibliotečku građu.</p>\n\n
         <p>CIP</p>\n\n
         <p>U Nacionalnoj biblioteci izrađuju se CIP zapisi po međunarodnim standardima za monografske publikacije – ISBD(M), za serijske publikacije – ISBD(CR), za štampane muzikalije – ISBD(PN), za elektronske publikacije – ISBD(ER), za njeknjižnu građu – ISBD(NBM) i za kartografsku građu ISBD(CM). Takav zapis, dat u sažetoj formi, pruža informaciju o bibliografskom i sadržinskom karakteru publikacije.</p>\n\n
         <p>Obaveze izdavača su da na svakoj novoj publikaciji odštampaju ovaj kataloški zapis koji se radi u bazi podataka COBIB Crna Gora. Na taj način su podaci o publikaciji dostupni putem Interneta i prije njenog objavljivanja.</p>\n\n
@@ -604,29 +611,9 @@
             e-mail: <a href="mailto:isbn@nb-cg.me">isbn@nb-cg.me</a></p>\n\n
         <p>ISSN </p>\n\n
         <p>Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN brojeve (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.</p>\n\n
-        <p>Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.</p>\n\n
-        <p><a href="/fajlovi/p1d5ohho0q1dvg14vm12131b5n1gfo5.pdf"><a href="https://www.nb-cg.me/fajlovi/p1d5ohho0q1dvg14vm12131b5n1gfo5.pdf" target="_blank">Upitnik za CIP za serijske publikacije i ISSN</a></a>(pdf)</p>\n\n
-        <p><a href="/fajlovi/p1d5ohho0p19661hjsdrillj13bh4.docx" target="_blank">Upitnik za CIP za serijske publikacije i ISSN</a>(word)</p>\n\n
-        <p>Kontakt:</p>\n\n
-        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje Bulevar crnogorskih junaka br. 163</p>\n\n
-        <p>NACIONALNI ISSN CENTAR\n\n
-            Vesna Vučković,\n\n
-            Tel: 041- 231 143 lok.144\n\n
-            E-mail:<a href="mailto:isnn@nb-cg.me">issn@nb-cg.me</a></p>\n\n
-        <p>ISMN</p>\n\n
-        <p>Nacionalni ISMN centar za Crnu Goru pri Nacionalnoj biblioteci dodjeljuje ISMN brojeve (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkih djela publikovanih u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta. ISMN se ne dodjeljuje samostalno objavljenim zvučnim zapisima, videozapisima ili zapisima na računalnom mediju. Centar za ISMN Crne Gore počeo je s radom 2016. godine.</p>\n\n
-        <p>Kontakt:</p>\n\n
-        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje\n\n
-            Bulevar crnogorskih junaka br. 163</p><p>NACIONALNI ISMN CENTAR\n\n
-            Tel: 041- 231-143 lok. 130\n\n
-            Fax: 041- 231 020; 234-236\n\n
-            E-mail:<a href="mailto:issn@nb-cg.me">ismn@nb-cg.me</a></p>\n\n
-        <p>OBAVEZNI PRIMJERAK</p>\n\n
-        <p>Svi izdavači u Crnoj Gori, prema Zakonu o izdavaštvu, dužni su da Nacionalnoj biblioteci besplatno dostave pet primjeraka svake publikacije, na bilo kom mediju, neposredno poslije štampanja ili objavljivanja: knjige, serijske publikacije (časopise i novine), muzikalije, geografske karte, audio i audio-vizuelnu građu (kako na klasičnim, tako i na elektronskim medijima – CD-ROM, DVD…), i veb sajtove sa nacionalnim domenom.</p>\n\n
-        <p><a href="/fajlovi/p1d5ohsgm6t6fq0p1fvd17l6pm05.pdf" target="_blank">ZAKON O BIBLIOTEČKOJ DJELATNOSTI</a></p>\n\n
-        <p><a href="/fajlovi/p1d5ohsgm510u541q28v9aq58d4.pdf" target="_blank">ZAKON O AUTORSKIM I SRODNIM PRAVIMA</a></p>\n\n
-        <p><a href="/fajlovi/p1d5ohsgm71sfm1imp62cl6qlgc6.pdf" target="_blank">ZAKON O IZDAVACKOJ DJELATNOSTI</a></p>
-[/0][1]<p>National Library prepares CIP (Cataloguing in Publication) upon request from the publishers from Montenegro and assigns the international standard ISBN, ISSN and ISMN numbers for monographs and serials, printed music and other library materials.</p>\n\n
+        <p>Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.\n</p>[/0]
+
+        [1]<p>National Library prepares CIP (Cataloguing in Publication) upon request from the publishers from Montenegro and assigns the international standard ISBN, ISSN and ISMN numbers for monographs and serials, printed music and other library materials.</p>\n\n
         <p>CIP</p>\n\n
         <p>CIP records are prepared in the National Library according to the international standards – ISBD (M) – for monographs, ISBD (CR) – for serials ISBD (PN) – for printed music, ISBD (ER) – for electronic publications, ISBD (NBM) –for non-book materials and ISBD (CM) – for cartographic materials. Such a record, given in summary form, provides information on bibliographic and content character of the publication.\n\n
             Obligation of the publisher is to print catalogue entry on each new publication prepared in the COBIB Montenegro database. In this way, the data on publication are available on the Internet before the publication date.\n\n
@@ -676,12 +663,33 @@
             Fax: 041- 231 020; 234-236\n\n
             E-mail: ismn@nb-cg.me</p>\n\n
         <p>LEGAL DEPOSIT</p>\n\n
-        <p>All publishers in Montenegro (Law on Publishing) are required to submit to the National Library free of charge five copies of each publication, on any media, immediately after printing or publishing: books, serials (magazines and newspapers), printed music, maps, audio-visual materials (on classic and electronic media – CDs, DVDs…) and web sites with the national domain.</p>\n\n
-        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-BIBLIOTE%C4%8CKOJ-DJELATNOSTI.pdf">THE LAW ON LIBRARY PRACTICE</a></p>\n\n
-        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-AUTORSKIM-I-SRODNIM-PRAVIMA.pdf">THE LAW ON COPYRIGHT AND RELATED RIGHTS</a></p>\n\n
-        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-IZDAVACKOJ-DJELATNOSTI.pdf">THE LAW ON PUBLISHING</a></p>
-[/1][2][/2][3][/3][4][/4][5][/5]</string>
+        <p>All publishers in Montenegro (Law on Publishing) are required to submit to the National Library free of charge five copies of each publication, on any media, immediately after printing or publishing: books, serials (magazines and newspapers), printed music, maps, audio-visual materials (on classic and electronic media – CDs, DVDs…) and web sites with the national domain.</p>
+        [/1]
+    </string>
+    <string name="str_izdavaci_body2">[0]
+        \n
+        <p>Kontakt:</p>\n\n
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje Bulevar crnogorskih junaka br. 163</p>\n\n
+        <p>NACIONALNI ISSN CENTAR\n\n
+            Vesna Vučković,\n\n
+            Tel: 041- 231 143 lok.144\n\n
+            E-mail:<a href="mailto:isnn@nb-cg.me">issn@nb-cg.me</a></p>\n\n
+        <p>ISMN</p>\n\n
+        <p>Nacionalni ISMN centar za Crnu Goru pri Nacionalnoj biblioteci dodjeljuje ISMN brojeve (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkih djela publikovanih u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta. ISMN se ne dodjeljuje samostalno objavljenim zvučnim zapisima, videozapisima ili zapisima na računalnom mediju. Centar za ISMN Crne Gore počeo je s radom 2016. godine.</p>\n\n
+        <p>Kontakt:</p>\n\n
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje\n\n
+            Bulevar crnogorskih junaka br. 163</p><p>NACIONALNI ISMN CENTAR\n\n
+            Tel: 041- 231-143 lok. 130\n\n
+            Fax: 041- 231 020; 234-236\n\n
+            E-mail:<a href="mailto:issn@nb-cg.me">ismn@nb-cg.me</a></p>\n\n
+        <p>OBAVEZNI PRIMJERAK</p>\n\n
+        <p>Svi izdavači u Crnoj Gori, prema Zakonu o izdavaštvu, dužni su da Nacionalnoj biblioteci besplatno dostave pet primjeraka svake publikacije, na bilo kom mediju, neposredno poslije štampanja ili objavljivanja: knjige, serijske publikacije (časopise i novine), muzikalije, geografske karte, audio i audio-vizuelnu građu (kako na klasičnim, tako i na elektronskim medijima – CD-ROM, DVD…), i veb sajtove sa nacionalnim domenom.</p>\n
+        [/0][1][/1]</string>
 
+
+    <string name="str_izdavaci_btn1">[0]ZAKON O BIBLIOTEČKOJ DJELATNOSTI[/0][1]THE LAW ON LIBRARY PRACTICE[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_izdavaci_btn2">[0]ZAKON O AUTORSKIM I SRODNIM PRAVIMA[/0][1]THE LAW ON COPYRIGHT AND RELATED RIGHTS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_izdavaci_btn3">[0]ZAKON O IZDAVACKOJ DJELATNOSTI[/0][1]THE LAW ON PUBLISHING[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!-- endregion Za izdavace -->
 
     <!-- region Za Bibliotekare -->
@@ -696,19 +704,7 @@
         <p>mr Đurđa Martinović, bibliotekar savjetnik</p>\n\n
         <p>mr Natalija Bokan, viši bibliotekar.</p>\n\n
         <p>Zadatak Komisije za je da u skladu sa članom 10 Pravilnika o bližim uslovima i načinu izdavanja dozvole za uzajamnu katalogizaciju, razmotri ispunjenost uslova podnosioca zahtjeva za izdavanje licence, te da u konačnom predloži Nacionalnoj biblioteci izdavanje licence.</p>\n\n
-        <p>Kandidat je dužan za ispit da uradi 30 zapisa monografskih publikacija u testnoj bazi, s tim da za njih ne postoje zapisi ni u lokalnoj, ni u uzajamnoj, ni u seminarskoj, i niti u bilo kojoj bazi u sistemu COBISS.\n\n
-            Troškovi rada Komisije regulisani su Cjenovnikom NBCG. Troškove snosi Biblioteka u kojoj je kandidat zaposlen ili sam kandidat.</p>\n\n
-        <p><a href="/fajlovi/p1d5ohsgm6t6fq0p1fvd17l6pm05.pdf" target="_blank">ZAKON O BIBLIOTEČKOJ DJELATNOSTI</a><a href="http://nb-cg.me/wp-content/uploads/2014/10/ZAKON-O-BIBLIOTE%C4%8CKOJ-DJELATNOSTI.pdf">\n\n
-        </a><a href="/fajlovi/p1d5oj8nm99do13o219118lmcnj5.pdf" target="_blank">PRAVILNIK O BLIZIM USLOVIMA I NACINU VRSENJA MATICNE DJELATNOSTI</a>\n\n
-        <a href=""></a><a href="/fajlovi/p1d5okgr3v124l12b319s2ka713uf4.pdf" target="_blank">PRAVILNIK O BLIŽIM USLOVIMA ZA OBAVLJANJE BIBLIOTEČKE DJELATNOSTI</a>\n\n
-        <a href="/fajlovi/p1d5ok705qn3nke6sei12vsb05.pdf" target="_blank">PRAVILNIK O SADRŽAJU I NAČINU VODJENJA REGISTRA BIBLIOTEKA</a>\n\n
-        <a href="/fajlovi/p1d5ok705q1ttr9s21naf130iauq6.pdf" target="_blank">PRAVILNIK O MJERAMA ZA ČUVANJE I ZAŠTITU BIBLIOTEČKE GRAĐE</a>\n\n
-        <a href="/fajlovi/p1d5ok705qn4r1rqeas7m64cku7.pdf" target="_blank">PRAVILNIK O NACIONALNIM STANDARDIMA I STRUČNIM UPUTSTVIMA ZA OBRADU BIBLIOTEČKE GRAĐE</a>\n\n
-        <a href="/fajlovi/p1d5ok705q6j5193qak116bf1f288.pdf">PRAVILNIK O NACIONALNIM STANDARDIMA ZA DIGITALIZACIJU BIBLIOTEČKE GRAĐE</a>\n\n
-        <a href="/fajlovi/p1d5ok705r2kk1a1r1mn9qin1c0j9.pdf" target="_blank">PRAVILNIK O POSTUPKU ROKOVIMA I NAČINU VRŠENJA REVIZIJE BIBLIOTEČKIH FONDOVA</a>\n\n
-        <a href="/fajlovi/p1d5ok705rnuhlte191r17na1g8la.pdf" target="_blank">PRAVILNIK BLIŽIM USLOVIMA I NAČINU IZDAVANJA LICENCE ZA UZAJAMNU KATALOGIZACIJU</a>\n\n
-        <a href="/fajlovi/p1d5ok705r1n0q17uieeopeb186vb.pdf" target="_blank">PRAVILNIK O VRSTI I STEPENU STRUČNE SPREME, PROGRAMU I NAČINU POLAGANJA STRUČNOG ISPITA I STRUČNIM ZVANJIMA</a><a href="http://nb-cg.me/wp-content/uploads/2017/06/PRAVILNIK-O-VRSTI-I-STEPENU-STRU%C4%8CNE-SPREME-PROGRAMU-I-NA%C4%8CINU-POLAGANJA-STRU%C4%8CNOG-ISPITA-I-STRU%C4%8CNIM-ZVANJIMA.pdf"></a>\n\n
-        <a href="/fajlovi/p1d5ok705r1me1161b1cjc1mpp1pfjc.pdf" target="_blank">PRAVILNIK O VRSTI SADRŽAJU I NAČINU VOĐENJA EVIDENCIJE BIBLIOTEČKE GRAĐE I BIBLIOTEČKE DOKUMENTACIJE</a></p>
+        <p>Kandidat je dužan za ispit da uradi 30 zapisa monografskih publikacija u testnoj bazi, s tim da za njih ne postoje zapisi ni u lokalnoj, ni u uzajamnoj, ni u seminarskoj, i niti u bilo kojoj bazi u sistemu COBISS.\n\n</p>
 [/0][1]<p>The National Library of Montenegro as the parent library in Montenegro, take care of the training of personnel for carrying out library activities and provides professional assistance to librarians of all Montenegrin libraries.</p>\n\n
         <p>The National Library organizes seminars and workshops in all domains of librarianship, information science and digitization for librarians in Montenegro.</p>\n\n
         <p>At the National Library, after the completion of training for work in the COBISS system, library technicians and librarians can acquire a license to work in the program segment COBISS, that is, permission to create records in the shared bibliographic database COBIB.CG.</p>\n\n
@@ -719,17 +715,21 @@
         <p>The task for the Commission is to consider the fulfillment of the conditions of the applicant for the license and to propose the license issuing to the National Library in accordance with Article 10 of the Rulebook on Detailed Conditions and Method of Issuing Cooperative Cataloguing License.</p>\n\n
         <p>The applicant is required to take the exam and make 30 records of monographs in the test base, provided that there are no records for them either in local, shared or seminar base, or in any other database in the COBISS system.</p>\n\n
         <p>The payments for Commission members are regulated with the NLM price list. The costs are borne by the employer library of the applicant or by the applicant himself.</p>\n\n
-        <p><a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/ZAKON-O-BIBLIOTE%C4%8CKOJ-DJELATNOSTI.pdf">LAW ON LIBRARY PRACTICE</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-BLIZIM-USLOVIMA-I-NACINU-VRSENJA-MATICNE-DJELATNOSTI.pdf">RULEBOOK ON DETAILED CONDITIONS AND METHOD OF PERFORMING PARENT LIBRARY ACTIVITIES</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-BLI%C5%BDIM-USLOVIMA-ZA-OBAVLJANJE-BIBLIOTE%C4%8CKE-DJELATNOSTI.pdf">RULEBOOK ON DETAILED CONDITIONS FOR PERFORMING LIBRARY ACTIVITIES</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-SADR%C5%BDAJU-I-NA%C4%8CINU-VODJENJA-REGISTRA-BIBLIOTEKA.pdf">RULEBOOK ON THE CONTENT AND METHOD OF KEEPING THE LIBRARIES REGISTRIES</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-MJERAMA-ZA-%C4%8CUVANJE-I-ZA%C5%A0TITU-BIBLIOTE%C4%8CKE-GRA%C4%90E.pdf">RULEBOOK ON PREVENTING MEASURES FOR PRESERVATION AND PROTECTION OF LIBRARY MATERIALS </a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-NACIONALNIM-STANDARDIMA-I-STRU%C4%8CNIM-UPUTSTVIMA-ZA-OBRADU-BIBLIOTE%C4%8CKE-GRA%C4%90E.pdf">RULEBOOK ON THE NATIONAL STANDARDS AND PROFESSIONAL GUIDELINES FOR PROCESSING OF LIBRARY MATERIALS</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-NACIONALNIM-STANDARDIMA-ZA-DIGITALIZACIJU-BIBLIOTE%C4%8CKE-GRA%C4%90E.pdf">RULEBOOK ON THE NATIONAL DIGITIZATION STANDARDS FOR LIBRARY MATERIALS</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-POSTUPKU-ROKOVIMA-I-NA%C4%8CINU-VR%C5%A0ENJA-REVIZIJE-BIBLIOTE%C4%8CKIH-FONDOVA.pdf">RULEBOOK ON PROCEDURES, DEADLINES AND METHOD OF AUDITING THE LIBRARY FUNDS</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-BLI%C5%BDIM-USLOVIMA-I-NA%C4%8CINU-IZDAVANJA-LICENCE-ZA-UZAJAMNU-KATALOGIZACIJU.pdf">RULEBOOK ON DETAILED CONDITIONS AND METHOD OF ISSUING COOPERATIVE CATALOGUING LICENSE</a>\n\n
-            <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-VRSTI-I-STEPENU-STRU%C4%8CNE-SPREME-PROGRAMU-I-NA%C4%8CINU-POLAGANJA-STRU%C4%8CNOG-ISPITA-I-STRU%C4%8CNIM-ZVANJIMA.pdf"> RULEBOOK ON THE TYPE AND LEVEL OF QUALIFICATION, PROGRAM AND METHOD OF TAKING THE PROFESSIONAL EXAMINATION AND PROFESSIONAL TITLES</a>\n\n
-        <a href="http://cnb.mikro.bildhosting.me/wp-content/uploads/2014/10/PRAVILNIK-O-VRSTI-SADR%C5%BDAJU-I-NA%C4%8CINU-VO%C4%90ENJA-EVIDENCIJE-BIBLIOTE%C4%8CKE-GRA%C4%90E-I-BIBLIOTE%C4%8CKE-DOKUMENTACIJE.pdf">RULEBOOK ON TYPE, CONTENT AND METHOD OF KEEPING RECORDS OF LIBRARY MATERIALS AND LIBRARY DOCUMENTATION</a></p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+        [/1][2][/2][3][/3][4][/4][5][/5]</string>
+
+
+    <string name="str_bibliotekari_link1">[0]ZAKON O BIBLIOTEČKOJ DJELATNOSTI[/0][1]LAW ON LIBRARY PRACTICE[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link2">[0]PRAVILNIK O BLIZIM USLOVIMA I NACINU VRSENJA MATICNE DJELATNOSTI[/0][1]RULEBOOK ON DETAILED CONDITIONS AND METHOD OF PERFORMING PARENT LIBRARY ACTIVITIES[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link3">[0]PRAVILNIK O BLIŽIM USLOVIMA ZA OBAVLJANJE BIBLIOTEČKE DJELATNOSTI[/0][1]RULEBOOK ON DETAILED CONDITIONS FOR PERFORMING LIBRARY ACTIVITIES[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link4">[0]PRAVILNIK O SADRŽAJU I NAČINU VODJENJA REGISTRA BIBLIOTEKA[/0][1]RULEBOOK ON THE CONTENT AND METHOD OF KEEPING THE LIBRARIES REGISTRIES[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link5">[0]PRAVILNIK O MJERAMA ZA ČUVANJE I ZAŠTITU BIBLIOTEČKE GRAĐE[/0][1]RULEBOOK ON PREVENTING MEASURES FOR PRESERVATION AND PROTECTION OF LIBRARY MATERIALS [/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link6">[0]PRAVILNIK O NACIONALNIM STANDARDIMA I STRUČNIM UPUTSTVIMA ZA OBRADU BIBLIOTEČKE GRAĐE[/0][1]RULEBOOK ON THE NATIONAL STANDARDS AND PROFESSIONAL GUIDELINES FOR PROCESSING OF LIBRARY MATERIALS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link7">[0]PRAVILNIK O NACIONALNIM STANDARDIMA ZA DIGITALIZACIJU BIBLIOTEČKE GRAĐE[/0][1]RULEBOOK ON THE NATIONAL DIGITIZATION STANDARDS FOR LIBRARY MATERIALS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link8">[0]PRAVILNIK O POSTUPKU ROKOVIMA I NAČINU VRŠENJA REVIZIJE BIBLIOTEČKIH FONDOVA[/0][1]RULEBOOK ON PROCEDURES, DEADLINES AND METHOD OF AUDITING THE LIBRARY FUNDS[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link9">[0]PRAVILNIK BLIŽIM USLOVIMA I NAČINU IZDAVANJA LICENCE ZA UZAJAMNU KATALOGIZACIJU[/0][1]RULEBOOK ON DETAILED CONDITIONS AND METHOD OF ISSUING COOPERATIVE CATALOGUING LICENSE[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link10">[0]PRAVILNIK O VRSTI I STEPENU STRUČNE SPREME, PROGRAMU I NAČINU POLAGANJA STRUČNOG ISPITA I STRUČNIM ZVANJIMA[/0][1]RULEBOOK ON THE TYPE AND LEVEL OF QUALIFICATION, PROGRAM AND METHOD OF TAKING THE PROFESSIONAL EXAMINATION AND PROFESSIONAL TITLES[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_bibliotekari_link11">[0]PRAVILNIK O VRSTI SADRŽAJU I NAČINU VOĐENJA EVIDENCIJE BIBLIOTEČKE GRAĐE I BIBLIOTEČKE DOKUMENTACIJE[/0][1]RULEBOOK ON TYPE, CONTENT AND METHOD OF KEEPING RECORDS OF LIBRARY MATERIALS AND LIBRARY DOCUMENTATION[/1][2][/2][3][/3][4][/4][5][/5]</string>
+
     <!-- endregion Za Bibliotekare -->
 
     <!-- endregion Usluge -->
@@ -916,19 +916,19 @@
     <string name="str_djelatnost_title">[0]Izdavačka djelatnost NBCG[/0][1]Publishing Activity of NLM[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_djelatnost_body">[0]<p>Nacionalna biblioteka ima sopstvenu, bogatu izdavačku produkciju sa prepoznatljivim edicijama i naslovima iz domena bibliotečko-informacionih nauka, bibliografije i kulturne istorije Crne Gore.</p>\n\n
         <p>Naslovi iz izdavačke produkcije Nacionalne biblioteke izlaze u okviru sedam zasebnih edicija:</p>\n\n
-        <ul><li>Fototipska izdanja</li>\n\n
-            <li>Posebna izdanja</li>\n\n
-            <li>Bibliografija</li>\n\n
-            <li>Bio-bibliografija</li>\n\n
-            <li>Serijske publikacije</li>\n\n
-            <li>KataloziPriručnici </li></ul>[/0]
+        <ul><li>•Fototipska izdanja</li>\n\n
+            <li>•Posebna izdanja</li>\n\n
+            <li>•Bibliografija</li>\n\n
+            <li>•Bio-bibliografija</li>\n\n
+            <li>•Serijske publikacije</li>\n\n
+            <li>•KataloziPriručnici </li></ul>[/0]
         [1]<p>The National Library of Montenegro “Đurđe Crnojević” has its own rich publishing production with recognizable editions and titles in the field of library and information sciences, bibliography and cultural history of Montenegro.</p><p>Titles from the National Library’s publishing production come forth within seven separate editions:</p>\n\n
-        <ul><li>Phototype Editions</li>\n\n
-            <li>Special Editions</li>\n\n
-            <li>Bibliography</li>\n\n
-            <li>Bio-bibliography</li>\n\n
-            <li>SerialsCatalogues</li>\n\n
-            <li>Handbooks </li></ul>[/1][2][/2][3][/3][4][/4][5][/5]</string>
+        <ul><li>•Phototype Editions</li>\n\n
+            <li>•Special Editions</li>\n\n
+            <li>•Bibliography</li>\n\n
+            <li>•Bio-bibliography</li>\n\n
+            <li>•SerialsCatalogues</li>\n\n
+            <li>•Handbooks</li></ul>[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--endregion Izdavačka djelatnost NBCG -->
 

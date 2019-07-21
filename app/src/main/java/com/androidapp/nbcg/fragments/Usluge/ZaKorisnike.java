@@ -87,6 +87,12 @@ public class ZaKorisnike extends Fragment {
             imageButtonHandlerWeb(ApiUrls.ZA_KORISNIKE_LN_MNE, R.id.vb_btn_ln);
         }
 
+        buttonHandlerWeb(ApiUrls.ZA_KORINISKE_LINK1, R.id.link1);
+        buttonHandlerWeb(ApiUrls.ZA_KORINISKE_LINK2, R.id.link2);
+        buttonHandlerWeb(ApiUrls.ZA_KORINISKE_LINK3, R.id.link3);
+        buttonHandlerWeb(ApiUrls.ZA_KORINISKE_LINK4, R.id.link4);
+        buttonHandlerWeb(ApiUrls.ZA_KORINISKE_LINK5, R.id.link5);
+
         v_flipper = (ViewFlipper)mView.findViewById(R.id.v_flipper_za_korisnike);
         for(int i=0; i<images.length; i++){
             flip_image(images[i]);
@@ -137,14 +143,51 @@ public class ZaKorisnike extends Fragment {
         title.setText(titleStr);
 
 
-        TextView body = (TextView)mView.findViewById(R.id.vb_body);
-        String bodyStr= "";
+        TextView body1 = (TextView)mView.findViewById(R.id.vb_body1);
+        String bodyStr1= "";
         switch (language){
-            case 0: bodyStr = helper.mne(getResources().getString(R.string.str_korisnici_body)); break;
-            case 1: bodyStr = helper.eng(getResources().getString(R.string.str_korisnici_body)); break;
+            case 0: bodyStr1 = helper.mne(getResources().getString(R.string.str_korisnici_body1)); break;
+            case 1: bodyStr1 = helper.eng(getResources().getString(R.string.str_korisnici_body1)); break;
         }
-        body.setText(bodyStr);
+        body1.setText(bodyStr1);
 
+        TextView body2 = (TextView)mView.findViewById(R.id.vb_body2);
+        String bodyStr2= "";
+        switch (language){
+            case 0: bodyStr2 = helper.mne(getResources().getString(R.string.str_korisnici_body2)); break;
+            case 1: bodyStr2 = helper.eng(getResources().getString(R.string.str_korisnici_body2)); break;
+        }
+        body2.setText(bodyStr2);
+
+        TextView body3 = (TextView)mView.findViewById(R.id.vb_body3);
+        String bodyStr3= "";
+        switch (language){
+            case 0: bodyStr3 = helper.mne(getResources().getString(R.string.str_korisnici_body3)); break;
+            case 1: bodyStr3 = helper.eng(getResources().getString(R.string.str_korisnici_body3)); break;
+        }
+        body3.setText(bodyStr3);
+
+
+        Button btn1 = (Button)mView.findViewById(R.id.link3);
+        if(language == 1){
+            btn1.setVisibility(View.GONE);
+        }
+
+        Button btn2 = (Button)mView.findViewById(R.id.link4);
+        String btn2Str= "";
+        switch (language){
+            case 0: btn2Str = helper.mne(getResources().getString(R.string.str_korisnici_btn2)); break;
+            case 1: btn2Str = helper.eng(getResources().getString(R.string.str_korisnici_btn2)); break;
+        }
+        btn2.setText(btn2Str);
+
+        Button btn3 = (Button)mView.findViewById(R.id.link5);
+        String btn3Str= "";
+        switch (language){
+            case 0: btn3Str = helper.mne(getResources().getString(R.string.str_korisnici_btn3)); break;
+            case 1: btn3Str = helper.eng(getResources().getString(R.string.str_korisnici_btn3)); break;
+        }
+        btn3.setText(btn3Str);
 
 
         TextView podjeli = (TextView)mView.findViewById(R.id.podjeli);

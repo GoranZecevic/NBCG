@@ -294,6 +294,30 @@ public class ApiUrls {
     public static final String MUZICKA = "http://dlib.me/zbirka.php?z=muzicka-i-video-gradja";
     public static final String TEMATSKE = "http://dlib.me/zbirka.php?z=tematske-zbirke";
 
+    public static final String ZA_KORINISKE_LINK1 = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001";
+    public static final String ZA_KORINISKE_LINK2 = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib";
+    public static final String ZA_KORINISKE_LINK3 = "https://www.nb-cg.me/fajlovi/p1d686a79l1b0316ei1l111t5o9ej5.pdf";
+    public static final String ZA_KORINISKE_LINK4 = "https://www.nb-cg.me/fajlovi/p1d686a79l1f4i14svlkkk0jmge4.pdf";
+    public static final String ZA_KORINISKE_LINK5 = "https://www.nb-cg.me/fajlovi/p1d6kvge0mg3bumsc351hta16vr4.pdf";
+
+    public static final String ZA_IZADVACE_LINK1 = "https://www.nb-cg.me/fajlovi/p1d5ohho0q1dvg14vm12131b5n1gfo5.pdf";
+    public static final String ZA_IZADVACE_LINK2 = "https://www.nb-cg.me/fajlovi/p1d5ohho0p19661hjsdrillj13bh4.docx";
+    public static final String ZA_IZADVACE_LINK3 = "https://www.nb-cg.me/fajlovi/p1d5ohsgm6t6fq0p1fvd17l6pm05.pdf";
+    public static final String ZA_IZADVACE_LINK4 = "https://www.nb-cg.me/fajlovi/p1d5ohsgm510u541q28v9aq58d4.pdf";
+    public static final String ZA_IZADVACE_LINK5 = "https://www.nb-cg.me/fajlovi/p1d5ohsgm71sfm1imp62cl6qlgc6.pdf";
+
+    public static final String ZA_BIBLIOTEKARE_LINK1 = "https://www.nb-cg.me/fajlovi/p1d5ohsgm6t6fq0p1fvd17l6pm05.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK2 = "https://www.nb-cg.me/fajlovi/p1d5oj8nm99do13o219118lmcnj5.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK3 = "https://www.nb-cg.me/fajlovi/p1d5okgr3v124l12b319s2ka713uf4.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK4 = "https://www.nb-cg.me/fajlovi/p1d5ok705qn3nke6sei12vsb05.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK5 = "https://www.nb-cg.me/fajlovi/p1d5ok705q1ttr9s21naf130iauq6.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK6 = "https://www.nb-cg.me/fajlovi/p1d5ok705qn4r1rqeas7m64cku7.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK7 = "https://www.nb-cg.me/fajlovi/p1d5ok705q6j5193qak116bf1f288.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK8 = "https://www.nb-cg.me/fajlovi/p1d5ok705r2kk1a1r1mn9qin1c0j9.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK9 = "https://www.nb-cg.me/fajlovi/p1d5ok705rnuhlte191r17na1g8la.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK10 = "https://www.nb-cg.me/fajlovi/p1d5ok705r1n0q17uieeopeb186vb.pdf";
+    public static final String ZA_BIBLIOTEKARE_LINK11 = "https://www.nb-cg.me/fajlovi/p1d5ok705r1me1161b1cjc1mpp1pfjc.pdf";
+
 
 
 
