@@ -167,8 +167,8 @@ public class KontaktEmail extends Fragment {
         EditText question = (EditText) mView.findViewById(R.id.pitanje);
         String questionStr= "";
         switch (MainActivity.lang){
-            case 0: questionStr = helper.mne(getResources().getString(R.string.str_question_title)); break;
-            case 1: questionStr = helper.eng(getResources().getString(R.string.str_question_title)); break;
+            case 0: questionStr = helper.mne(getResources().getString(R.string.str_question)); break;
+            case 1: questionStr = helper.eng(getResources().getString(R.string.str_question)); break;
         }
         question.setHint(questionStr);
 

@@ -153,6 +153,8 @@ public class Pocetna extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+
+
     public void textPopulate(){
 
         Button pocetnaBtn =(Button) mView.findViewById(R.id.o_nama_title);

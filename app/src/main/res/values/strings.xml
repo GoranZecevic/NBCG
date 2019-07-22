@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">NBCG</string>
+    <string name="app_name">Nacionalna biblioteka Crne Gore - Đurđe Crnojević</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="str_izlaz">[0]Da li želite da napustite aplikaciju?[/0][1]Do you want to exit this application?[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_da">[0]Da[/0][1]Yes[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_ne">[0]Ne[/0][1]No[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <string name="str_podelite">[0]PODJELITE[/0][1]SHARE[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
@@ -986,6 +989,7 @@
     <string name="str_surname_title">[0]Prezime[/0][1]Surname[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_emails_title">[0]Email[/0][1]Email[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_phone_title">[0]Telefon[/0][1]Phone[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_question">[0]Pitanje[/0][1]Question[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_question_title">[0]POŠALJI[/0][1]SEND[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_address_title">[0]Adresa[/0][1]Address[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_poruci_title">[0]PORUČI[/0][1]ORDER IT[/1][2][/2][3][/3][4][/4][5][/5]</string>

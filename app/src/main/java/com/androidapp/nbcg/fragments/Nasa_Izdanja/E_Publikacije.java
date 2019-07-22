@@ -146,7 +146,7 @@ public class E_Publikacije extends Fragment {
 
                                 String fajl = hit.getString("FAJL");
                                 fajl = ApiUrls.GET_PICTURES + fajl;
-                                System.out.println("Fajl: "+ fajl);
+//                                System.out.println("Fajl: "+ fajl);
 
 //                                System.out.println(" ");
 

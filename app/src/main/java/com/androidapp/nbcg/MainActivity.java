@@ -2,8 +2,10 @@ package com.androidapp.nbcg;
 
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.view.menu.MenuBuilder;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -65,6 +67,11 @@ public class MainActivity extends AppCompatActivity
     public static int lang = 0;
 
     private Helpers helper = new Helpers();
+
+    private String izlaz;
+
+    private String yes;
+    private String no;
 
     //region menu main titles
     private String str_pocetna;
@@ -176,9 +183,37 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+
         } else {
-            super.onBackPressed();
+//            super.onBackPressed();
+            int count = getSupportFragmentManager().getBackStackEntryCount();
+
+            if (count == 0) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle(R.string.app_name);
+                builder.setIcon(R.mipmap.ic_launcher);
+                builder.setMessage(izlaz)
+                        .setCancelable(false)
+                        .setPositiveButton(yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                finish();
+                            }
+                        })
+                        .setNegativeButton(no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+                System.out.println("Usao 1");
+            } else {
+                System.out.println("Usao 2");
+                getSupportFragmentManager().popBackStack();
+            }
         }
+
+
     }
 
     @SuppressLint("RestrictedApi")
@@ -678,6 +713,11 @@ public class MainActivity extends AppCompatActivity
     public void textPopulate(){
         switch (lang){
             case 0:
+                izlaz = helper.mne(getResources().getString(R.string.str_izlaz));
+
+                yes = helper.mne(getResources().getString(R.string.str_da));
+                no = helper.mne(getResources().getString(R.string.str_ne));
+
                 str_pocetna = helper.mne(getResources().getString(R.string.title_pocetna));
                 str_o_nama = helper.mne(getResources().getString(R.string.title_o_nama));
                 str_katalozi = helper.mne(getResources().getString(R.string.title_katalozi));
@@ -724,6 +764,12 @@ public class MainActivity extends AppCompatActivity
                 str_epub = helper.mne(getResources().getString(R.string.str_e_publikacije_title));
             break;
             case 1:
+
+                izlaz = helper.eng(getResources().getString(R.string.str_izlaz));
+
+                yes = helper.eng(getResources().getString(R.string.str_da));
+                no = helper.eng(getResources().getString(R.string.str_ne));
+
                 str_pocetna = helper.eng(getResources().getString(R.string.title_pocetna));
                 str_o_nama = helper.eng(getResources().getString(R.string.title_o_nama));
                 str_katalozi = helper.eng(getResources().getString(R.string.title_katalozi));
@@ -774,4 +820,5 @@ public class MainActivity extends AppCompatActivity
 
 
     }
+
 }
