@@ -32,12 +32,10 @@ public class Objekti extends Fragment {
             R.drawable.objekti1,
             R.drawable.objekti3,
             R.drawable.objekti4,
-            R.drawable.objekti5,
             R.drawable.objekti6,
             R.drawable.objekti7,
             R.drawable.objekti8,
             R.drawable.objekti9,
-            R.drawable.objekti11,
             R.drawable.objekti12
     };
 

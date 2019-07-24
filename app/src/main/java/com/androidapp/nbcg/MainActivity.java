@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.view.menu.MenuBuilder;
+import android.util.Size;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -185,7 +186,6 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
 
         } else {
-//            super.onBackPressed();
             int count = getSupportFragmentManager().getBackStackEntryCount();
 
             if (count == 0) {
@@ -206,9 +206,13 @@ public class MainActivity extends AppCompatActivity
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
-                System.out.println("Usao 1");
+                Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
+                nbutton.setBackgroundColor(Color.parseColor("#c8a049"));
+                nbutton.setTextColor(Color.parseColor("#333333"));
+                Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+                pbutton.setBackgroundColor(Color.parseColor("#333333"));
+                pbutton.setTextColor(Color.parseColor("#c8a049"));
             } else {
-                System.out.println("Usao 2");
                 getSupportFragmentManager().popBackStack();
             }
         }

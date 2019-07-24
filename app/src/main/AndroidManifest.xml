@@ -22,7 +22,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".SplashActivity"
-            android:label="@string/str_pocetna"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
