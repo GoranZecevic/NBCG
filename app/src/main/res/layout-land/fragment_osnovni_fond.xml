@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayoutZaIzdavaceeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.Kolekcije.OsnovniFond">
+
+
+
+
+        <ScrollView
+            android:id="@+id/home_scroll"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/fragment_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+
+                    <Button
+                        android:id="@+id/o_nama_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/kolekcija"
+                        android:text="@string/str_za_korisnike_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/over_txt_size"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/str_za_izdavace_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
+                    android:paddingTop="@dimen/v8"
+                    android:paddingBottom="@dimen/v8"
+                    android:text="subt_osnovni"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/title_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+
+                <FrameLayout
+                    android:id="@+id/v_flipper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/str_za_izdavace_title"
+                    tools:ignore="MissingConstraints">
+
+
+                    <ViewFlipper
+                        android:id="@+id/v_flipper_istorija"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></ViewFlipper>
+
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/vb_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="subt_osnovni"
+                    android:textColor="@color/cardview_dark_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_flipper" />
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body">
+
+                    <TextView
+                        android:id="@+id/podjeli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/v8"
+                        android:paddingBottom="@dimen/v8"
+                        android:background="@color/gold"
+                        android:text="PODELITE"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/vb_btn_fb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/ic_social_facebook_circular_button"
+                        android:textSize="@dimen/over_txt_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/vb_btn_tw"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/podjeli" />
+
+                    <ImageButton
+                        android:id="@+id/vb_btn_tw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/ic_social_twitter_circular_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/vb_btn_ln"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/vb_btn_fb"
+                        app:layout_constraintTop_toBottomOf="@+id/podjeli" />
+
+                    <ImageButton
+                        android:id="@+id/vb_btn_ln"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/ic_social_linkedin_circular_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/vb_btn_tw"
+                        app:layout_constraintTop_toBottomOf="@+id/podjeli" />
+
+                </android.support.constraint.ConstraintLayout>
+
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
