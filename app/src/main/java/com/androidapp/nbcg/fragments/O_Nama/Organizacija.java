@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -52,6 +53,8 @@ public class Organizacija extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+    LottieAnimationView lottieAnimationView;
+
     public Organizacija() {
     }
 
@@ -70,6 +73,12 @@ public class Organizacija extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_organizacija, container, false);
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         textPopulate();
 
@@ -153,6 +162,7 @@ public class Organizacija extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        lottieAnimationView.setVisibility(View.GONE);
                         helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });

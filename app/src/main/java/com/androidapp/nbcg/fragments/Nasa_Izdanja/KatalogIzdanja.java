@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -83,6 +84,9 @@ public class KatalogIzdanja extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+
+    LottieAnimationView lottieAnimationView;
+
     public KatalogIzdanja() {
     }
 
@@ -102,6 +106,12 @@ public class KatalogIzdanja extends Fragment {
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja, null);
         textPopulate();
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         getActionBar().setTitle(katalogIzdanja);
 
@@ -226,6 +236,7 @@ public class KatalogIzdanja extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        lottieAnimationView.setVisibility(View.GONE);
                         helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });

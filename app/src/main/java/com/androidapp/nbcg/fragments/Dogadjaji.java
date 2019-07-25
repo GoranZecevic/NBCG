@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -86,6 +87,8 @@ public class Dogadjaji extends Fragment {
 
     private FloatingActionButton btnFilter;
 
+    LottieAnimationView lottieAnimationView;
+
 
     public Dogadjaji() {
     }
@@ -107,6 +110,12 @@ public class Dogadjaji extends Fragment {
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_dogadjaji, null);
         textPopulate();
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         getActionBar().setTitle(dogadjaji);
 
@@ -229,6 +238,7 @@ public class Dogadjaji extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        lottieAnimationView.setVisibility(View.GONE);
                         helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -48,6 +49,9 @@ public class E_Publikacije extends Fragment {
     private RequestQueue requestQueue;
     private View mView;
 
+
+    LottieAnimationView lottieAnimationView;
+
     private OnFragmentInteractionListener mListener;
 
     public E_Publikacije() {
@@ -69,6 +73,12 @@ public class E_Publikacije extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_e__publikacije, null);
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
@@ -166,7 +176,9 @@ public class E_Publikacije extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace(); switch (language) {
+                        error.printStackTrace();
+                        lottieAnimationView.setVisibility(View.GONE);
+                        switch (language) {
                             case 0:
                                 noConnectionTitle = "Nema interneta!";
                                 noConnectionBody = "Kako bi preuzeli E-Publikacije potrebna Vam je internet konekcija!";

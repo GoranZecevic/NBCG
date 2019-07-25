@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -47,6 +48,9 @@ public class JavneNabavkeLista extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+
+    LottieAnimationView lottieAnimationView;
+
     public JavneNabavkeLista() {
     }
 
@@ -65,6 +69,12 @@ public class JavneNabavkeLista extends Fragment {
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_javne_nabavke_lista, container, false);
         textPopulate();
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         arrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(this.getContext());
@@ -117,6 +127,7 @@ public class JavneNabavkeLista extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        lottieAnimationView.setVisibility(View.GONE);
                         helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });
