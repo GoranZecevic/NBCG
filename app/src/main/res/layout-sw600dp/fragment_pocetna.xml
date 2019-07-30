@@ -7,73 +7,20 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light">
 
-    <FrameLayout
-        android:id="@+id/top"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
 
-
-        <Button
-            android:id="@+id/o_nama_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/pocetna"
-            android:text="@string/str_za_korisnike_title"
-            android:textColor="@color/white"
-            android:textSize="@dimen/over_txt_size"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/str_home_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/v8"
-        android:layout_marginStart="@dimen/v8"
-        android:layout_marginLeft="@dimen/v8"
-        android:layout_marginRight="@dimen/v8"
-        android:layout_marginEnd="@dimen/v8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top">
-
-        <TextView
-            android:id="@+id/str_home_title_inner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            android:text="@string/str_home_title"
-            android:textAlignment="center"
-            android:textColor="@color/gold"
-            android:textSize="@dimen/title_size"
-            android:paddingTop="@dimen/v16"
-            android:paddingBottom="@dimen/v16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_container"/>
-    </FrameLayout>
 
 
     <ScrollView
         android:id="@+id/home_scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/v8"
         android:layout_marginLeft="@dimen/v8"
         android:layout_marginRight="@dimen/v8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/str_home_title"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
         <android.support.constraint.ConstraintLayout
@@ -81,19 +28,75 @@
             android:layout_height="match_parent">
 
             <FrameLayout
-                android:id="@+id/fragment_container"
+                android:id="@+id/top"
                 android:layout_width="0dp"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints">
 
 
+                <Button
+                    android:id="@+id/o_nama_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pocetna"
+                    android:text="@string/str_za_korisnike_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/over_txt_size"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/str_home_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v8"
+                android:layout_marginStart="@dimen/v8"
+                android:layout_marginLeft="@dimen/v8"
+                android:layout_marginRight="@dimen/v8"
+                android:layout_marginEnd="@dimen/v8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top">
+
+                <TextView
+                    android:id="@+id/str_home_title_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/str_home_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/title_size"
+                    android:paddingTop="@dimen/v16"
+                    android:paddingBottom="@dimen/v16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_container"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/str_home_title"
+                tools:ignore="MissingConstraints">
+
+
                 <ViewFlipper
                     android:id="@+id/v_flipper"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></ViewFlipper>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></ViewFlipper>
 
             </FrameLayout>
 
@@ -111,8 +114,8 @@
 
             <Button
                 android:id="@+id/za_korisnike_btn"
-                android:layout_width="match_parent"
-                android:layout_height="450dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/v24"
                 android:layout_marginBottom="@dimen/v8"
                 android:background="@drawable/zakorisnike"
@@ -121,6 +124,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/over_txt_size"
                 app:layout_constraintBottom_toTopOf="@+id/za_korisnike_txt"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/str_home_body" />
 
@@ -153,8 +157,8 @@
 
             <Button
                 android:id="@+id/za_izdavace_btn"
-                android:layout_width="match_parent"
-                android:layout_height="450dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/v8"
                 android:layout_marginLeft="@dimen/v8"
                 android:layout_marginTop="@dimen/v24"
@@ -197,8 +201,8 @@
 
             <Button
                 android:id="@+id/za_bibiliotekare_btn"
-                android:layout_width="match_parent"
-                android:layout_height="450dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/v8"
                 android:layout_marginLeft="@dimen/v8"
                 android:layout_marginTop="@dimen/v24"
@@ -266,6 +270,7 @@
                 android:textColor="@color/cardview_dark_background"
                 android:gravity="left"
                 android:layout_marginTop="@dimen/v8"
+                android:layout_marginLeft="@dimen/v8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dogadjaji_btn" />

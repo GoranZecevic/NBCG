@@ -129,9 +129,6 @@ public class Pocetna extends Fragment {
         return mView;
     }
 
-
-
-
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -148,12 +145,9 @@ public class Pocetna extends Fragment {
         mListener = null;
     }
 
-
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }
-
-
 
     public void textPopulate(){
 
@@ -339,8 +333,6 @@ public class Pocetna extends Fragment {
         posetiteNas.setText(posetiteNasStr);
     }
 
-
-
     // region helpers
     private void newFragment(Fragment fragment){
         Fragment newFragment = fragment;
@@ -395,6 +387,4 @@ public class Pocetna extends Fragment {
             }
         });
     }
-
-
 }

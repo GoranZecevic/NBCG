@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ import android.widget.TextView;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
+import com.androidapp.nbcg.helper.GMailSender;
 import com.androidapp.nbcg.helper.Helpers;
 import com.bumptech.glide.Glide;
 
@@ -41,6 +44,8 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
 
     private Button btnPoruci;
 
+    String link;
+
     private OnFragmentInteractionListener mListener;
 
     public KatalogIzdanjaOpsirnije() {
@@ -61,6 +66,14 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
                              Bundle savedInstanceState) {
         Bundle bundle = getArguments();
 
+        int SDK_INT = android.os.Build.VERSION.SDK_INT;
+        if (SDK_INT > 8)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                    .permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja_opsirnije, null);
         textPopulate();
 
@@ -69,7 +82,7 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
             String naslov  = bundle.getString("naslov");
             String opis = bundle.getString("opis");
             String tekst = bundle.getString("tekst");
-            String link = bundle.getString("link");
+            link = bundle.getString("link");
             double cijena = bundle.getDouble("cijena");
             String tip_naslova = bundle.getString("tip_naslova");
             String fajl = bundle.getString("fajl");
@@ -123,8 +136,20 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
                 else{
                     closeKeyboard();
                     helper.alert(mView.getContext(), questionSendTitle, questionSendBody );
+//                    helper.alert(mView.getContext(), questionSendTitle, link );
 
-                    //TO DO: proslediti podatke na neki call
+                    String subject = " Porudžbina iz kataloga izdanja sa android aplikacije";
+                    String message = "Ime: " + ime + " Prezime: " + prezime + " Telefon: + " + telefon + " Adresa: "
+                            + adresa + " Email: " + email + " Porudžbina: " + link ;
+
+                    try {
+                        GMailSender sender = new GMailSender("djurdjecrnojevicmne@gmail.com",
+                                "Djurdjecrnojevicmne123$");
+                        sender.sendMail(subject, message,
+                                "ne_odgovaraj@email.minmedia.me", "info@nb-cg.me");
+                    } catch (Exception e) {
+                        Log.e("SendMail", e.getMessage(), e);
+                    }
 
                     getFragmentManager().popBackStack();
                 }

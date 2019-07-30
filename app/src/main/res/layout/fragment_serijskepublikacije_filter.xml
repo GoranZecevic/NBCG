@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".fragments.Nasa_Izdanja.KatalogIzdanjas.SerijskepublikacijeFilter">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="data.json"
+        app:lottie_loop="true"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view_katalog_izdanja"

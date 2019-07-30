@@ -220,8 +220,6 @@ public class IzvestajiRada extends Fragment {
                 listaPraznaBody = "Data are missing, please check Your internet connection.";
                 break;
         }
-
-
     }
 
     // region helpers

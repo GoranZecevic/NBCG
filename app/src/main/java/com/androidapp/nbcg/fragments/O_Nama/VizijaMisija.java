@@ -60,7 +60,6 @@ public class VizijaMisija extends Fragment {
             imageButtonHandlerWeb(ApiUrls.VIZIJA_MISIJA_LN_MNE, R.id.vb_btn_ln);
         }
 
-
         return mView;
     }
 

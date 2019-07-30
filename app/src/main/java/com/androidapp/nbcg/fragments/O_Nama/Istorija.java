@@ -160,10 +160,7 @@ public class Istorija extends Fragment {
         }
         podjeli.setText(podjeliStr);
 
-
     }
-
-
 
     // region helpers
     private void newFragment(Fragment fragment){

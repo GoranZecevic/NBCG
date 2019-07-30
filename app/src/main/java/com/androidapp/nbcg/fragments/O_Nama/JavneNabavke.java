@@ -83,9 +83,6 @@ public class JavneNabavke extends Fragment {
 
     }
 
-
-
-
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
@@ -167,8 +164,6 @@ public class JavneNabavke extends Fragment {
 
 
     }
-
-
 
     // region helpers
     private void newFragment(Fragment fragment){

@@ -196,7 +196,6 @@ public class ZaIzdavace extends Fragment {
         }
         podjeli.setText(podjeliStr);
 
-
     }
 
     // region helpers

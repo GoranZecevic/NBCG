@@ -1,9 +1,12 @@
 package com.androidapp.nbcg.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +17,29 @@ import android.widget.TextView;
 
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
+//import com.androidapp.nbcg.helper.GMailSender;
+import com.androidapp.nbcg.helper.GMailSender;
 import com.androidapp.nbcg.helper.Helpers;
+
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+//import javax.mail.Message;
+//import javax.mail.Session;
 
 
 public class KontaktEmail extends Fragment {
@@ -34,8 +59,6 @@ public class KontaktEmail extends Fragment {
 
     Helpers helper = new Helpers();
 
-
-
     public KontaktEmail() {
     }
 
@@ -53,6 +76,14 @@ public class KontaktEmail extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_kontakt_email, container, false);
+
+        int SDK_INT = android.os.Build.VERSION.SDK_INT;
+        if (SDK_INT > 8)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                    .permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         textPopulate();
 
@@ -85,7 +116,17 @@ public class KontaktEmail extends Fragment {
                     closeKeyboard();
                     helper.alertInfo(mView.getContext(), questionSendTitle, questionSendBody );
 
-                    //TO DO: proslediti podatke na neki call
+                    String subject = " Pitanje kontakt forma android aplikacija";
+                    String message = "Ime: " + ime + " Prezime: " + prezime + " Email: " + email + " Telefon: " + telefon + " Pitanje: " + pitanje;
+
+                    try {
+                        GMailSender sender = new GMailSender("djurdjecrnojevicmne@gmail.com",
+                                "Djurdjecrnojevicmne123$");
+                        sender.sendMail(subject, message,
+                                "ne_odgovaraj@email.minmedia.me", "info@nb-cg.me");
+                    } catch (Exception e) {
+                        Log.e("SendMail", e.getMessage(), e);
+                    }
 
                     getFragmentManager().popBackStack();
                 }
@@ -210,4 +251,6 @@ public class KontaktEmail extends Fragment {
             case 1: questionSendBody = helper.eng(getResources().getString(R.string.str_pitanje_prosledjeno_body)); break;
         }
     }
+
 }
+

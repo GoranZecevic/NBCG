@@ -262,7 +262,6 @@ public class ZaBibliotekare extends Fragment {
         }
         podjeli.setText(podjeliStr);
 
-
     }
 
     // region helpers

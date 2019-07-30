@@ -101,68 +101,55 @@ public class E_Publikacije extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = helper.dateConverter(datumod);
-//                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
                                     case 0: naslov = StringUtils.substringBetween(naslov, "[0]", "[/0]"); break;
                                     case 1: naslov = StringUtils.substringBetween(naslov, "[1]", "[/1]"); break;
                                 }
-//                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
                                     case 0: opis = StringUtils.substringBetween(opis, "[0]", "[/0]"); break;
                                     case 1: opis = StringUtils.substringBetween(opis, "[1]", "[/1]"); break;
                                 }
-//                                System.out.println("Opis: "+ opis);
-
 
                                 String tekst = hit.getString("TEKST");
                                 switch (language){
                                     case 0: tekst = StringUtils.substringBetween(tekst, "[0]", "[/0]"); break;
                                     case 1: tekst = StringUtils.substringBetween(tekst, "[1]", "[/1]"); break;
                                 }
-//                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
                                     case 0: link = StringUtils.substringBetween(link, "[0]", "[/0]"); break;
                                     case 1: link = StringUtils.substringBetween(link, "[1]", "[/1]"); break;
                                 }
-//                                System.out.println("Link: "+ link);
 
 
                                 double cijena = hit.getDouble("CIJENA");
-//                                System.out.println("Cijena: "+ cijena);
-
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
                                 switch (language){
                                     case 0: tipNaslova = StringUtils.substringBetween(tipNaslova, "[0]", "[/0]"); break;
                                     case 1: tipNaslova = StringUtils.substringBetween(tipNaslova, "[1]", "[/1]"); break;
                                 }
-//                                System.out.println("Tip naslova: "+ tipNaslova);
 
                                 String fajl = hit.getString("FAJL");
                                 fajl = ApiUrls.GET_PICTURES + fajl;
-//                                System.out.println("Fajl: "+ fajl);
-
-//                                System.out.println(" ");
 
                                 arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova, fajl));
 
                             }
+                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
 
                             adapter = new E_PublikacijeAdapter(mView , arrayList);
 

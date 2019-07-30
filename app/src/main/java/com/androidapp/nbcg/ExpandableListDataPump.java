@@ -24,8 +24,6 @@ import java.util.List;
 
 public class ExpandableListDataPump  {
 
-//    static int language = MainActivity.lang;
-
     private static Context context;
 
     private static Helpers helper = new Helpers();

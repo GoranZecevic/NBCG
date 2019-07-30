@@ -78,6 +78,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/home_scroll">
 
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="data.json"
+            app:lottie_loop="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/share"/>
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view_organizacija"
                 android:layout_width="match_parent"
@@ -92,7 +104,10 @@
 
             </android.support.v7.widget.RecyclerView>
 
+
+
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/share"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"

@@ -708,8 +708,6 @@ public class MainActivity extends AppCompatActivity
                     expandableListView.collapseGroup(previousItem );
                 previousItem = groupPosition;
             }
-
-
         });
 
     }
@@ -820,9 +818,5 @@ public class MainActivity extends AppCompatActivity
                 str_epub = helper.eng(getResources().getString(R.string.str_e_publikacije_title));
             break;
         }
-
-
-
     }
-
 }

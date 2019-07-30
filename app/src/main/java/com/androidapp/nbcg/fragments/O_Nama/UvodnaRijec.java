@@ -32,7 +32,6 @@ public class UvodnaRijec extends Fragment {
     public UvodnaRijec() {
     }
 
-
     public static UvodnaRijec newInstance(String param1, String param2) {
         UvodnaRijec fragment = new UvodnaRijec();
 
@@ -51,7 +50,6 @@ public class UvodnaRijec extends Fragment {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_uvodna_rijec, null);
         textPopulate();
 
-
         Button btnBiografija = (Button)mView.findViewById(R.id.bogic_biografija);
 
         if(language == 1){
@@ -67,8 +65,6 @@ public class UvodnaRijec extends Fragment {
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_MNE, R.id.vb_btn_ln);
             buttonHandlerWeb(ApiUrls.BIOGRAFIJA_BR, R.id.bogic_biografija);
         }
-
-
 
         return mView;
     }
@@ -90,8 +86,6 @@ public class UvodnaRijec extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-
 
     public void textPopulate(){
 
@@ -146,8 +140,6 @@ public class UvodnaRijec extends Fragment {
         }
         biografija.setText(biografijaStr);
     }
-
-
 
     // region helpers
     private void newFragment(Fragment fragment){

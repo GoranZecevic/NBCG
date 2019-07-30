@@ -23,7 +23,6 @@ public class GalerijaZoom extends Fragment {
     private String fajl;
 
     public GalerijaZoom() {
-
     }
 
     public static GalerijaZoom newInstance(String param1, String param2) {

@@ -209,7 +209,7 @@
                     android:id="@+id/poruci_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/v24"
+                    android:layout_marginBottom="@dimen/v8"
                     android:background="@color/gold"
                     android:text="PORUCI"
                     android:textColor="@color/white"

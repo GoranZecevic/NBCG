@@ -2,34 +2,36 @@ package com.androidapp.nbcg.api_urls;
 
 public class ApiUrls {
 
-    public static final String GET_VIJESTI = "http://192.168.0.15/nbcrnegore/get_vijesti.php";
-    public static final String GET_KATALOG_IZDANJA = "http://192.168.0.15/nbcrnegore/get_katalog_izdanja.php";
-    public static final String GET_EPUBLIKACIJE = "http://192.168.0.15/nbcrnegore/get_epublikacije.php";
-    public static final String GET_IZVESTAJI_RADA = "http://192.168.0.15/nbcrnegore/get_izvestaji_rada.php";
-    public static final String GET_PROGRAMI_RADA = "http://192.168.0.15/nbcrnegore/get_programi_rada.php";
-    public static final String GET_PUTNI_NALOZI = "http://192.168.0.15/nbcrnegore/get_putni_nalozi.php";
-    public static final String GET_ANALITICKE_KARTICE = "http://192.168.0.15/nbcrnegore/get_analiticka_kartica.php";
-    public static final String GET_SLIKE = "http://192.168.0.15/nbcrnegore/get_slike.php";
-    public static final String GET_JAVNE_NABAVKE= "http://192.168.0.15/nbcrnegore/get_javnenabavke.php";
-    public static final String GET_ORGANIZACIJA= "http://192.168.0.15/nbcrnegore/get_organizacije.php";
+    private static final String SERVER = "http://www.nb-cg.me/nbcrnegore";
 
-    public static final String GET_VIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_vijesti_filter.php";
-    public static final String GET_NAJAVA_FILTER = "http://192.168.0.15/nbcrnegore/get_najava_filter.php";
-    public static final String GET_IZLOZBA_FILTER = "http://192.168.0.15/nbcrnegore/get_izlozba_filter.php";
-    public static final String GET_PROMOCIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_promocija_filter.php";
-    public static final String GET_POSJETA_FILTER = "http://192.168.0.15/nbcrnegore/get_posjeta_filter.php";
-    public static final String GET_STRUCNISKUP_FILTER = "http://192.168.0.15/nbcrnegore/get_strucniskup_filter.php";
-    public static final String GET_KONCERT_FILTER = "http://192.168.0.15/nbcrnegore/get_koncert_filter.php";
-    public static final String GET_VIRTUELNAIZLOZBA_FILTER = "http://192.168.0.15/nbcrnegore/get_virtuelnaizlozba_filter.php";
-    public static final String GET_OSTALEVIJESTI_FILTER = "http://192.168.0.15/nbcrnegore/get_ostalevijesti_filter.php";
+    public static final String GET_VIJESTI = SERVER + "/get_vijesti.php";
+    public static final String GET_KATALOG_IZDANJA = SERVER + "/get_katalog_izdanja.php";
+    public static final String GET_EPUBLIKACIJE = SERVER + "/get_epublikacije.php";
+    public static final String GET_IZVESTAJI_RADA = SERVER + "/get_izvestaji_rada.php";
+    public static final String GET_PROGRAMI_RADA = SERVER + "/get_programi_rada.php";
+    public static final String GET_PUTNI_NALOZI = SERVER + "/get_putni_nalozi.php";
+    public static final String GET_ANALITICKE_KARTICE = SERVER + "/get_analiticka_kartica.php";
+    public static final String GET_SLIKE = SERVER + "/get_slike.php";
+    public static final String GET_JAVNE_NABAVKE= SERVER + "/get_javnenabavke.php";
+    public static final String GET_ORGANIZACIJA= SERVER + "/get_organizacije.php";
 
-    public static final String GET_FOTOTIPSKA_IZDANJA_FILTER = "http://192.168.0.15/nbcrnegore/get_fototipskaizdanja_filter.php";
-    public static final String GET_POSEBNA_IZDANJA_FILTER = "http://192.168.0.15/nbcrnegore/get_posebnaizdanja_filter.php";
-    public static final String GET_BIBLIOGRAFIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_bibliografija_filter.php";
-    public static final String GET_BIOBIBLIOGRAFIJA_FILTER = "http://192.168.0.15/nbcrnegore/get_biobibliografija_filter.php";
-    public static final String GET_SERIJSKE_PUBLIKACIJE_FILTER = "http://192.168.0.15/nbcrnegore/get_serijskepublikacije_filter.php";
-    public static final String GET_KATALOZI_FILTER = "http://192.168.0.15/nbcrnegore/get_katalozi_filter.php";
-    public static final String GET_PRIRUCNICI_FILTER = "http://192.168.0.15/nbcrnegore/get_prirucnici_filter.php";
+    public static final String GET_VIJESTI_FILTER = SERVER + "/get_vijesti_filter.php";
+    public static final String GET_NAJAVA_FILTER = SERVER + "/get_najava_filter.php";
+    public static final String GET_IZLOZBA_FILTER = SERVER + "/get_izlozba_filter.php";
+    public static final String GET_PROMOCIJA_FILTER = SERVER + "/get_promocija_filter.php";
+    public static final String GET_POSJETA_FILTER = SERVER + "/get_posjeta_filter.php";
+    public static final String GET_STRUCNISKUP_FILTER = SERVER + "/get_strucniskup_filter.php";
+    public static final String GET_KONCERT_FILTER = SERVER + "/get_koncert_filter.php";
+    public static final String GET_VIRTUELNAIZLOZBA_FILTER = SERVER + "/get_virtuelnaizlozba_filter.php";
+    public static final String GET_OSTALEVIJESTI_FILTER = SERVER + "/get_ostalevijesti_filter.php";
+
+    public static final String GET_FOTOTIPSKA_IZDANJA_FILTER = SERVER + "/get_fototipskaizdanja_filter.php";
+    public static final String GET_POSEBNA_IZDANJA_FILTER = SERVER + "/get_posebnaizdanja_filter.php";
+    public static final String GET_BIBLIOGRAFIJA_FILTER = SERVER + "/get_bibliografija_filter.php";
+    public static final String GET_BIOBIBLIOGRAFIJA_FILTER = SERVER + "/get_biobibliografija_filter.php";
+    public static final String GET_SERIJSKE_PUBLIKACIJE_FILTER = SERVER + "/get_serijskepublikacije_filter.php";
+    public static final String GET_KATALOZI_FILTER = SERVER + "/get_katalozi_filter.php";
+    public static final String GET_PRIRUCNICI_FILTER = SERVER + "/get_prirucnici_filter.php";
 
     public static final String GET_DOCUMENTS = "https://www.nb-cg.me/fajlovi/";
     public static final String GET_PICTURES = "https://www.nb-cg.me/tumber.php?src=fajlovi/";
@@ -317,9 +319,5 @@ public class ApiUrls {
     public static final String ZA_BIBLIOTEKARE_LINK9 = "https://www.nb-cg.me/fajlovi/p1d5ok705rnuhlte191r17na1g8la.pdf";
     public static final String ZA_BIBLIOTEKARE_LINK10 = "https://www.nb-cg.me/fajlovi/p1d5ok705r1n0q17uieeopeb186vb.pdf";
     public static final String ZA_BIBLIOTEKARE_LINK11 = "https://www.nb-cg.me/fajlovi/p1d5ok705r1me1161b1cjc1mpp1pfjc.pdf";
-
-
-
-
 
 }

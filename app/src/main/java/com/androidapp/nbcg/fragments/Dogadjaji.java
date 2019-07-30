@@ -149,23 +149,17 @@ public class Dogadjaji extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = datumod.substring(0, datumod.indexOf(" "));
                                 datumod = helper.dateConverter(datumod);
-//                                System.out.println("Datum: "+ datumod);
-
 
                                 String naslov = hit.getString("NASLOV");
-//                                naslov = replacer(naslov);
-//                                naslov =  URLDecoder.decode(naslov, "UTF-8");
                                 switch (language){
                                     case 0: naslov = helper.mne(naslov); break;
                                     case 1:
@@ -174,11 +168,8 @@ public class Dogadjaji extends Fragment {
                                         else naslov = helper.mne(naslov); break;
                                 }
 
-//                                System.out.println("Naslov: "+ naslov);
-
                                 String opis = hit.getString("OPIS");
-//                                opis = replacer(opis);
-//                                opis =  URLDecoder.decode(opis, "UTF-8");
+
                                 switch (language){
                                     case 0: opis = helper.mne(opis); break;
                                     case 1:
@@ -186,12 +177,9 @@ public class Dogadjaji extends Fragment {
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
                                 }
-//                                System.out.println("Opis: "+ opis);
-
 
                                 String description = hit.getString("DESCRIPTION");
-//                                description = replacer(description);
-//                                description =  URLDecoder.decode(description, "UTF-8");
+
                                 switch (language){
                                     case 0: description = helper.mne(description); break;
                                     case 1:
@@ -199,11 +187,10 @@ public class Dogadjaji extends Fragment {
                                         if(!temp.equals("")) description = helper.eng(description);
                                         else description = helper.mne(description); break;
                                 }
-//                                System.out.println("Description: "+ description);
+
 
                                 String tip_novosti = hit.getString("TIP_NOVOSTI");
-//                                tip_novosti = replacer(tip_novosti);
-//                                tip_novosti =  URLDecoder.decode(tip_novosti, "UTF-8");
+
                                 switch (language){
                                     case 0: tip_novosti = helper.mne(tip_novosti); break;
                                     case 1: tip_novosti = helper.eng(tip_novosti); break;
@@ -214,16 +201,14 @@ public class Dogadjaji extends Fragment {
                                     case 0: link = helper.mne(link); break;
                                     case 1: link = helper.eng(link); break;
                                 }
-//                                System.out.println("LInk: "+ link);
 
                                 String fajl = hit.getString("FAJL");
-//                                System.out.println("Fajl: "+ fajl);
-
-//                                System.out.println(" ");
 
                                 arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti, fajl, link));
 
                             }
+
+                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
 
                             adapter = new VijestiAdapter(mView , arrayList);
 
@@ -311,7 +296,6 @@ public class Dogadjaji extends Fragment {
             }
         });
 
-        // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
     }

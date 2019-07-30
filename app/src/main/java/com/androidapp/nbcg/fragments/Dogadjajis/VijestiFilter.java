@@ -139,19 +139,15 @@ public class VijestiFilter extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = datumod.substring(0, datumod.indexOf(" "));
                                 datumod = helper.dateConverter(datumod);
-//                                System.out.println("Datum: "+ datumod);
-
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
@@ -162,8 +158,6 @@ public class VijestiFilter extends Fragment {
                                         else naslov = helper.mne(naslov); break;
                                 }
 
-//                                System.out.println("Naslov: "+ naslov);
-
                                 String opis = hit.getString("OPIS");
                                 switch (language){
                                     case 0: opis = helper.mne(opis); break;
@@ -172,8 +166,6 @@ public class VijestiFilter extends Fragment {
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
                                 }
-//                                System.out.println("Opis: "+ opis);
-
 
                                 String description = hit.getString("DESCRIPTION");
                                 switch (language){
@@ -183,7 +175,6 @@ public class VijestiFilter extends Fragment {
                                         if(!temp.equals("")) description = helper.eng(description);
                                         else description = helper.mne(description); break;
                                 }
-//                                System.out.println("Description: "+ description);
 
                                 String tip_novosti = hit.getString("TIP_NOVOSTI");
                                 switch (language){
@@ -196,12 +187,8 @@ public class VijestiFilter extends Fragment {
                                     case 0: link = helper.mne(link); break;
                                     case 1: link = helper.eng(link); break;
                                 }
-//                                System.out.println("LInk: "+ link);
 
                                 String fajl = hit.getString("FAJL");
-//                                System.out.println("Fajl: "+ fajl);
-
-//                                System.out.println(" ");
 
                                 arrayList.add(new Vijesti(id, datumod, naslov, opis, description, tip_novosti, fajl, link));
 
@@ -227,12 +214,8 @@ public class VijestiFilter extends Fragment {
     }
 
     public void showAlertDialogButtonClicked(View view) {
-
-        // setup the alert builder
         AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
-//        builder.setTitle("Filteri");
 
-        // add a list
         String[] filteri = {vijest, najava, izlozba, promocija, posjeta, strucniSkup, koncert, virtuelnaIzlozba, ostaleVijesti, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
@@ -272,7 +255,6 @@ public class VijestiFilter extends Fragment {
             }
         });
 
-        // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
     }

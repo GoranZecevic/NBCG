@@ -129,25 +129,21 @@ public class Organizacija extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-//                                System.out.println("Id: "+ id);
-
 
                                 String naslov = hit.getString("NASLOV");
                                 naslov = helper.mne(naslov);
 
                                 String fajl = hit.getString("FAJL");
-//                                System.out.println("Fajl: "+ fajl);
-
-//                                System.out.println(" ");
 
                                 arrayList.add(new com.androidapp.nbcg.models.JavneNabavke(id, naslov, fajl ));
                             }
+
+                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
 
                             adapter = new OrganizacijaAdapter(mView , arrayList);
 

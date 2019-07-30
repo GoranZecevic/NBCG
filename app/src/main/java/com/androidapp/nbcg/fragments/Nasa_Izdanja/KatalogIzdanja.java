@@ -146,18 +146,15 @@ public class KatalogIzdanja extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = datumod.substring(0, datumod.indexOf(" "));
                                 datumod = helper.dateConverter(datumod);
-//                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
@@ -168,7 +165,6 @@ public class KatalogIzdanja extends Fragment {
                                         else naslov = helper.mne(naslov); break;
 
                                 }
-//                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
@@ -178,8 +174,6 @@ public class KatalogIzdanja extends Fragment {
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
                                 }
-//                                System.out.println("Opis: "+ opis);
-
 
                                 String tekst = hit.getString("TEKST");
                                 switch (language){
@@ -189,7 +183,6 @@ public class KatalogIzdanja extends Fragment {
                                         if(!temp.equals("")) tekst = helper.eng(tekst);
                                         else tekst = helper.mne(tekst); break;
                                 }
-//                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
@@ -199,29 +192,23 @@ public class KatalogIzdanja extends Fragment {
                                         if(!temp.equals("")) link = helper.eng(link);
                                         else link = helper.mne(link); break;
                                 }
-//                                System.out.println("Link: "+ link);
-
 
                                 double cijena = hit.getDouble("CIJENA");
-//                                System.out.println("Cijena: "+ cijena);
-
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
                                 switch (language){
                                     case 0: tipNaslova = helper.mne(tipNaslova); break;
                                     case 1: tipNaslova = helper.eng(tipNaslova); break;
                                 }
-//                                System.out.println("Tip naslova: "+ tipNaslova);
 
                                 String fajl = hit.getString("FAJL");
                                 fajl = fajl;
-//                                System.out.println("Fajl: "+ fajl);
-
-//                                System.out.println(" ");
 
                                 arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova, fajl));
 
                             }
+
+                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
 
                             adapter = new KatalogIzdanjaAdapter(mView , arrayList);
 
@@ -245,11 +232,9 @@ public class KatalogIzdanja extends Fragment {
 
     public void showAlertDialogButtonClicked(View view) {
 
-        // setup the alert builder
         AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
         builder.setTitle(filteri);
 
-        // add a list
         String[] filteri = {fototipskaIzdanja, posebnaIzdanaj, bibliografija, bioBibliografija, serijskePublikacije, katalozi, prirucnici, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
@@ -284,7 +269,6 @@ public class KatalogIzdanja extends Fragment {
             }
         });
 
-        // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
     }

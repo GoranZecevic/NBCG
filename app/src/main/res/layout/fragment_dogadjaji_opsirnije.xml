@@ -60,6 +60,7 @@
                 app:layout_constraintStart_toEndOf="@+id/opsirnije_datumod"
                 app:layout_constraintTop_toBottomOf="@+id/opsirnije_naslov" />
 
+
             <ImageView
                 android:id="@+id/opsirnije_dogadjaji_img"
                 android:layout_width="match_parent"

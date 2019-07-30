@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -67,6 +68,8 @@ public class BibliografijaFilter extends Fragment {
 
     private FloatingActionButton btnFilter;
 
+    LottieAnimationView lottieAnimationView;
+
     private com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanja.OnFragmentInteractionListener mListener;
 
     public BibliografijaFilter() {
@@ -88,6 +91,12 @@ public class BibliografijaFilter extends Fragment {
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_bibliografija_filter, null);
         textPopulate();
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         getActionBar().setTitle(katalogIzdanja);
 
@@ -121,18 +130,15 @@ public class BibliografijaFilter extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("server_response");
-//                            System.out.println("Response: "+ response);
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 int id =  hit.getInt("ID");
-//                                System.out.println("Id: "+ id);
 
                                 String datumod = hit.getString("DATUMOD");
                                 datumod = datumod.substring(0, datumod.indexOf(" "));
                                 datumod = helper.dateConverter(datumod);
-//                                System.out.println("Datum: "+ datumod);
 
                                 String naslov = hit.getString("NASLOV");
                                 switch (language){
@@ -143,7 +149,6 @@ public class BibliografijaFilter extends Fragment {
                                         else naslov = helper.mne(naslov); break;
 
                                 }
-//                                System.out.println("Naslov: "+ naslov);
 
                                 String opis = hit.getString("OPIS");
                                 switch (language){
@@ -153,8 +158,6 @@ public class BibliografijaFilter extends Fragment {
                                         if(!temp.equals("")) opis = helper.eng(opis);
                                         else opis = helper.mne(opis); break;
                                 }
-//                                System.out.println("Opis: "+ opis);
-
 
                                 String tekst = hit.getString("TEKST");
                                 switch (language){
@@ -164,7 +167,6 @@ public class BibliografijaFilter extends Fragment {
                                         if(!temp.equals("")) tekst = helper.eng(tekst);
                                         else tekst = helper.mne(tekst); break;
                                 }
-//                                System.out.println("Tekst: "+ tekst);
 
                                 String link = hit.getString("LINK");
                                 switch (language){
@@ -174,29 +176,22 @@ public class BibliografijaFilter extends Fragment {
                                         if(!temp.equals("")) link = helper.eng(link);
                                         else link = helper.mne(link); break;
                                 }
-//                                System.out.println("Link: "+ link);
-
 
                                 double cijena = hit.getDouble("CIJENA");
-//                                System.out.println("Cijena: "+ cijena);
-
 
                                 String tipNaslova = hit.getString("TIPOVI_NASLOV");
                                 switch (language){
                                     case 0: tipNaslova = helper.mne(tipNaslova); break;
                                     case 1: tipNaslova = helper.eng(tipNaslova); break;
                                 }
-//                                System.out.println("Tip naslova: "+ tipNaslova);
 
                                 String fajl = hit.getString("FAJL");
                                 fajl = fajl;
-//                                System.out.println("Fajl: "+ fajl);
-
-//                                System.out.println(" ");
 
                                 arrayList.add(new com.androidapp.nbcg.models.KatalogIzdanja(id, datumod, naslov, opis, tekst, link, cijena, tipNaslova, fajl));
 
                             }
+                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
 
                             adapter = new KatalogIzdanjaAdapter(mView , arrayList);
 
@@ -211,6 +206,7 @@ public class BibliografijaFilter extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        lottieAnimationView.setVisibility(View.GONE);
                         helper.alert(mView.getContext(), noConnectionTitle, noConnectionBody );
                     }
                 });
@@ -218,12 +214,8 @@ public class BibliografijaFilter extends Fragment {
     }
 
     public void showAlertDialogButtonClicked(View view) {
-
-        // setup the alert builder
         AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
-//        builder.setTitle("Filteri");
 
-        // add a list
         String[] filteri = {fototipskaIzdanja, posebnaIzdanaj, bibliografija, bioBibliografija, serijskePublikacije, katalozi, prirucnici, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
             @Override
@@ -258,7 +250,6 @@ public class BibliografijaFilter extends Fragment {
             }
         });
 
-        // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
     }

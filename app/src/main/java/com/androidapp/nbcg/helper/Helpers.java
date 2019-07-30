@@ -89,7 +89,6 @@ public class Helpers extends Fragment {
                 .show();
     }
 
-
     //Open new fragment
     public void openFragment(Fragment fragment, FragmentManager fragmentManager){
         Fragment newFragment = fragment;
@@ -100,11 +99,4 @@ public class Helpers extends Fragment {
 
         fragmentTransaction.commit();
     }
-
-
-
-
-
-
-
 }
