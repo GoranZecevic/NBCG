@@ -83,7 +83,8 @@ public class DogadjajiOpsirnije extends Fragment {
             }
 
 
-            opisTxt.setText(Html.fromHtml(opis));
+            String opisChanged = opis.toString().replace("\\r\\n", " ");
+            opisTxt.setText(Html.fromHtml(opisChanged));
 
             ImageButton fb = (ImageButton)thisFragment.findViewById(R.id.vb_btn_fb);
             fb.setOnClickListener(new View.OnClickListener() {

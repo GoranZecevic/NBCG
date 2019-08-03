@@ -169,13 +169,17 @@ public class Dogadjaji extends Fragment {
                                 }
 
                                 String opis = hit.getString("OPIS");
-
+                                System.out.println("Tekst: " + opis);
                                 switch (language){
-                                    case 0: opis = helper.mne(opis); break;
+                                    case 0: opis = helper.mne(opis);
+                                        break;
                                     case 1:
                                         String temp = helper.eng(opis);
                                         if(!temp.equals("")) opis = helper.eng(opis);
-                                        else opis = helper.mne(opis); break;
+                                        else opis = helper.mne(opis);
+                                        break;
+
+
                                 }
 
                                 String description = hit.getString("DESCRIPTION");

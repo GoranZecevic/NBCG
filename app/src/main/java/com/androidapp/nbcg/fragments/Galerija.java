@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -47,6 +48,8 @@ public class Galerija extends Fragment {
     public View mView;
     private RequestQueue requestQueue;
 
+    LottieAnimationView lottieAnimationView;
+
     public Galerija() {
     }
 
@@ -67,6 +70,12 @@ public class Galerija extends Fragment {
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_galerija, null);
         arrayList = new ArrayList<>();
+
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
 
         requestQueue = Volley.newRequestQueue(this.getContext());
         Bundle bundle = getArguments();
@@ -126,6 +135,7 @@ public class Galerija extends Fragment {
 
                                 arrayList.add(new Slike(naslov, fajl));
                             }
+                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
                             galerijaAdapter = new GalerijaAdapter(mView , arrayList);
 
                             recycleView.setAdapter(galerijaAdapter);
@@ -138,6 +148,7 @@ public class Galerija extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        lottieAnimationView.setVisibility(View.GONE);
                         error.printStackTrace();
                     }
                 });

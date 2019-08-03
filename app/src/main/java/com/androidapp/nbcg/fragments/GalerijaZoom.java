@@ -1,7 +1,9 @@
 package com.androidapp.nbcg.fragments;
 
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +11,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 
 
 public class GalerijaZoom extends Fragment {
@@ -21,6 +28,8 @@ public class GalerijaZoom extends Fragment {
     private View mView;
     private String naslov;
     private String fajl;
+
+    LottieAnimationView lottieAnimationView;
 
     public GalerijaZoom() {
     }
@@ -40,6 +49,12 @@ public class GalerijaZoom extends Fragment {
                              Bundle savedInstanceState) {
         mView =  inflater.inflate(R.layout.fragment_galerija_zoom, container, false);
 
+        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        lottieAnimationView.setImageAssetsFolder("images/");
+        lottieAnimationView.setAnimation("data.json");
+        lottieAnimationView.loop(true);
+        lottieAnimationView.playAnimation();
+
         Bundle bundle = getArguments();
 
 
@@ -53,7 +68,23 @@ public class GalerijaZoom extends Fragment {
 
         naslovPrint.setText(naslov);
 
-        Glide.with(mView.getContext()).load(ApiUrls.GET_PICTURES_FULL_SIZE + fajl).into(slika);
+        Glide.with(mView.getContext()).load(ApiUrls.GET_PICTURES_FULL_SIZE + fajl)
+                .listener(new RequestListener<Drawable>() {
+                              @Override
+                              public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+
+                                  lottieAnimationView.setVisibility(View.GONE);
+                                  return false;
+                              }
+
+                              @Override
+                              public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+
+                                  lottieAnimationView.setVisibility(View.GONE);
+                                  return false;
+                              }
+                          }
+                ).into(slika);
 
         return mView;
     }
