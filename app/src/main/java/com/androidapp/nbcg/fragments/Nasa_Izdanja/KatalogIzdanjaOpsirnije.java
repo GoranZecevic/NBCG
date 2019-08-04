@@ -1,13 +1,12 @@
 package com.androidapp.nbcg.fragments.Nasa_Izdanja;
 
-import android.app.Activity;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
@@ -155,7 +155,7 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
                 }
             }
         });
-
+        handleAnimation();
 
         return mView;
     }
@@ -272,6 +272,16 @@ public class KatalogIzdanjaOpsirnije extends Fragment {
             case 0: questionSendBody = helper.mne(getResources().getString(R.string.str_poruceno_body)); break;
             case 1: questionSendBody = helper.eng(getResources().getString(R.string.str_poruceno_body)); break;
         }
+    }
+
+    public void handleAnimation(){
+        ImageView title = (ImageView) mView.findViewById(R.id.kat_izd_ops_img);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 
 }

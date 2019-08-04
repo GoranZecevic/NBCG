@@ -1,6 +1,5 @@
 package com.androidapp.nbcg.fragments.O_Nama;
 
-import android.Manifest;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidapp.nbcg.CustomExpandableListAdapter;
 import com.androidapp.nbcg.ExpandableListDataPump;
@@ -27,9 +25,7 @@ import com.androidapp.nbcg.models.Izvestaji;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class IzvestajiRada extends Fragment {
 

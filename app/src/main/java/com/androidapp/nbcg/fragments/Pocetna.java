@@ -1,7 +1,8 @@
 package com.androidapp.nbcg.fragments;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
@@ -21,10 +23,6 @@ import com.androidapp.nbcg.ExpandableListDataPump;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.fragments.Katalozi.CgBibliografija;
-import com.androidapp.nbcg.fragments.Katalozi.ECG;
-import com.androidapp.nbcg.fragments.Katalozi.ENBCG;
-import com.androidapp.nbcg.fragments.Kolekcije.DigitalnaBiblioteka;
 import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanja;
 import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
 import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
@@ -83,6 +81,7 @@ public class Pocetna extends Fragment {
         getActionBar().setTitle("Pocetna");
 
         textPopulate();
+        handleAnimation();
 
         System.out.println("Jezik je: "+ language);
 
@@ -386,5 +385,15 @@ public class Pocetna extends Fragment {
                 help.goToUrl(url, ctx);
             }
         });
+    }
+
+    public void handleAnimation(){
+        ScrollView title = (ScrollView) mView.findViewById(R.id.home_scroll);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

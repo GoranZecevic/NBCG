@@ -1,7 +1,6 @@
 package com.androidapp.nbcg.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -17,29 +16,8 @@ import android.widget.TextView;
 
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
-//import com.androidapp.nbcg.helper.GMailSender;
 import com.androidapp.nbcg.helper.GMailSender;
 import com.androidapp.nbcg.helper.Helpers;
-
-import java.util.Properties;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-
-//import javax.mail.Message;
-//import javax.mail.Session;
 
 
 public class KontaktEmail extends Fragment {

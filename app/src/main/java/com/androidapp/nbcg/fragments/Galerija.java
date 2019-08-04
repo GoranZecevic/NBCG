@@ -19,7 +19,6 @@ import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.GalerijaAdapter;
-import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.Slike;
@@ -29,7 +28,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Galerija extends Fragment {
@@ -48,7 +46,6 @@ public class Galerija extends Fragment {
     public View mView;
     private RequestQueue requestQueue;
 
-    LottieAnimationView lottieAnimationView;
 
     public Galerija() {
     }
@@ -71,11 +68,6 @@ public class Galerija extends Fragment {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_galerija, null);
         arrayList = new ArrayList<>();
 
-        lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
-        lottieAnimationView.setImageAssetsFolder("images/");
-        lottieAnimationView.setAnimation("data.json");
-        lottieAnimationView.loop(true);
-        lottieAnimationView.playAnimation();
 
         requestQueue = Volley.newRequestQueue(this.getContext());
         Bundle bundle = getArguments();
@@ -131,11 +123,9 @@ public class Galerija extends Fragment {
                                 naslov = helper.mne(naslov);
 
                                 String fajl = hit.getString("FAJL");
-                                System.out.println("Fajl: "+ fajl);
 
                                 arrayList.add(new Slike(naslov, fajl));
                             }
-                            if(!arrayList.isEmpty()) lottieAnimationView.setVisibility(View.GONE);
                             galerijaAdapter = new GalerijaAdapter(mView , arrayList);
 
                             recycleView.setAdapter(galerijaAdapter);
@@ -148,7 +138,6 @@ public class Galerija extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        lottieAnimationView.setVisibility(View.GONE);
                         error.printStackTrace();
                     }
                 });

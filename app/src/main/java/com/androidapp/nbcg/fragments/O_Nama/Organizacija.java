@@ -1,5 +1,7 @@
 package com.androidapp.nbcg.fragments.O_Nama;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -24,7 +27,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
-import com.androidapp.nbcg.adapters.JavneNabavkeAdapter;
 import com.androidapp.nbcg.adapters.OrganizacijaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
@@ -73,6 +75,7 @@ public class Organizacija extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_organizacija, container, false);
+        handleAnimation();
 
         lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
         lottieAnimationView.setImageAssetsFolder("images/");
@@ -266,5 +269,15 @@ public class Organizacija extends Fragment {
                 help.goToUrl(url, ctx);
             }
         });
+    }
+
+    public void handleAnimation(){
+        ScrollView title = (ScrollView) mView.findViewById(R.id.home_scroll);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

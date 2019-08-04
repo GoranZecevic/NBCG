@@ -1,6 +1,5 @@
 package com.androidapp.nbcg.fragments.Dogadjajis;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -215,6 +214,7 @@ public class VirtuelnaizlozbaFilter extends Fragment {
 
     public void showAlertDialogButtonClicked(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
+        builder.setTitle(filteri);
 
         String[] filteri = {vijest, najava, izlozba, promocija, posjeta, strucniSkup, koncert, virtuelnaIzlozba, ostaleVijesti, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {

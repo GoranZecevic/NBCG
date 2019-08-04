@@ -1,5 +1,7 @@
 package com.androidapp.nbcg.fragments;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
@@ -137,6 +140,7 @@ public class DogadjajiOpsirnije extends Fragment {
             });
         }
 
+        handleAnimation();
         return thisFragment;
     }
 
@@ -156,5 +160,15 @@ public class DogadjajiOpsirnije extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void handleAnimation(){
+        ImageView title = (ImageView) thisFragment.findViewById(R.id.opsirnije_dogadjaji_img);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(500);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

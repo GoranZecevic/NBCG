@@ -13,22 +13,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
-import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
-import com.androidapp.nbcg.models.Vijesti;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 
 public class JavneNabavke extends Fragment {

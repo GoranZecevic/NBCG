@@ -1,6 +1,7 @@
 package com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas;
 
-import android.content.Context;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,12 +26,6 @@ import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.fragments.Dogadjajis.IzlozbaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.KoncertFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.NajavaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.PosjetaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.PromocijaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.StruckiskupFilter;
 import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.KatalogIzdanja;
 
@@ -118,6 +113,7 @@ public class PosebnaIzdanjaFilter extends Fragment {
         recycleView.setLayoutManager(layoutManager);
         PARSEDATA();
 
+        handleAnimation();
         return mView;
     }
 
@@ -217,6 +213,7 @@ public class PosebnaIzdanjaFilter extends Fragment {
 
     public void showAlertDialogButtonClicked(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mView.getContext());
+        builder.setTitle(filteri);
 
         String[] filteri = {fototipskaIzdanja, posebnaIzdanaj, bibliografija, bioBibliografija, serijskePublikacije, katalozi, prirucnici, ponistiFiltere};
         builder.setItems(filteri, new DialogInterface.OnClickListener() {
@@ -310,5 +307,14 @@ public class PosebnaIzdanjaFilter extends Fragment {
                 break;
 
         }
+    }
+    public void handleAnimation(){
+        LottieAnimationView title = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

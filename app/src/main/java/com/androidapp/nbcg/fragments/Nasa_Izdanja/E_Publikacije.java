@@ -1,6 +1,7 @@
 package com.androidapp.nbcg.fragments.Nasa_Izdanja;
 
-import android.content.Context;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,7 +21,6 @@ import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.E_PublikacijeAdapter;
-import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.KatalogIzdanja;
@@ -73,6 +73,7 @@ public class E_Publikacije extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_e__publikacije, null);
+        handleAnimation();
 
         lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
         lottieAnimationView.setImageAssetsFolder("images/");
@@ -198,5 +199,15 @@ public class E_Publikacije extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void handleAnimation(){
+        LottieAnimationView title = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

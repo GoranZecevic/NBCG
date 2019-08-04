@@ -1,5 +1,7 @@
 package com.androidapp.nbcg.fragments.Nasa_Izdanja;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
@@ -24,16 +27,6 @@ import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.KatalogIzdanjaAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.fragments.Dogadjaji;
-import com.androidapp.nbcg.fragments.Dogadjajis.IzlozbaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.KoncertFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.NajavaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.OstalevijestiFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.PosjetaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.PromocijaFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.StruckiskupFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.VijestiFilter;
-import com.androidapp.nbcg.fragments.Dogadjajis.VirtuelnaizlozbaFilter;
 import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.BibliografijaFilter;
 import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.BiobibliografijaFilter;
 import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.FototipskaIzdanjaFilter;
@@ -43,8 +36,6 @@ import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.PrirucniciFilt
 import com.androidapp.nbcg.fragments.Nasa_Izdanja.KatalogIzdanjas.SerijskepublikacijeFilter;
 import com.androidapp.nbcg.helper.Helpers;
 
-
-import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -105,6 +96,7 @@ public class KatalogIzdanja extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_katalog_izdanja, null);
+        handleAnimation();
         textPopulate();
 
         lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
@@ -327,5 +319,15 @@ public class KatalogIzdanja extends Fragment {
                     break;
 
         }
+    }
+
+    public void handleAnimation(){
+        LottieAnimationView title = (LottieAnimationView) mView.findViewById(R.id.animation_view);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

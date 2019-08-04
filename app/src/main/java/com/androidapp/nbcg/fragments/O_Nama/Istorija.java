@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +17,6 @@ import android.widget.ViewFlipper;
 
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.api_urls.ApiUrls;
-import com.androidapp.nbcg.fragments.Usluge.ZaBibliotekare;
-import com.androidapp.nbcg.fragments.Usluge.ZaIzdavace;
-import com.androidapp.nbcg.fragments.Usluge.ZaKorisnike;
 import com.androidapp.nbcg.helper.Helpers;
 
 import com.androidapp.nbcg.R;

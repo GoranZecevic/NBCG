@@ -1,10 +1,11 @@
 package com.androidapp.nbcg.fragments;
 
-import android.annotation.SuppressLint;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -14,7 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ScrollView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
@@ -39,15 +40,10 @@ import com.androidapp.nbcg.fragments.Dogadjajis.VirtuelnaizlozbaFilter;
 import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.Vijesti;
 
-import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class Dogadjaji extends Fragment {
@@ -109,6 +105,7 @@ public class Dogadjaji extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_dogadjaji, null);
+        handleAnimation();
         textPopulate();
 
         lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
@@ -169,7 +166,6 @@ public class Dogadjaji extends Fragment {
                                 }
 
                                 String opis = hit.getString("OPIS");
-                                System.out.println("Tekst: " + opis);
                                 switch (language){
                                     case 0: opis = helper.mne(opis);
                                         break;
@@ -339,6 +335,16 @@ public class Dogadjaji extends Fragment {
                 ponistiFiltere = "Reset filters";
                 break;
         }
+    }
+
+    public void handleAnimation(){
+        ConstraintLayout title = (ConstraintLayout) mView.findViewById(R.id.home_scroll);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 
 }

@@ -1,8 +1,10 @@
 package com.androidapp.nbcg.fragments.O_Nama;
 
-import android.content.Context;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,7 +22,6 @@ import com.android.volley.toolbox.Volley;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.adapters.JavneNabavkeAdapter;
-import com.androidapp.nbcg.adapters.VijestiAdapter;
 import com.androidapp.nbcg.api_urls.ApiUrls;
 import com.androidapp.nbcg.helper.Helpers;
 import com.androidapp.nbcg.models.JavneNabavke;
@@ -68,6 +69,7 @@ public class JavneNabavkeLista extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_javne_nabavke_lista, container, false);
+        handleAnimation();
         textPopulate();
 
         lottieAnimationView = (LottieAnimationView) mView.findViewById(R.id.animation_view);
@@ -157,5 +159,15 @@ public class JavneNabavkeLista extends Fragment {
                 noConnectionBody = "You need internet connection to see public procurement!";
                 break;
         }
+    }
+
+    public void handleAnimation(){
+        ConstraintLayout title = (ConstraintLayout) mView.findViewById(R.id.home_scroll);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(title, View.ALPHA, 0.0f, 1.0f);
+        alpha.setDuration(400);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(alpha);
+        animatorSet.start();
     }
 }

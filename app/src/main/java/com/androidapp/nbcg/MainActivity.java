@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.view.menu.MenuBuilder;
-import android.util.Size;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,7 +18,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 
 import com.androidapp.nbcg.fragments.Dogadjaji;
 import com.androidapp.nbcg.fragments.Katalozi.COBISS;
