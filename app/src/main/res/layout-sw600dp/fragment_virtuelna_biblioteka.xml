@@ -52,7 +52,8 @@
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_container"
+        android:gravity="center_horizontal" />
 
     <ScrollView
         android:id="@+id/home_scroll"
@@ -93,7 +94,7 @@
                 android:layout_marginStart="@dimen/v8"
                 android:layout_marginLeft="@dimen/v8"
                 android:background="@android:color/transparent"
-                android:text="http://vbcg.vbcg.me"
+                android:text="https://plus.cg.cobiss.net/"
                 android:textColor="@color/gold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/vb_body" />
@@ -124,7 +125,8 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/vb_btn_fb"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_horizontal" />
 
         <ImageButton
             android:id="@+id/vb_btn_fb"

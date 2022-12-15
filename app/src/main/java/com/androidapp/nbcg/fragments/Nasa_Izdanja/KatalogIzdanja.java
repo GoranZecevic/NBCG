@@ -293,7 +293,7 @@ public class KatalogIzdanja extends Fragment {
                     noConnectionTitle = "Nema interneta!";
                     noConnectionBody = "Za pregled kataloga izdanja potrebna Vam je internet konekcija!";
                     filteri = "Filteri";
-                    katalogIzdanja = "Ktalog Izdanja";
+                    katalogIzdanja = "Katalog Izdanja";
                     fototipskaIzdanja = "Fototipska Izdanja";
                     posebnaIzdanaj = "Posebna Izdanja";
                     bibliografija = "Bibliografija";

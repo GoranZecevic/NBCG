@@ -68,7 +68,8 @@
                     android:paddingBottom="@dimen/v16"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/fragment_container"/>
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_container"
+                    android:gravity="center_horizontal" />
             </FrameLayout>
 
 
@@ -285,7 +286,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dogadjaji_opsirnije_btn"
-                />
+                android:gravity="center_horizontal" />
 
             <Button
                 android:id="@+id/enbcg_btn"
@@ -431,12 +432,13 @@
                     android:paddingTop="@dimen/v8"
                     android:paddingBottom="@dimen/v8"
                     android:background="@color/gold"
-                    android:text="POSETITE NAS"
+                    android:text="POSJETITE NAS"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center_horizontal" />
 
                 <ImageButton
                     android:id="@+id/nbcg_fb"

@@ -10,7 +10,7 @@
     <string name="str_da">[0]Da[/0][1]Yes[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_ne">[0]Ne[/0][1]No[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
-    <string name="str_podelite">[0]PODJELITE[/0][1]SHARE[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_podelite">[0]PODIJELITE[/0][1]SHARE[/1][2][/2][3][/3][4][/4][5][/5]</string>
 
     <!--region Menu titles-->
     <string name="title_pocetna">[0]Početna[/0][1]Home page[/1][2][/2][3][/3][4][/4][5][/5]</string>
@@ -57,7 +57,7 @@
     <string name="str_katalog_izdanja_title">[0]KATALOG IZDANJA[/0][1]CATALOGUE OF PUBLICATIONS[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_cg_bibliografija_title">[0]CRNOGORSKA BIBLIOGRAFIJA[/0][1]MONTENEGRIN BIBLIOGRAPHY[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_europeana_title">[0]EUROPEANA[/0][1]EUROPEANA[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_posetine_nas">[0]Posetite nas[/0][1]Visit us[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_posetine_nas">[0]Posjetite nas[/0][1]Visit us[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <!--endregion Pocetna-->
 
     <!--region O Nama -->
@@ -65,20 +65,19 @@
     <!--region Uvodna rijec -->
     <string name="str_onama_title">[0]O NAMA[/0][1]ABOUT US[/1][2][/2][3][/3][4][/4][5][/5]</string>
     <string name="str_uvodna_rijec_title">[0]Uvodna riječ[/0][1]Introduction[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_uvodna_rijec_bold">[0]Iako relativno mala država, Crna Gora ima bogatu istoriju i kulturu o čemu, pored ostalog, svjedoči i njena Nacionalna biblioteka „Đurđe Crnojević“. Ona nosi ime po vladaru Crne Gore koji je 1493. godine osnovao prvu državnu štampariju u svijetu.[/0][1]Though a relatively small country, Montenegro has a rich history and culture of which, among other things, testifies its National Library “Đurđe Crnojević”. It has been named after the ruler of Montenegro who in 1493 founded the first state printing house in the world.[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_uvodna_rijec_body">[0]<p>Biblioteka u svom razvojnom toku bilježi različite mijene, ali sve vrijeme svog postojanja i trajanja predstavlja jedan od temelja crnogorske državnosti, tradicije i kulture. Počev od 1592/93. godine kada su popisane 42 knjige u Cetinjskom manastiru do savremenog doba kada je dobila moderni centralni depo za smještaj bibliotečkog fonda velike površine, Biblioteka predstavlja mjesto gdje se sabiraju važniji pisani tragovi o Crnogorcima i svim drugim narodima koji žive u Crnoj Gori. Ona je stjecište i zavidne građe objavljene u inostranstvu.</p>\n  \n
-        <p>Nacionalna biblioteka Crne Gore „Đurđe Crnojević“ smještena je na Cetinju, u dva osobena zdanja sagrađena početkom dvadesetog vijeka za potrebe italijanske i francuske diplomatije u Kraljevini Crnoj Gori. Riječ je o graditeljskim biserima koji su rađeni po projektima čuvenih arhitekata Koradinija i Pola Godea.</p>\n\n
-        <p>Danas ova ustanova posjeduje bibliotečku građu raspoređenu u tri cjeline: Osnovni fond, Muzejski fond i Posebne zbirke, a ima i vrijedne legate. Ona je matična biblioteka narodnim i univerzitetskim bibliotekama u Crnoj Gori. Ovaj jedinstveni hram knjige bilježi izuzetno razvijenu međunarodnu saradnju koja se ogleda u razmjeni publikacija, zajedničkim projektima i učešću u radu niza asocijacija i institucija koje se bave bibliotečkom djelatnošću. Nacionalna biblioteka ima Digitalnu i Virtuelnu biblioteku Crne Gore koje korisnicima omogućavaju korišćenje pisane baštine u elektronskom obliku. Osim osnovne djelatnosti, ona organizuje programe iz različitih umjetničkih oblasti čime upotpunjuje svoju društvenu ulogu sloveći za jednog od najvažnijih činilaca na kulturnoj mapi  Crne Gore. \n \n </p>
-        <p>Crnogorska država utemeljena je i na slovima, a njena Nacionalna biblioteka s ponosom baštini tragove Crnojevića štamparije, kao i viševjekovne pismenosti koja je postojala i razvijala se na njenom tlu. Danas je to elitna kulturna ustanova čija misija umnogome prevazilazi njenu osnovnu djelatnost. Ona ima nezaobilaznu kulturnu i obrazovnu ulogu u zemlji i reputaciju pouzdanog partnera u oblasti kulture u inostranstvu. \n\n</p>
-        <p>Bogić Rakočević \n \n direktor NBCG „Đurđe Crnojević“\n \n </p>
+    <string name="str_uvodna_rijec_bold">[0]Nacionalna biblioteka Crne Gore „Đurđe Crnojević“ na Cetinju je jedna od najznačajnijih identitetskih institucija naše države. Njena uloga je prvenstveno da prikuplja, čuva i daje na korišćenje crnogorsku pisanu kulturnu baštinu, a ujedno je matična biblioteka i nosilac bibliotečko-informacione djelatnosti u Crnoj Gori.[/0][1]The National Library of Montenegro "Đurđe Crnojević" in Cetinje is one of the most important identity institutions of our country. Its role is primarily to collect, preserve and make available the Montenegrin written cultural heritage, and it is also the home library and the carrier of library and information activities in Montenegro.[/1][2][/2][3][/3][4][/4][5][/5]</string>
+    <string name="str_uvodna_rijec_body">[0]<p>Svojim fondovima, koji sadrže oko 2 miliona jedinica bibliotečke građe, predstavlja najveću informacionu bazu podataka koja je dostupna za korišćenje u cilju unapređenja kulturnog, obrazovnog, naučno-istraživačkog, odnosno sveukupnog napretka naše države.</p>\n  \n
+        <p>Savremeni informacioni trendovi su olakšali posao bibliotekara na organizovanju i obradi informacija i uveli biblioteke u naše domove posredstvom elektronskih kataloga i digitalnih kolekcija, ne umanjujući značaj bibliotečke profesije i njene uloge. Novi modeli poslovanja i novi korisnički servisi, u skladu sa načelom opšte dostupnosti, omogućavaju aktivno učešće Nacionalne biblioteke u kreiranju kulturno-obrazovnog ambijenta Crne Gore, kao i razvijanje međunarodne saradnje i razmjene digitalnih sadržaja na regionalnom i globalnom nivou.</p>\n\n
+        <p>mr Dragica Lompar \n</p>
+        <p>direktorica NBCG „Đurđe Crnojević“ \n</p>
         [/0]
         [1]
-        <p>During its development, the library has undergone various changes, but for all the time and duration of its existence it has represented one of the cornerstones of Montenegrin independence, tradition and culture. From 1592/93 when 42 books were listed in the Cetinje Monastery to the modern times in which it has got a modern central depot for storing library holdings on large surface area, the library has represented a place where all important written evidence of Montenegrins and all the other people living in Montenegro has been collected. It is the core of the remarkable material published abroad as well. \n \n</p>
-        <p>The National Library of Montenegro “Đurđe Crnojević” is located in Cetinje, in two distinctive buildings built in the early twentieth century to serve the needs of Italian and French diplomacy in the Kingdom of Montenegro.These architectural pearls that have been designed by famous architects Corradini and Paul Gaudet.\n \n</p>
-        <p>Today this institution holds a library material sorted within three units: Basic Fund, Museum Fund and Special Collections, as well as some valuable legacies. It is the parent library to the public and university libraries in Montenegro. This unique temple of books cherish extremely developed international cooperation that is reflected in the exchange of publications, joint projects and participation in the work of a number of associations and institutions practicing library activities. The National Library holds a Digital and Virtual Library of Montenegro that enable the usage of written heritage in electronic form. In addition to the basic activities, it organizes events from different artistic fields thanks to which it complements its social role, being known as one of the most important factors on the cultural map of Montenegro. \n \n</p>
-        <p>Montenegrin state has been founded on the letters as well, and its National Library is proud to inherit traces of the Crnojević’s printing house, as well as centuries of literacy that existed and flourished on its soil. Today it is the elite cultural institution whose mission goes far beyond its basic activity. It has an inevitable cultural and educational role in the country and the reputation of a reliable partner in the field of culture abroad. \n \n</p>
-        <p>Bogić Rakočević \n \n Director of NLM “Đurđe Crnojević” \n \n </p>[/1][2][/2][3][/3][4][/4][5][/5]</string>
-    <string name="str_biografija">[0]Bogić Rakočević - Biografija[/0][1]Bogić Rakočević - Biography[/1][2][/2][3][/3][4][/4][5][/5]</string>
+        <p>With its holdings, which contain about 2 million items of library material, it represents the largest information database that is available for use in order to improve the cultural, educational, scientific-research, or overall progress of our country. \n \n</p>
+        <p>Modern information trends have facilitated the work of librarians in organizing and processing information and introduced libraries into our homes through electronic catalogs and digital collections, without diminishing the importance of the library profession and its role. New business models and new user services, in accordance with the principle of general availability, enable the active participation of the National Library in the creation of the cultural and educational environment of Montenegro, as well as the development of international cooperation and the exchange of digital content on a regional and global level.\n \n</p>
+        <p>mr Dragica Lompar \n</p>
+        <p>director of NLM “Đurđe Crnojević” \n</p>
+        [/1]
+    </string>
     <!--endregion Uvodna rijec-->
 
     <!-- region Vizija i misija -->
@@ -514,32 +513,36 @@
         Međubibliotečka pozajmica<p>\n\n
             Nacionalna biblioteka ima razvijenu međubibliotečku pozajmicu sa svim bibliotekama u Crnoj Gori, a sa bibliotekama iz inostranstva posuđivanje se obavlja putem međunarodne pozajmice. Pozajmljene publikacije koriste se najduže 30 dana i to u prostorijama biblioteke preko koje su tražene. Na pozajmicu se daju isključivo knjige i kopije članaka iz serijskih publikacija.</p>\n\n
         <p>Publikacije izdate do 1950. godine ne izdaju se na pozajmicu.</p>\n\n
-        Kontakt informacije<p>Čitaonice:</p>\n
-        <p>informatori: Milenija Vračar, Nada Drašković\n\n
-            tel. +382 41-231-143, lokal 122\n\n
-            e-mail: citaonica@nb-cg.me</p>\n\n
-        <p>Zbirka rukopisa i dokumenata:</p>\n
-        <p>Boris Kaluđerović, voditelj zbirke\n\n
-            tel +382 41 231 143 / lokal 132\n\n
+        Kontakt informacije \n \n
+        <p>ČITAONICE:</p>\n\n
+        <p>Rukovodilac odjeljenja za korišćenje i čuvanje fondova:\n
+            Dragana Marković \n
+            dragana.markovic@nb-cg.me   </p>\n\n
+        <p>informatori: Milenija Vračar, Predrag Zuber, Dragana Kaluđerović\n
+            tel. 067-077-890, +382 41-231-143, lokal 122 \n
+            e-mail: citaonica@nb-cg.me   </p>\n\n
+        <p>ZBIRKA RUKOPISA I DOKUMENATA:</p>\n\n
+        <p>Boris Kaluđerović, voditelj zbirke\n
+            tel +382 41 231 143 / lokal 132\n
             e-mail: boris.kaludjerovic@nb-cg.me</p>\n\n
-        <p>Zbirka muzikalija i audiovizuelne građe:</p>\n
-        <p>Dragan Mirković, voditelj zbirke\n\n
-            tel +382 41 231 143 / l. 132\n\n
-            e-mail: dragan.mirkovic@nb-cg.me</p>\n\n
-        <p>Kartografsko-geografska zbirka:</p>\n
-        <p>Danijela Radulović, voditelj zbirke\n\n
-            tel +382 41 234-236, 231-143 lok. 109\n\n
+        <p>ZBIRKA MUZIKALIJA I AUDIOVIZUELNE GRAĐE:</p>\n\n
+        <p>Natalija Bokan, voditelj zbirke\n
+            tel +382 41 231 143 / l. 132\n
+            e-mail: natalija.bokan@nb-cg.me</p>\n\n
+        <p>KARTOGRAFSKO-GEOGRAFSKA ZBIRKA:</p>\n\n
+        <p>Danijela Radulović, voditelj zbirke\n
+            tel +382 41 234-236, 231-143 lok. 109\n
             e-mail: danijela.radulovic@nb-cg.me</p>\n\n
-        <p>Montenegrina, Stara i rijetka knjiga i Legati:</p>\n
-        <p>Slavica Glendža\n\n
-            tel. +382 41 232-133; 231-722\n\n
-            e-mail: slavica.glendza@nb-cg.me</p>\n\n
-        <p>Međubibliotečka pozajmica:</p>\n
-        <p>Milenija Vračar\n\n
-            radno vrijeme: 9-17 sati\n\n
-            tel: +382 41-231-143, lokal 122\n\n
+        <p>ODJELJENJE NACIONALNOG FONDA, LEGATA I STARE I RIJETKE KNJIGE:</p>\n\n
+        <p>Danijela Radulović, rukovodilac\n
+            tel. +382 41 232-133; 231-722\n
+             e-mail: citaonica2@nb-cg.me</p>\n\n
+        <p>MEĐUBIBLIOTEČKA POZAJMICA:</p>\n\n
+        <p>Milenija Vračar\n
+            radno vrijeme: 9-17 sati\n
+            tel: +382 41-231-143, lokal 122\n
             e-mail: medjubibliotecka@nb-cg.me</p>\n\n
-        <p>Adresa:</p>\n
+        <p>Adresa:</p>\n \n
         <p>Nacionalna biblioteka Crne Gore “Ðurde Crnojević”\n
             Služba međubibliotečke pozajmice\n
             Bulevar crnogorskih junaka 163, 81250 Cetinje</p>\n\n[/0]
@@ -601,35 +604,96 @@
         <p>U Nacionalnoj biblioteci izrađuju se CIP zapisi po međunarodnim standardima za monografske publikacije – ISBD(M), za serijske publikacije – ISBD(CR), za štampane muzikalije – ISBD(PN), za elektronske publikacije – ISBD(ER), za njeknjižnu građu – ISBD(NBM) i za kartografsku građu ISBD(CM). Takav zapis, dat u sažetoj formi, pruža informaciju o bibliografskom i sadržinskom karakteru publikacije.</p>\n\n
         <p>Obaveze izdavača su da na svakoj novoj publikaciji odštampaju ovaj kataloški zapis koji se radi u bazi podataka COBIB Crna Gora. Na taj način su podaci o publikaciji dostupni putem Interneta i prije njenog objavljivanja.</p>\n\n
         <p>Nacionalna biblioteka u prosjeku godišnje izradi više od 1.000 CIP zapisa.</p>\n\n
+
+        <p>KONTAKT OSOBE ZA IZRADU CIP-A ZA MONOGRAFSKE PUBLIKACIJE:</p>\n\n
+        <p>Maja Vuksanović  (e-mail: cip_monografske@nb-cg.me , maja.vuksanovic@nb-cg.me)</p>\n
+        <p>Sanja Martinović (e-mail: cip_monografske@nb-cg.me, sanja.martinovic@nb-cg.me)</p>\n
+        <p>Tel/fax: 041-234-236</p>\n\n
+
+        <p>KONTAKT OSOBA ZA IZRADU CIP-A ZA SERIJSKE PUBLIKACIJE:</p>\n\n
+        <p>Vesna Kovačević (e-mail: cip_serijske@nb-cg.me)</p>\n
+        <p>Tel: +382 41 232-133</p>\n\n
+
+        <p>KONTAKT OSOBA ZA IZRADU CIP-A ZA ŠTAMPANE MUZIKALIJE:</p>\n\n
+        <p>Natalija Bokan (e-mail: natalija.bokan@nb-cg.me)</p>\n
+        <p>Tel: +382 41 231-143 lok.140</p>\n
+
+        <p>KONTAKT OSOBA ZA IZRADU CIP-A ZA KARTOGRAFSKU GRAĐU:</p>\n\n
+        <p>Danijela Radulović (e-mail: danijela.radulovic@nb-cg.me)</p>\n
+        <p>Tel: +382 41 231-143 lok.107</p>\n\n
+
+        <p>OBRASCI ZA PREUZIMANJE:</p>\n\n
+        <p>Obrazac za dodjelu CIP zapisa za monografske publikacije (word)</p>\n
+        <p>Obrazac za dodjelu CIP zapisa za monografske publikacije (pdf)</p>\n
+        <p>Obrazac za dodjelu CIP zapisa za zvučni CD (word)</p>\n
+        <p>Obrazac za dodjelu CIP zapisa za zvučni CD (pdf)</p>\n\n
+
         <p>ISBN</p>\n\n
-        <p>Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, godišnje dodijeli preko 1.000 ISBN oznaka (International Standard Book Number – međunarodni standardni broj knjige) knjigama i drugim omeđenim publikacijama bez obzira na medij na kojem su objavljene.</p>\n\n
+        <p>Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, godišnje dodijeli preko 1.000 ISBN oznaka (International Standard Book Number – međunarodni standardni broj knjige) štampanim knjigama i brošurama u Crnoj Gori.</p>\n\n
+        <p>ISBN se dodjeljuje i publikacijama objavljenim Brajevim pismom i geografskim kartama, knjigama na drugim medijima (CD, Internet…), kao i publikacijama mješovitih medija sa tekstom.</p>\n\n
+
+        <p>NACIONALNA ISBN AGENCIJA</p>\n\n
+
+        <p>Kontakt:</p>\n
+        <p>Tel/fax: 041 – 234-236</p>\n
+        <p>e-mail: isbn@nb-cg.me</p>\n\n
+
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje</p>\n
+        <p>Bulevar crnogorskih junaka br. 163</p>\n\n
+
+        <p>OBRASCI ZA PREUZIMANJE:</p>\n\n
+        <p>Pristupnica za izdavače (word)</p>\n
+        <p>Pristupnica za izdavače (pdf)</p>\n
+
+
         <p>ISSN </p>\n\n
         <p>Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN oznake (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.</p>\n\n
         <p>Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.</p>\n\n
+
+        <p>NACIONALNI ISSN CENTAR</p>\n\n
+
+        <p>Kontakt:</p>\n
+        <p>Vesna Vučković,</p>\n
+        <p>Tel: 041- 231 143 lok.144</p>\n
+        <p>E-mail: issn@nb-cg.me</p>\n\n
+
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje</p>\n
+        <p>Bulevar crnogorskih junaka br. 163</p>\n\n
+
+        <p>OBRASCI ZA PREUZIMANJE:</p>\n\n
+        <p>Upitnik za dodjelu ISSN i CIP-a za serijske publikacije (pdf)</p>\n
+        <p>Upitnik za dodjelu ISSN i CIP-a za serijske publikacije (word)</p>\n
+
         <p>ISMN</p>\n\n
-        <p>Nacionalni ISMN centar za Crnu Goru dodjeljuje ISMN oznake (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkim djelima publikovanim u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta.</p>\n\n
+        <p>Nacionalni ISMN centar za Crnu Goru pri Nacionalnoj biblioteci dodjeljuje ISMN brojeve (International Standard Music Number – Međunarodni standardni broj muzičkih publikacija) muzičkih djela publikovanih u Crnoj Gori. Pojam štampana muzikalija obuhvata partiture, dionice ili sastavne djelove multimedijskog kompleta. ISMN se ne dodjeljuje samostalno objavljenim zvučnim zapisima, videozapisima ili zapisima na računalnom mediju. Centar za ISMN Crne Gore počeo je s radom 2016. godine.</p>\n\n
+
+        <p>Kontakt:</p>\n
+        <p>Tel: 041- 231-143 lok. 130</p>\n
+        <p>Fax: 041- 231 020; 234-236</p>\n
+        <p>E-mail: ismn@nb-cg.me</p>\n\n
+
+        <p>Nacionalna biblioteka “Đurđe Crnojević” – Cetinje</p>\n
+        <p>Bulevar crnogorskih junaka br. 163</p>\n\n
+
+        <p>OBRASCI ZA PREUZIMANJE:</p>\n\n
+        <p>Pristupnica za ISMN (word)</p>\n
+        <p>Pristupnica za ISMN (pdf)</p>\n
+
+        <p>IZRADA UDK BROJEVA ZA ČLANKE</p>\n\n
+        <p>Kontakt osobe:</p>\n
+        <p>Vera Đukanović</p>\n
+        <p>Ljiljana Lipovina</p>\n
+        <p>Anđelka Martinović</p>\n
+        <p>Lidija Kaluđerović</p>\n
+        <p>e-mail: bibliografsko@nb-cg.me</p>\n\n
+
         <p>OBAVEZNI PRIMJERAK</p>\n\n
-        <p>Izdavači u Crnoj Gori (Zakon o izdavačkoj djelatnosti) u obavezi su da Nacionalnoj biblioteci dostave bez naknade i o svom trošku pet primjeraka svake publikacije neposredno poslije štampanja ili objavljivanja. Obavezni primjerak čine: knjige, serijske publikacije (časopisi i novine), štampane muzikalije, geografske karte, audio-vizuelna građa, elektronske publikacije na fizičkim nosačima, elektronske publikacije distribuirane na internetu, sadržaji internet domena Crne Gore i druge publikacije.</p>\n\n
-        <p>Kontakt osobe za izradu CIP-a za monografske publikacije:</p>\n\n
-        <p>Dragana Mirković (e-mail: cip_monografske@nb-cg.me)\n\n
-            Sanja Martinović (e-mail: cip_monografske@nb-cg.me)\n\n
-            Tel/fax: 041-234-236</p>\n\n
-        <p>Kontakt osobe za izradu CIP-a za serijske publikacije:\n\n
-            Vesna Kovačević (e-mail: cip_serijske@nb-cg.me)\n\n
-            Tel/fax: 041 – 234-236\n\n
-            Tel: 041 – 231-143 lok.130</p>\n\n
-        <p>ISBN </p>\n\n
-        <p>Nacionalni ISBN centar za Crnu Goru, smješten u Nacionalnoj biblioteci, dodijeli prosječno u godini 1.000 ISBN brojeva (International Standard Book Number – međunarodni standardni broj knjige) štampanim knjigama i brošurama u Crnoj Gori.</p>\n\n
-        <p>ISBN se dodjeljuje i publikacijama objavljenim Brajevim pismom i geografskim kartama, knjigama na drugim medijima (CD, Internet…), kao i publikacijama mješovitih medija sa tekstom.</p>\n\n
-        <p>Kontakt:</p>\n\n
-        <p>Nacionalna biblioteka Crne Gore “Đurđe Crnojević”\n\n
-            Bulevar crnogorskih junaka br. 163 Cetinje</p>\n\n
-        <p>NACIONALNA ISBN AGENCIJA\n\n
-            Tel/fax: 041 – 234-236\n\n
-            e-mail: <a href="mailto:isbn@nb-cg.me">isbn@nb-cg.me</a></p>\n\n
-        <p>ISSN </p>\n\n
-        <p>Nacionalni ISSN centar za Crnu Goru, takođe smješten u Nacionalnoj biblioteci, dodjeljuje ISSN brojeve (International Standard Serial Number – međunarodni standardni broj serijskih publikacija) časopisima i novinama objavljenim u Crnoj Gori.</p>\n\n
-        <p>Nacionalna biblioteka u prosjeku godišnje dodijeli oko 60 ISSN brojeva.\n</p>[/0]
+        <p>Svi izdavači u Crnoj Gori, prema Zakonu o izdavaštvu, dužni su da Nacionalnoj biblioteci besplatno dostave pet primjeraka svake publikacije, na bilo kom mediju, neposredno poslije štampanja ili objavljivanja: knjige, serijske publikacije (časopise i novine), muzikalije, geografske karte, audio i audio-vizuelnu građu (kako na klasičnim, tako i na elektronskim medijima – CD-ROM, DVD…), i veb sajtove sa nacionalnim domenom.</p>\n\n
+
+        <p>ZAKON O BIBLIOTEČKOJ DJELATNOSTI</p>\n
+        <p>ZAKON O AUTORSKIM I SRODNIM PRAVIMA</p>\n
+        <p>ZAKON O IZDAVACKOJ DJELATNOSTI</p>\n
+        [/0]
 
         [1]<p>National Library prepares CIP (Cataloguing in Publication) upon request from the publishers from Montenegro and assigns the international standard ISBN, ISSN and ISMN numbers for monographs and serials, printed music and other library materials.</p>\n\n
         <p>CIP</p>\n\n

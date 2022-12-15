@@ -65,7 +65,8 @@
                 android:textSize="@dimen/title_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+                app:layout_constraintTop_toBottomOf="@+id/fragment_container"
+                android:gravity="center_horizontal" />
 
 
             <FrameLayout
@@ -87,7 +88,7 @@
                     android:id="@+id/bogic_img"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/bogic"></ImageView>
+                    android:background="@drawable/dragica"></ImageView>
 
             </FrameLayout>
 
@@ -123,20 +124,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/vb_bold" />
 
-                <Button
-                    android:id="@+id/bogic_biografija"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:background="@android:color/transparent"
-                    android:text="Biografija"
-                    android:textStyle="italic"
-                    android:textColor="@color/gold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/vb_body"/>
-
-
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -147,7 +134,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/bogic_biografija">
+                    app:layout_constraintTop_toBottomOf="@+id/vb_body">
 
                     <TextView
                         android:id="@+id/podjeli"
@@ -161,7 +148,8 @@
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center_horizontal" />
 
                     <ImageButton
                         android:id="@+id/vb_btn_fb"

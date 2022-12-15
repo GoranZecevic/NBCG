@@ -15,7 +15,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.androidapp.nbcg.MainActivity;
 import com.androidapp.nbcg.R;
 import com.androidapp.nbcg.api_urls.ApiUrls;
@@ -78,7 +77,7 @@ public class DogadjajiOpsirnije extends Fragment {
             TextView podjeliTxt = (TextView)thisFragment.findViewById(R.id.podjeli);
             switch (language) {
                 case 0:
-                    podjeliTxt.setText("PODJELI");
+                    podjeliTxt.setText("PODIJELI");
                     break;
                 case 1:
                     podjeliTxt.setText("SHARE");

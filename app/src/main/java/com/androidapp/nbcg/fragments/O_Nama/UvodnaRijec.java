@@ -49,20 +49,16 @@ public class UvodnaRijec extends Fragment {
         mView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_uvodna_rijec, null);
         textPopulate();
 
-        Button btnBiografija = (Button)mView.findViewById(R.id.bogic_biografija);
-
         if(language == 1){
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_ENG, R.id.vb_btn_fb);
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_ENG, R.id.vb_btn_tw);
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_ENG, R.id.vb_btn_ln);
-            btnBiografija.setVisibility(View.GONE);
         }
 
         if(language == 0) {
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_FB_MNE, R.id.vb_btn_fb);
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_TW_MNE, R.id.vb_btn_tw);
             imageButtonHandlerWeb(ApiUrls.UVODNA_RIJEC_LN_MNE, R.id.vb_btn_ln);
-            buttonHandlerWeb(ApiUrls.BIOGRAFIJA_BR, R.id.bogic_biografija);
         }
 
         return mView;
@@ -131,13 +127,6 @@ public class UvodnaRijec extends Fragment {
         }
         podjeli.setText(podjeliStr);
 
-        Button biografija = (Button)mView.findViewById(R.id.bogic_biografija);
-        String biografijaStr= "";
-        switch (language){
-            case 0: biografijaStr = helper.mne(getResources().getString(R.string.str_biografija)); break;
-            case 1: biografijaStr = helper.eng(getResources().getString(R.string.str_biografija)); break;
-        }
-        biografija.setText(biografijaStr);
     }
 
     // region helpers

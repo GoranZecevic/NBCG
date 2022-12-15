@@ -68,7 +68,8 @@
                     android:textSize="@dimen/title_size"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_container"
+                    android:gravity="center_horizontal" />
 
 
                 <FrameLayout
@@ -119,7 +120,7 @@
                     android:layout_marginBottom="@dimen/v8"
                     android:layout_marginLeft="@dimen/v8"
                     android:layout_marginRight="@dimen/v8"
-                    android:text="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"
+                    android:text="pretraga"
                     android:gravity="left|center"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/vb_body1" />
@@ -148,7 +149,7 @@
                     android:layout_marginBottom="@dimen/v8"
                     android:layout_marginLeft="@dimen/v8"
                     android:layout_marginRight="@dimen/v8"
-                    android:text="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=cobib"
+                    android:text="pretraga"
                     android:gravity="left|center"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/vb_body2" />
@@ -238,7 +239,8 @@
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center_horizontal" />
 
                     <ImageButton
                         android:id="@+id/vb_btn_fb"

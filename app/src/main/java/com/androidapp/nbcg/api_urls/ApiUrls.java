@@ -2,7 +2,7 @@ package com.androidapp.nbcg.api_urls;
 
 public class ApiUrls {
 
-    private static final String SERVER = "http://www.nb-cg.me/nbcrnegore";
+    private static final String SERVER = "https://www.nb-cg.me/nbcrnegore";
 
     public static final String GET_VIJESTI = SERVER + "/get_vijesti.php";
     public static final String GET_KATALOG_IZDANJA = SERVER + "/get_katalog_izdanja.php";
@@ -277,9 +277,9 @@ public class ApiUrls {
     public static final String JAVNE_NABAVKE_OBRAZA2 = "http://www.nbcg.minmedia.me/img/OBRAZAC-zahtjev-za-nabavkama-male-vrijednosti.docx";
     public static final String JAVNE_NABAVKE_OBRAZA3 = "http://www.nbcg.minmedia.me/img/OBRAZAC-NABAVKA-MALE-VRIJEDNOSTI.docx";
 
-    public static final String VBCG_VIRTUELNA_BIBLIOTEKA = "http://vbcg.vbcg.me/";
-    public static final String VBCG_EKCG = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib";
-    public static final String VBCG_ENBCG = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001";
+    public static final String VBCG_VIRTUELNA_BIBLIOTEKA = "https://plus.cg.cobiss.net/opac7/bib/search?db=cnbct";
+    public static final String VBCG_EKCG = "https://plus.cg.cobiss.net/opac7/bib/search";
+    public static final String VBCG_ENBCG = "https://plus.cg.cobiss.net/opac7/bib/search?db=cnbct";
     public static final String VBCG_CG_BIBLIOGRAFIJA = "http://www.nbcg-digitalnabibliografija.me/";
     public static final String VBCG_TEKUCA_BIBLIOGRAFIJA = "http://www.nbcg-digitalnabibliografija.me/bibliografija_tekuca/";
 
@@ -296,8 +296,8 @@ public class ApiUrls {
     public static final String MUZICKA = "http://dlib.me/zbirka.php?z=muzicka-i-video-gradja";
     public static final String TEMATSKE = "http://dlib.me/zbirka.php?z=tematske-zbirke";
 
-    public static final String ZA_KORINISKE_LINK1 = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001";
-    public static final String ZA_KORINISKE_LINK2 = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib";
+    public static final String ZA_KORINISKE_LINK1 = "https://plus.cobiss.net/cobiss/cg/cnr_latn/bib/search?db=cnbct";
+    public static final String ZA_KORINISKE_LINK2 = "https://plus.cobiss.net/cobiss/cg/cnr_latn/bib/search";
     public static final String ZA_KORINISKE_LINK3 = "https://www.nb-cg.me/fajlovi/p1d686a79l1b0316ei1l111t5o9ej5.pdf";
     public static final String ZA_KORINISKE_LINK4 = "https://www.nb-cg.me/fajlovi/p1d686a79l1f4i14svlkkk0jmge4.pdf";
     public static final String ZA_KORINISKE_LINK5 = "https://www.nb-cg.me/fajlovi/p1d6kvge0mg3bumsc351hta16vr4.pdf";

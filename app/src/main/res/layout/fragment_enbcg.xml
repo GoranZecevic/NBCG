@@ -67,7 +67,8 @@
                     android:textSize="@dimen/title_size"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_container"
+                    android:gravity="center_horizontal" />
 
 
                 <TextView
@@ -96,7 +97,7 @@
                     android:layout_marginLeft="@dimen/v8"
                     android:gravity="left"
                     android:background="@android:color/transparent"
-                    android:text="http://vbcg.vbcg.me/scripts/cobiss?command=CONNECTbase=20001"
+                    android:text="https://plus.cg.cobiss.net/opac7/bib/search?db=cnbct"
                     android:textColor="@color/gold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/vb_body1" />
@@ -140,7 +141,8 @@
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center_horizontal" />
 
                     <ImageButton
                         android:id="@+id/vb_btn_fb"
