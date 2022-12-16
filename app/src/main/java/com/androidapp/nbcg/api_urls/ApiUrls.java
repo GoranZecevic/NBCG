@@ -46,9 +46,9 @@ public class ApiUrls {
     public static final String SHARE_LN_MNE = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nb-cg.me/me/dogadjaji/";
     public static final String SHARE_LN_ENG = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.nb-cg.me/en/events/";
 
-    public static final String E_KATALOG_NBCG = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=20001%20";
-    public static final String DIG_KOLEKCIJA_PPNJ = "http://www.dlib.me/petarpetrovic2njegos/rukopisi.php";
-    public static final String E_KATALOG_CG = "http://vbcg.vbcg.me/scripts/cobiss?command=CONNECT&base=cobib";
+    public static final String E_KATALOG_NBCG = "https://plus.cobiss.net/cobiss/cg/cnr_latn/bib/search?db=cnbct";
+    public static final String DIG_KOLEKCIJA_PPNJ = "https://njegos.dlib.me/";
+    public static final String E_KATALOG_CG = "https://plus.cobiss.net/cobiss/cg/cnr_latn/bib/search";
     public static final String DIG_BIBL_CG = "http://www.dlib.me/";
     public static final String CG_BIBLIOGRAFIJA = "http://www.nbcg-digitalnabibliografija.me/";
     public static final String EUROPEANA = "https://www.europeana.eu/portal/en";

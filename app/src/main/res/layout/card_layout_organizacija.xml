@@ -9,7 +9,7 @@
     android:background="@color/white">
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/organizacije_card"
         app:cardBackgroundColor="@android:color/transparent"
         android:layout_marginLeft="@dimen/v8"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -38,7 +38,6 @@
                 android:layout_marginLeft="@dimen/v8"
                 android:layout_marginRight="@dimen/v8"
                 android:layout_marginTop="@dimen/v8"
-                android:textAlignment="center"
                 android:visibility="gone"/>
 
             <Button
@@ -72,11 +71,10 @@
                 android:layout_marginLeft="@dimen/v8"
                 android:layout_marginRight="@dimen/v8"
                 android:layout_marginTop="@dimen/v8"
-                android:textAlignment="center"
                 android:visibility="gone"/>
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

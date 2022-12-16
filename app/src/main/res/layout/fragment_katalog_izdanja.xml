@@ -16,15 +16,14 @@
         app:lottie_fileName="data.json"
         app:lottie_loop="true"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_katalog_izdanja"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
 
-    </android.support.v7.widget.RecyclerView>
-
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/katalogFilter"
         android:layout_width="75dp"
         android:layout_height="75dp"
